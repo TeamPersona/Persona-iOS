@@ -8,12 +8,14 @@
 
 #import "FeaturedViewController.h"
 #import "FeaturedOffersDataSource.h"
+#import "OfferDetailsViewController.h"
 #import "OfferTableViewCell.h"
 #import "OffersManager.h"
 #import "Constants.h"
 
 @interface FeaturedViewController ()
 @property (nonatomic, strong) FeaturedOffersDataSource *dataSource;
+@property (nonatomic, strong) NSArray *offers;
 @end
 
 @implementation FeaturedViewController
@@ -26,10 +28,9 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"OfferTableViewCell" bundle:nil] forCellReuseIdentifier:OfferTableViewCellIdentifier];
     
-    NSArray *offers;
 #if DEBUG
-    offers = [OffersManager parseOffersFromJSONFile:@"featuredOffersTestData1.json"];
-    self.dataSource = [[FeaturedOffersDataSource alloc] initWithOffers:offers];
+    self.offers = [OffersManager parseOffersFromJSONFile:@"featuredOffersTestData1.json"];
+    self.dataSource = [[FeaturedOffersDataSource alloc] initWithOffers:self.offers];
     self.tableView.dataSource = self.dataSource;
 #endif
     
@@ -46,6 +47,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 90.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.offers[indexPath.row]];
+    [self.navigationController pushViewController:offerDetailsVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 @end
