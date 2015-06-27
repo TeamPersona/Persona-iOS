@@ -10,4 +10,14 @@
 
 @implementation Offer
 
+- (NSString *)rewardString
+{
+    return [NSString stringWithFormat:@"$%.02lf", [self.rewardValue doubleValue]];
+}
+
+- (CGFloat)participantsProgress
+{
+    return (CGFloat)self.currentParticipants / (CGFloat)self.totalParticipants;
+}
+
 @end

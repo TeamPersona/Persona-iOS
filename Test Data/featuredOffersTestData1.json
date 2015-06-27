@@ -1,124 +1,200 @@
 {
-    "offers": [
-        {
-            "partnerId": 40847,
-            "partnerName": "BMW",
-            "partnerImageURL": "http://img2.wikia.nocookie.net/__cb20100516075848/logopedia/images/archive/2/25/20150410110027!BMW_logo.png",
-            "offerId": 99381,
-            "offerDetails": "BMW is looking for the next new drivers for our i8 model - the most progressive sports car. The BMW i8 is ready to revolutionise its vehicle class.",
-            "categoryFilters": [
-                "Salary",
-                "Martial Status",
-                "Date of Birth",
-                "Gender"
-            ],
-            "categoryRequested": [
-                "Email Address"
-            ],
-            "category": [
-                "Contact Information"
-            ],
-            "expirationDate": 1435665600,
-            "rewardValue": 3.5,
-            "currNumParticipants": 15,
-            "maxParticipants": 20
-        },
-        {
-            "partnerId": 19593,
-            "partnerName": "Canadian Tire",
-            "partnerImageURL": "http://img3.wikia.nocookie.net/__cb20100920050700/logopedia/images/archive/c/cc/20130622143742!Canadian_Tire.png",
-            "offerId": 70726,
-            "offerDetails": "Our summer deals are here! Special discounts for a limited-time!.",
-            "categoryFilters": [
-                "Salary",
-                "Martial Status",
-                "Date of Birth"
-            ],
-            "categoryRequested": [
-                "Email Address",
-                "Martial Status"
-            ],
-            "category": [
-                "Contact Information",
-                "Martial Status"
-            ],
-            "expirationDate": 1435406400,
-            "rewardValue": 2,
-            "currNumParticipants": 37,
-            "maxParticipants": 100
-        },
-        {
-            "partnerId": 12185,
-            "partnerName": "Best Buy",
-            "partnerImageURL": "http://img1.wikia.nocookie.net/__cb20100902185528/logopedia/images/2/28/800px-Best_Buy_Logo_svg.png",
-            "offerId": 33844,
-            "offerDetails": "Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!",
-            "categoryFilters": [
-                "Date of Birth",
-                "Martial Status"
-            ],
-            "categoryRequested": [
-                "Profession",
-                "Geolocation",
-                "Home Address"
-            ],
-            "category": [
-                "Profession",
-                "Location"
-            ],
-            "expirationDate": 1435579200,
-            "rewardValue": 3.45,
-            "currNumParticipants": 18,
-            "maxParticipants": 50
-        },
-        {
-            "partnerId": 47058,
-            "partnerName": "Apple",
-            "partnerImageURL": "https://upload.wikimedia.org/wikipedia/zh-yue/a/ab/Apple-logo.png",
-            "offerId": 60632,
-            "offerDetails": "Apple Watch - our most personal device yet. Soon to be on your wrist.",
-            "categoryFilters": [
-                "Date of Birth",
-                "Geolocation"
-            ],
-            "categoryRequested": [
-                "Email Address",
-                "Home Address",
-                "Purchase History"
-            ],
-            "category": [
-                "Contact Information",
-                "Location",
-                "Financial Transactions"
-            ],
-            "expirationDate": 1435406400,
-            "rewardValue": 4.53,
-            "currNumParticipants": 14,
-            "maxParticipants": 15
-        },
-        {
-            "partnerId": 24243,
-            "partnerName": "The Home Depot",
-            "partnerImageURL": "http://eos-surfaces.com/wp-content/uploads/2012/11/home_depot_logo2.jpg",
-            "offerId": 31974,
-            "offerDetails": "Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!",
-            "categoryFilters": [
-                "Martial Status",
-                "Date of Birth",
-                "Geolocation"
-            ],
-            "categoryRequested": [
-                "Email Address",
-                "Home Address"
-            ],
-            "category": [
-                "Contact Information",
-                "Location"
-            ],
-            "expirationDate": 1438387200,
-            "rewardValue": 8.93,
-            "currNumParticipants": 1,
-            "maxParticipants": 40
-        }
-    ]
+    "offers":[
+              {
+              "partnerId":40847,
+              "partnerName":"BMW",
+              "partnerImageURL":"http://img2.wikia.nocookie.net/__cb20100516075848/logopedia/images/archive/2/25/20150410110027!BMW_logo.png",
+              "offerId":99381,
+              "offerDetails":"BMW is looking for the next new drivers for our i8 model - the most progressive sports car. The BMW i8 is ready to revolutionise its vehicle class.",
+              "categoryFilters":[
+                                 {
+                                 "category":"Salary",
+                                 "isMissing":1
+                                 },
+                                 {
+                                 "category":"Martial Status",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Date of Birth",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Gender",
+                                 "isMissing":0
+                                 }
+                                 ],
+              "categoryRequested":[
+                                   {
+                                   "category":"Email Address",
+                                   "isMissing":0
+                                   }
+                                   ],
+              "category":[
+                          "Contact Information"
+                          ],
+              "expirationDate":1435665600,
+              "rewardValue":3.5,
+              "currNumParticipants":15,
+              "maxParticipants":20
+              },
+              {
+              "partnerId":19593,
+              "partnerName":"Canadian Tire",
+              "partnerImageURL":"http://img3.wikia.nocookie.net/__cb20100920050700/logopedia/images/archive/c/cc/20130622143742!Canadian_Tire.png",
+              "offerId":70726,
+              "offerDetails":"Our summer deals are here! Special discounts for a limited-time!.",
+              "categoryFilters":[
+                                 {
+                                 "category":"Salary",
+                                 "isMissing":1
+                                 },
+                                 {
+                                 "category":"Martial Status",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Date of Birth",
+                                 "isMissing":0
+                                 }
+                                 ],
+              "categoryRequested":[
+                                   {
+                                   "category":"Martial Status",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Email Address",
+                                   "isMissing":0
+                                   }
+                                   ],
+              "category":[
+                          "Contact Information",
+                          "Martial Status"
+                          ],
+              "expirationDate":1435406400,
+              "rewardValue":2,
+              "currNumParticipants":37,
+              "maxParticipants":100
+              },
+              {
+              "partnerId":12185,
+              "partnerName":"Best Buy",
+              "partnerImageURL":"http://img1.wikia.nocookie.net/__cb20100902185528/logopedia/images/2/28/800px-Best_Buy_Logo_svg.png",
+              "offerId":33844,
+              "offerDetails":"Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!",
+              "categoryFilters":[
+                                 {
+                                 "category":"Martial Status",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Date of Birth",
+                                 "isMissing":0
+                                 }
+                                 ],
+              "categoryRequested":[
+                                   {
+                                   "category":"Profession",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Geolocation",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Home Address",
+                                   "isMissing":1
+                                   }
+                                   ],
+              "category":[
+                          "Profession",
+                          "Location"
+                          ],
+              "expirationDate":1435579200,
+              "rewardValue":3.45,
+              "currNumParticipants":18,
+              "maxParticipants":50
+              },
+              {
+              "partnerId":47058,
+              "partnerName":"Apple",
+              "partnerImageURL":"https://upload.wikimedia.org/wikipedia/zh-yue/a/ab/Apple-logo.png",
+              "offerId":60632,
+              "offerDetails":"Apple Watch - our most personal device yet. Soon to be on your wrist.",
+              "categoryFilters":[
+                                 {
+                                 "category":"Geolocation",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Date of Birth",
+                                 "isMissing":0
+                                 }
+                                 ],
+              "categoryRequested":[
+                                   {
+                                   "category":"Email Address",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Home Address",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Purchase History",
+                                   "isMissing":0
+                                   }
+                                   ],
+              "category":[
+                          "Contact Information",
+                          "Location",
+                          "Financial Transactions"
+                          ],
+              "expirationDate":1435406400,
+              "rewardValue":4.53,
+              "currNumParticipants":14,
+              "maxParticipants":15
+              },
+              {
+              "partnerId":24243,
+              "partnerName":"The Home Depot",
+              "partnerImageURL":"http://eos-surfaces.com/wp-content/uploads/2012/11/home_depot_logo2.jpg",
+              "offerId":31974,
+              "offerDetails":"Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!",
+              "categoryFilters":[
+                                 {
+                                 "category":"Martial Status",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Geolocation",
+                                 "isMissing":0
+                                 },
+                                 {
+                                 "category":"Date of Birth",
+                                 "isMissing":0
+                                 }
+                                 ],
+              "categoryRequested":[
+                                   {
+                                   "category":"Email Address",
+                                   "isMissing":0
+                                   },
+                                   {
+                                   "category":"Home Address",
+                                   "isMissing":0
+                                   }
+                                   ],
+              "category":[
+                          "Contact Information",
+                          "Location"
+                          ],
+              "expirationDate":1438387200,
+              "rewardValue":8.93,
+              "currNumParticipants":1,
+              "maxParticipants":40
+              }
+              ]
+    
 }

@@ -15,13 +15,15 @@
 @property (nonatomic, strong) Partner *partner;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSNumber *rewardValue;
+@property (nonatomic, strong) NSString *rewardString;
 @property (nonatomic, strong) NSArray *categoryList; // TODO: Make category types
 @property (nonatomic) NSInteger currentParticipants;
 @property (nonatomic) NSInteger totalParticipants;
+@property (nonatomic) CGFloat participantsProgress;
 
 // Offer Details
-@property (nonatomic, strong) NSArray *filterList;
-@property (nonatomic, strong) NSArray *categoryRequestedList;
+@property (nonatomic, strong) NSDictionary *categoryFilterList;
+@property (nonatomic, strong) NSDictionary *categoryRequestedList;
 @property (nonatomic, strong) NSString *offerDescription;
 
 @end

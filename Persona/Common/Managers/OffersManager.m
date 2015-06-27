@@ -23,6 +23,9 @@ static const NSString *API_JSON_Reward_Value =          @"rewardValue";
 static const NSString *API_JSON_Current_Participants =  @"currNumParticipants";
 static const NSString *API_JSON_Max_Participants =      @"maxParticipants";
 
+static const NSString *API_JSON_Category_Metadata_Name =        @"category";
+static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
+
 
 @implementation OffersManager
 
@@ -84,10 +87,10 @@ static const NSString *API_JSON_Max_Participants =      @"maxParticipants";
         offer.offerDescription = jsonOffer[API_JSON_Offer_Details];
     }
     if (jsonOffer[API_JSON_Category_Filters] != nil) {
-        offer.filterList = jsonOffer[API_JSON_Category_Filters];
+        offer.categoryFilterList = [self parseCategoryWithMetadata:jsonOffer[API_JSON_Category_Filters]];
     }
     if (jsonOffer[API_JSON_Category_Requested] != nil) {
-        offer.categoryRequestedList = jsonOffer[API_JSON_Category_Requested];
+        offer.categoryRequestedList = [self parseCategoryWithMetadata:jsonOffer[API_JSON_Category_Requested]];
     }
     if (jsonOffer[API_JSON_Category] != nil) {
         offer.categoryList = jsonOffer[API_JSON_Category];
@@ -110,6 +113,15 @@ static const NSString *API_JSON_Max_Participants =      @"maxParticipants";
     }
     
     return offer;
+}
+
++ (NSDictionary *)parseCategoryWithMetadata:(NSArray *)categoryList
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:categoryList.count];
+    for (NSDictionary *categoryMetadata in categoryList) {
+        [dict setObject:categoryMetadata[API_JSON_Category_Metadata_Is_Missing] forKey:categoryMetadata[API_JSON_Category_Metadata_Name]];
+    }
+    return dict;
 }
 
 @end

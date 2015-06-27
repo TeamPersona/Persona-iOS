@@ -46,9 +46,9 @@
     [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
     cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
     cell.expirationTimeLabel.text = offer.expirationDate.description; // TODO: epoch time to time remaining
-    cell.rewardLabel.text = [NSString stringWithFormat:@"$%.02lf", [offer.rewardValue doubleValue]];
-    cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", offer.totalParticipants - offer.currentParticipants];
-    cell.progressView.progress = (CGFloat)offer.currentParticipants/(CGFloat)offer.totalParticipants;
+    cell.rewardLabel.text = offer.rewardString;
+    cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
+    cell.progressView.progress = offer.participantsProgress;
     return cell;
 }
 
