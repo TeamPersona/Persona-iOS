@@ -22,6 +22,7 @@ static const NSString *API_JSON_Expiration_Date =       @"expirationDate";
 static const NSString *API_JSON_Reward_Value =          @"rewardValue";
 static const NSString *API_JSON_Current_Participants =  @"currNumParticipants";
 static const NSString *API_JSON_Max_Participants =      @"maxParticipants";
+static const NSString *API_JSON_Does_Match_Filters =    @"doesMatchFilters";
 
 static const NSString *API_JSON_Category_Metadata_Name =        @"category";
 static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
@@ -106,6 +107,9 @@ static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
     }
     if (jsonOffer[API_JSON_Max_Participants] != nil) {
         offer.totalParticipants = [jsonOffer[API_JSON_Max_Participants] integerValue];
+    }
+    if (jsonOffer[API_JSON_Does_Match_Filters] != nil) {
+        offer.doesMatchFilter = [jsonOffer[API_JSON_Does_Match_Filters] boolValue];
     }
     
     if (partner.name != nil && partner.userId) {

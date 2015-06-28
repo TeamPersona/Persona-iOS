@@ -9,25 +9,25 @@
               "categoryFilters":[
                                  {
                                  "category":"Salary",
-                                 "isMissing":1
+                                 "isMissing":true
                                  },
                                  {
                                  "category":"Martial Status",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Date of Birth",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Gender",
-                                 "isMissing":0
+                                 "isMissing":false
                                  }
                                  ],
               "categoryRequested":[
                                    {
                                    "category":"Email Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    }
                                    ],
               "category":[
@@ -36,36 +36,37 @@
               "expirationDate":1435665600,
               "rewardValue":3.5,
               "currNumParticipants":15,
-              "maxParticipants":20
+              "maxParticipants":20,
+              "doesMatchFilters":true
               },
               {
               "partnerId":19593,
               "partnerName":"Canadian Tire",
               "partnerImageURL":"http://img3.wikia.nocookie.net/__cb20100920050700/logopedia/images/archive/c/cc/20130622143742!Canadian_Tire.png",
               "offerId":70726,
-              "offerDetails":"Our summer deals are here! Special discounts for a limited-time!.",
+              "offerDetails":"Our summer deals are here! Special discounts for a limited-time!",
               "categoryFilters":[
                                  {
                                  "category":"Salary",
-                                 "isMissing":1
+                                 "isMissing":true
                                  },
                                  {
                                  "category":"Martial Status",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Date of Birth",
-                                 "isMissing":0
+                                 "isMissing":false
                                  }
                                  ],
               "categoryRequested":[
                                    {
                                    "category":"Martial Status",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Email Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    }
                                    ],
               "category":[
@@ -75,7 +76,8 @@
               "expirationDate":1435406400,
               "rewardValue":2,
               "currNumParticipants":37,
-              "maxParticipants":100
+              "maxParticipants":100,
+              "doesMatchFilters":true
               },
               {
               "partnerId":12185,
@@ -86,25 +88,25 @@
               "categoryFilters":[
                                  {
                                  "category":"Martial Status",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Date of Birth",
-                                 "isMissing":0
+                                 "isMissing":false
                                  }
                                  ],
               "categoryRequested":[
                                    {
                                    "category":"Profession",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Geolocation",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Home Address",
-                                   "isMissing":1
+                                   "isMissing":true
                                    }
                                    ],
               "category":[
@@ -114,7 +116,8 @@
               "expirationDate":1435579200,
               "rewardValue":3.45,
               "currNumParticipants":18,
-              "maxParticipants":50
+              "maxParticipants":50,
+              "doesMatchFilters":true
               },
               {
               "partnerId":47058,
@@ -125,25 +128,25 @@
               "categoryFilters":[
                                  {
                                  "category":"Geolocation",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Date of Birth",
-                                 "isMissing":0
+                                 "isMissing":false
                                  }
                                  ],
               "categoryRequested":[
                                    {
                                    "category":"Email Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Home Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Purchase History",
-                                   "isMissing":0
+                                   "isMissing":false
                                    }
                                    ],
               "category":[
@@ -154,7 +157,8 @@
               "expirationDate":1435406400,
               "rewardValue":4.53,
               "currNumParticipants":14,
-              "maxParticipants":15
+              "maxParticipants":15,
+              "doesMatchFilters":true
               },
               {
               "partnerId":24243,
@@ -165,25 +169,25 @@
               "categoryFilters":[
                                  {
                                  "category":"Martial Status",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Geolocation",
-                                 "isMissing":0
+                                 "isMissing":false
                                  },
                                  {
                                  "category":"Date of Birth",
-                                 "isMissing":0
+                                 "isMissing":false
                                  }
                                  ],
               "categoryRequested":[
                                    {
                                    "category":"Email Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    },
                                    {
                                    "category":"Home Address",
-                                   "isMissing":0
+                                   "isMissing":false
                                    }
                                    ],
               "category":[
@@ -193,7 +197,8 @@
               "expirationDate":1438387200,
               "rewardValue":8.93,
               "currNumParticipants":1,
-              "maxParticipants":40
+              "maxParticipants":40,
+              "doesMatchFilters":false
               }
               ]
     
