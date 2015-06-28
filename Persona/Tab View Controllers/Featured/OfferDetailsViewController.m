@@ -9,8 +9,12 @@
 #import "OfferDetailsViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-static NSString *FilterCategoriesPrefixDescription =      @"Filtered by:";
-static NSString *RequestedCategoriesPrefixDescription =   @"You are sending:";
+static NSString *OfferDetailsTitle =                    @"Offer Details";
+static NSString *FilterCategoriesPrefixDescription =    @"Filtered by:";
+static NSString *RequestedCategoriesPrefixDescription = @"You are sending:";
+static NSString *EligiblityLabelPrefixDescription =     @"Please enter the required information before you can participate.";
+static NSString *FilterNotMatchedPrefixDescription =    @"You are not eligible for this offer at the current moment.";
+
 static const CGFloat TextViewPadding = 16.0f;
 
 @interface OfferDetailsViewController ()
@@ -32,8 +36,15 @@ static const CGFloat TextViewPadding = 16.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = OfferDetailsTitle;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self populateViewInformation];
+    [self updateDynamicLayoutConstraints];
+}
+
+- (void)populateViewInformation
+{
     [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
     self.partnerLabel.text = self.offer.partner.name;
     self.expirationDateLabel.text = self.offer.expirationDate.description;
@@ -45,6 +56,26 @@ static const CGFloat TextViewPadding = 16.0f;
     self.requestedCategoriesTextView.attributedText = [self attributedStringWithCategories:self.offer.categoryRequestedList andDescription:RequestedCategoriesPrefixDescription];
     self.detailsTextView.text = self.offer.offerDescription;
     
+    if (self.offer.isEligible && self.offer.doesMatchFilter) {
+        self.participateButton.hidden = NO;
+        self.eligibilityLabel.hidden = YES;
+    } else {
+        self.participateButton.hidden = YES;
+        self.eligibilityLabel.hidden = NO;
+        
+        NSString *text;
+        if (!self.offer.isEligible) {
+            text = [NSString stringWithFormat:@"%@", EligiblityLabelPrefixDescription];
+        } else {
+            text = [NSString stringWithFormat:@"%@", FilterNotMatchedPrefixDescription];
+        }
+        
+        self.eligibilityLabel.text = text;
+    }
+}
+
+- (void)updateDynamicLayoutConstraints
+{
     CGFloat halfTextViewWidth = ([UIScreen mainScreen].bounds.size.width - TextViewPadding * 3) / 2;
     CGSize filterCategoriesTextViewHeight = [self.filterCategoriesTextView sizeThatFits:CGSizeMake(halfTextViewWidth, MAXFLOAT)];
     self.filterCategoriesTextViewHeightConstraint.constant = filterCategoriesTextViewHeight.height;
@@ -53,7 +84,7 @@ static const CGFloat TextViewPadding = 16.0f;
     CGSize requestedCategoriesTextViewHeight = [self.requestedCategoriesTextView sizeThatFits:CGSizeMake(halfTextViewWidth, MAXFLOAT)];
     self.requestedCategoriesTextViewHeightConstraint.constant = requestedCategoriesTextViewHeight.height;
     self.requestedCategoriesTextViewWidthConstraint.constant = halfTextViewWidth;
-
+    
     CGFloat textViewWidth = ([UIScreen mainScreen].bounds.size.width - TextViewPadding * 2);
     CGSize detailsTextViewHeight = [self.detailsTextView sizeThatFits:CGSizeMake(textViewWidth, MAXFLOAT)];
     self.detailsTextViewHeightConstraint.constant = detailsTextViewHeight.height;
@@ -64,7 +95,8 @@ static const CGFloat TextViewPadding = 16.0f;
     self.detailsTextViewTopConstraint.constant = MAX(filterCategoriesTextViewYCoord, requestedCategoriesTextViewYCoord);
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -84,7 +116,8 @@ static const CGFloat TextViewPadding = 16.0f;
 {
     NSDictionary *prefixStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.0f]};
     NSDictionary *defaultStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f]};
-    NSDictionary *missingCategoryStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f]};
+    NSDictionary *missingCategoryStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f],
+                                                      NSForegroundColorAttributeName: [UIColor colorWithRed:220.0/255.0 green:8.0/255.0 blue:8.0/255.0 alpha:1.0]};
     
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", descriptionString] attributes:prefixStringAttributes];
     
@@ -99,6 +132,5 @@ static const CGFloat TextViewPadding = 16.0f;
     
     return attrString;
 }
-
 
 @end

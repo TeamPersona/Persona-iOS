@@ -26,4 +26,8 @@
 @property (nonatomic, strong) NSDictionary *categoryRequestedList;
 @property (nonatomic, strong) NSString *offerDescription;
 
+@property (nonatomic) bool doesMatchFilter;
+@property (nonatomic, readonly) bool isEligible;
+@property (nonatomic, readonly) NSArray *missingInformationCategories;
+
 @end
