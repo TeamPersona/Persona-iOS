@@ -10,5 +10,6 @@
 #define Persona_Constants_h
 
 #define DEBUG 1
+#define IS_LOGGED_IN    @"kIsLoggedIn"
 
 #endif

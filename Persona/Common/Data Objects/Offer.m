@@ -55,7 +55,7 @@
     }
 }
 
-- (bool)isEligible
+- (BOOL)isEligible
 {
     return (self._missingCategoriesSet.count == 0);
 }
