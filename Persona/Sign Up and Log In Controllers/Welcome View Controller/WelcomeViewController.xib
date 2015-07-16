@@ -148,11 +148,10 @@
                         <constraint firstAttribute="height" constant="38" id="6yX-zV-VJt"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fu1-KJ-23O" secondAttribute="trailing" id="8HB-aC-vhL"/>
                 <constraint firstItem="fu1-KJ-23O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PiG-0q-UJp"/>

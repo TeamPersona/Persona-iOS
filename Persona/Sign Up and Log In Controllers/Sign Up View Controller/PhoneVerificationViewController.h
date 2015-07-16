@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField3;
 @property (weak, nonatomic) IBOutlet UITextField *textField4;
 @property (weak, nonatomic) IBOutlet UITextField *textField5;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
 - (id)initWithPhoneNumber:(NSString *)phoneNumString;
 

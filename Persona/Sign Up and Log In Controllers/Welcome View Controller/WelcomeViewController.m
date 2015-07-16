@@ -9,6 +9,7 @@
 #import "WelcomeViewController.h"
 #import "SignUpViewController.h"
 #import "AppDelegate.h"
+#import "Constants.h"
 #import "NSString+EmailValidation.h"
 
 typedef NS_ENUM(NSInteger, WelcomeState) {
@@ -26,15 +27,27 @@ typedef NS_ENUM(NSInteger, WelcomeState) {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    self.currentWelcomeState = self.segmentedControl.selectedSegmentIndex;
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     // Add keyboard notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
- 
-    self.currentWelcomeState = self.segmentedControl.selectedSegmentIndex;
-    
-    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    self.loginPanelBottomSpaceLayoutConstraint.constant = 0;
+    [self.view layoutIfNeeded];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -42,6 +55,16 @@ typedef NS_ENUM(NSInteger, WelcomeState) {
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // Remove keyboard notifications
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -136,8 +159,6 @@ typedef NS_ENUM(NSInteger, WelcomeState) {
 #pragma mark - Button Methods
 - (IBAction)nextButtonPressed:(UIButton *)sender
 {
-    [self hideKeyboard];
-    
     SignUpViewController *vc = [[SignUpViewController alloc] initWithEmail:self.emailTextField.text];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -152,6 +173,10 @@ typedef NS_ENUM(NSInteger, WelcomeState) {
         //TODO: call API for login
         AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         [appDelegate transitionToMainTabView:YES];
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:@YES forKey:IS_LOGGED_IN];
+        [userDefaults synchronize];
     }
 }
 

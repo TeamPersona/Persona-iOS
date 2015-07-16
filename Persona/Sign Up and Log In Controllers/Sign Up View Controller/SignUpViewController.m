@@ -32,6 +32,7 @@ static NSString *SignUpTitle = @"Sign Up";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,7 +40,7 @@ static NSString *SignUpTitle = @"Sign Up";
     [super viewWillAppear:animated];
     
     self.emailLabel.text = self.emailString;
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.passwordTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,7 +82,7 @@ static NSString *SignUpTitle = @"Sign Up";
     // Don't do real-time updates unless the phone number textfield is filled in
     if (self.phoneNumberTextField.text.length != 0 && sender.text.length != 0) {
         if ([sender.text isEqualToString:self.passwordTextField.text]) {
-            [self showPasswordDoesNotMatchError:NO];    
+            [self showPasswordDoesNotMatchError:NO];
         } else {
             [self showPasswordDoesNotMatchError:YES];
         }
