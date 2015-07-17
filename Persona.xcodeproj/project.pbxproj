@@ -9,9 +9,18 @@
 /* Begin PBXBuildFile section */
 		C614652A1B39FE3700F1E5F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C61465291B39FE3700F1E5F5 /* main.m */; };
 		C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C614652C1B39FE3700F1E5F5 /* AppDelegate.m */; };
-		C61465381B39FE3700F1E5F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61465371B39FE3700F1E5F5 /* Images.xcassets */; };
 		C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61465391B39FE3700F1E5F5 /* LaunchScreen.xib */; };
 		C61465471B39FE3700F1E5F5 /* PersonaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C61465461B39FE3700F1E5F5 /* PersonaTests.m */; };
+		C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */; };
+		C662FD241B5611A900000FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C662FD231B5611A900000FD1 /* Images.xcassets */; };
+		C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C601B562AC00066FF74 /* CustomTextField.m */; };
+		C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */; };
+		C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C701B56D21C0066FF74 /* WelcomeViewController.m */; };
+		C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6846C711B56D21C0066FF74 /* WelcomeViewController.xib */; };
+		C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C791B56D31C0066FF74 /* SignUpViewController.m */; };
+		C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6846C7A1B56D31C0066FF74 /* SignUpViewController.xib */; };
+		C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C7E1B56EE430066FF74 /* PhoneVerificationViewController.m */; };
+		C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6846C7F1B56EE430066FF74 /* PhoneVerificationViewController.xib */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44161B3A050A00BA6405 /* FeaturedViewController.m */; };
 		C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44171B3A050A00BA6405 /* FeaturedViewController.xib */; };
@@ -57,11 +66,26 @@
 		C61465291B39FE3700F1E5F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C614652B1B39FE3700F1E5F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C614652C1B39FE3700F1E5F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C61465371B39FE3700F1E5F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C614653A1B39FE3700F1E5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C61465401B39FE3700F1E5F5 /* PersonaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61465451B39FE3700F1E5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61465461B39FE3700F1E5F5 /* PersonaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonaTests.m; sourceTree = "<group>"; };
+		C64B0FB71B58309700C444C5 /* NSString+PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PhoneNumber.h"; sourceTree = "<group>"; };
+		C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PhoneNumber.m"; sourceTree = "<group>"; };
+		C662FD231B5611A900000FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C6846C5F1B562AC00066FF74 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		C6846C601B562AC00066FF74 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		C6846C631B56C17E0066FF74 /* NSString+EmailValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailValidation.h"; sourceTree = "<group>"; };
+		C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmailValidation.m"; sourceTree = "<group>"; };
+		C6846C6F1B56D21C0066FF74 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		C6846C701B56D21C0066FF74 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		C6846C711B56D21C0066FF74 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		C6846C781B56D31C0066FF74 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		C6846C791B56D31C0066FF74 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		C6846C7A1B56D31C0066FF74 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		C6846C7D1B56EE430066FF74 /* PhoneVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneVerificationViewController.h; sourceTree = "<group>"; };
+		C6846C7E1B56EE430066FF74 /* PhoneVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneVerificationViewController.m; sourceTree = "<group>"; };
+		C6846C7F1B56EE430066FF74 /* PhoneVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneVerificationViewController.xib; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB44151B3A050A00BA6405 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
@@ -150,10 +174,11 @@
 				C614652B1B39FE3700F1E5F5 /* AppDelegate.h */,
 				C614652C1B39FE3700F1E5F5 /* AppDelegate.m */,
 				C6AB442C1B3A0BC700BA6405 /* Common */,
+				C6846C6D1B56D21C0066FF74 /* Sign Up and Log In Controllers */,
 				C6AB44071B3A01D000BA6405 /* Main View Controller */,
 				C6AB440B1B3A01E100BA6405 /* Tab View Controllers */,
-				C61465371B39FE3700F1E5F5 /* Images.xcassets */,
 				C61465391B39FE3700F1E5F5 /* LaunchScreen.xib */,
+				C662FD231B5611A900000FD1 /* Images.xcassets */,
 				C61465271B39FE3700F1E5F5 /* Supporting Files */,
 			);
 			path = Persona;
@@ -184,6 +209,58 @@
 				C61465451B39FE3700F1E5F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6846C5E1B5626F80066FF74 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C6846C5F1B562AC00066FF74 /* CustomTextField.h */,
+				C6846C601B562AC00066FF74 /* CustomTextField.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		C6846C621B56C1600066FF74 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C6846C631B56C17E0066FF74 /* NSString+EmailValidation.h */,
+				C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */,
+				C64B0FB71B58309700C444C5 /* NSString+PhoneNumber.h */,
+				C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C6846C6D1B56D21C0066FF74 /* Sign Up and Log In Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6846C6E1B56D21C0066FF74 /* Welcome View Controller */,
+				C6846C741B56D2340066FF74 /* Sign Up View Controller */,
+			);
+			path = "Sign Up and Log In Controllers";
+			sourceTree = "<group>";
+		};
+		C6846C6E1B56D21C0066FF74 /* Welcome View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6846C6F1B56D21C0066FF74 /* WelcomeViewController.h */,
+				C6846C701B56D21C0066FF74 /* WelcomeViewController.m */,
+				C6846C711B56D21C0066FF74 /* WelcomeViewController.xib */,
+			);
+			path = "Welcome View Controller";
+			sourceTree = "<group>";
+		};
+		C6846C741B56D2340066FF74 /* Sign Up View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6846C781B56D31C0066FF74 /* SignUpViewController.h */,
+				C6846C791B56D31C0066FF74 /* SignUpViewController.m */,
+				C6846C7A1B56D31C0066FF74 /* SignUpViewController.xib */,
+				C6846C7D1B56EE430066FF74 /* PhoneVerificationViewController.h */,
+				C6846C7E1B56EE430066FF74 /* PhoneVerificationViewController.m */,
+				C6846C7F1B56EE430066FF74 /* PhoneVerificationViewController.xib */,
+			);
+			path = "Sign Up View Controller";
 			sourceTree = "<group>";
 		};
 		C6AB44071B3A01D000BA6405 /* Main View Controller */ = {
@@ -260,6 +337,8 @@
 			children = (
 				C6AB448B1B3A4CC600BA6405 /* Constants.h */,
 				C6AB447E1B3A1FAF00BA6405 /* RewardTier.h */,
+				C6846C621B56C1600066FF74 /* Categories */,
+				C6846C5E1B5626F80066FF74 /* Custom */,
 				C6AB44511B3A1A1C00BA6405 /* Data Objects */,
 				C6AB44551B3A1A3700BA6405 /* Data Sources */,
 				C6AB445C1B3A1A5800BA6405 /* Managers */,
@@ -426,14 +505,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
+				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
+				C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */,
+				C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */,
 				C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */,
 				C6AB448E1B3A553A00BA6405 /* featuredOffersTestData1.json in Resources */,
 				C6AB44261B3A05D800BA6405 /* DashboardViewController.xib in Resources */,
-				C61465381B39FE3700F1E5F5 /* Images.xcassets in Resources */,
 				C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,19 +572,25 @@
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
+				C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */,
 				C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */,
 				C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */,
+				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
 				C6AB44251B3A05D800BA6405 /* DashboardViewController.m in Sources */,
 				C6AB44391B3A0EF200BA6405 /* FeaturedOffersDataSource.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
 				C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */,
+				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
+				C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */,
 				C6AB44921B3A6C4300BA6405 /* OfferDetailsViewController.m in Sources */,
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
+				C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */,
 				C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */,
+				C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

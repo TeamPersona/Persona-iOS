@@ -122,7 +122,7 @@ static const CGFloat TextViewPadding = 16.0f;
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", descriptionString] attributes:prefixStringAttributes];
     
     for (NSString *category in categories.allKeys) {
-        bool isMissing = [categories[category] boolValue];
+        BOOL isMissing = [categories[category] boolValue];
         NSDictionary *attributes = isMissing ? missingCategoryStringAttributes : defaultStringAttributes;
         
         NSMutableAttributedString *categoryAttrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n• %@", category]];

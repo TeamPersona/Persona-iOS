@@ -9,11 +9,7 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 #import "MainTabBarController.h"
-
-#import "FeaturedViewController.h"
-#import "ExploreViewController.h"
-#import "DashboardViewController.h"
-#import "ProfileViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,12 +20,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    MainTabBarController *mainTabBarVC = [[MainTabBarController alloc] initWithDefaultTabBarViewControllers];
+    // Initialize userDefaults if necessary
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![userDefaults objectForKey:IS_LOGGED_IN]) {
+        [userDefaults setObject:@NO forKey:IS_LOGGED_IN];
+    }
+    
+    UIViewController *viewControllerToPresent;
+    if ([userDefaults boolForKey:IS_LOGGED_IN]) {
+        viewControllerToPresent = [[MainTabBarController alloc] initWithDefaultTabBarViewControllers];
+    } else {
+        viewControllerToPresent = [[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window setRootViewController:mainTabBarVC];
+    self.window.rootViewController = viewControllerToPresent;
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -60,6 +67,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Transition To Main
+- (void)transitionToMainTabView:(BOOL)animated
+{
+    [UIView transitionWithView:self.window
+                      duration:0.6
+                       options:(UIViewAnimationOptionTransitionFlipFromLeft |
+                                UIViewAnimationOptionAllowAnimatedContent)
+                    animations:^{
+                        self.window.rootViewController = [[MainTabBarController alloc] initWithDefaultTabBarViewControllers];
+                    } completion:nil];
 }
 
 @end
