@@ -44,6 +44,14 @@
 		C6AB448E1B3A553A00BA6405 /* featuredOffersTestData1.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AB448D1B3A553A00BA6405 /* featuredOffersTestData1.json */; };
 		C6AB44921B3A6C4300BA6405 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */; };
 		C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */; };
+		C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC081E1B5937DF0089E305 /* SettingsViewController.m */; };
+		C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */; };
+		C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08281B595EEF0089E305 /* SettingsSectionNames.plist */; };
+		C6BC082F1B5962310089E305 /* SettingsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC082E1B5962310089E305 /* SettingsDataSource.m */; };
+		C6BC08321B5964560089E305 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08311B5964560089E305 /* Settings.m */; };
+		C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */; };
+		C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */; };
+		C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08391B59DC7D0089E305 /* SettingsOption.m */; };
 		ED2E407ACA39AE15F39B988E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7E1DBBF7EBC30106C658D7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +135,19 @@
 		C6AB448F1B3A6C4300BA6405 /* OfferDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailsViewController.h; sourceTree = "<group>"; };
 		C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailsViewController.m; sourceTree = "<group>"; };
 		C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetailsViewController.xib; sourceTree = "<group>"; };
+		C6BC081D1B5937DF0089E305 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C6BC081E1B5937DF0089E305 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		C6BC08281B595EEF0089E305 /* SettingsSectionNames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsSectionNames.plist; sourceTree = "<group>"; };
+		C6BC082D1B5962310089E305 /* SettingsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsDataSource.h; sourceTree = "<group>"; };
+		C6BC082E1B5962310089E305 /* SettingsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsDataSource.m; sourceTree = "<group>"; };
+		C6BC08301B5964560089E305 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		C6BC08311B5964560089E305 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		C6BC08331B599AE90089E305 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
+		C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
+		C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		C6BC08381B59DC7D0089E305 /* SettingsOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsOption.h; sourceTree = "<group>"; };
+		C6BC08391B59DC7D0089E305 /* SettingsOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +211,7 @@
 				C6AB448C1B3A552C00BA6405 /* Test Data */,
 				C61465281B39FE3700F1E5F5 /* Info.plist */,
 				C61465291B39FE3700F1E5F5 /* main.m */,
+				C6BC08281B595EEF0089E305 /* SettingsSectionNames.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -328,6 +350,9 @@
 				C6AB44271B3A05F200BA6405 /* ProfileViewController.h */,
 				C6AB44281B3A05F200BA6405 /* ProfileViewController.m */,
 				C6AB44291B3A05F200BA6405 /* ProfileViewController.xib */,
+				C6BC081D1B5937DF0089E305 /* SettingsViewController.h */,
+				C6BC081E1B5937DF0089E305 /* SettingsViewController.m */,
+				C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -353,6 +378,10 @@
 			children = (
 				C6AB44521B3A1A1C00BA6405 /* Offer.h */,
 				C6AB44531B3A1A1C00BA6405 /* Offer.m */,
+				C6BC08301B5964560089E305 /* Settings.h */,
+				C6BC08311B5964560089E305 /* Settings.m */,
+				C6BC08381B59DC7D0089E305 /* SettingsOption.h */,
+				C6BC08391B59DC7D0089E305 /* SettingsOption.m */,
 			);
 			path = "Data Objects";
 			sourceTree = "<group>";
@@ -362,6 +391,8 @@
 			children = (
 				C6AB44581B3A1A3700BA6405 /* OffersDataSource.h */,
 				C6AB44591B3A1A3700BA6405 /* OffersDataSource.m */,
+				C6BC082D1B5962310089E305 /* SettingsDataSource.h */,
+				C6BC082E1B5962310089E305 /* SettingsDataSource.m */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -394,6 +425,9 @@
 				C6AB44861B3A35F400BA6405 /* OfferTableViewCell.h */,
 				C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */,
 				C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */,
+				C6BC08331B599AE90089E305 /* SettingsTableViewCell.h */,
+				C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */,
+				C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -505,8 +539,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */,
 				C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
+				C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
@@ -514,6 +550,7 @@
 				C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */,
 				C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */,
 				C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */,
+				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
 				C6AB448E1B3A553A00BA6405 /* featuredOffersTestData1.json in Resources */,
 				C6AB44261B3A05D800BA6405 /* DashboardViewController.xib in Resources */,
 				C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */,
@@ -568,11 +605,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6AB445B1B3A1A3700BA6405 /* OffersDataSource.m in Sources */,
+				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
 				C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */,
+				C6BC08321B5964560089E305 /* Settings.m in Sources */,
 				C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */,
 				C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */,
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
@@ -589,8 +628,11 @@
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
 				C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */,
+				C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */,
 				C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */,
 				C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */,
+				C6BC082F1B5962310089E305 /* SettingsDataSource.m in Sources */,
+				C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
