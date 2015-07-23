@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileTierCell" id="gTV-IL-0wX" customClass="ProfileTierCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-z8-tHN">
+                        <rect key="frame" x="128" y="52" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="Flg-1n-n99"/>
+                            <constraint firstAttribute="width" constant="64" id="kOs-e6-M2k"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platinum Tier: 150 points remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-4T-20z">
+                        <rect key="frame" x="8" y="151" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="YxM-KB-0pW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="CVX-z8-tHN" secondAttribute="centerX" id="0sZ-L2-EHs"/>
+                <constraint firstAttribute="bottom" secondItem="TDi-4T-20z" secondAttribute="bottom" constant="8" id="4M6-uv-nKb"/>
+                <constraint firstAttribute="centerY" secondItem="CVX-z8-tHN" secondAttribute="centerY" constant="6" id="6dt-zP-Olb"/>
+                <constraint firstAttribute="centerX" secondItem="TDi-4T-20z" secondAttribute="centerX" id="h3i-wo-ZVS"/>
+                <constraint firstAttribute="trailing" secondItem="TDi-4T-20z" secondAttribute="trailing" constant="8" id="kDI-zU-OCT"/>
+                <constraint firstItem="TDi-4T-20z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="uOb-7U-YUK"/>
+            </constraints>
+            <connections>
+                <outlet property="tierImageView" destination="CVX-z8-tHN" id="c3U-MC-o9b"/>
+                <outlet property="tierLabel" destination="TDi-4T-20z" id="1A0-Rs-lNc"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

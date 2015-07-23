@@ -7,7 +7,10 @@
 //
 
 #import "BaseTabBarViewController.h"
+#import "ProfileDataSource.h"
 
-@interface ProfileViewController : BaseTabBarViewController
+@interface ProfileViewController : BaseTabBarViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ProfileDataSourceDelegate>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
