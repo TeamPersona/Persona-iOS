@@ -22,7 +22,7 @@ static const NSString *API_JSON_Total_Offers =      @"totalOffers";
 {
     NSDictionary *json = [super getJSONDataFromFile:fileLocation];
     
-    if (json != nil) {
+    if (json == nil) {
         return nil;
     }
     

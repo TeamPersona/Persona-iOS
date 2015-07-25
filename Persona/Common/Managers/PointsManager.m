@@ -23,7 +23,7 @@ static const NSString *API_JSON_Data_Source_Is_Data_Provided =  @"isDataProvided
 {
     NSDictionary *json = [super getJSONDataFromFile:fileLocation];
     
-    if (json != nil) {
+    if (json == nil) {
         return @[];
     }
     
@@ -44,7 +44,7 @@ static const NSString *API_JSON_Data_Source_Is_Data_Provided =  @"isDataProvided
 + (PointsData *)parseJSONPointsDataObject:(NSDictionary *)jsonData
 {
     PointsData *pointsData = [[PointsData alloc] init];
-    if (jsonData[API_JSON_Root_Points] != nil) {
+    if (jsonData[API_JSON_Data_Source_Name] != nil) {
         pointsData.dataTitle = jsonData[API_JSON_Data_Source_Name];
     }
     if (jsonData[API_JSON_Data_Source_Image_URL] != nil) {

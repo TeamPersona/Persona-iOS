@@ -11,6 +11,8 @@
 #import "ProfilePointsCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
+#import "PointsData.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileDataSource ()
 @property (nonatomic) ProfileSegment currentSelectedSegment;
@@ -45,8 +47,7 @@
         numItems = 1;
     } else if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-//            numItems = self.pointsDataArray.count;
-            numItems = 20;
+            numItems = self.pointsDataArray.count;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             numItems = 1;
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
@@ -66,8 +67,12 @@
         return cell;
     } else if (indexPath.section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
+            PointsData *pointsData = self.pointsDataArray[indexPath.row];
+            
             ProfilePointsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfilePointsCollectionViewCellIdentifier forIndexPath:indexPath];
-            cell.pointsValueLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];
+            cell.titleLabel.text = pointsData.dataTitle;
+            [cell.dataImageView sd_setImageWithURL:pointsData.dataImageURL];
+            cell.pointsValueLabel.text = [NSString stringWithFormat:@"%li pts", [pointsData.dataPointsValue integerValue]];
 
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {

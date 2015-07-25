@@ -44,7 +44,11 @@
     Offer *offer = self.offers[indexPath.row];
     
     cell.titleLabel.text = offer.partner.name;
-    [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
+    [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL ];
+//    [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL
+//                                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//    }];
     cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
     
     NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate];
@@ -59,6 +63,7 @@
     cell.rewardLabel.text = offer.rewardString;
     cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
     cell.progressView.progress = offer.participantsProgress;
+    
     return cell;
 }
 

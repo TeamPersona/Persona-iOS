@@ -15,7 +15,6 @@
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "Constants.h"
-#import "SpacingAndSizingCalculations.h"
 
 /* Spacing and Sizing Constants */
 
@@ -44,7 +43,10 @@ static const CGFloat ProfileOffersTableViewCellHeight = 44.0f;
     
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
-//    self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:nil];
+#if DEBUG
+    self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
+    [self.collectionView reloadData];
+#endif
 
     // Collection View
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileSegmentedHeaderCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ProfileSegmentedHeaderViewIdentifier];

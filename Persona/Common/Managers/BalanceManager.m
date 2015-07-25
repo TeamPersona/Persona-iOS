@@ -22,7 +22,7 @@ static NSString *API_JSON_Balance_Info_Reward_Reward_Value =    @"rewardValue";
 {
     NSDictionary *json = [super getJSONDataFromFile:fileLocation];
     
-    if (json != nil) {
+    if (json == nil) {
         return nil;
     }
     
