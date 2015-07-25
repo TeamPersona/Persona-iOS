@@ -9,6 +9,7 @@
 #import "OffersDataSource.h"
 #import "OfferTableViewCell.h"
 #import "Offer.h"
+#import "NSString+ExpirationTime.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface OffersDataSource ()
@@ -45,7 +46,16 @@
     cell.titleLabel.text = offer.partner.name;
     [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
     cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
-    cell.expirationTimeLabel.text = offer.expirationDate.description; // TODO: epoch time to time remaining
+    
+    NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate];
+    cell.expirationTimeLabel.text = expirationString;
+    
+    if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {
+        cell.expirationTimeLabel.textColor = [UIColor orangeColor];
+    } else if ([expirationString isEqual:Expiration_Time_Expired]) {
+        cell.expirationTimeLabel.textColor = [UIColor redColor];
+    }
+    
     cell.rewardLabel.text = offer.rewardString;
     cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
     cell.progressView.progress = offer.participantsProgress;

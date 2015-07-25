@@ -14,6 +14,8 @@
 		C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */; };
 		C662FD241B5611A900000FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C662FD231B5611A900000FD1 /* Images.xcassets */; };
 		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
+		C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */; };
+		C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */; };
 		C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */; };
 		C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C601B562AC00066FF74 /* CustomTextField.m */; };
 		C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */; };
@@ -108,6 +110,10 @@
 		C662FD231B5611A900000FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C67278BD1B6404D4008F1A48 /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
 		C67278BE1B6404D4008F1A48 /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
+		C67278C01B64164A008F1A48 /* NSDate+EpochTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+EpochTime.h"; sourceTree = "<group>"; };
+		C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+EpochTime.m"; sourceTree = "<group>"; };
+		C67278C91B641CF7008F1A48 /* NSString+ExpirationTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpirationTime.h"; sourceTree = "<group>"; };
+		C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpirationTime.m"; sourceTree = "<group>"; };
 		C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProjectColors.h"; sourceTree = "<group>"; };
 		C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProjectColors.m"; sourceTree = "<group>"; };
 		C6846C5F1B562AC00066FF74 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
@@ -320,6 +326,10 @@
 				C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */,
 				C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */,
 				C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */,
+				C67278C01B64164A008F1A48 /* NSDate+EpochTime.h */,
+				C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */,
+				C67278C91B641CF7008F1A48 /* NSString+ExpirationTime.h */,
+				C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -767,6 +777,7 @@
 				C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */,
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
 				C6AB44251B3A05D800BA6405 /* DashboardViewController.m in Sources */,
+				C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */,
 				C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */,
 				C6AB44391B3A0EF200BA6405 /* FeaturedOffersDataSource.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
@@ -775,6 +786,7 @@
 				C6FD79F71B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,
+				C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
 				C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */,
 				C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */,

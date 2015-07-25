@@ -7,6 +7,7 @@
 //
 
 #import "OfferDetailsViewController.h"
+#import "NSString+ExpirationTime.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 static NSString *OfferDetailsTitle =                    @"Offer Details";
@@ -47,7 +48,16 @@ static const CGFloat TextViewPadding = 16.0f;
 {
     [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
     self.partnerLabel.text = self.offer.partner.name;
-    self.expirationDateLabel.text = self.offer.expirationDate.description;
+    
+    NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate];
+    self.expirationDateLabel.text = expirationString;
+
+    if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {
+        self.expirationDateLabel.textColor = [UIColor orangeColor];
+    } else if ([expirationString isEqual:Expiration_Time_Expired]) {
+        self.expirationDateLabel.textColor = [UIColor redColor];
+    }
+    
     self.rewardLabel.text = self.offer.rewardString;
     self.participantsLabel.text = [NSString stringWithFormat:@"%li/%li participants", self.offer.currentParticipants, self.offer.totalParticipants];
     self.progressView.progress = self.offer.participantsProgress;

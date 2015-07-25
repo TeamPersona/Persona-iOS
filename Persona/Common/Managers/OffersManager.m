@@ -7,6 +7,7 @@
 //
 
 #import "OffersManager.h"
+#import "NSDate+EpochTime.h"
 
 static const NSString *API_JSON_Root_Offers =           @"offers";
 
@@ -82,7 +83,7 @@ static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
         offer.categoryList = jsonOffer[API_JSON_Category];
     }
     if (jsonOffer[API_JSON_Expiration_Date] != nil) {
-        offer.expirationDate = jsonOffer[API_JSON_Expiration_Date]; // TODO: epoch conversion
+        offer.expirationDate = [NSDate dateWithEpochTime:jsonOffer[API_JSON_Expiration_Date]];
     }
     if (jsonOffer[API_JSON_Reward_Value] != nil) {
         offer.rewardValue = jsonOffer[API_JSON_Reward_Value];

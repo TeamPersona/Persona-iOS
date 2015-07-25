@@ -9,6 +9,13 @@
 #import "ProfileManager.h"
 #import "Participant.h"
 
+static const NSString *API_JSON_Root_Profile =           @"profile";
+
+static const NSString *API_JSON_Reward_Tier_Level = @"tierLevel";
+static const NSString *API_JSON_Total_Points =      @"totalPoints";
+static const NSString *API_JSON_Account_Balance =   @"accountBalance";
+static const NSString *API_JSON_Total_Offers =      @"totalOffers";
+
 @implementation ProfileManager
 
 + (Participant *)parseProfileDataFromJSONFile:(NSString *)fileLocation
