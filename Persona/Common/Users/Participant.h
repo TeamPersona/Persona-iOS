@@ -12,5 +12,8 @@
 @interface Participant : User
 
 @property (nonatomic) RewardTier rewardTier;
+@property (nonatomic) NSNumber *totalPointsEarned;
+@property (nonatomic) NSNumber *accountBalance;
+@property (nonatomic) NSNumber *totalNumOffers;
 
 @end

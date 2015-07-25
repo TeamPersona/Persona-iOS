@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONManager.h"
 #import "Offer.h"
 
-@interface OffersManager : NSObject
+@interface OffersManager : JSONManager
 
 typedef NS_ENUM(NSUInteger, OfferSortType) {
     OfferSortTypeRank,

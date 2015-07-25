@@ -32,10 +32,13 @@ static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
 
 + (NSArray *)parseOffersFromJSONFile:(NSString *)fileLocation
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
-    NSDictionary *json = [self parseJSONData:[NSData dataWithContentsOfFile:filePath]];
-    NSDictionary *jsonOffers = json[API_JSON_Root_Offers];
+    NSDictionary *json = [super getJSONDataFromFile:fileLocation];
+    
+    if (json == nil) {
+        return @[];
+    }
 
+    NSDictionary *jsonOffers = json[API_JSON_Root_Offers];
     NSMutableArray *offers = [[NSMutableArray alloc] initWithCapacity:jsonOffers.count];
     for (NSDictionary *offer in jsonOffers) {
         [offers addObject:[self parseJSONOfferObject:offer]];
@@ -46,27 +49,9 @@ static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
 + (NSArray *)sortOffers:(NSArray *)offers bySortType:(OfferSortType)sortType
 {
     return nil;
-//    return [offers sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-//        Offer *offer1 = obj1;
-//        Offer *offer2 = obj2;
-//        return 1;
-//    }];
 }
 
-#pragma mark -- Helper Methods
-+ (NSDictionary *)parseJSONData:(NSData *)jsonData
-{
-    NSError *error;
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-
-    if (error != nil) {
-        NSLog(@"%@", error.description);
-        return nil;
-    }
-    
-    return dictionary;
-}
-
+#pragma mark - Helper Methods
 + (Offer *)parseJSONOfferObject:(NSDictionary *)jsonOffer
 {
     Offer *offer = [[Offer alloc] init];

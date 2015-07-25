@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONManager.h"
+#import "Participant.h"
 
-@interface ProfileManager : NSObject
+static const NSString *API_JSON_Root_Profile =           @"profile";
 
-+ (NSArray *)parseProfileDataFromJSONFile:(NSString *)fileLocation;
+static const NSString *API_JSON_Reward_Tier_Level = @"tierLevel";
+static const NSString *API_JSON_Total_Points =      @"totalPoints";
+static const NSString *API_JSON_Account_Balance =   @"accountBalance";
+static const NSString *API_JSON_Total_Offers =      @"totalOffers";
+
+@interface ProfileManager : JSONManager
+
++ (Participant *)parseProfileDataFromJSONFile:(NSString *)fileLocation;
 
 @end

@@ -17,5 +17,7 @@ static NSString *ProfileOffersCollectionViewCellIdentifier = @"profileOffersCell
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *expirationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UILabel *remainingLabel;
 
 @end

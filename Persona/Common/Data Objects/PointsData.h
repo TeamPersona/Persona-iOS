@@ -19,9 +19,9 @@ typedef NS_ENUM(NSUInteger, PointsDataType) {
 @interface PointsData : NSObject
 
 @property (nonatomic, strong) NSString *dataTitle;
-@property (nonatomic) PointsDataType dataType;
-@property (nonatomic) NSInteger dataPointsValue;
-@property (nonatomic) BOOL isDataProvided;
 @property (nonatomic, strong) NSURL *dataImageURL;
+@property (nonatomic) PointsDataType dataType;
+@property (nonatomic) NSNumber *dataPointsValue;
+@property (nonatomic) BOOL isDataProvided;
 
 @end

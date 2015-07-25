@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONManager.h"
 
 typedef NS_ENUM(NSUInteger, PointsDataSortType) {
     PointsDataSortTypePointsAscending,
@@ -15,7 +16,7 @@ typedef NS_ENUM(NSUInteger, PointsDataSortType) {
     PointsDataSortTypeTier
 };
 
-@interface PointsManager : NSObject
+@interface PointsManager : JSONManager
 
 + (NSArray *)parsePointsDataFromJSONFile:(NSString *)fileLocation;
 + (NSArray *)sortPointsData:(NSArray *)pointsData bySortType:(PointsDataSortType)sortType;
