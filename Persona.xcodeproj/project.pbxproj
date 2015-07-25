@@ -13,6 +13,7 @@
 		C61465471B39FE3700F1E5F5 /* PersonaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C61465461B39FE3700F1E5F5 /* PersonaTests.m */; };
 		C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */; };
 		C662FD241B5611A900000FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C662FD231B5611A900000FD1 /* Images.xcassets */; };
+		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
 		C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */; };
 		C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C601B562AC00066FF74 /* CustomTextField.m */; };
 		C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */; };
@@ -23,6 +24,13 @@
 		C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C7E1B56EE430066FF74 /* PhoneVerificationViewController.m */; };
 		C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6846C7F1B56EE430066FF74 /* PhoneVerificationViewController.xib */; };
 		C687F7511B617EBB007DDA93 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C687F7501B617EBB007DDA93 /* ProfileManager.m */; };
+		C687F7531B6182DA007DDA93 /* featuredOffersMockDataSample1.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7521B6182DA007DDA93 /* featuredOffersMockDataSample1.json */; };
+		C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7541B61EC09007DDA93 /* profileMockData.json */; };
+		C687F7581B61EC09007DDA93 /* profileOffersMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7551B61EC09007DDA93 /* profileOffersMockData.json */; };
+		C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7561B61EC09007DDA93 /* profilePointsMockData.json */; };
+		C687F75C1B61F4DE007DDA93 /* RewardDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C687F75B1B61F4DE007DDA93 /* RewardDataPoint.m */; };
+		C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C687F7641B61F6DE007DDA93 /* JSONManager.m */; };
+		C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44161B3A050A00BA6405 /* FeaturedViewController.m */; };
 		C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44171B3A050A00BA6405 /* FeaturedViewController.xib */; };
@@ -42,7 +50,6 @@
 		C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44831B3A274B00BA6405 /* BaseNavigationViewController.m */; };
 		C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */; };
 		C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */; };
-		C6AB448E1B3A553A00BA6405 /* featuredOffersTestData1.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AB448D1B3A553A00BA6405 /* featuredOffersTestData1.json */; };
 		C6AB44921B3A6C4300BA6405 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */; };
 		C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */; };
 		C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC081E1B5937DF0089E305 /* SettingsViewController.m */; };
@@ -99,6 +106,8 @@
 		C64B0FB71B58309700C444C5 /* NSString+PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PhoneNumber.h"; sourceTree = "<group>"; };
 		C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PhoneNumber.m"; sourceTree = "<group>"; };
 		C662FD231B5611A900000FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C67278BD1B6404D4008F1A48 /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
+		C67278BE1B6404D4008F1A48 /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
 		C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProjectColors.h"; sourceTree = "<group>"; };
 		C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProjectColors.m"; sourceTree = "<group>"; };
 		C6846C5F1B562AC00066FF74 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
@@ -116,6 +125,15 @@
 		C6846C7F1B56EE430066FF74 /* PhoneVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneVerificationViewController.xib; sourceTree = "<group>"; };
 		C687F74F1B617EBB007DDA93 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
 		C687F7501B617EBB007DDA93 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
+		C687F7521B6182DA007DDA93 /* featuredOffersMockDataSample1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featuredOffersMockDataSample1.json; sourceTree = "<group>"; };
+		C687F7541B61EC09007DDA93 /* profileMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileMockData.json; sourceTree = "<group>"; };
+		C687F7551B61EC09007DDA93 /* profileOffersMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileOffersMockData.json; sourceTree = "<group>"; };
+		C687F7561B61EC09007DDA93 /* profilePointsMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profilePointsMockData.json; sourceTree = "<group>"; };
+		C687F75A1B61F4DE007DDA93 /* RewardDataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardDataPoint.h; sourceTree = "<group>"; };
+		C687F75B1B61F4DE007DDA93 /* RewardDataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardDataPoint.m; sourceTree = "<group>"; };
+		C687F7631B61F6DE007DDA93 /* JSONManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONManager.h; sourceTree = "<group>"; };
+		C687F7641B61F6DE007DDA93 /* JSONManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONManager.m; sourceTree = "<group>"; };
+		C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileBalanceInfoMockData.json; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB44151B3A050A00BA6405 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
@@ -151,7 +169,6 @@
 		C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferTableViewCell.m; sourceTree = "<group>"; };
 		C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		C6AB448B1B3A4CC600BA6405 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		C6AB448D1B3A553A00BA6405 /* featuredOffersTestData1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featuredOffersTestData1.json; sourceTree = "<group>"; };
 		C6AB448F1B3A6C4300BA6405 /* OfferDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailsViewController.h; sourceTree = "<group>"; };
 		C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailsViewController.m; sourceTree = "<group>"; };
 		C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetailsViewController.xib; sourceTree = "<group>"; };
@@ -440,6 +457,8 @@
 				C6BC08391B59DC7D0089E305 /* SettingsOption.m */,
 				C6FD79AC1B5D7B60006873BD /* PointsData.h */,
 				C6FD79AD1B5D7B60006873BD /* PointsData.m */,
+				C687F75A1B61F4DE007DDA93 /* RewardDataPoint.h */,
+				C687F75B1B61F4DE007DDA93 /* RewardDataPoint.m */,
 				C6FD79E11B5DAC4A006873BD /* BalanceInfo.h */,
 				C6FD79E21B5DAC4A006873BD /* BalanceInfo.m */,
 			);
@@ -449,12 +468,16 @@
 		C6AB445C1B3A1A5800BA6405 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C687F7631B61F6DE007DDA93 /* JSONManager.h */,
+				C687F7641B61F6DE007DDA93 /* JSONManager.m */,
 				C6AB44601B3A1A7200BA6405 /* OffersManager.h */,
 				C6AB44611B3A1A7200BA6405 /* OffersManager.m */,
 				C687F74F1B617EBB007DDA93 /* ProfileManager.h */,
 				C687F7501B617EBB007DDA93 /* ProfileManager.m */,
 				C6FD79C11B5D7FDA006873BD /* PointsManager.h */,
 				C6FD79C21B5D7FDA006873BD /* PointsManager.m */,
+				C67278BD1B6404D4008F1A48 /* BalanceManager.h */,
+				C67278BE1B6404D4008F1A48 /* BalanceManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -486,7 +509,11 @@
 		C6AB448C1B3A552C00BA6405 /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
-				C6AB448D1B3A553A00BA6405 /* featuredOffersTestData1.json */,
+				C687F7521B6182DA007DDA93 /* featuredOffersMockDataSample1.json */,
+				C687F7541B61EC09007DDA93 /* profileMockData.json */,
+				C687F7561B61EC09007DDA93 /* profilePointsMockData.json */,
+				C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */,
+				C687F7551B61EC09007DDA93 /* profileOffersMockData.json */,
 			);
 			path = "Test Data";
 			sourceTree = SOURCE_ROOT;
@@ -657,17 +684,21 @@
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
 				C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
+				C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
 				C6FD79F81B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.xib in Resources */,
+				C687F7531B6182DA007DDA93 /* featuredOffersMockDataSample1.json in Resources */,
 				C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */,
 				C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */,
+				C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */,
+				C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
 				C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
-				C6AB448E1B3A553A00BA6405 /* featuredOffersTestData1.json in Resources */,
 				C6FD7A081B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib in Resources */,
+				C687F7581B61EC09007DDA93 /* profileOffersMockData.json in Resources */,
 				C6AB44261B3A05D800BA6405 /* DashboardViewController.xib in Resources */,
 				C6FD79FE1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib in Resources */,
 				C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */,
@@ -721,6 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */,
 				C687F7511B617EBB007DDA93 /* ProfileManager.m in Sources */,
 				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
 				C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */,
@@ -738,11 +770,13 @@
 				C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */,
 				C6AB44391B3A0EF200BA6405 /* FeaturedOffersDataSource.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
+				C687F75C1B61F4DE007DDA93 /* RewardDataPoint.m in Sources */,
 				C6FD79C81B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m in Sources */,
 				C6FD79F71B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
+				C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */,
 				C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */,
 				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,

@@ -12,7 +12,7 @@
                                  "isMissing":true
                                  },
                                  {
-                                 "category":"Martial Status",
+                                 "category":"Marital Status",
                                  "isMissing":false
                                  },
                                  {
@@ -51,7 +51,7 @@
                                  "isMissing":true
                                  },
                                  {
-                                 "category":"Martial Status",
+                                 "category":"Marital Status",
                                  "isMissing":false
                                  },
                                  {
@@ -61,7 +61,7 @@
                                  ],
               "categoryRequested":[
                                    {
-                                   "category":"Martial Status",
+                                   "category":"Marital Status",
                                    "isMissing":false
                                    },
                                    {
@@ -71,7 +71,7 @@
                                    ],
               "category":[
                           "Contact Information",
-                          "Martial Status"
+                          "Marital Status"
                           ],
               "expirationDate":1435406400,
               "rewardValue":2,
@@ -87,7 +87,7 @@
               "offerDetails":"Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!",
               "categoryFilters":[
                                  {
-                                 "category":"Martial Status",
+                                 "category":"Marital Status",
                                  "isMissing":false
                                  },
                                  {
@@ -168,7 +168,7 @@
               "offerDetails":"Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!",
               "categoryFilters":[
                                  {
-                                 "category":"Martial Status",
+                                 "category":"Marital Status",
                                  "isMissing":false
                                  },
                                  {

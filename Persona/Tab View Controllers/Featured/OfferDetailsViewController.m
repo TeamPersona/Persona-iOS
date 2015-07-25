@@ -101,7 +101,7 @@ static const CGFloat TextViewPadding = 16.0f;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -- Offer Details String Formatter
+#pragma mark - Offer Details String Formatter
 /**
  Creates the attributed string for a list of categories.
  
