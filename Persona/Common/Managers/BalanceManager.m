@@ -7,6 +7,7 @@
 //
 
 #import "BalanceManager.h"
+#import "NSDate+EpochTime.h"
 
 static NSString *API_JSON_Root_Balance_Info = @"profileBalanceInfo";
 
@@ -37,7 +38,7 @@ static NSString *API_JSON_Balance_Info_Reward_Reward_Value =    @"rewardValue";
     BalanceInfo *balanceInfo = [[BalanceInfo alloc] init];
     
     if (jsonBalanceInfo[API_JSON_Last_Redeemded_Date] != nil) {
-//        balanceInfo.lastRedeemedDate = jsonBalanceInfo[API_JSON_Last_Redeemded_Date];
+        balanceInfo.lastRedeemedDate = [NSDate dateWithEpochTime:jsonBalanceInfo[API_JSON_Last_Redeemded_Date]];
     }
     if (jsonBalanceInfo[API_JSON_Balance_Info_Data_Points] != nil) {
         NSArray *jsonDataPoints = jsonBalanceInfo[API_JSON_Balance_Info_Data_Points];
@@ -46,8 +47,10 @@ static NSString *API_JSON_Balance_Info_Reward_Reward_Value =    @"rewardValue";
         for (NSDictionary *rewardDict in jsonDataPoints) {
             RewardDataPoint *dataPoint = [[RewardDataPoint alloc] init];
             dataPoint.offerId = [rewardDict[API_JSON_Balance_Info_Reward_Offer_Id] integerValue];
-//            dataPoint.rewardedDate = rewardDict[API_JSON_Balance_Info_Reward_Date];
+            dataPoint.rewardedDate = [NSDate dateWithEpochTime:rewardDict[API_JSON_Balance_Info_Reward_Date]];
             dataPoint.rewardedValue = rewardDict[API_JSON_Balance_Info_Reward_Reward_Value];
+            
+            [rewardDataPoints addObject:dataPoint];
         }
         
         balanceInfo.rewardDataPoints = rewardDataPoints;

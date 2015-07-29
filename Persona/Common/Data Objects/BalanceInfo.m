@@ -18,11 +18,13 @@
 
 - (void)setRewardDataPoints:(NSArray *)rewardDataPoints
 {
+    _rewardDataPoints = rewardDataPoints;
     [self splitAndUpdateRewardDataPoints];
 }
 
 - (void)setLastRedeemedDate:(NSDate *)lastRedeemedDate
 {
+    _lastRedeemedDate = lastRedeemedDate;
     [self splitAndUpdateRewardDataPoints];
 }
 
@@ -53,6 +55,9 @@
                 [afterDataPoints addObject:reward];
             }
         }];
+        
+        self.rewardDataPointsBeforeLastRedeemedDate = beforeDataPoints;
+        self.rewardDataPointsAfterLastRedeemedDate = afterDataPoints;
     }
 }
 

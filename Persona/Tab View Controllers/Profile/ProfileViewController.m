@@ -10,6 +10,7 @@
 #import "SettingsViewController.h"
 #import "ProfileManager.h"
 #import "PointsManager.h"
+#import "BalanceManager.h"
 #import "ProfileDataSource.h"
 #import "ProfileTierCollectionViewCell.h"
 #import "ProfilePointsCollectionViewCell.h"
@@ -39,6 +40,7 @@
 #if DEBUG
     self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
     self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
+    self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
     [self.collectionView reloadData];
 #endif
 

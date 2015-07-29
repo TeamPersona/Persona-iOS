@@ -32,7 +32,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-9l-bWc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-9l-bWc">
                         <rect key="frame" x="166" y="37" width="69" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="QVZ-fD-ix8"/>
@@ -51,8 +51,11 @@
                         <state key="normal" title="Redeem">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="redeemButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="k4a-YN-9ho"/>
+                        </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.54" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2g-d9-LNh">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2g-d9-LNh">
                         <rect key="frame" x="166" y="8" width="69" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="32x-Z8-Rfs"/>
@@ -78,6 +81,10 @@
                 <constraint firstItem="AEu-un-bku" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="uFu-uz-hfx"/>
             </constraints>
             <size key="customSize" width="320" height="197"/>
+            <connections>
+                <outlet property="currentBalanceLabel" destination="u8W-9l-bWc" id="0R7-Jj-Imo"/>
+                <outlet property="redeemedToDateBalanceLabel" destination="a2g-d9-LNh" id="EtZ-wN-tBU"/>
+            </connections>
             <point key="canvasLocation" x="241" y="401.5"/>
         </collectionViewCell>
     </objects>

@@ -93,6 +93,7 @@
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             ProfileBalanceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileBalanceCollectionViewCellIdentifier forIndexPath:indexPath];
+            [cell updateBalanceInfo:self.balanceInfo];
             
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {

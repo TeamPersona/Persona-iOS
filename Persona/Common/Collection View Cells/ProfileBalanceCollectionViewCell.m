@@ -10,8 +10,20 @@
 
 @implementation ProfileBalanceCollectionViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
+}
+
+- (void)updateBalanceInfo:(BalanceInfo *)balanceInfo
+{
+    self.redeemedToDateBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.redeemedRewardBalance.doubleValue];
+    self.currentBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.currentRewardBalance.doubleValue];
+}
+
+- (IBAction)redeemButtonPressed:(UIButton *)sender
+{
+    
 }
 
 @end

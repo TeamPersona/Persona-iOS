@@ -16,6 +16,9 @@ static const CGFloat ProfileBalanceCollectionViewCellHeight = 200.0f;
 
 @interface ProfileBalanceCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) BalanceInfo *balanceInfo;
+@property (weak, nonatomic) IBOutlet UILabel *redeemedToDateBalanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentBalanceLabel;
+
+- (void)updateBalanceInfo:(BalanceInfo *)balanceInfo;
 
 @end
