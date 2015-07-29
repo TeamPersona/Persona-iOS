@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,13 +18,14 @@
                             <constraint firstAttribute="height" constant="24" id="8CL-74-mED"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qI2-PK-fWU" userLabel="Partner Image View">
                         <rect key="frame" x="8" y="8" width="56" height="56"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="qI2-PK-fWU" secondAttribute="height" multiplier="1:1" id="Zbl-su-y4B"/>
+                            <constraint firstAttribute="height" constant="56" id="NlC-U5-5V6"/>
+                            <constraint firstAttribute="width" constant="56" id="XKi-1m-WId"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-hL-6fK" userLabel="Reward Label">
@@ -44,7 +44,7 @@
                             <constraint firstAttribute="height" constant="35" id="jwZ-WT-GnS"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-Zb-siK" userLabel="Expiration Date">
@@ -54,7 +54,7 @@
                             <constraint firstAttribute="width" constant="74" id="cqB-Q7-NTA"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38d-g5-cCy">
@@ -68,7 +68,7 @@
                             <constraint firstAttribute="height" constant="24" id="nUv-8t-zBe"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -78,31 +78,30 @@
                 <constraint firstItem="asZ-Zb-siK" firstAttribute="leading" secondItem="OWV-sN-Rms" secondAttribute="trailing" constant="8" id="1Vg-TH-ddn"/>
                 <constraint firstAttribute="trailing" secondItem="jtr-hL-6fK" secondAttribute="trailing" constant="8" id="3BB-ci-qDp"/>
                 <constraint firstAttribute="bottom" secondItem="ZFA-Cj-Nsi" secondAttribute="bottom" constant="8" id="4YM-de-QMU"/>
-                <constraint firstAttribute="bottom" secondItem="qI2-PK-fWU" secondAttribute="bottom" constant="26" id="8Lf-8L-MLQ"/>
+                <constraint firstItem="OWV-sN-Rms" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Djx-5A-Nno"/>
                 <constraint firstAttribute="bottom" secondItem="38d-g5-cCy" secondAttribute="bottom" constant="15" id="EtT-ct-ZGn"/>
                 <constraint firstItem="qI2-PK-fWU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="FVd-fL-f30"/>
                 <constraint firstItem="38d-g5-cCy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Ig1-HA-aC0"/>
                 <constraint firstItem="jtr-hL-6fK" firstAttribute="leading" secondItem="WJM-vf-YhV" secondAttribute="trailing" constant="8" id="NcU-i4-pt6"/>
                 <constraint firstAttribute="trailing" secondItem="ZFA-Cj-Nsi" secondAttribute="trailing" constant="8" id="WAU-QX-Hyy"/>
-                <constraint firstAttribute="centerY" secondItem="asZ-Zb-siK" secondAttribute="centerY" constant="25" id="Y3Y-yE-uXf"/>
                 <constraint firstItem="qI2-PK-fWU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="amo-Du-kXj"/>
                 <constraint firstItem="WJM-vf-YhV" firstAttribute="leading" secondItem="qI2-PK-fWU" secondAttribute="trailing" constant="8" id="cZr-ds-dLg"/>
                 <constraint firstAttribute="trailing" secondItem="asZ-Zb-siK" secondAttribute="trailing" constant="8" id="dBh-VT-7Bn"/>
-                <constraint firstAttribute="centerY" secondItem="WJM-vf-YhV" secondAttribute="centerY" constant="-1.5" id="fRQ-iu-gZU"/>
-                <constraint firstAttribute="centerY" secondItem="jtr-hL-6fK" secondAttribute="centerY" constant="-2" id="nfx-Ei-j0M"/>
+                <constraint firstItem="asZ-Zb-siK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="n0c-vK-co3"/>
                 <constraint firstItem="OWV-sN-Rms" firstAttribute="leading" secondItem="qI2-PK-fWU" secondAttribute="trailing" constant="8" id="qg3-id-1TH"/>
-                <constraint firstAttribute="centerY" secondItem="OWV-sN-Rms" secondAttribute="centerY" constant="25" id="wSn-uC-E5e"/>
+                <constraint firstItem="WJM-vf-YhV" firstAttribute="top" secondItem="OWV-sN-Rms" secondAttribute="bottom" constant="-3" id="t1n-86-80P"/>
+                <constraint firstItem="jtr-hL-6fK" firstAttribute="top" secondItem="asZ-Zb-siK" secondAttribute="bottom" constant="3" id="wif-eV-3y1"/>
                 <constraint firstItem="ZFA-Cj-Nsi" firstAttribute="leading" secondItem="38d-g5-cCy" secondAttribute="trailing" constant="8" id="xI1-9U-rFD"/>
             </constraints>
             <size key="customSize" width="377" height="71"/>
             <connections>
                 <outlet property="categoryLabel" destination="WJM-vf-YhV" id="74Y-fD-hip"/>
-                <outlet property="expirationLabel" destination="asZ-Zb-siK" id="mxd-nh-CZP"/>
+                <outlet property="expirationTimeLabel" destination="asZ-Zb-siK" id="FkQ-5h-FEQ"/>
                 <outlet property="partnerImageView" destination="qI2-PK-fWU" id="CkS-Ip-C7j"/>
-                <outlet property="partnerLabel" destination="OWV-sN-Rms" id="QjU-in-RK9"/>
                 <outlet property="progressView" destination="38d-g5-cCy" id="eYp-OD-mNs"/>
                 <outlet property="remainingLabel" destination="ZFA-Cj-Nsi" id="tyo-cx-9F3"/>
                 <outlet property="rewardLabel" destination="jtr-hL-6fK" id="eGu-5h-Upr"/>
+                <outlet property="titleLabel" destination="OWV-sN-Rms" id="GTw-MQ-qeP"/>
             </connections>
             <point key="canvasLocation" x="285.5" y="528"/>
         </collectionViewCell>

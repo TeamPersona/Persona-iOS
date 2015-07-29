@@ -10,6 +10,7 @@
 #import "NSDate+EpochTime.h"
 
 static const NSString *API_JSON_Root_Offers =           @"offers";
+static const NSString *API_JSON_Root_Profile_Offers =   @"profileOffers";
 
 static const NSString *API_JSON_Partner_Id =            @"partnerId";
 static const NSString *API_JSON_Partner_Name =          @"partnerName";
@@ -28,18 +29,39 @@ static const NSString *API_JSON_Does_Match_Filters =    @"doesMatchFilters";
 static const NSString *API_JSON_Category_Metadata_Name =        @"category";
 static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
 
+typedef NS_ENUM(NSUInteger, OffersJSONType) {
+    OffersJSONTypeFeatured,
+    OffersJSONTypeProfile
+};
+
 
 @implementation OffersManager
 
-+ (NSArray *)parseOffersFromJSONFile:(NSString *)fileLocation
++ (NSArray *)parseFeaturedOffersFromJSONFile:(NSString *)fileLocation
+{
+    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeFeatured];
+}
+
++ (NSArray *)parseProfileOffersFromJSONFile:(NSString *)fileLocation
+{
+    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeProfile];
+}
+
++ (NSArray *)parseOffersFromJSONFile:(NSString *)fileLocation type:(OffersJSONType)offerType
 {
     NSDictionary *json = [super getJSONDataFromFile:fileLocation];
     
     if (json == nil) {
         return @[];
     }
-
-    NSDictionary *jsonOffers = json[API_JSON_Root_Offers];
+    
+    NSDictionary *jsonOffers;
+    if (offerType == OffersJSONTypeFeatured) {
+        jsonOffers = json[API_JSON_Root_Offers];
+    } else if (offerType == OffersJSONTypeProfile) {
+        jsonOffers = json[API_JSON_Root_Profile_Offers];
+    }
+    
     NSMutableArray *offers = [[NSMutableArray alloc] initWithCapacity:jsonOffers.count];
     for (NSDictionary *offer in jsonOffers) {
         [offers addObject:[self parseJSONOfferObject:offer]];

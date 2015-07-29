@@ -25,4 +25,14 @@
     return [self blackColor];
 }
 
++ (UIColor *)expiringSoonColor
+{
+    return [self orangeColor];
+}
+
++ (UIColor *)expiredColor
+{
+    return  [self redColor];
+}
+
 @end

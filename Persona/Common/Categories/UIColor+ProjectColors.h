@@ -14,4 +14,7 @@
 + (UIColor *)progressCircleFillColor;
 + (UIColor *)progressCircleOutlineColor;
 
++ (UIColor *)expiringSoonColor;
++ (UIColor *)expiredColor;
+
 @end

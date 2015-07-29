@@ -12,6 +12,9 @@
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "PointsData.h"
+#import "Offer.h"
+#import "NSString+ExpirationTime.h"
+#import "UIColor+ProjectColors.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileDataSource ()
@@ -98,6 +101,33 @@
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
             ProfileOffersCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileOffersCollectionViewCellIdentifier forIndexPath:indexPath];
+            [cell setNeedsDisplay];
+            Offer *offer = self.offersDataArray[indexPath.row];
+            
+            cell.titleLabel.text = offer.partner.name;
+            [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL ];
+            cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
+            cell.rewardLabel.text = offer.rewardString;
+
+            NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate];
+            cell.expirationTimeLabel.text = expirationString;
+            
+            if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {
+                cell.expirationTimeLabel.textColor = [UIColor expiringSoonColor];
+            } else if (offer.isExpired) {
+                cell.expirationTimeLabel.textColor = [UIColor expiredColor];
+                cell.remainingLabel.hidden = YES;
+                cell.progressView.hidden = YES;
+            }
+            
+            
+            if (!offer.isExpired) {
+                cell.remainingLabel.hidden = NO;
+                cell.progressView.hidden = NO;
+                
+                cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
+                cell.progressView.progress = offer.participantsProgress;
+            }
             
             return cell;
         }

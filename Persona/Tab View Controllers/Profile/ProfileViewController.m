@@ -11,11 +11,13 @@
 #import "ProfileManager.h"
 #import "PointsManager.h"
 #import "BalanceManager.h"
+#import "OffersManager.h"
 #import "ProfileDataSource.h"
 #import "ProfileTierCollectionViewCell.h"
 #import "ProfilePointsCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
+#import "OfferDetailsViewController.h"
 #import "Constants.h"
 
 @interface ProfileViewController ()
@@ -41,6 +43,7 @@
     self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
     self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
+    self.profileDataSource.offersDataArray = [OffersManager parseProfileOffersFromJSONFile:@"profileOffersMockData.json"];
     [self.collectionView reloadData];
 #endif
 
@@ -88,7 +91,12 @@
 }
 
 #pragma mark - UICollectionView Delegate Methods
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
+    [self.navigationController pushViewController:offerDetailsVC animated:YES];
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+}
 
 #pragma mark - UICollectionViewFlowLayout Delegate Methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -102,7 +110,12 @@
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileBalanceCollectionViewCellHeight);
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-            
+            Offer * offer = self.profileDataSource.offersDataArray[indexPath.row];
+            if (!offer.isExpired) {
+                itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileOffersCollectionViewCellHeight);
+            } else {
+                itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileOffersCollectionViewCellHeightExpired);
+            }
         }
     }
     
@@ -139,6 +152,8 @@
     if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
             minItemSpacing = ProfilePointsCollectionViewMinimumCellSpacing;
+        } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
+            
         }
     }
     
