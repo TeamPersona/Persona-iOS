@@ -17,4 +17,6 @@ typedef NS_ENUM(NSUInteger, RewardTier) {
     RewardTierDiamond
 };
 
+// TODO: make into class that returns image name for reward tier (i.e. RewardTierBasic -> "rewardTierBasic.png")
+
 #endif

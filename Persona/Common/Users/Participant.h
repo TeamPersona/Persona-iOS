@@ -13,7 +13,10 @@
 
 @property (nonatomic) RewardTier rewardTier;
 @property (nonatomic) NSNumber *totalPointsEarned;
-@property (nonatomic) NSNumber *accountBalance;
+@property (nonatomic) NSNumber *pointsUntilNextTier;
+@property (nonatomic) NSNumber *accountBalance; //TODO: Make money class $
 @property (nonatomic) NSNumber *totalNumOffers;
+
+@property (readonly) NSNumber *tierProgress;
 
 @end

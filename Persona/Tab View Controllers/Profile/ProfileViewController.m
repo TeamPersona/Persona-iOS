@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "SettingsViewController.h"
+#import "ProfileManager.h"
 #import "PointsManager.h"
 #import "ProfileDataSource.h"
 #import "ProfileTierCollectionViewCell.h"
@@ -15,14 +16,6 @@
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "Constants.h"
-
-/* Spacing and Sizing Constants */
-
-// Profile Balance
-static const CGFloat ProfileBalanceViewHeight = 320.0f;
-// Profile Offers
-static const CGFloat ProfileOffersTableViewCellHeight = 44.0f;
-
 
 @interface ProfileViewController ()
 
@@ -44,6 +37,7 @@ static const CGFloat ProfileOffersTableViewCellHeight = 44.0f;
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
 #if DEBUG
+    self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
     self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     [self.collectionView reloadData];
 #endif

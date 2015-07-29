@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ProfileConfigurations.h"
+#import "Participant.h"
 
 @protocol ProfileSegmentedControlDelegate <NSObject>
 
@@ -28,5 +29,6 @@ static const CGFloat ProfileSegmentedHeaderViewHeight = 72.0f;
 @property (weak, nonatomic) IBOutlet UIButton *offersButton;
 
 - (void)setSelectedProfileSegment:(ProfileSegment)segment;
+- (void)updateProfileInfo:(Participant *)participantInfo;
 
 @end

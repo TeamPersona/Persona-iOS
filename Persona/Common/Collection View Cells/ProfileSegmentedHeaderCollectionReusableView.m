@@ -8,6 +8,10 @@
 
 #import "ProfileSegmentedHeaderCollectionReusableView.h"
 
+static const NSString *PointsButtonTitleText = @"Points";
+static const NSString *BalanceButtonTitleText = @"Balance";
+static const NSString *OffersButtonTitleText = @"Offers";
+
 @interface ProfileSegmentedHeaderCollectionReusableView ()
 @end
 
@@ -15,12 +19,29 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    self.pointsButton.titleLabel.numberOfLines = 0;
+    self.pointsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.balanceButton.titleLabel.numberOfLines = 0;
+    self.balanceButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.offersButton.titleLabel.numberOfLines = 0;
+    self.offersButton.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)setSelectedProfileSegment:(ProfileSegment)segment
 {
     [self selectButtonForProfileSegment:segment];
+}
+
+- (void)updateProfileInfo:(Participant *)participantInfo
+{
+    [self.pointsButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalPointsEarned.integerValue, PointsButtonTitleText]
+                       forState:UIControlStateNormal];
+    
+    [self.balanceButton setTitle:[NSString stringWithFormat:@"$%.02f\n%@", participantInfo.accountBalance.doubleValue, BalanceButtonTitleText]
+                       forState:UIControlStateNormal];
+    
+    [self.offersButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalNumOffers.integerValue, OffersButtonTitleText]
+                       forState:UIControlStateNormal];
 }
 
 #pragma mark - Button Methods

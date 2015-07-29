@@ -62,8 +62,24 @@
 {
     if (indexPath.section == ProfileSectionTierInformation) {
         ProfileTierCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileTierCollectionViewCellIdentifier forIndexPath:indexPath];
-        cell.progressPercent = 0.25;
+        
+        cell.progressPercent = self.profileInfo.tierProgress.floatValue;
 
+        NSString *tierString;
+        if (self.profileInfo.rewardTier == RewardTierBasic) {
+            tierString = @"Bronze";
+        } else if (self.profileInfo.rewardTier == RewardTierBronze) {
+            tierString = @"Silver";
+        } else if (self.profileInfo.rewardTier == RewardTierSilver) {
+            tierString = @"Gold";
+        } else if (self.profileInfo.rewardTier == RewardTierGold) {
+            tierString = @"Diamond";
+        }
+        
+        cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
+        
+//        cell.tierImageView.image = [UIImage imageNamed:@""];
+        
         return cell;
     } else if (indexPath.section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
@@ -97,7 +113,9 @@
             header.delegate = self;
         }
         
+        [header updateProfileInfo:self.profileInfo];
         [header setSelectedProfileSegment:self.currentSelectedSegment];
+        
         return header;
     }
     

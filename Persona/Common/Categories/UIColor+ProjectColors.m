@@ -10,9 +10,14 @@
 
 @implementation UIColor (ProjectColors)
 
++ (UIColor *)personaColor
+{
+    return [self colorWithRed:46.0/255.0 green:88.0/255.0 blue:148.0/255.0 alpha:1.0];
+}
+
 + (UIColor *)progressCircleFillColor
 {
-    return [self yellowColor];
+    return [self personaColor];
 }
 
 + (UIColor *)progressCircleOutlineColor

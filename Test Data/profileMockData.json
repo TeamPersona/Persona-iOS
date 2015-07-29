@@ -2,6 +2,7 @@
   "profile":{
     "tierLevel":2,
     "totalPoints":250,
+    "pointsUntilNextTier":150,
     "accountBalance":1.26,
     "totalOffers":5
   }
