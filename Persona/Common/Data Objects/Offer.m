@@ -62,7 +62,7 @@
 
 - (BOOL)isExpired
 {
-    return [self.expirationDate compare:[NSDate date]] == NSOrderedAscending;
+    return (self.expirationDate.timeIntervalSince1970 < [NSDate date].timeIntervalSince1970);
 }
 
 - (NSArray *)missingInformationCategories

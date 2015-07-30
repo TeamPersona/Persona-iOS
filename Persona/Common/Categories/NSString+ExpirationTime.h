@@ -13,6 +13,6 @@ static NSString *Expiration_Time_Expired = @"Expired";
 
 @interface NSString (ExpirationTime)
 
-+ (NSString *)stringWithExpirationDate:(NSDate *)expirationDate;
++ (NSString *)stringWithExpirationDate:(NSDate *)dateOfExpiration currentDate:(NSDate *)currentDate;
 
 @end

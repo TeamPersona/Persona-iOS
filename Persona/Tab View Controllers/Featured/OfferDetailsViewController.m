@@ -49,12 +49,12 @@ static const CGFloat TextViewPadding = 16.0f;
     [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
     self.partnerLabel.text = self.offer.partner.name;
     
-    NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate];
+    NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate currentDate:[NSDate date]];
     self.expirationDateLabel.text = expirationString;
 
     if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {
         self.expirationDateLabel.textColor = [UIColor orangeColor];
-    } else if ([expirationString isEqual:Expiration_Time_Expired]) {
+    } else if (self.offer.isExpired) {
         self.expirationDateLabel.textColor = [UIColor redColor];
     }
     

@@ -109,7 +109,7 @@
             cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
             cell.rewardLabel.text = offer.rewardString;
 
-            NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate];
+            NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate currentDate:[NSDate date]];
             cell.expirationTimeLabel.text = expirationString;
             
             if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {

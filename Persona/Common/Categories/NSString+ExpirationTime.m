@@ -14,11 +14,10 @@ static const NSInteger Seconds_Per_Day = 24 * Seconds_Per_Hour;
 
 @implementation NSString (ExpirationTime)
 
-+ (NSString *)stringWithExpirationDate:(NSDate *)expirationDate
++ (NSString *)stringWithExpirationDate:(NSDate *)dateOfExpiration currentDate:(NSDate *)currentDate
 {
-    NSDate *currentDate = [NSDate date];
-    if ([expirationDate compare:currentDate] == NSOrderedDescending) {
-        NSTimeInterval expirationTimeInterval = [expirationDate timeIntervalSinceDate:[NSDate date]];
+    if (dateOfExpiration.timeIntervalSince1970 > currentDate.timeIntervalSince1970) {
+        NSTimeInterval expirationTimeInterval = [dateOfExpiration timeIntervalSinceDate:currentDate];
         
         NSInteger ti = (NSInteger)expirationTimeInterval;
         
@@ -42,7 +41,7 @@ static const NSInteger Seconds_Per_Day = 24 * Seconds_Per_Hour;
         } else if (minutes > 0) {
                 NSString *minString = [NSString stringWithFormat:@"<%li min", minutes];
                 if (minutes > 1) {
-                    [minString stringByAppendingString:@"s"];
+                    minString = [minString stringByAppendingString:@"s"];
                 }
                 
                 return minString;
