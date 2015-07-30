@@ -12,6 +12,8 @@
 		C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61465391B39FE3700F1E5F5 /* LaunchScreen.xib */; };
 		C61465471B39FE3700F1E5F5 /* PersonaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C61465461B39FE3700F1E5F5 /* PersonaTests.m */; };
 		C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */; };
+		C6533F821B69973000A4D601 /* EpochAndExpirationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6533F811B69973000A4D601 /* EpochAndExpirationTests.m */; };
+		C6533F841B69BD1500A4D601 /* EmailValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6533F831B69BD1500A4D601 /* EmailValidationTests.m */; };
 		C662FD241B5611A900000FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C662FD231B5611A900000FD1 /* Images.xcassets */; };
 		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
 		C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */; };
@@ -107,6 +109,8 @@
 		C61465461B39FE3700F1E5F5 /* PersonaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonaTests.m; sourceTree = "<group>"; };
 		C64B0FB71B58309700C444C5 /* NSString+PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PhoneNumber.h"; sourceTree = "<group>"; };
 		C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PhoneNumber.m"; sourceTree = "<group>"; };
+		C6533F811B69973000A4D601 /* EpochAndExpirationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpochAndExpirationTests.m; sourceTree = "<group>"; };
+		C6533F831B69BD1500A4D601 /* EmailValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailValidationTests.m; sourceTree = "<group>"; };
 		C662FD231B5611A900000FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C67278BD1B6404D4008F1A48 /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
 		C67278BE1B6404D4008F1A48 /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				C61465461B39FE3700F1E5F5 /* PersonaTests.m */,
+				C6533F811B69973000A4D601 /* EpochAndExpirationTests.m */,
+				C6533F831B69BD1500A4D601 /* EmailValidationTests.m */,
 				C6FD79EF1B5E8057006873BD /* HeightCalculations.m */,
 				C61465441B39FE3700F1E5F5 /* Supporting Files */,
 			);
@@ -817,6 +823,8 @@
 			files = (
 				C6FD79F01B5E8057006873BD /* HeightCalculations.m in Sources */,
 				C61465471B39FE3700F1E5F5 /* PersonaTests.m in Sources */,
+				C6533F821B69973000A4D601 /* EpochAndExpirationTests.m in Sources */,
+				C6533F841B69BD1500A4D601 /* EmailValidationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
