@@ -10,6 +10,10 @@
 
 static NSString *OfferTableViewCellIdentifier = @"offerCell";
 
+// Sizing Constants
+static const CGFloat OfferTableViewCellHeight =         90.0f;
+static const CGFloat OfferTableViewCellHeightExpired =  73.0f;
+
 @interface OfferTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

@@ -28,6 +28,7 @@
 
 @property (nonatomic) BOOL doesMatchFilter;
 @property (nonatomic, readonly) BOOL isEligible;
+@property (nonatomic, readonly) BOOL isExpired;
 @property (nonatomic, readonly) NSArray *missingInformationCategories;
 
 @end

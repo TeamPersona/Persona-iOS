@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SectionNames</key>
+	<array>
+		<string>General</string>
+		<string>Privacy</string>
+		<string>Notifications</string>
+	</array>
+	<key>SectionItems</key>
+	<array>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Offers</string>
+				<key>Switch</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Linked Accounts</string>
+				<key>Switch</key>
+				<false/>
+			</dict>
+		</array>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Something</string>
+				<key>Switch</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Something Else</string>
+				<key>Switch</key>
+				<false/>
+			</dict>
+		</array>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Messages</string>
+				<key>Switch</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Offers</string>
+				<key>Switch</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Recommendations</string>
+				<key>Switch</key>
+				<true/>
+			</dict>
+		</array>
+	</array>
+</dict>
+</plist>

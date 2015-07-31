@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONManager.h"
 #import "Offer.h"
 
-@interface OffersManager : NSObject
+@interface OffersManager : JSONManager
 
 typedef NS_ENUM(NSUInteger, OfferSortType) {
     OfferSortTypeRank,
@@ -19,7 +20,8 @@ typedef NS_ENUM(NSUInteger, OfferSortType) {
     OfferSortTypeCategory
 };
 
-+ (NSArray *)parseOffersFromJSONFile:(NSString *)fileLocation;
++ (NSArray *)parseFeaturedOffersFromJSONFile:(NSString *)fileLocation;
++ (NSArray *)parseProfileOffersFromJSONFile:(NSString *)fileLocation;
 + (NSArray *)sortOffers:(NSArray *)offers bySortType:(OfferSortType)sortType;
 
 @end

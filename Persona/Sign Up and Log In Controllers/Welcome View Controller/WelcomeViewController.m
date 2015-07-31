@@ -12,7 +12,7 @@
 #import "Constants.h"
 #import "NSString+EmailValidation.h"
 
-typedef NS_ENUM(NSInteger, WelcomeState) {
+typedef NS_ENUM(NSUInteger, WelcomeState) {
     WelcomeStateSignUp,
     WelcomeStateLogin
 };

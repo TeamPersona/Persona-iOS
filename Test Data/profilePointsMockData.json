@@ -1,0 +1,25 @@
+{
+  "profilePoints":[
+    {
+      "dataSourceName":"Facebook",
+      "dataSourceImageURL":"http://icons.iconarchive.com/icons/yootheme/social-bookmark/512/social-facebook-box-blue-icon.png",
+      "dataSourceType":2,
+      "pointsValue":200,
+      "isDataProvided":false
+    },
+    {
+      "dataSourceName":"Twitter",
+      "dataSourceImageURL":"http://www.muscogeenation-nsn.gov/Pages/NativeNews/images/twitter-icon.png",
+      "dataSourceType":2,
+      "pointsValue":150,
+      "isDataProvided":false
+    },
+    {
+      "dataSourceName":"Birthday",
+      "dataSourceImageURL":"https://cdn1.iconfinder.com/data/icons/nuvola2/128x128/apps/cookie.png",
+      "dataSourceType":1,
+      "pointsValue":10,
+      "isDataProvided":true
+    }
+  ]
+}

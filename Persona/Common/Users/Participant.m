@@ -10,4 +10,9 @@
 
 @implementation Participant
 
+- (NSNumber *)tierProgress
+{
+    return [NSNumber numberWithFloat:self.totalPointsEarned.floatValue / (self.pointsUntilNextTier.floatValue + self.totalPointsEarned.floatValue)];
+}
+
 @end

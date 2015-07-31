@@ -1,5 +1,5 @@
 //
-//  DashboardViewController.h
+//  MessagesViewController.h
 //  Persona
 //
 //  Created by Denny Kim on 2015-06-23.
@@ -8,6 +8,6 @@
 
 #import "BaseTabBarViewController.h"
 
-@interface DashboardViewController : BaseTabBarViewController
+@interface MessagesViewController : BaseTabBarViewController
 
 @end

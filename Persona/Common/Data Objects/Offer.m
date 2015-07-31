@@ -60,6 +60,11 @@
     return (self._missingCategoriesSet.count == 0);
 }
 
+- (BOOL)isExpired
+{
+    return (self.expirationDate.timeIntervalSince1970 < [NSDate date].timeIntervalSince1970);
+}
+
 - (NSArray *)missingInformationCategories
 {
     [self._missingCategoriesSet sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
