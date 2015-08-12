@@ -63,6 +63,7 @@
 		C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */; };
 		C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */; };
 		C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08391B59DC7D0089E305 /* SettingsOption.m */; };
+		C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3DF1B1B6BC137009CC49C /* Money.m */; };
 		C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79AD1B5D7B60006873BD /* PointsData.m */; };
 		C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C21B5D7FDA006873BD /* PointsManager.m */; };
 		C6FD79C81B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C61B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m */; };
@@ -193,6 +194,8 @@
 		C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C6BC08381B59DC7D0089E305 /* SettingsOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsOption.h; sourceTree = "<group>"; };
 		C6BC08391B59DC7D0089E305 /* SettingsOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsOption.m; sourceTree = "<group>"; };
+		C6E3DF1A1B6BC137009CC49C /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
+		C6E3DF1B1B6BC137009CC49C /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		C6FD79AC1B5D7B60006873BD /* PointsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsData.h; sourceTree = "<group>"; };
 		C6FD79AD1B5D7B60006873BD /* PointsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsData.m; sourceTree = "<group>"; };
 		C6FD79C11B5D7FDA006873BD /* PointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsManager.h; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 				C687F75B1B61F4DE007DDA93 /* RewardDataPoint.m */,
 				C6FD79E11B5DAC4A006873BD /* BalanceInfo.h */,
 				C6FD79E21B5DAC4A006873BD /* BalanceInfo.m */,
+				C6E3DF1A1B6BC137009CC49C /* Money.h */,
+				C6E3DF1B1B6BC137009CC49C /* Money.m */,
 			);
 			path = "Data Objects";
 			sourceTree = "<group>";
@@ -780,6 +785,7 @@
 				C6BC08321B5964560089E305 /* Settings.m in Sources */,
 				C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */,
 				C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */,
+				C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */,
 				C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */,
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
 				C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */,

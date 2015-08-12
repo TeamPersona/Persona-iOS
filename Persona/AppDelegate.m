@@ -33,7 +33,7 @@
     } else {
         viewControllerToPresent = [[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
     }
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = viewControllerToPresent;

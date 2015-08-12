@@ -26,20 +26,20 @@ static const NSInteger Seconds_Per_Day = 24 * Seconds_Per_Hour;
         NSInteger days = (ti / Seconds_Per_Day) % Seconds_Per_Minute;
         
         if (days > 0) {
-            NSString *dayStr = [NSString stringWithFormat:@"<%li day", days];
+            NSString *dayStr = [NSString stringWithFormat:@"＜%li day", days];
             if (days > 1) {
                 dayStr = [dayStr stringByAppendingString:@"s"];
             }
             return dayStr;
         } else if (hours > 0) {
-            NSString *hourStr = [NSString stringWithFormat:@"<%li hour", hours];
+            NSString *hourStr = [NSString stringWithFormat:@"＜%li hour", hours];
             if (hours > 1) {
                 hourStr = [hourStr stringByAppendingString:@"s"];
             }
             
             return hourStr;
         } else if (minutes > 0) {
-                NSString *minString = [NSString stringWithFormat:@"<%li min", minutes];
+                NSString *minString = [NSString stringWithFormat:@"＜%li min", minutes];
                 if (minutes > 1) {
                     minString = [minString stringByAppendingString:@"s"];
                 }

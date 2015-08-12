@@ -112,21 +112,23 @@
             NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate currentDate:[NSDate date]];
             cell.expirationTimeLabel.text = expirationString;
             
-            if ([expirationString isEqual:Expiration_Time_Less_Than_A_Minute]) {
-                cell.expirationTimeLabel.textColor = [UIColor expiringSoonColor];
-            } else if (offer.isExpired) {
-                cell.expirationTimeLabel.textColor = [UIColor expiredColor];
-                cell.remainingLabel.hidden = YES;
-                cell.progressView.hidden = YES;
-            }
-            
-            
             if (!offer.isExpired) {
                 cell.remainingLabel.hidden = NO;
                 cell.progressView.hidden = NO;
                 
                 cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
                 cell.progressView.progress = offer.participantsProgress;
+                
+                if ([expirationString isEqualToString:Expiration_Time_Less_Than_A_Minute]) {
+                    cell.expirationTimeLabel.textColor = [UIColor expiringSoonColor];
+                } else {
+                    cell.expirationTimeLabel.textColor = [UIColor blackColor];
+                }
+            } else {
+                cell.remainingLabel.hidden = YES;
+                cell.progressView.hidden = YES;
+                
+                cell.expirationTimeLabel.textColor = [UIColor expiredColor];
             }
             
             return cell;
