@@ -29,7 +29,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"OfferTableViewCell" bundle:nil] forCellReuseIdentifier:OfferTableViewCellIdentifier];
     
 #if DEBUG
-    self.offers = [OffersManager parseFeaturedOffersFromJSONFile:@"featuredOffersTestData1.json"];
+    self.offers = [OffersManager parseFeaturedOffersFromJSONFile:@"featuredOffersMockDataSample1.json"];
     self.dataSource = [[FeaturedOffersDataSource alloc] initWithOffers:self.offers];
     self.tableView.dataSource = self.dataSource;
 #endif
