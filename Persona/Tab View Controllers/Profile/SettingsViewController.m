@@ -11,6 +11,8 @@
 #import "SettingsOption.h"
 #import "SettingsDataSource.h"
 #import "SettingsTableViewCell.h"
+#import "AppDelegate.h"
+#import "Constants.h"
 
 static NSString *SettingsTitle =        @"Settings";
 static NSString *SettingsSectionPlist = @"SettingsSectionNames.plist";
@@ -30,7 +32,7 @@ static const CGFloat SettingsHeaderViewHeight = 32.0f;
     self.title = SettingsTitle;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"SettingsTableViewCell" bundle:nil] forCellReuseIdentifier:SettingsTableViewCellIdentifier];
-    self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.tableFooterView = self.settingsFooterView;
     
     self.settings = [[Settings alloc] initWithSettingsPlist:SettingsSectionPlist];
     self.dataSource = [[SettingsDataSource alloc] initWithSettings:self.settings];
@@ -48,6 +50,16 @@ static const CGFloat SettingsHeaderViewHeight = 32.0f;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)logoutButtonPressed:(UIButton *)sender
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@NO forKey:IS_LOGGED_IN];
+    [userDefaults synchronize];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate logoutToWelcomeView:YES];
 }
 
 #pragma mark - UITableView Delegate Methods

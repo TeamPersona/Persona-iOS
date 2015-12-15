@@ -1,37 +1,47 @@
 //
-//  FeaturedOffersDataSource.m
+//  HomeOffersDataSource.m
 //  Persona
 //
 //  Created by Denny Kim on 2015-06-23.
 //  Copyright (c) 2015 Persona. All rights reserved.
 //
 
-#import "FeaturedOffersDataSource.h"
+#import "HomeOffersDataSource.h"
 
-@implementation FeaturedOffersDataSource
+@implementation HomeOffersDataSource
 
-- (id)initWithOffers:(NSArray *)offers
+//- (id)initWithOffers:(NSArray *)offers
+//{
+//    self = [super initWithOffers:offers];
+//    if (self) {
+//        
+//    }
+//    return self;
+//}
+
+- (id)init
 {
-    self = [super initWithOffers:offers];
+    self = [super init];
     if (self) {
         
     }
+    
     return self;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [super numberOfSectionsInTableView:tableView];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [super tableView:tableView numberOfRowsInSection:section];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    return nil;
 }
 
 

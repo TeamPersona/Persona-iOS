@@ -69,7 +69,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - Transition To Main
+#pragma mark - Transition To Main Tab View
 - (void)transitionToMainTabView:(BOOL)animated
 {
     [UIView transitionWithView:self.window
@@ -78,6 +78,18 @@
                                 UIViewAnimationOptionAllowAnimatedContent)
                     animations:^{
                         self.window.rootViewController = [[MainTabBarController alloc] initWithDefaultTabBarViewControllers];
+                    } completion:nil];
+}
+
+#pragma mark - Transition To Welcome View
+- (void)logoutToWelcomeView:(BOOL)animated
+{
+    [UIView transitionWithView:self.window
+                      duration:0.6
+                       options:(UIViewAnimationOptionTransitionFlipFromLeft |
+                                UIViewAnimationOptionAllowAnimatedContent)
+                    animations:^{
+                        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
                     } completion:nil];
 }
 

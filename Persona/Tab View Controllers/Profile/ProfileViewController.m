@@ -93,9 +93,11 @@
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
-    [self.navigationController pushViewController:offerDetailsVC animated:YES];
-    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    if (self.currentSelectedSegment == ProfileSegmentOffers) {
+        OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
+        [self.navigationController pushViewController:offerDetailsVC animated:YES];
+        [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    }
 }
 
 #pragma mark - UICollectionViewFlowLayout Delegate Methods

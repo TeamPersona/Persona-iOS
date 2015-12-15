@@ -38,13 +38,10 @@
 		C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C687F7641B61F6DE007DDA93 /* JSONManager.m */; };
 		C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
-		C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44161B3A050A00BA6405 /* FeaturedViewController.m */; };
-		C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44171B3A050A00BA6405 /* FeaturedViewController.xib */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
 		C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44281B3A05F200BA6405 /* ProfileViewController.m */; };
 		C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44291B3A05F200BA6405 /* ProfileViewController.xib */; };
-		C6AB44391B3A0EF200BA6405 /* FeaturedOffersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44381B3A0EF200BA6405 /* FeaturedOffersDataSource.m */; };
 		C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44531B3A1A1C00BA6405 /* Offer.m */; };
 		C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44611B3A1A7200BA6405 /* OffersManager.m */; };
 		C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44761B3A1F5100BA6405 /* Participant.m */; };
@@ -54,8 +51,6 @@
 		C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44831B3A274B00BA6405 /* BaseNavigationViewController.m */; };
 		C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */; };
 		C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */; };
-		C6AB44921B3A6C4300BA6405 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */; };
-		C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */; };
 		C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC081E1B5937DF0089E305 /* SettingsViewController.m */; };
 		C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */; };
 		C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08281B595EEF0089E305 /* SettingsSectionNames.plist */; };
@@ -63,6 +58,11 @@
 		C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */; };
 		C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */; };
 		C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08391B59DC7D0089E305 /* SettingsOption.m */; };
+		C6C027241C1FED7400692227 /* HomeOffersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271D1C1FED7400692227 /* HomeOffersDataSource.m */; };
+		C6C027251C1FED7400692227 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271F1C1FED7400692227 /* HomeViewController.m */; };
+		C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027201C1FED7400692227 /* HomeViewController.xib */; };
+		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
+		C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */; };
 		C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3DF1B1B6BC137009CC49C /* Money.m */; };
 		C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79AD1B5D7B60006873BD /* PointsData.m */; };
 		C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C21B5D7FDA006873BD /* PointsManager.m */; };
@@ -150,17 +150,12 @@
 		C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileBalanceInfoMockData.json; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		C6AB44151B3A050A00BA6405 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
-		C6AB44161B3A050A00BA6405 /* FeaturedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedViewController.m; sourceTree = "<group>"; };
-		C6AB44171B3A050A00BA6405 /* FeaturedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedViewController.xib; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
 		C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
 		C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreViewController.xib; sourceTree = "<group>"; };
 		C6AB44271B3A05F200BA6405 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		C6AB44281B3A05F200BA6405 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		C6AB44291B3A05F200BA6405 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		C6AB44371B3A0EF200BA6405 /* FeaturedOffersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedOffersDataSource.h; sourceTree = "<group>"; };
-		C6AB44381B3A0EF200BA6405 /* FeaturedOffersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedOffersDataSource.m; sourceTree = "<group>"; };
 		C6AB44521B3A1A1C00BA6405 /* Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
 		C6AB44531B3A1A1C00BA6405 /* Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
 		C6AB44601B3A1A7200BA6405 /* OffersManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersManager.h; sourceTree = "<group>"; };
@@ -180,9 +175,6 @@
 		C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferTableViewCell.m; sourceTree = "<group>"; };
 		C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		C6AB448B1B3A4CC600BA6405 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		C6AB448F1B3A6C4300BA6405 /* OfferDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailsViewController.h; sourceTree = "<group>"; };
-		C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailsViewController.m; sourceTree = "<group>"; };
-		C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetailsViewController.xib; sourceTree = "<group>"; };
 		C6BC081D1B5937DF0089E305 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C6BC081E1B5937DF0089E305 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +186,14 @@
 		C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C6BC08381B59DC7D0089E305 /* SettingsOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsOption.h; sourceTree = "<group>"; };
 		C6BC08391B59DC7D0089E305 /* SettingsOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsOption.m; sourceTree = "<group>"; };
+		C6C0271C1C1FED7400692227 /* HomeOffersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeOffersDataSource.h; sourceTree = "<group>"; };
+		C6C0271D1C1FED7400692227 /* HomeOffersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeOffersDataSource.m; sourceTree = "<group>"; };
+		C6C0271E1C1FED7400692227 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C6C0271F1C1FED7400692227 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C6C027201C1FED7400692227 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C6C027211C1FED7400692227 /* OfferDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailsViewController.h; sourceTree = "<group>"; };
+		C6C027221C1FED7400692227 /* OfferDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailsViewController.m; sourceTree = "<group>"; };
+		C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetailsViewController.xib; sourceTree = "<group>"; };
 		C6E3DF1A1B6BC137009CC49C /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		C6E3DF1B1B6BC137009CC49C /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		C6FD79AC1B5D7B60006873BD /* PointsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsData.h; sourceTree = "<group>"; };
@@ -401,27 +401,12 @@
 				C6AB44831B3A274B00BA6405 /* BaseNavigationViewController.m */,
 				C6AB447F1B3A258D00BA6405 /* BaseTabBarViewController.h */,
 				C6AB44801B3A258D00BA6405 /* BaseTabBarViewController.m */,
-				C6AB44141B3A050A00BA6405 /* Featured */,
+				C6C0271B1C1FED7400692227 /* Home */,
 				C6AB441A1B3A053100BA6405 /* Explore */,
 				C6533F851B69C76200A4D601 /* Messages */,
 				C6AB441C1B3A053D00BA6405 /* Profile */,
 			);
 			path = "Tab View Controllers";
-			sourceTree = "<group>";
-		};
-		C6AB44141B3A050A00BA6405 /* Featured */ = {
-			isa = PBXGroup;
-			children = (
-				C6AB44151B3A050A00BA6405 /* FeaturedViewController.h */,
-				C6AB44161B3A050A00BA6405 /* FeaturedViewController.m */,
-				C6AB44171B3A050A00BA6405 /* FeaturedViewController.xib */,
-				C6AB44371B3A0EF200BA6405 /* FeaturedOffersDataSource.h */,
-				C6AB44381B3A0EF200BA6405 /* FeaturedOffersDataSource.m */,
-				C6AB448F1B3A6C4300BA6405 /* OfferDetailsViewController.h */,
-				C6AB44901B3A6C4300BA6405 /* OfferDetailsViewController.m */,
-				C6AB44911B3A6C4300BA6405 /* OfferDetailsViewController.xib */,
-			);
-			path = Featured;
 			sourceTree = "<group>";
 		};
 		C6AB441A1B3A053100BA6405 /* Explore */ = {
@@ -538,6 +523,21 @@
 			);
 			path = "Test Data";
 			sourceTree = SOURCE_ROOT;
+		};
+		C6C0271B1C1FED7400692227 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C6C0271C1C1FED7400692227 /* HomeOffersDataSource.h */,
+				C6C0271D1C1FED7400692227 /* HomeOffersDataSource.m */,
+				C6C0271E1C1FED7400692227 /* HomeViewController.h */,
+				C6C0271F1C1FED7400692227 /* HomeViewController.m */,
+				C6C027201C1FED7400692227 /* HomeViewController.xib */,
+				C6C027211C1FED7400692227 /* OfferDetailsViewController.h */,
+				C6C027221C1FED7400692227 /* OfferDetailsViewController.m */,
+				C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
 		};
 		C6FD79C41B5D9CA7006873BD /* Collection View Cells */ = {
 			isa = PBXGroup;
@@ -663,7 +663,7 @@
 		C614651C1B39FE3600F1E5F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Persona;
 				TargetAttributes = {
 					C61465231B39FE3600F1E5F5 = {
@@ -699,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */,
 				C6FD79C91B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib in Resources */,
 				C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */,
@@ -709,6 +710,7 @@
 				C6533F8A1B69C76200A4D601 /* MessagesViewController.xib in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
+				C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
 				C6FD79F81B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.xib in Resources */,
 				C687F7531B6182DA007DDA93 /* featuredOffersMockDataSample1.json in Resources */,
@@ -717,12 +719,10 @@
 				C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */,
 				C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
-				C6AB44931B3A6C4300BA6405 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
 				C6FD7A081B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib in Resources */,
 				C687F7581B61EC09007DDA93 /* profileOffersMockData.json in Resources */,
 				C6FD79FE1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib in Resources */,
-				C6AB44191B3A050A00BA6405 /* FeaturedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,8 +778,10 @@
 				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
 				C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
+				C6C027241C1FED7400692227 /* HomeOffersDataSource.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
+				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
 				C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */,
 				C6BC08321B5964560089E305 /* Settings.m in Sources */,
@@ -790,7 +792,7 @@
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
 				C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */,
 				C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */,
-				C6AB44391B3A0EF200BA6405 /* FeaturedOffersDataSource.m in Sources */,
+				C6C027251C1FED7400692227 /* HomeViewController.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
 				C687F75C1B61F4DE007DDA93 /* RewardDataPoint.m in Sources */,
 				C6FD79C81B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m in Sources */,
@@ -801,7 +803,6 @@
 				C6533F891B69C76200A4D601 /* MessagesViewController.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
 				C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */,
-				C6AB44181B3A050A00BA6405 /* FeaturedViewController.m in Sources */,
 				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
@@ -810,7 +811,6 @@
 				C6FD79F31B5E80B9006873BD /* SpacingAndSizingCalculations.m in Sources */,
 				C6FD79D31B5DA077006873BD /* OffersDataSource.m in Sources */,
 				C6FD79D61B5DA077006873BD /* SettingsDataSource.m in Sources */,
-				C6AB44921B3A6C4300BA6405 /* OfferDetailsViewController.m in Sources */,
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
 				C6FD7A071B5EFA12006873BD /* ProfileOffersCollectionViewCell.m in Sources */,
 				C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */,
@@ -877,6 +877,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -944,6 +945,7 @@
 				INFOPLIST_FILE = Persona/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.persona.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -956,6 +958,7 @@
 				INFOPLIST_FILE = Persona/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.persona.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -974,6 +977,7 @@
 				);
 				INFOPLIST_FILE = PersonaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.persona.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Persona.app/Persona";
 			};
@@ -989,6 +993,7 @@
 				);
 				INFOPLIST_FILE = PersonaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.persona.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Persona.app/Persona";
 			};

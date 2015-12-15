@@ -6,19 +6,19 @@
 //  Copyright (c) 2015 Persona. All rights reserved.
 //
 
-#import "FeaturedViewController.h"
-#import "FeaturedOffersDataSource.h"
+#import "HomeViewController.h"
+#import "HomeOffersDataSource.h"
 #import "OfferDetailsViewController.h"
 #import "OfferTableViewCell.h"
 #import "OffersManager.h"
 #import "Constants.h"
 
-@interface FeaturedViewController ()
-@property (nonatomic, strong) FeaturedOffersDataSource *dataSource;
+@interface HomeViewController ()
+@property (nonatomic, strong) HomeOffersDataSource *dataSource;
 @property (nonatomic, strong) NSArray *offers;
 @end
 
-@implementation FeaturedViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad
 {
@@ -30,7 +30,7 @@
     
 #if DEBUG
     self.offers = [OffersManager parseFeaturedOffersFromJSONFile:@"featuredOffersMockDataSample1.json"];
-    self.dataSource = [[FeaturedOffersDataSource alloc] initWithOffers:self.offers];
+    self.dataSource = [[HomeOffersDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;
 #endif
     

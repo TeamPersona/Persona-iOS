@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 - (void)transitionToMainTabView:(BOOL)animated;
+- (void)logoutToWelcomeView:(BOOL)animated;
 
 @end
 

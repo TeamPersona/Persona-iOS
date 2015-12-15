@@ -8,7 +8,7 @@
 
 #import "BaseTabBarViewController.h"
 
-@interface FeaturedViewController : BaseTabBarViewController <UITableViewDelegate>
+@interface HomeViewController : BaseTabBarViewController <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

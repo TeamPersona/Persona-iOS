@@ -11,5 +11,6 @@
 @interface SettingsViewController : UIViewController <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *settingsFooterView;
 
 @end

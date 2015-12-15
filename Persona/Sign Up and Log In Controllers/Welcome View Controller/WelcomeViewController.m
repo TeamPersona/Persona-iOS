@@ -77,7 +77,9 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
 - (IBAction)segmentedControlValueDidChange:(UISegmentedControl *)sender
 {
     self.currentWelcomeState = sender.selectedSegmentIndex;
-    [self hideKeyboard];
+    if (self.passwordTextField.isFirstResponder) {
+        [self.emailTextField becomeFirstResponder];
+    }
     
     self.emailTextField.text = @"";
     self.passwordTextField.text = @"";
@@ -179,7 +181,6 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
         [userDefaults synchronize];
     }
 }
-
 
 #pragma mark - Keyboard
 - (void)hideKeyboard

@@ -9,24 +9,24 @@
 #import "MainTabBarController.h"
 
 #import "BaseNavigationViewController.h"
-#import "FeaturedViewController.h"
+#import "HomeViewController.h"
 #import "ExploreViewController.h"
 #import "MessagesViewController.h"
 #import "ProfileViewController.h"
 
-static NSString *TabBarFeaturedTitle =  @"Featured";
+static NSString *TabBarHomeTitle =      @"Home";
 static NSString *TabBarExploreTitle =   @"Explore";
 static NSString *TabBarMessagesTitle =  @"Messages";
 static NSString *TabBarProfileTitle =   @"Profile";
 
 
 @interface MainTabBarController ()
-@property (nonatomic, strong) BaseNavigationViewController *featuredNavVC;
+@property (nonatomic, strong) BaseNavigationViewController *homeNavVC;
 @property (nonatomic, strong) BaseNavigationViewController *exploreNavVC;
 @property (nonatomic, strong) BaseNavigationViewController *messagesNavVC;
 @property (nonatomic, strong) BaseNavigationViewController *profileNavVC;
 
-@property (nonatomic, strong) FeaturedViewController *featuredVC;
+@property (nonatomic, strong) HomeViewController *homeVC;
 @property (nonatomic, strong) ExploreViewController *exploreVC;
 @property (nonatomic, strong) MessagesViewController *messagesVC;
 @property (nonatomic, strong) ProfileViewController *profileVC;
@@ -38,17 +38,17 @@ static NSString *TabBarProfileTitle =   @"Profile";
 {
     self = [super init];
     if (self) {
-        self.featuredVC = [[FeaturedViewController alloc] initWithTabBarTitle:TabBarFeaturedTitle];
+        self.homeVC = [[HomeViewController alloc] initWithTabBarTitle:TabBarHomeTitle];
         self.exploreVC = [[ExploreViewController alloc] initWithTabBarTitle:TabBarExploreTitle];
         self.messagesVC = [[MessagesViewController alloc] initWithTabBarTitle:TabBarMessagesTitle];
         self.profileVC = [[ProfileViewController alloc] initWithTabBarTitle:TabBarProfileTitle];
 
-        self.featuredNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.featuredVC];
+        self.homeNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.homeVC];
         self.exploreNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.exploreVC];
         self.messagesNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.messagesVC];
         self.profileNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.profileVC];
         
-        [self setViewControllers:@[self.featuredNavVC, self.exploreNavVC, self.messagesNavVC, self.profileNavVC]];
+        [self setViewControllers:@[self.homeNavVC, self.exploreNavVC, self.messagesNavVC, self.profileNavVC]];
     }
     return self;
 }
