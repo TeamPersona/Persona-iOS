@@ -10,11 +10,9 @@
 #define Persona_RewardTier_h
 
 typedef NS_ENUM(NSUInteger, RewardTier) {
-    RewardTierBasic,
-    RewardTierBronze,
+    RewardTierDefault,
     RewardTierSilver,
-    RewardTierGold,
-    RewardTierDiamond
+    RewardTierGold
 };
 
 // TODO: make into class that returns image name for reward tier (i.e. RewardTierBasic -> "rewardTierBasic.png")

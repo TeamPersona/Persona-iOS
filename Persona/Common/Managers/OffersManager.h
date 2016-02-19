@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, OfferSortType) {
     OfferSortTypeCategory
 };
 
-+ (NSArray *)parseFeaturedOffersFromJSONFile:(NSString *)fileLocation;
++ (NSArray *)parseRecommendedOffersFromJSONFile:(NSString *)fileLocation;
 + (NSArray *)parseProfileOffersFromJSONFile:(NSString *)fileLocation;
 + (NSArray *)sortOffers:(NSArray *)offers bySortType:(OfferSortType)sortType;
 

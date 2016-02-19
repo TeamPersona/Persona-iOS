@@ -7,8 +7,9 @@
 //
 
 #import "BaseTabBarViewController.h"
+#import "SideScrollingCollectionTableViewCell.h"
 
-@interface HomeViewController : BaseTabBarViewController <UITableViewDelegate>
+@interface HomeViewController : BaseTabBarViewController <UITableViewDelegate, UITableViewDataSource, SideScrollingCollectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

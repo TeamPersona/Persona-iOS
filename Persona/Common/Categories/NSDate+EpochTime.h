@@ -12,4 +12,6 @@
 
 + (NSDate *)dateWithEpochTime:(NSNumber *)epochTime;
 
+- (NSNumber *)epochTime;
+
 @end

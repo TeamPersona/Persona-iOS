@@ -1,0 +1,111 @@
+{
+  "partners":[
+    {
+      "partnerId":1,
+      "partnerName":"Walmart",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/walmart-logo.jpg",
+      "offerType": ["Food & Dining", "Grocery"]
+    },
+    {
+      "partnerId":2,
+      "partnerName":"Apple",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
+      "offerType": ["Tech", "Mobile", "Music"]
+    },
+    {
+      "partnerId":3,
+      "partnerName":"General Motors",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/General_Motors_logo.png",
+      "offerType": ["Automotive", "Auto Dealers"]
+    },
+    {
+      "partnerId":4,
+      "partnerName":"Ford Motor",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
+      "offerType": ["Automotive", "Auto Dealers"]
+    },
+    {
+      "partnerId":5,
+      "partnerName":"Costco",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Costco_Wholesale.svg.png",
+      "offerType": ["Food & Dining", "Grocery"]
+    },
+    {
+      "partnerId":6,
+      "partnerName":"HP",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
+      "offerType": ["Tech", "Computers"]
+    },
+    {
+      "partnerId":7,
+      "partnerName":"Boeing",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Boeing-Logo.svg.png",
+      "offerType": ["Travel", "Tourism"]
+    },
+    {
+      "partnerId":8,
+      "partnerName":"IBM",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/640px-IBM_logo.svg.png",
+      "offerType": ["Tech", "Cloud Computing Services"]
+    },
+    {
+      "partnerId":9,
+      "partnerName":"Air Canada",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/640px-Air_Canada_Logo.svg.png",
+      "offerType": ["Travel", "Tourism"]
+    },
+    {
+      "partnerId":10,
+      "partnerName":"Home Depot",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/home-depot-logo.png",
+      "offerType": ["Home & Garden", "Home Improvements"]
+    },
+    {
+      "partnerId":11,
+      "partnerName":"BMW",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/500px-BMW.svg.png",
+      "offerType": ["Automotive", "Auto Dealers", "Used Vehicles"]
+    },
+    {
+      "partnerId":12,
+      "partnerName":"Canadian Tire",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/CT_Classic_StdKey_RGB.png",
+      "offerType": ["Home & Garden", "Landscape", "Lawn Service"]
+    },
+    {
+      "partnerId":13,
+      "partnerName":"Best Buy",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Best_Buy_Logo.svg.png",
+      "offerType": ["Tech", "Computers", "Keyboards"]
+    },
+    {
+      "partnerId":14,
+      "partnerName":"Disney",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
+      "offerType": ["Entertainment", "Amusement Park", "Family"]
+    },
+    {
+      "partnerId":15,
+      "partnerName":"Shopper Drug Mart",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/shoppers-drug-mart-logo.png",
+      "offerType": ["Personal Care", "Beauty Supplies"]
+    },
+    {"partnerId":16,
+      "partnerName":"Nike",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/640px-Logo_NIKE.svg.png",
+      "offerType": ["Clothing", "Sporting Goods", "Shoes"]
+    },
+    {
+      "partnerId":17,
+      "partnerName":"Staples",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Staples.svg.png",
+      "offerType": ["Business", "Office Supplies"]
+    },
+    {
+      "partnerId":18,
+      "partnerName":"Cineplex",
+      "partnerImageURL":"https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
+      "offerType": ["Entertainment", "Movies"]
+    }
+  ]
+}

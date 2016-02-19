@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Offer.h"
 
 static NSString *OfferTableViewCellIdentifier = @"offerCell";
 
@@ -19,9 +20,13 @@ static const CGFloat OfferTableViewCellHeightExpired =  73.0f;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *partnerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *expirationImageView;
 @property (weak, nonatomic) IBOutlet UILabel *expirationTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *remainingLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userIcon;
+
+- (void)populateOfferInfo:(Offer *)offer;
 
 @end

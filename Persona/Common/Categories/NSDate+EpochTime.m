@@ -15,4 +15,9 @@
     return [NSDate dateWithTimeIntervalSince1970:[epochTime doubleValue]];
 }
 
+- (NSNumber *)epochTime
+{
+    return [NSNumber numberWithDouble:[self timeIntervalSince1970]];
+}
+
 @end

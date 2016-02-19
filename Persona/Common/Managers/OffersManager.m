@@ -17,29 +17,29 @@ static const NSString *API_JSON_Partner_Name =          @"partnerName";
 static const NSString *API_JSON_Partner_ImageURL =      @"partnerImageURL";
 static const NSString *API_JSON_Offer_Id =              @"offerId";
 static const NSString *API_JSON_Offer_Details =         @"offerDetails";
-static const NSString *API_JSON_Category_Filters =      @"categoryFilters";
-static const NSString *API_JSON_Category_Requested =    @"categoryRequested";
+static const NSString *API_JSON_Info_Filters =          @"offerFilters";
+static const NSString *API_JSON_Info_Required =         @"offerInfoRequired";
 static const NSString *API_JSON_Category =              @"category";
-static const NSString *API_JSON_Expiration_Date =       @"expirationDate";
-static const NSString *API_JSON_Reward_Value =          @"rewardValue";
-static const NSString *API_JSON_Current_Participants =  @"currNumParticipants";
-static const NSString *API_JSON_Max_Participants =      @"maxParticipants";
+static const NSString *API_JSON_Expiration_Date =       @"offerExpirationDate";
+static const NSString *API_JSON_Reward_Value =          @"offerReward";
+static const NSString *API_JSON_Current_Participants =  @"offerCurrentParticipants";
+static const NSString *API_JSON_Max_Participants =      @"offerMaxParticipants";
 static const NSString *API_JSON_Does_Match_Filters =    @"doesMatchFilters";
 
-static const NSString *API_JSON_Category_Metadata_Name =        @"category";
-static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"isMissing";
+static const NSString *API_JSON_Category_Metadata_Name =        @"informationType";
+static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"informationMissing";
 
 typedef NS_ENUM(NSUInteger, OffersJSONType) {
-    OffersJSONTypeFeatured,
+    OffersJSONTypeRecommended,
     OffersJSONTypeProfile
 };
 
 
 @implementation OffersManager
 
-+ (NSArray *)parseFeaturedOffersFromJSONFile:(NSString *)fileLocation
++ (NSArray *)parseRecommendedOffersFromJSONFile:(NSString *)fileLocation
 {
-    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeFeatured];
+    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeRecommended];
 }
 
 + (NSArray *)parseProfileOffersFromJSONFile:(NSString *)fileLocation
@@ -56,7 +56,7 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     }
     
     NSDictionary *jsonOffers;
-    if (offerType == OffersJSONTypeFeatured) {
+    if (offerType == OffersJSONTypeRecommended) {
         jsonOffers = json[API_JSON_Root_Offers];
     } else if (offerType == OffersJSONTypeProfile) {
         jsonOffers = json[API_JSON_Root_Profile_Offers];
@@ -95,14 +95,15 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     if (jsonOffer[API_JSON_Offer_Details] != nil) {
         offer.offerDescription = jsonOffer[API_JSON_Offer_Details];
     }
-    if (jsonOffer[API_JSON_Category_Filters] != nil) {
-        offer.categoryFilterList = [self parseCategoryWithMetadata:jsonOffer[API_JSON_Category_Filters]];
+    if (jsonOffer[API_JSON_Info_Filters] != nil) {
+        NSDictionary *infos = jsonOffer[API_JSON_Info_Filters];
+        offer.filterCategoriesList = infos.allKeys;
+        offer.infoFilterList = [self parseOfferInfosWithMetadata:infos];
     }
-    if (jsonOffer[API_JSON_Category_Requested] != nil) {
-        offer.categoryRequestedList = [self parseCategoryWithMetadata:jsonOffer[API_JSON_Category_Requested]];
-    }
-    if (jsonOffer[API_JSON_Category] != nil) {
-        offer.categoryList = jsonOffer[API_JSON_Category];
+    if (jsonOffer[API_JSON_Info_Required] != nil) {
+        NSDictionary *infos = jsonOffer[API_JSON_Info_Required];
+        offer.requiredCategoriesList = infos.allKeys;
+        offer.infoRequiredList = [self parseOfferInfosWithMetadata:infos];
     }
     if (jsonOffer[API_JSON_Expiration_Date] != nil) {
         offer.expirationDate = [NSDate dateWithEpochTime:jsonOffer[API_JSON_Expiration_Date]];
@@ -116,9 +117,6 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     if (jsonOffer[API_JSON_Max_Participants] != nil) {
         offer.totalParticipants = [jsonOffer[API_JSON_Max_Participants] integerValue];
     }
-    if (jsonOffer[API_JSON_Does_Match_Filters] != nil) {
-        offer.doesMatchFilter = [jsonOffer[API_JSON_Does_Match_Filters] boolValue];
-    }
     
     if (partner.name != nil && partner.userId) {
         offer.partner = partner;
@@ -127,13 +125,14 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     return offer;
 }
 
-+ (NSDictionary *)parseCategoryWithMetadata:(NSArray *)categoryList
++ (NSArray *)parseOfferInfosWithMetadata:(NSDictionary *)offerInfos
 {
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:categoryList.count];
-    for (NSDictionary *categoryMetadata in categoryList) {
-        [dict setObject:categoryMetadata[API_JSON_Category_Metadata_Is_Missing] forKey:categoryMetadata[API_JSON_Category_Metadata_Name]];
+    NSMutableArray *infos = [[NSMutableArray alloc] init];
+    for (NSString *key in offerInfos.allKeys) {
+        [infos addObjectsFromArray:offerInfos[key]];
     }
-    return dict;
+    
+    return infos;
 }
 
 @end

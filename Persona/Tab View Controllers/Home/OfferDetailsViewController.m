@@ -47,6 +47,8 @@ static const CGFloat TextViewPadding = 16.0f;
 - (void)populateViewInformation
 {
     [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
+    self.partnerImageView.layer.minificationFilter = kCAFilterTrilinear;
+    
     self.partnerLabel.text = self.offer.partner.name;
     
     NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate currentDate:[NSDate date]];
@@ -62,11 +64,11 @@ static const CGFloat TextViewPadding = 16.0f;
     self.participantsLabel.text = [NSString stringWithFormat:@"%li/%li participants", self.offer.currentParticipants, self.offer.totalParticipants];
     self.progressView.progress = self.offer.participantsProgress;
     
-    self.filterCategoriesTextView.attributedText = [self attributedStringWithCategories:self.offer.categoryFilterList andDescription:FilterCategoriesPrefixDescription];
-    self.requestedCategoriesTextView.attributedText = [self attributedStringWithCategories:self.offer.categoryRequestedList andDescription:RequestedCategoriesPrefixDescription];
+    self.filterCategoriesTextView.attributedText = [self attributedStringWithInfo:self.offer.infoFilterList andDescription:FilterCategoriesPrefixDescription];
+    self.requestedCategoriesTextView.attributedText = [self attributedStringWithInfo:self.offer.infoRequiredList andDescription:RequestedCategoriesPrefixDescription];
     self.detailsTextView.text = self.offer.offerDescription;
     
-    if (self.offer.isEligible && self.offer.doesMatchFilter) {
+    if (self.offer.isEligible) {
         self.participateButton.hidden = NO;
         self.eligibilityLabel.hidden = YES;
     } else {
@@ -113,31 +115,32 @@ static const CGFloat TextViewPadding = 16.0f;
 
 #pragma mark - Offer Details String Formatter
 /**
- Creates the attributed string for a list of categories.
+ Creates the attributed string for a list of personal info.
  
- @param categoriesList
+ @param infoList
     The categories parameter is a dictionary where the keys are NSStrings for the categories to list and the
-    values are NSNumbers to indicate whether this category type of information is missing from the user's profile.
+    values are NSNumbers to indicate whether this type of information is missing from the user's profile.
  
  @param descriptionString
-        The prefix string before listing the categories
+        The prefix string before listing the personal info types
  */
-- (NSAttributedString *)attributedStringWithCategories:(NSDictionary *)categories andDescription:(NSString *)descriptionString
+- (NSAttributedString *)attributedStringWithInfo:(NSArray *)infoDict andDescription:(NSString *)descriptionString
 {
     NSDictionary *prefixStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.0f]};
     NSDictionary *defaultStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f]};
-    NSDictionary *missingCategoryStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f],
+    NSDictionary *missingStringAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f],
                                                       NSForegroundColorAttributeName: [UIColor colorWithRed:220.0/255.0 green:8.0/255.0 blue:8.0/255.0 alpha:1.0]};
     
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", descriptionString] attributes:prefixStringAttributes];
     
-    for (NSString *category in categories.allKeys) {
-        BOOL isMissing = [categories[category] boolValue];
-        NSDictionary *attributes = isMissing ? missingCategoryStringAttributes : defaultStringAttributes;
+    for (NSDictionary *info in infoDict) {
+        BOOL isMissing = [info[@"informationMissing"] boolValue];
+        NSString *infoType = info[@"informationType"];
+        NSDictionary *attributes = isMissing ? missingStringAttributes : defaultStringAttributes;
         
-        NSMutableAttributedString *categoryAttrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n• %@", category]];
-        [categoryAttrString setAttributes:attributes range:NSMakeRange(3, category.length)];
-        [attrString appendAttributedString:categoryAttrString];
+        NSMutableAttributedString *infoAttrString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n• %@", infoType]];
+        [infoAttrString setAttributes:attributes range:NSMakeRange(3, infoType.length)];
+        [attrString appendAttributedString:infoAttrString];
     }
     
     return attrString;

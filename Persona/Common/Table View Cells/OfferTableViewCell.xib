@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -12,27 +13,32 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-G3-1A9" userLabel="Partner Title">
-                        <rect key="frame" x="72" y="8" width="213" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" lineBreakMode="tailTruncation" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-G3-1A9" userLabel="Partner Title">
+                        <rect key="frame" x="72" y="8" width="208" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="FPR-Mp-Oe1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-Ag-ev1" userLabel="Expiration Date">
-                        <rect key="frame" x="293" y="8" width="74" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="&gt; 1 week" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-Ag-ev1" userLabel="Expiration Date">
+                        <rect key="frame" x="307" y="8" width="60" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="0Ud-f2-oyY"/>
                             <constraint firstAttribute="width" constant="74" id="tqT-a1-bwW"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tqT-a1-bwW"/>
+                            </mask>
+                        </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S00-Dz-2Au" userLabel="Partner Image View">
                         <rect key="frame" x="8" y="8" width="56" height="56"/>
@@ -41,38 +47,57 @@
                         </constraints>
                     </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dy7-oe-svs">
-                        <rect key="frame" x="8" y="76" width="251" height="2"/>
+                        <rect key="frame" x="8" y="76" width="272" height="2"/>
                         <color key="progressTintColor" red="0.1803921568627451" green="0.34509803921568627" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </progressView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-90-Yg4" userLabel="Participants Remaining">
-                        <rect key="frame" x="267" y="61" width="100" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-90-Yg4" userLabel="Participants Remaining">
+                        <rect key="frame" x="307" y="62" width="60" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="1ev-CS-dDp"/>
                             <constraint firstAttribute="width" constant="100" id="VYL-Bk-ge2"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VYL-Bk-ge2"/>
+                            </mask>
+                        </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-1E-8Rf" userLabel="Reward Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.50" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-1E-8Rf" userLabel="Reward Label">
                         <rect key="frame" x="293" y="35" width="74" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="74" id="XHO-8K-8rB"/>
                             <constraint firstAttribute="height" constant="24" id="g67-l2-33e"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWc-bd-YOl" userLabel="Category Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Information" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWc-bd-YOl" userLabel="Category Label">
                         <rect key="frame" x="72" y="29" width="213" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="MuD-X2-etZ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="Qsl-kP-rfd">
+                        <rect key="frame" x="288" y="62" width="15" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="afe-Rf-eEZ"/>
+                            <constraint firstAttribute="height" constant="19" id="zPZ-uT-ghC"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timer" translatesAutoresizingMaskIntoConstraints="NO" id="INS-pZ-mei">
+                        <rect key="frame" x="288" y="13" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="vK7-Sv-9X2"/>
+                            <constraint firstAttribute="width" constant="15" id="wV9-81-mPX"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="leading" secondItem="S00-Dz-2Au" secondAttribute="trailing" constant="8" id="1ft-Yk-D96"/>
@@ -80,31 +105,51 @@
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4GS-n5-RDs"/>
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="5L8-fR-E60"/>
                     <constraint firstItem="ThT-90-Yg4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6Sq-IJ-mAl"/>
+                    <constraint firstItem="lzx-Ag-ev1" firstAttribute="leading" secondItem="INS-pZ-mei" secondAttribute="trailing" constant="4" id="8x8-Pb-Ggp"/>
                     <constraint firstItem="NWc-bd-YOl" firstAttribute="leading" secondItem="S00-Dz-2Au" secondAttribute="trailing" constant="8" id="9oR-Sz-j7G"/>
                     <constraint firstItem="dy7-oe-svs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="J29-vc-WZK"/>
                     <constraint firstItem="NWc-bd-YOl" firstAttribute="top" secondItem="3bu-G3-1A9" secondAttribute="bottom" constant="-3" id="KRa-Sc-Hip"/>
+                    <constraint firstItem="Qsl-kP-rfd" firstAttribute="leading" secondItem="dy7-oe-svs" secondAttribute="trailing" constant="8" id="Mpv-N5-2UU"/>
                     <constraint firstItem="lzx-Ag-ev1" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="NUF-8q-6kj"/>
+                    <constraint firstItem="INS-pZ-mei" firstAttribute="leading" secondItem="3bu-G3-1A9" secondAttribute="trailing" constant="8" id="PqF-Zj-O9k"/>
                     <constraint firstItem="dNx-1E-8Rf" firstAttribute="top" secondItem="lzx-Ag-ev1" secondAttribute="bottom" constant="3" id="RTa-33-stj"/>
                     <constraint firstItem="lzx-Ag-ev1" firstAttribute="leading" secondItem="3bu-G3-1A9" secondAttribute="trailing" constant="8" id="Uce-NQ-tmj"/>
                     <constraint firstItem="ThT-90-Yg4" firstAttribute="leading" secondItem="dy7-oe-svs" secondAttribute="trailing" constant="8" id="VJc-6P-Hj1"/>
+                    <constraint firstItem="ThT-90-Yg4" firstAttribute="leading" secondItem="Qsl-kP-rfd" secondAttribute="trailing" constant="4" id="WhH-bh-JEw"/>
                     <constraint firstItem="S00-Dz-2Au" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ZQq-QW-7US"/>
                     <constraint firstItem="dNx-1E-8Rf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gdB-C6-W8V"/>
                     <constraint firstAttribute="bottomMargin" secondItem="dy7-oe-svs" secondAttribute="bottom" constant="3" id="jOj-E6-E8l"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ThT-90-Yg4" secondAttribute="bottom" constant="-4" id="jZs-e5-hC5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ThT-90-Yg4" secondAttribute="bottom" constant="-5" id="jZs-e5-hC5"/>
+                    <constraint firstItem="INS-pZ-mei" firstAttribute="centerY" secondItem="lzx-Ag-ev1" secondAttribute="centerY" id="leD-DE-cpu"/>
                     <constraint firstItem="lzx-Ag-ev1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="rpY-XL-PtN"/>
                     <constraint firstItem="S00-Dz-2Au" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sZX-ho-5m7"/>
+                    <constraint firstItem="Qsl-kP-rfd" firstAttribute="centerY" secondItem="ThT-90-Yg4" secondAttribute="centerY" constant="-2.5" id="wkE-YI-UAF"/>
+                    <constraint firstItem="INS-pZ-mei" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="xDn-hh-iFs"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="xDn-hh-iFs"/>
+                        <exclude reference="Uce-NQ-tmj"/>
+                        <exclude reference="VJc-6P-Hj1"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryLabel" destination="NWc-bd-YOl" id="pbe-cO-K26"/>
+                <outlet property="expirationImageView" destination="INS-pZ-mei" id="LDu-gu-zyt"/>
                 <outlet property="expirationTimeLabel" destination="lzx-Ag-ev1" id="HAI-p7-OSd"/>
                 <outlet property="partnerImageView" destination="S00-Dz-2Au" id="IQs-SO-4a6"/>
                 <outlet property="progressView" destination="dy7-oe-svs" id="csS-pZ-zuX"/>
                 <outlet property="remainingLabel" destination="ThT-90-Yg4" id="iwO-dB-mj9"/>
                 <outlet property="rewardLabel" destination="dNx-1E-8Rf" id="jcx-7i-RA5"/>
                 <outlet property="titleLabel" destination="3bu-G3-1A9" id="iUS-ao-0ae"/>
+                <outlet property="userIcon" destination="Qsl-kP-rfd" id="Te5-OX-mB3"/>
             </connections>
             <point key="canvasLocation" x="514.5" y="427"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Timer" width="300" height="300"/>
+        <image name="User" width="122" height="148"/>
+    </resources>
 </document>

@@ -9,7 +9,7 @@
 #import "Offer.h"
 
 @interface Offer ()
-@property (nonatomic, strong) NSMutableOrderedSet *_missingCategoriesSet;
+@property (nonatomic, strong) NSMutableOrderedSet *_missingInfoSet;
 @end
 
 @implementation Offer
@@ -18,7 +18,7 @@
 {
     self = [super init];
     if (self) {
-        self._missingCategoriesSet = [[NSMutableOrderedSet alloc] init];
+        self._missingInfoSet = [[NSMutableOrderedSet alloc] init];
     }
     return self;
 }
@@ -33,31 +33,31 @@
     return (CGFloat)self.currentParticipants / (CGFloat)self.totalParticipants;
 }
 
-- (void)setCategoryFilterList:(NSDictionary *)categoryFilterList
+- (void)setInfoFilterList:(NSArray *)infoFilterList
 {
-    _categoryFilterList = categoryFilterList;
-    
-    for (NSString *categoryName in _categoryFilterList.allKeys) {
-        if ([_categoryFilterList[categoryName] boolValue]) {
-            [self._missingCategoriesSet addObject:categoryName];
+    _infoFilterList = infoFilterList;
+
+    for (NSDictionary *info in _infoFilterList) {
+        if ([info[@"informationMissing"] boolValue]) {
+            [self._missingInfoSet addObject:info[@"informationType"]];
         }
     }
 }
 
-- (void)setCategoryRequestedList:(NSDictionary *)categoryRequestedList
+- (void)setInfoRequiredList:(NSArray *)infoRequiredList
 {
-    _categoryRequestedList = categoryRequestedList;
+    _infoRequiredList = infoRequiredList;
     
-    for (NSString *categoryName in _categoryRequestedList.allKeys) {
-        if ([_categoryRequestedList[categoryName] boolValue]) {
-            [self._missingCategoriesSet addObject:categoryName];
+    for (NSDictionary *info in _infoRequiredList) {
+        if ([info[@"informationMissing"] boolValue]) {
+            [self._missingInfoSet addObject:info[@"informationType"]];
         }
     }
 }
 
 - (BOOL)isEligible
 {
-    return (self._missingCategoriesSet.count == 0);
+    return (self._missingInfoSet.count == 0);
 }
 
 - (BOOL)isExpired
@@ -67,13 +67,13 @@
 
 - (NSArray *)missingInformationCategories
 {
-    [self._missingCategoriesSet sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    [self._missingInfoSet sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         NSString *str1 = obj1;
         NSString *str2 = obj2;
         return [str1 compare:str2];
     }];
     
-    return self._missingCategoriesSet.array;
+    return self._missingInfoSet.array;
 }
 
 @end

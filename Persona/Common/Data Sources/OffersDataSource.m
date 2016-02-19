@@ -50,7 +50,7 @@
 //                                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //
 //    }];
-    cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
+    cell.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
     cell.rewardLabel.text = offer.rewardString;
     
     NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate currentDate:[NSDate date]];

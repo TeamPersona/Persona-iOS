@@ -1,0 +1,182 @@
+{
+  "userMissingInfo": {
+    "Basic": [
+      {
+        "informationMissing": false,
+        "informationType": "First Name"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Last Name"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Date of Birth"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Gender"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Ethnicity"
+      },
+      {
+        "informationMissing": true,
+        "informationType": "Home Address"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Allow Contact"
+      }
+    ],
+    "Employment": [
+      {
+        "informationMissing": false,
+        "informationType": "Current Employer"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Employment History"
+      }
+    ],
+    "Entertainment": [
+      {
+        "informationMissing": false,
+        "informationType": "TV Shows Interests"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Movie Interests"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Book Interests"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Favorite Sports Teams"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Video Game Interests"
+      }
+    ],
+    "Financial": [
+      {
+        "informationMissing": false,
+        "informationType": "Salary"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Purchase History"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Credit Score"
+      }
+    ],
+    "Heath & Fitness": [
+      {
+        "informationMissing": false,
+        "informationType": "Height"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Weight"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Has Eyewear"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Disabilities"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Medical History"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Steps Taken History"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Sleep Tracking History"
+      }
+    ],
+    "Personal": [
+      {
+        "informationMissing": false,
+        "informationType": "Education"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Marital Status"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Number of Dependents"
+      },
+      {
+        "informationMissing": true,
+        "informationType": "Political Affliations"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Religion"
+      }
+    ],
+    "Social": [
+      {
+        "informationMissing": false,
+        "informationType": "Facebook Friends List"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Facebook Statuses"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Facebook Events"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Twitter Following List"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Twitter Followers List"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Twitter Favorties"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Twitter Retweets"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Instagram Following List"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Instagram Followers List"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Instagram Photos"
+      },
+      {
+        "informationMissing": true,
+        "informationType": "Swarm Check-ins"
+      },
+      {
+        "informationMissing": false,
+        "informationType": "Yelp Reviews"
+      }
+    ]
+  }
+}

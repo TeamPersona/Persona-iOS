@@ -8,27 +8,35 @@
 
 #import <Foundation/Foundation.h>
 #import "Partner.h"
+#import "OfferStatus.h"
 
 @interface Offer : NSObject
 
 @property (nonatomic) NSInteger offerId;
+@property (nonatomic) OfferStatus offerStatus;
 @property (nonatomic, strong) Partner *partner;
+@property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSNumber *rewardValue;
 @property (nonatomic, strong) NSString *rewardString;
-@property (nonatomic, strong) NSArray *categoryList; // TODO: Make category types
 @property (nonatomic) NSInteger currentParticipants;
 @property (nonatomic) NSInteger totalParticipants;
 @property (nonatomic) CGFloat participantsProgress;
 
 // Offer Details
-@property (nonatomic, strong) NSDictionary *categoryFilterList;
-@property (nonatomic, strong) NSDictionary *categoryRequestedList;
+@property (nonatomic, strong) NSArray *infoFilterList;
+@property (nonatomic, strong) NSArray *infoRequiredList;
+@property (nonatomic, strong) NSArray *filterCategoriesList;
+@property (nonatomic, strong) NSArray *requiredCategoriesList;
+
 @property (nonatomic, strong) NSString *offerDescription;
 
-@property (nonatomic) BOOL doesMatchFilter;
-@property (nonatomic, readonly) BOOL isEligible;
+@property (nonatomic) BOOL isEligible;
 @property (nonatomic, readonly) BOOL isExpired;
-@property (nonatomic, readonly) NSArray *missingInformationCategories;
+@property (nonatomic, readonly) NSArray *missingInformationList;
+
+// Message
+@property (nonatomic) BOOL didReadMessage;
+@property (nonatomic) NSInteger messageId;
 
 @end

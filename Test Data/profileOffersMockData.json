@@ -1,205 +1,204 @@
 {
-    "profileOffers":[
-              {
-              "partnerId":40847,
-              "partnerName":"BMW",
-              "partnerImageURL":"http://img2.wikia.nocookie.net/__cb20100516075848/logopedia/images/archive/2/25/20150410110027!BMW_logo.png",
-              "offerId":99381,
-              "offerDetails":"BMW is looking for the next new drivers for our i8 model - the most progressive sports car. The BMW i8 is ready to revolutionise its vehicle class.",
-              "categoryFilters":[
-                                 {
-                                 "category":"Salary",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Marital Status",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Date of Birth",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Gender",
-                                 "isMissing":false
-                                 }
-                                 ],
-              "categoryRequested":[
-                                   {
-                                   "category":"Email Address",
-                                   "isMissing":false
-                                   }
-                                   ],
-              "category":[
-                          "Contact Information"
-                          ],
-              "expirationDate":1435665600,
-              "rewardValue":3.5,
-              "currNumParticipants":15,
-              "maxParticipants":20,
-              "doesMatchFilters":true
-              },
-              {
-              "partnerId":19593,
-              "partnerName":"Canadian Tire",
-              "partnerImageURL":"http://img3.wikia.nocookie.net/__cb20100920050700/logopedia/images/archive/c/cc/20130622143742!Canadian_Tire.png",
-              "offerId":70726,
-              "offerDetails":"Our summer deals are here! Special discounts for a limited-time!",
-              "categoryFilters":[
-                                 {
-                                 "category":"Salary",
-                                 "isMissing":true
-                                 },
-                                 {
-                                 "category":"Marital Status",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Date of Birth",
-                                 "isMissing":false
-                                 }
-                                 ],
-              "categoryRequested":[
-                                   {
-                                   "category":"Marital Status",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Email Address",
-                                   "isMissing":false
-                                   }
-                                   ],
-              "category":[
-                          "Contact Information",
-                          "Marital Status"
-                          ],
-              "expirationDate":1435406400,
-              "rewardValue":2,
-              "currNumParticipants":37,
-              "maxParticipants":100,
-              "doesMatchFilters":true
-              },
-              {
-              "partnerId":12185,
-              "partnerName":"Best Buy",
-              "partnerImageURL":"http://img1.wikia.nocookie.net/__cb20100902185528/logopedia/images/2/28/800px-Best_Buy_Logo_svg.png",
-              "offerId":33844,
-              "offerDetails":"Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!",
-              "categoryFilters":[
-                                 {
-                                 "category":"Marital Status",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Date of Birth",
-                                 "isMissing":false
-                                 }
-                                 ],
-              "categoryRequested":[
-                                   {
-                                   "category":"Profession",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Geolocation",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Home Address",
-                                   "isMissing":true
-                                   }
-                                   ],
-              "category":[
-                          "Profession",
-                          "Location"
-                          ],
-              "expirationDate":1439596799,
-              "rewardValue":3.45,
-              "currNumParticipants":18,
-              "maxParticipants":50,
-              "doesMatchFilters":true
-              },
-              {
-              "partnerId":47058,
-              "partnerName":"Apple",
-              "partnerImageURL":"https://upload.wikimedia.org/wikipedia/zh-yue/a/ab/Apple-logo.png",
-              "offerId":60632,
-              "offerDetails":"Apple Watch - our most personal device yet. Soon to be on your wrist.",
-              "categoryFilters":[
-                                 {
-                                 "category":"Geolocation",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Date of Birth",
-                                 "isMissing":false
-                                 }
-                                 ],
-              "categoryRequested":[
-                                   {
-                                   "category":"Email Address",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Home Address",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Purchase History",
-                                   "isMissing":false
-                                   }
-                                   ],
-              "category":[
-                          "Contact Information",
-                          "Location",
-                          "Financial Transactions"
-                          ],
-              "expirationDate":1439596799,
-              "rewardValue":4.53,
-              "currNumParticipants":14,
-              "maxParticipants":15,
-              "doesMatchFilters":true
-              },
-              {
-              "partnerId":24243,
-              "partnerName":"The Home Depot",
-              "partnerImageURL":"http://eos-surfaces.com/wp-content/uploads/2012/11/home_depot_logo2.jpg",
-              "offerId":31974,
-              "offerDetails":"Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!",
-              "categoryFilters":[
-                                 {
-                                 "category":"Marital Status",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Geolocation",
-                                 "isMissing":false
-                                 },
-                                 {
-                                 "category":"Date of Birth",
-                                 "isMissing":false
-                                 }
-                                 ],
-              "categoryRequested":[
-                                   {
-                                   "category":"Email Address",
-                                   "isMissing":false
-                                   },
-                                   {
-                                   "category":"Home Address",
-                                   "isMissing":false
-                                   }
-                                   ],
-              "category":[
-                          "Contact Information",
-                          "Location"
-                          ],
-              "expirationDate":1439683199,
-              "rewardValue":8.93,
-              "currNumParticipants":1,
-              "maxParticipants":40,
-              "doesMatchFilters":false
-              }
-              ]
-    
-			  }
+  "offers" : [
+    {
+      "partnerImageURL" : "https:\/\/s3.amazonaws.com\/persona.assets\/500px-BMW.svg.png",
+      "categoryRequested" : [
+        {
+          "category" : "Email Address",
+          "isMissing" : false
+        }
+      ],
+      "category" : [
+        "Contact Information"
+      ],
+      "currNumParticipants" : 15,
+      "rewardValue" : 3.5,
+      "partnerId" : 40847,
+      "maxParticipants" : 20,
+      "doesMatchFilters" : true,
+      "partnerName" : "BMW",
+      "expirationDate" : 1435665600,
+      "categoryFilters" : [
+        {
+          "category" : "Salary",
+          "isMissing" : true
+        },
+        {
+          "category" : "Marital Status",
+          "isMissing" : false
+        },
+        {
+          "category" : "Date of Birth",
+          "isMissing" : false
+        },
+        {
+          "category" : "Gender",
+          "isMissing" : false
+        }
+      ],
+      "offerId" : 99381,
+      "offerDetails" : "BMW is looking for the next new drivers for our i8 model - the most progressive sports car. The BMW i8 is ready to revolutionise its vehicle class."
+    },
+    {
+      "partnerImageURL" : "https:\/\/s3.amazonaws.com\/persona.assets\/CT_Classic_StdKey_RGB.png",
+      "categoryRequested" : [
+        {
+          "category" : "Marital Status",
+          "isMissing" : false
+        },
+        {
+          "category" : "Email Address",
+          "isMissing" : false
+        }
+      ],
+      "category" : [
+        "Contact Information",
+        "Marital Status"
+      ],
+      "currNumParticipants" : 37,
+      "rewardValue" : 2,
+      "partnerId" : 19593,
+      "maxParticipants" : 100,
+      "doesMatchFilters" : true,
+      "partnerName" : "Canadian Tire",
+      "expirationDate" : 1435406400,
+      "categoryFilters" : [
+        {
+          "category" : "Salary",
+          "isMissing" : true
+        },
+        {
+          "category" : "Marital Status",
+          "isMissing" : false
+        },
+        {
+          "category" : "Date of Birth",
+          "isMissing" : false
+        }
+      ],
+      "offerId" : 70726,
+      "offerDetails" : "Our summer deals are here! Special discounts for a limited-time!"
+    },
+    {
+      "partnerImageURL" : "https:\/\/s3.amazonaws.com\/persona.assets\/Best_Buy_Logo.svg.png",
+      "categoryRequested" : [
+        {
+          "category" : "Profession",
+          "isMissing" : false
+        },
+        {
+          "category" : "Geolocation",
+          "isMissing" : false
+        },
+        {
+          "category" : "Home Address",
+          "isMissing" : true
+        }
+      ],
+      "category" : [
+        "Profession",
+        "Location"
+      ],
+      "currNumParticipants" : 18,
+      "rewardValue" : 3.45,
+      "partnerId" : 12185,
+      "maxParticipants" : 50,
+      "doesMatchFilters" : true,
+      "partnerName" : "Best Buy",
+      "expirationDate" : 1439596799,
+      "categoryFilters" : [
+        {
+          "category" : "Marital Status",
+          "isMissing" : false
+        },
+        {
+          "category" : "Date of Birth",
+          "isMissing" : false
+        }
+      ],
+      "offerId" : 33844,
+      "offerDetails" : "Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!"
+    },
+    {
+      "partnerImageURL" : "https:\/\/s3.amazonaws.com\/persona.assets\/giant-apple-logo-bw.png",
+      "categoryRequested" : [
+        {
+          "category" : "Email Address",
+          "isMissing" : false
+        },
+        {
+          "category" : "Home Address",
+          "isMissing" : false
+        },
+        {
+          "category" : "Purchase History",
+          "isMissing" : false
+        }
+      ],
+      "category" : [
+        "Contact Information",
+        "Location",
+        "Financial Transactions"
+      ],
+      "currNumParticipants" : 14,
+      "rewardValue" : 4.53,
+      "partnerId" : 47058,
+      "maxParticipants" : 15,
+      "doesMatchFilters" : true,
+      "partnerName" : "Apple",
+      "expirationDate" : 1439596799,
+      "categoryFilters" : [
+        {
+          "category" : "Geolocation",
+          "isMissing" : false
+        },
+        {
+          "category" : "Date of Birth",
+          "isMissing" : false
+        }
+      ],
+      "offerId" : 60632,
+      "offerDetails" : "Apple Watch - our most personal device yet. Soon to be on your wrist."
+    },
+    {
+      "partnerImageURL" : "https:\/\/s3.amazonaws.com\/persona.assets\/home-depot-logo.png",
+      "categoryRequested" : [
+        {
+          "category" : "Email Address",
+          "isMissing" : false
+        },
+        {
+          "category" : "Home Address",
+          "isMissing" : false
+        }
+      ],
+      "category" : [
+        "Contact Information",
+        "Location"
+      ],
+      "currNumParticipants" : 1,
+      "rewardValue" : 8.93,
+      "partnerId" : 24243,
+      "maxParticipants" : 40,
+      "doesMatchFilters" : false,
+      "partnerName" : "The Home Depot",
+      "expirationDate" : 1439683199,
+      "categoryFilters" : [
+        {
+          "category" : "Marital Status",
+          "isMissing" : false
+        },
+        {
+          "category" : "Geolocation",
+          "isMissing" : false
+        },
+        {
+          "category" : "Date of Birth",
+          "isMissing" : false
+        }
+      ],
+      "offerId" : 31974,
+      "offerDetails" : "Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!"
+    }
+  ]
+}

@@ -69,17 +69,13 @@
         cell.progressPercent = self.profileInfo.tierProgress.floatValue;
 
         NSString *tierString;
-        if (self.profileInfo.rewardTier == RewardTierBasic) {
-            tierString = @"Bronze";
-        } else if (self.profileInfo.rewardTier == RewardTierBronze) {
+        if (self.profileInfo.rewardTier == RewardTierDefault) {
             tierString = @"Silver";
         } else if (self.profileInfo.rewardTier == RewardTierSilver) {
             tierString = @"Gold";
-        } else if (self.profileInfo.rewardTier == RewardTierGold) {
-            tierString = @"Diamond";
         }
         
-        cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
+        cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
         
 //        cell.tierImageView.image = [UIImage imageNamed:@""];
         
@@ -106,7 +102,7 @@
             
             cell.titleLabel.text = offer.partner.name;
             [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL ];
-            cell.categoryLabel.text = [offer.categoryList componentsJoinedByString:@", "];
+            cell.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
             cell.rewardLabel.text = offer.rewardString;
 
             NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate currentDate:[NSDate date]];
