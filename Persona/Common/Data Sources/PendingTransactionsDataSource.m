@@ -7,6 +7,7 @@
 //
 
 #import "PendingTransactionsDataSource.h"
+#import "PendingSideScrollingCollectionViewCell.h"
 
 @interface PendingTransactionsDataSource ()
 
@@ -17,20 +18,12 @@
 
 @implementation PendingTransactionsDataSource
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    
-    return self;
-}
-
 - (id)initWithPendingTransactions:(NSArray *)pendingTransactions
 {
     self = [self init];
-    self.pendingTransactions = pendingTransactions;
+    if (self) {
+        self.pendingTransactions = pendingTransactions;
+    }
     return self;
 }
 
@@ -41,7 +34,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    Offer *offer = self.pendingTransactions[indexPath.row];
+    PendingSideScrollingCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PendingSideScrollingOfferCollectionViewCellIdentifier forIndexPath:indexPath];
+    [cell setOffer:offer];
+    return cell;
 }
 
 @end

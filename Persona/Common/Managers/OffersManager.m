@@ -30,16 +30,16 @@ static const NSString *API_JSON_Category_Metadata_Name =        @"informationTyp
 static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"informationMissing";
 
 typedef NS_ENUM(NSUInteger, OffersJSONType) {
-    OffersJSONTypeRecommended,
+    OffersJSONTypeHome,
     OffersJSONTypeProfile
 };
 
 
 @implementation OffersManager
 
-+ (NSArray *)parseRecommendedOffersFromJSONFile:(NSString *)fileLocation
++ (NSArray *)parseOffersFromJSONFile:(NSString *)fileLocation
 {
-    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeRecommended];
+    return [self parseOffersFromJSONFile:fileLocation type:OffersJSONTypeHome];
 }
 
 + (NSArray *)parseProfileOffersFromJSONFile:(NSString *)fileLocation
@@ -56,7 +56,7 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     }
     
     NSDictionary *jsonOffers;
-    if (offerType == OffersJSONTypeRecommended) {
+    if (offerType == OffersJSONTypeHome) {
         jsonOffers = json[API_JSON_Root_Offers];
     } else if (offerType == OffersJSONTypeProfile) {
         jsonOffers = json[API_JSON_Root_Profile_Offers];

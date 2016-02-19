@@ -7,6 +7,7 @@
 //
 
 #import "CompletedTransactionsDataSource.h"
+#import "SideScrollingCollectionViewCell.h"
 
 @interface CompletedTransactionsDataSource ()
 
@@ -17,22 +18,16 @@
 
 @implementation CompletedTransactionsDataSource
 
-- (id)init
+- (id)initWithCompletedTransactions:(NSArray *)completedTransactions
 {
     self = [super init];
     if (self) {
-
+        self.completedTransactions = completedTransactions;
     }
-    
     return self;
 }
 
-- (id)initWithCompletedTransactions:(NSArray *)completedTransactions
-{
-    self = [self init];
-    self.completedTransactions = completedTransactions;
-    return self;
-}
+#pragma mark - Collection View Datasource Methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -41,7 +36,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    Offer *offer = self.completedTransactions[indexPath.row];
+    SideScrollingCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SideScrollingOfferCollectionViewCellIdentifier forIndexPath:indexPath];
+    [cell setOffer:offer];
+    return cell;
 }
 
 @end

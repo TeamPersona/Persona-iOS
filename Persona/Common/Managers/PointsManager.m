@@ -57,7 +57,7 @@ static const NSString *API_JSON_Data_Source_Is_Data_Provided =  @"isDataProvided
         pointsData.dataPointsValue = jsonData[API_JSON_Data_Source_Points_Value];
     }
     if (jsonData[API_JSON_Data_Source_Is_Data_Provided] != nil) {
-        pointsData.isDataProvided = jsonData[API_JSON_Data_Source_Is_Data_Provided];
+        pointsData.isDataProvided = (BOOL)jsonData[API_JSON_Data_Source_Is_Data_Provided];
     }
     
     return pointsData;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Offer.h"
 
-static NSString *SideScrollingOfferCollectionViewCellIdentifier = @"sideScrollingOfferCollectionViewCellIdentifer";
+static NSString *SideScrollingOfferCollectionViewCellIdentifier = @"sideScrollingOfferCollectionViewCell";
 
 @interface SideScrollingCollectionViewCell : UICollectionViewCell
 

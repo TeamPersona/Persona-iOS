@@ -15,8 +15,6 @@
 
 - (void)awakeFromNib
 {
-    self.partnerImageView.layer.minificationFilter = kCAFilterTrilinear;
-    self.expirationImageView.layer.minificationFilter = kCAFilterTrilinear;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -26,8 +24,8 @@
 
 - (void)populateOfferInfo:(Offer *)offer
 {
-    self.titleLabel.text = offer.partner.name;
     [self.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
+    self.titleLabel.text = offer.partner.name;
     self.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
     self.rewardLabel.text = offer.rewardString;
     

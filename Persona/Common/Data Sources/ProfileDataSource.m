@@ -87,7 +87,7 @@
             ProfilePointsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfilePointsCollectionViewCellIdentifier forIndexPath:indexPath];
             cell.titleLabel.text = pointsData.dataTitle;
             [cell.dataImageView sd_setImageWithURL:pointsData.dataImageURL];
-            cell.pointsValueLabel.text = [NSString stringWithFormat:@"%li pts", [pointsData.dataPointsValue integerValue]];
+            cell.pointsValueLabel.text = [NSString stringWithFormat:@"%li pts", [pointsData.dataPointsValue longValue]];
 
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {

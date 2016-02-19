@@ -1,0 +1,650 @@
+{
+  "offers": [
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 69,
+      "offerDetails": "Participate now and receive our limited time offer!",
+      "offerExpirationDate": 1456348644,
+      "offerFilters": {
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Steps Taken History"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Following List"
+          }
+        ]
+      },
+      "offerId": 100,
+      "offerInfoRequired": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Salary"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Has Eyewear"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          }
+        ],
+        "Social": []
+      },
+      "offerMaxParticipants": 390,
+      "offerMinRank": 2,
+      "offerReward": 5.25,
+      "offerStartDate": 1455793650,
+      "offerStatus": 4,
+      "offerType": [
+        "Automotive",
+        "Auto Dealers",
+        "Used Vehicles"
+      ],
+      "partnerId": 11,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/500px-BMW.svg.png",
+      "partnerName": "BMW"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 52,
+      "offerDetails": "Buy one get one free!",
+      "offerExpirationDate": 1456561219,
+      "offerFilters": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ]
+      },
+      "offerId": 164,
+      "offerInfoRequired": {
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Medical History"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Height"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Religion"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Following List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 480,
+      "offerMinRank": 0,
+      "offerReward": 7.26,
+      "offerStartDate": 1456393080,
+      "offerStatus": 1,
+      "offerType": [
+        "Entertainment",
+        "Movies"
+      ],
+      "partnerId": 18,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
+      "partnerName": "Cineplex"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 1,
+      "offerDetails": "Join our membership and get 40% off your next purchase!",
+      "offerExpirationDate": 1456952437,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": true,
+            "informationType": "Ethnicity"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ]
+      },
+      "offerId": 195,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Date of Birth"
+          }
+        ],
+        "Heath & Fitness": []
+      },
+      "offerMaxParticipants": 250,
+      "offerMinRank": 0,
+      "offerReward": 7.02,
+      "offerStartDate": 1456803689,
+      "offerStatus": 1,
+      "offerType": [
+        "Automotive",
+        "Auto Dealers",
+        "Used Vehicles"
+      ],
+      "partnerId": 11,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/500px-BMW.svg.png",
+      "partnerName": "BMW"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 16,
+      "offerDetails": "Get 70% off your next purchase!",
+      "offerExpirationDate": 1457270031,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": true,
+            "informationType": "Ethnicity"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ]
+      },
+      "offerId": 201,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Home Address"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": true,
+            "informationType": "Movie Interests"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Has Eyewear"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Facebook Friends List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 20,
+      "offerMinRank": 1,
+      "offerReward": 6.09,
+      "offerStartDate": 1456875689,
+      "offerStatus": 1,
+      "offerType": [
+        "Tech",
+        "Computers"
+      ],
+      "partnerId": 6,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
+      "partnerName": "HP"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 116,
+      "offerDetails": "$30 off your first order!",
+      "offerExpirationDate": 1456366617,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Gender"
+          },
+          {
+            "informationMissing": true,
+            "informationType": "Allow Contact"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Salary"
+          }
+        ]
+      },
+      "offerId": 248,
+      "offerInfoRequired": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Favorite Sports Teams"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Favorties"
+          }
+        ]
+      },
+      "offerMaxParticipants": 170,
+      "offerMinRank": 0,
+      "offerReward": 0.3,
+      "offerStartDate": 1456101367,
+      "offerStatus": 1,
+      "offerType": [
+        "Tech",
+        "Cloud Computing Services"
+      ],
+      "partnerId": 8,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-IBM_logo.svg.png",
+      "partnerName": "IBM"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 46,
+      "offerDetails": "Get 80% off your next purchase!",
+      "offerExpirationDate": 1457353642,
+      "offerFilters": {
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Medical History"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Has Eyewear"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Facebook Friends List"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Followers List"
+          }
+        ]
+      },
+      "offerId": 274,
+      "offerInfoRequired": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": true,
+            "informationType": "Movie Interests"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Political Affliations"
+          }
+        ]
+      },
+      "offerMaxParticipants": 90,
+      "offerMinRank": 2,
+      "offerReward": 6.6,
+      "offerStartDate": 1456903680,
+      "offerStatus": 1,
+      "offerType": [
+        "Business",
+        "Office Supplies"
+      ],
+      "partnerId": 17,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Staples.svg.png",
+      "partnerName": "Staples"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 44,
+      "offerDetails": "Buy two get one free!",
+      "offerExpirationDate": 1457320683,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Gender"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Favorite Sports Teams"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Salary"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Facebook Statuses"
+          }
+        ]
+      },
+      "offerId": 336,
+      "offerInfoRequired": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Medical History"
+          }
+        ]
+      },
+      "offerMaxParticipants": 450,
+      "offerMinRank": 1,
+      "offerReward": 3.65,
+      "offerStartDate": 1456169177,
+      "offerStatus": 1,
+      "offerType": [
+        "Tech",
+        "Computers"
+      ],
+      "partnerId": 6,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
+      "partnerName": "HP"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 85,
+      "offerDetails": "Get 30% off your next purchase!",
+      "offerExpirationDate": 1457203663,
+      "offerFilters": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Photos"
+          }
+        ]
+      },
+      "offerId": 435,
+      "offerInfoRequired": {
+        "Employment": [],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Number of Dependents"
+          }
+        ]
+      },
+      "offerMaxParticipants": 210,
+      "offerMinRank": 2,
+      "offerReward": 9.55,
+      "offerStartDate": 1456255310,
+      "offerStatus": 1,
+      "offerType": [
+        "Tech",
+        "Computers",
+        "Keyboards"
+      ],
+      "partnerId": 13,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Best_Buy_Logo.svg.png",
+      "partnerName": "Best Buy"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 104,
+      "offerDetails": "Get 50% off your next purchase!",
+      "offerExpirationDate": 1456997756,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": true,
+            "informationType": "Ethnicity"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Following List"
+          }
+        ]
+      },
+      "offerId": 438,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Last Name"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Date of Birth"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Book Interests"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Following List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 300,
+      "offerMinRank": 0,
+      "offerReward": 9.73,
+      "offerStartDate": 1455741222,
+      "offerStatus": 4,
+      "offerType": [
+        "Home & Garden",
+        "Landscape",
+        "Lawn Service"
+      ],
+      "partnerId": 12,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/CT_Classic_StdKey_RGB.png",
+      "partnerName": "Canadian Tire"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 140,
+      "offerDetails": "Join our membership and get 10% off your next purchase!",
+      "offerExpirationDate": 1457353241,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "First Name"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Purchase History"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": true,
+            "informationType": "Swarm Check-ins"
+          }
+        ]
+      },
+      "offerId": 463,
+      "offerInfoRequired": {
+        "Basic": [],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Medical History"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Yelp Reviews"
+          }
+        ]
+      },
+      "offerMaxParticipants": 350,
+      "offerMinRank": 1,
+      "offerReward": 9.16,
+      "offerStartDate": 1456535020,
+      "offerStatus": 1,
+      "offerType": [
+        "Automotive",
+        "Auto Dealers"
+      ],
+      "partnerId": 4,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
+      "partnerName": "Ford Motor"
+    }
+  ]
+}

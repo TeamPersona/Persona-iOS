@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Offer.h"
 
-static NSString *PendingSideScrollingOfferCollectionViewCellIdentifier = @"pendingSideScrollingOfferCollectionViewCellIdentifer";
+static NSString *PendingSideScrollingOfferCollectionViewCellIdentifier = @"pendingSideScrollingOfferCollectionViewCell";
 
 @interface PendingSideScrollingCollectionViewCell : UICollectionViewCell
 
@@ -16,5 +17,7 @@ static NSString *PendingSideScrollingOfferCollectionViewCellIdentifier = @"pendi
 @property (weak, nonatomic) IBOutlet UILabel *partnerTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pendingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *expirationDateLabel;
+
+- (void)setOffer:(Offer *)offer;
 
 @end

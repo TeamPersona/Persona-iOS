@@ -1,0 +1,667 @@
+{
+  "offers": [
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 12,
+      "offerDetails": "Get 70% off your next purchase!",
+      "offerExpirationDate": 1457118010,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Home Address"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Education"
+          }
+        ]
+      },
+      "offerId": 63,
+      "offerInfoRequired": {
+        "Employment": [],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Book Interests"
+          }
+        ]
+      },
+      "offerMaxParticipants": 340,
+      "offerMinRank": 0,
+      "offerReward": 8.18,
+      "offerStartDate": 1456660575,
+      "offerStatus": 1,
+      "offerType": [
+        "Automotive",
+        "Auto Dealers"
+      ],
+      "partnerId": 4,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
+      "partnerName": "Ford Motor"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 13,
+      "offerDetails": "Participate now and receive our limited time offer!",
+      "offerExpirationDate": 1455906253,
+      "offerFilters": {
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": true,
+            "informationType": "Salary"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Retweets"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Yelp Reviews"
+          }
+        ]
+      },
+      "offerId": 148,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Date of Birth"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Swarm Check-ins"
+          }
+        ]
+      },
+      "offerMaxParticipants": 50,
+      "offerMinRank": 1,
+      "offerReward": 4.5,
+      "offerStartDate": 1455582478,
+      "offerStatus": 4,
+      "offerType": [
+        "Home & Garden",
+        "Home Improvements"
+      ],
+      "partnerId": 10,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/home-depot-logo.png",
+      "partnerName": "Home Depot"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": true,
+      "offerCurrentParticipants": 125,
+      "offerDetails": "Get 80% off your next purchase!",
+      "offerExpirationDate": 1456157074,
+      "offerFilters": {
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Book Interests"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Steps Taken History"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Followers List"
+          }
+        ]
+      },
+      "offerId": 187,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Home Address"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Movie Interests"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Has Eyewear"
+          }
+        ]
+      },
+      "offerMaxParticipants": 210,
+      "offerMinRank": 1,
+      "offerReward": 9.32,
+      "offerStartDate": 1455794290,
+      "offerStatus": 4,
+      "offerType": [
+        "Entertainment",
+        "Movies"
+      ],
+      "partnerId": 18,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
+      "partnerName": "Cineplex"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 143,
+      "offerDetails": "Get 60% off your next purchase!",
+      "offerExpirationDate": 1456532120,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Ethnicity"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          },
+          {
+            "informationMissing": true,
+            "informationType": "Political Affliations"
+          }
+        ]
+      },
+      "offerId": 287,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Home Address"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Date of Birth"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Facebook Statuses"
+          }
+        ]
+      },
+      "offerMaxParticipants": 360,
+      "offerMinRank": 1,
+      "offerReward": 6.07,
+      "offerStartDate": 1456373054,
+      "offerStatus": 1,
+      "offerType": [
+        "Travel",
+        "Tourism"
+      ],
+      "partnerId": 7,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Boeing-Logo.svg.png",
+      "partnerName": "Boeing"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 274,
+      "offerDetails": "Get 70% off your next purchase!",
+      "offerExpirationDate": 1457350163,
+      "offerFilters": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ]
+      },
+      "offerId": 383,
+      "offerInfoRequired": {
+        "Employment": [],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          }
+        ],
+        "Financial": [],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Steps Taken History"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          }
+        ]
+      },
+      "offerMaxParticipants": 460,
+      "offerMinRank": 0,
+      "offerReward": 9.73,
+      "offerStartDate": 1457263785,
+      "offerStatus": 1,
+      "offerType": [
+        "Entertainment",
+        "Amusement Park",
+        "Family"
+      ],
+      "partnerId": 14,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
+      "partnerName": "Disney"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 66,
+      "offerDetails": "Buy one get one 50% off!",
+      "offerExpirationDate": 1456568449,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Last Name"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Religion"
+          }
+        ]
+      },
+      "offerId": 438,
+      "offerInfoRequired": {
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Steps Taken History"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Has Eyewear"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Number of Dependents"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Facebook Friends List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 300,
+      "offerMinRank": 1,
+      "offerReward": 7.19,
+      "offerStartDate": 1456524405,
+      "offerStatus": 1,
+      "offerType": [
+        "Food & Dining",
+        "Grocery"
+      ],
+      "partnerId": 1,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/walmart-logo.jpg",
+      "partnerName": "Walmart"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 4,
+      "offerDetails": "Buy two get one free!",
+      "offerExpirationDate": 1457209898,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Ethnicity"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Date of Birth"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Allow Contact"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Book Interests"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Purchase History"
+          }
+        ]
+      },
+      "offerId": 517,
+      "offerInfoRequired": {
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Employment History"
+          }
+        ]
+      },
+      "offerMaxParticipants": 30,
+      "offerMinRank": 1,
+      "offerReward": 3.13,
+      "offerStartDate": 1457088164,
+      "offerStatus": 1,
+      "offerType": [
+        "Tech",
+        "Mobile",
+        "Music"
+      ],
+      "partnerId": 2,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
+      "partnerName": "Apple"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 398,
+      "offerDetails": "Join our membership and get 50% off your next purchase!",
+      "offerExpirationDate": 1456097438,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Ethnicity"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Home Address"
+          }
+        ],
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Movie Interests"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          }
+        ]
+      },
+      "offerId": 601,
+      "offerInfoRequired": {
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Number of Dependents"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Favorties"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Photos"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Instagram Followers List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 470,
+      "offerMinRank": 0,
+      "offerReward": 8.09,
+      "offerStartDate": 1455620964,
+      "offerStatus": 4,
+      "offerType": [
+        "Personal Care",
+        "Beauty Supplies"
+      ],
+      "partnerId": 15,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/shoppers-drug-mart-logo.png",
+      "partnerName": "Shopper Drug Mart"
+    },
+    {
+      "isEligible": false,
+      "isParticipating": false,
+      "offerCurrentParticipants": 52,
+      "offerDetails": "Join our membership and get 20% off your next purchase!",
+      "offerExpirationDate": 1456196408,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Allow Contact"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Weight"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Sleep Tracking History"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": true,
+            "informationType": "Political Affliations"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Marital Status"
+          }
+        ]
+      },
+      "offerId": 616,
+      "offerInfoRequired": {
+        "Entertainment": [
+          {
+            "informationMissing": false,
+            "informationType": "TV Shows Interests"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Video Game Interests"
+          },
+          {
+            "informationMissing": false,
+            "informationType": "Favorite Sports Teams"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Followers List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 60,
+      "offerMinRank": 1,
+      "offerReward": 6.72,
+      "offerStartDate": 1455944280,
+      "offerStatus": 1,
+      "offerType": [
+        "Automotive",
+        "Auto Dealers"
+      ],
+      "partnerId": 4,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
+      "partnerName": "Ford Motor"
+    },
+    {
+      "isEligible": true,
+      "isParticipating": false,
+      "offerCurrentParticipants": 400,
+      "offerDetails": "$30 off your first order!",
+      "offerExpirationDate": 1457265720,
+      "offerFilters": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Ethnicity"
+          }
+        ],
+        "Employment": [
+          {
+            "informationMissing": false,
+            "informationType": "Current Employer"
+          }
+        ],
+        "Financial": [
+          {
+            "informationMissing": false,
+            "informationType": "Credit Score"
+          }
+        ]
+      },
+      "offerId": 674,
+      "offerInfoRequired": {
+        "Basic": [
+          {
+            "informationMissing": false,
+            "informationType": "Gender"
+          }
+        ],
+        "Employment": [],
+        "Heath & Fitness": [
+          {
+            "informationMissing": false,
+            "informationType": "Disabilities"
+          }
+        ],
+        "Personal": [
+          {
+            "informationMissing": false,
+            "informationType": "Religion"
+          }
+        ],
+        "Social": [
+          {
+            "informationMissing": false,
+            "informationType": "Twitter Following List"
+          }
+        ]
+      },
+      "offerMaxParticipants": 450,
+      "offerMinRank": 0,
+      "offerReward": 0.15,
+      "offerStartDate": 1456971334,
+      "offerStatus": 1,
+      "offerType": [
+        "Entertainment",
+        "Amusement Park",
+        "Family"
+      ],
+      "partnerId": 14,
+      "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
+      "partnerName": "Disney"
+    }
+  ]
+}

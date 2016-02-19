@@ -13,34 +13,72 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="220" height="120"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Canadian Tire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmf-6F-fyR">
-                        <rect key="frame" x="70" y="4" width="146" height="61"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canadian Tire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmf-6F-fyR">
+                        <rect key="frame" x="78" y="8" width="134" height="61"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7t-fk-utk">
-                        <rect key="frame" x="4" y="4" width="62" height="62"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s7t-fk-utk">
+                        <rect key="frame" x="8" y="8" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="KF8-Dk-2KK"/>
+                            <constraint firstAttribute="height" constant="62" id="MnL-Ei-UDd"/>
+                        </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnvelopeRead" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-i9-YlV">
-                        <rect key="frame" x="159" y="78" width="57" height="38"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="EnvelopeRead" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-i9-YlV">
+                        <rect key="frame" x="151" y="74" width="57" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="F1U-Df-uhP"/>
+                            <constraint firstAttribute="width" constant="57" id="T5T-0Y-2ly"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dec/12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-FE-01j">
-                        <rect key="frame" x="4" y="95" width="147" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.50 earned!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjn-ll-g25">
+                        <rect key="frame" x="8" y="71" width="135" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="6fw-ei-gKH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec/12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-FE-01j">
+                        <rect key="frame" x="8" y="91" width="135" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="WIa-PC-FbY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1.50 earned!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjn-ll-g25">
-                        <rect key="frame" x="8" y="73" width="143" height="23"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ivm-i9-YlV" firstAttribute="leading" secondItem="jjn-ll-g25" secondAttribute="trailing" constant="8" id="0l3-Cb-XPX"/>
+                <constraint firstItem="pmf-6F-fyR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="7wc-aI-cPB"/>
+                <constraint firstItem="jjn-ll-g25" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="LnW-0J-00A"/>
+                <constraint firstAttribute="trailing" secondItem="pmf-6F-fyR" secondAttribute="trailing" constant="8" id="LxY-fV-tm9"/>
+                <constraint firstItem="ivm-i9-YlV" firstAttribute="leading" secondItem="jjn-ll-g25" secondAttribute="trailing" id="Rkz-sZ-XDE"/>
+                <constraint firstItem="ivm-i9-YlV" firstAttribute="top" secondItem="pmf-6F-fyR" secondAttribute="bottom" constant="5" id="Zmh-nD-e3N"/>
+                <constraint firstAttribute="bottom" secondItem="ivm-i9-YlV" secondAttribute="bottom" constant="8" id="a2t-e8-7J9"/>
+                <constraint firstItem="ivm-i9-YlV" firstAttribute="leading" secondItem="FQc-FE-01j" secondAttribute="trailing" constant="8" id="fyL-ZP-0ue"/>
+                <constraint firstItem="pmf-6F-fyR" firstAttribute="leading" secondItem="s7t-fk-utk" secondAttribute="trailing" constant="8" id="hKi-hS-JiZ"/>
+                <constraint firstItem="FQc-FE-01j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hd0-eL-YsO"/>
+                <constraint firstAttribute="bottom" secondItem="FQc-FE-01j" secondAttribute="bottom" constant="8" id="iTG-jM-7So"/>
+                <constraint firstItem="FQc-FE-01j" firstAttribute="top" secondItem="jjn-ll-g25" secondAttribute="bottom" constant="-3" id="kyT-WE-cJS"/>
+                <constraint firstItem="s7t-fk-utk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ohh-s4-u2A"/>
+                <constraint firstItem="s7t-fk-utk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="qCy-SK-EsC"/>
+                <constraint firstItem="jjn-ll-g25" firstAttribute="top" secondItem="s7t-fk-utk" secondAttribute="bottom" constant="1" id="tv2-oh-lKO"/>
+                <constraint firstAttribute="trailing" secondItem="ivm-i9-YlV" secondAttribute="trailing" constant="12" id="ujj-Je-3N9"/>
+            </constraints>
             <size key="customSize" width="227" height="123"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Rkz-sZ-XDE"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="dateEarnedLabel" destination="FQc-FE-01j" id="0Ar-y6-W5h"/>
                 <outlet property="earnedLabel" destination="jjn-ll-g25" id="TI4-xZ-1IX"/>

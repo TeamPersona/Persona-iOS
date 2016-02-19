@@ -20,8 +20,6 @@
 		C662FD241B5611A900000FD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C662FD231B5611A900000FD1 /* Images.xcassets */; };
 		C669B8421C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B8401C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m */; };
 		C669B8431C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C669B8411C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib */; };
-		C669B84A1C44486900B1E232 /* CompletedTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B8491C44486900B1E232 /* CompletedTransactionsDataSource.m */; };
-		C669B84F1C44489300B1E232 /* PendingTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */; };
 		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
 		C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */; };
 		C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */; };
@@ -70,11 +68,15 @@
 		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
 		C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */; };
 		C6D7B1FE1C73D8C20033F5A2 /* DateFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7B1FD1C73D8C20033F5A2 /* DateFormatManager.m */; };
-		C6D7B2011C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7B2001C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.m */; };
-		C6D7B2031C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2021C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib */; };
 		C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */; };
 		C6D7B2081C7688860033F5A2 /* offers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2071C7688860033F5A2 /* offers.json */; };
 		C6D7B20A1C76E7330033F5A2 /* recommendedOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */; };
+		C6D7B20D1C76E8EA0033F5A2 /* completedOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B20B1C76E8EA0033F5A2 /* completedOffers.json */; };
+		C6D7B2101C76E9500033F5A2 /* pendingOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B20F1C76E9500033F5A2 /* pendingOffers.json */; };
+		C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */; };
+		C6D7B2151C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */; };
+		C6D7B21B1C7703730033F5A2 /* CompletedTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7B2181C7703730033F5A2 /* CompletedTransactionsDataSource.m */; };
+		C6D7B21C1C7703730033F5A2 /* PendingTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D7B21A1C7703730033F5A2 /* PendingTransactionsDataSource.m */; };
 		C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3DF1B1B6BC137009CC49C /* Money.m */; };
 		C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79AD1B5D7B60006873BD /* PointsData.m */; };
 		C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C21B5D7FDA006873BD /* PointsManager.m */; };
@@ -130,10 +132,6 @@
 		C669B83F1C4434F800B1E232 /* SideScrollingCollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollingCollectionTableViewCell.h; sourceTree = "<group>"; };
 		C669B8401C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollingCollectionTableViewCell.m; sourceTree = "<group>"; };
 		C669B8411C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideScrollingCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		C669B8481C44486900B1E232 /* CompletedTransactionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTransactionsDataSource.h; sourceTree = "<group>"; };
-		C669B8491C44486900B1E232 /* CompletedTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTransactionsDataSource.m; sourceTree = "<group>"; };
-		C669B84D1C44489300B1E232 /* PendingTransactionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsDataSource.h; sourceTree = "<group>"; };
-		C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsDataSource.m; sourceTree = "<group>"; };
 		C66E7C7E1C5AD1470045F79A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C67278BD1B6404D4008F1A48 /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
 		C67278BE1B6404D4008F1A48 /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
@@ -216,13 +214,19 @@
 		C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferDetailsViewController.xib; sourceTree = "<group>"; };
 		C6D7B1FC1C73D8C20033F5A2 /* DateFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatManager.h; sourceTree = "<group>"; };
 		C6D7B1FD1C73D8C20033F5A2 /* DateFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatManager.m; sourceTree = "<group>"; };
-		C6D7B1FF1C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingSideScrollingCollectionViewCell.h; sourceTree = "<group>"; };
-		C6D7B2001C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingSideScrollingCollectionViewCell.m; sourceTree = "<group>"; };
-		C6D7B2021C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingSideScrollingCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = completeTransactionsMockData.json; sourceTree = "<group>"; };
 		C6D7B2061C7679D70033F5A2 /* OfferStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferStatus.h; sourceTree = "<group>"; };
 		C6D7B2071C7688860033F5A2 /* offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = offers.json; sourceTree = "<group>"; };
 		C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recommendedOffers.json; sourceTree = "<group>"; };
+		C6D7B20B1C76E8EA0033F5A2 /* completedOffers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = completedOffers.json; sourceTree = "<group>"; };
+		C6D7B20F1C76E9500033F5A2 /* pendingOffers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pendingOffers.json; sourceTree = "<group>"; };
+		C6D7B2111C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingSideScrollingCollectionViewCell.h; sourceTree = "<group>"; };
+		C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingSideScrollingCollectionViewCell.m; sourceTree = "<group>"; };
+		C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingSideScrollingCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6D7B2171C7703730033F5A2 /* CompletedTransactionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTransactionsDataSource.h; sourceTree = "<group>"; };
+		C6D7B2181C7703730033F5A2 /* CompletedTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTransactionsDataSource.m; sourceTree = "<group>"; };
+		C6D7B2191C7703730033F5A2 /* PendingTransactionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsDataSource.h; sourceTree = "<group>"; };
+		C6D7B21A1C7703730033F5A2 /* PendingTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsDataSource.m; sourceTree = "<group>"; };
 		C6E3DF1A1B6BC137009CC49C /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		C6E3DF1B1B6BC137009CC49C /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		C6FD79AC1B5D7B60006873BD /* PointsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsData.h; sourceTree = "<group>"; };
@@ -352,24 +356,6 @@
 				C6533F881B69C76200A4D601 /* MessagesViewController.xib */,
 			);
 			path = Messages;
-			sourceTree = "<group>";
-		};
-		C669B8471C44486900B1E232 /* Completed Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				C669B8481C44486900B1E232 /* CompletedTransactionsDataSource.h */,
-				C669B8491C44486900B1E232 /* CompletedTransactionsDataSource.m */,
-			);
-			path = "Completed Transactions";
-			sourceTree = "<group>";
-		};
-		C669B84B1C44487000B1E232 /* Pending Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				C669B84D1C44489300B1E232 /* PendingTransactionsDataSource.h */,
-				C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */,
-			);
-			path = "Pending Transactions";
 			sourceTree = "<group>";
 		};
 		C6846C5E1B5626F80066FF74 /* Custom */ = {
@@ -569,6 +555,8 @@
 			isa = PBXGroup;
 			children = (
 				C6D7B2071C7688860033F5A2 /* offers.json */,
+				C6D7B20B1C76E8EA0033F5A2 /* completedOffers.json */,
+				C6D7B20F1C76E9500033F5A2 /* pendingOffers.json */,
 				C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */,
 				C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */,
 				C687F7521B6182DA007DDA93 /* featuredOffersMockDataSample1.json */,
@@ -589,10 +577,19 @@
 				C6C027211C1FED7400692227 /* OfferDetailsViewController.h */,
 				C6C027221C1FED7400692227 /* OfferDetailsViewController.m */,
 				C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */,
-				C669B8471C44486900B1E232 /* Completed Transactions */,
-				C669B84B1C44487000B1E232 /* Pending Transactions */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C6D7B2161C7703570033F5A2 /* Home Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C6D7B2171C7703730033F5A2 /* CompletedTransactionsDataSource.h */,
+				C6D7B2181C7703730033F5A2 /* CompletedTransactionsDataSource.m */,
+				C6D7B2191C7703730033F5A2 /* PendingTransactionsDataSource.h */,
+				C6D7B21A1C7703730033F5A2 /* PendingTransactionsDataSource.m */,
+			);
+			name = "Home Data Sources";
 			sourceTree = "<group>";
 		};
 		C6FD79C41B5D9CA7006873BD /* Collection View Cells */ = {
@@ -613,9 +610,9 @@
 				C692F9B21C5B3033004EBFFC /* SideScrollingCollectionViewCell.h */,
 				C692F9B31C5B3033004EBFFC /* SideScrollingCollectionViewCell.m */,
 				C692F9B41C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib */,
-				C6D7B1FF1C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.h */,
-				C6D7B2001C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.m */,
-				C6D7B2021C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib */,
+				C6D7B2111C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.h */,
+				C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */,
+				C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */,
 				C6FD79F91B5EF9C3006873BD /* Reusable Header Views */,
 			);
 			path = "Collection View Cells";
@@ -626,6 +623,7 @@
 			children = (
 				C6FD79CB1B5DA077006873BD /* OffersDataSource.h */,
 				C6FD79CC1B5DA077006873BD /* OffersDataSource.m */,
+				C6D7B2161C7703570033F5A2 /* Home Data Sources */,
 				C6FD79D71B5DA098006873BD /* Profile Data Sources */,
 			);
 			path = "Data Sources";
@@ -765,7 +763,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D7B2081C7688860033F5A2 /* offers.json in Resources */,
-				C6D7B2031C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */,
 				C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */,
 				C6FD79C91B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib in Resources */,
@@ -780,14 +777,17 @@
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
 				C692F9B61C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib in Resources */,
 				C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */,
+				C6D7B2101C76E9500033F5A2 /* pendingOffers.json in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
 				C6FD79F81B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.xib in Resources */,
 				C6D7B20A1C76E7330033F5A2 /* recommendedOffers.json in Resources */,
 				C669B8431C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib in Resources */,
 				C687F7531B6182DA007DDA93 /* featuredOffersMockDataSample1.json in Resources */,
 				C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */,
+				C6D7B20D1C76E8EA0033F5A2 /* completedOffers.json in Resources */,
 				C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */,
 				C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */,
+				C6D7B2151C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */,
 				C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
 				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
@@ -866,11 +866,11 @@
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
+				C6D7B21C1C7703730033F5A2 /* PendingTransactionsDataSource.m in Sources */,
 				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
 				C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */,
 				C6BC08321B5964560089E305 /* Settings.m in Sources */,
-				C669B84F1C44489300B1E232 /* PendingTransactionsDataSource.m in Sources */,
 				C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */,
 				C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */,
 				C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */,
@@ -885,7 +885,6 @@
 				C6FD79F71B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,
-				C6D7B2011C73F1020033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,
 				C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */,
 				C6533F891B69C76200A4D601 /* MessagesViewController.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
@@ -894,6 +893,7 @@
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
 				C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */,
+				C6D7B21B1C7703730033F5A2 /* CompletedTransactionsDataSource.m in Sources */,
 				C669B8421C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m in Sources */,
 				C6FD79E31B5DAC4A006873BD /* BalanceInfo.m in Sources */,
 				C6FD79F31B5E80B9006873BD /* SpacingAndSizingCalculations.m in Sources */,
@@ -903,6 +903,7 @@
 				C6FD7A071B5EFA12006873BD /* ProfileOffersCollectionViewCell.m in Sources */,
 				C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
+				C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,
 				C692F9B51C5B3033004EBFFC /* SideScrollingCollectionViewCell.m in Sources */,
 				C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */,
 				C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */,
@@ -910,7 +911,6 @@
 				C6D7B1FE1C73D8C20033F5A2 /* DateFormatManager.m in Sources */,
 				C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */,
 				C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */,
-				C669B84A1C44486900B1E232 /* CompletedTransactionsDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

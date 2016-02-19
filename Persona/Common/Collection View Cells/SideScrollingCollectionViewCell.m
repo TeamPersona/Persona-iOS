@@ -18,8 +18,16 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
 
 - (void)awakeFromNib
 {
-    self.partnerImageView.layer.minificationFilter = kCAFilterTrilinear;
-    self.messageImageView.layer.minificationFilter = kCAFilterTrilinear;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect inRect = CGRectInset(rect, 4.0f, 4.0f);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:inRect cornerRadius:5.0f];
+    path.lineWidth = 1.0f;
+    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
+    [path stroke];
 }
 
 - (void)setOffer:(Offer *)offer
@@ -27,7 +35,7 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
     [self.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
     self.partnerTitleLabel.text = offer.partner.name;
     
-    self.earnedLabel.text = [NSString stringWithFormat:@"$%@ earned!", offer.rewardString];
+    self.earnedLabel.text = [NSString stringWithFormat:@"%@ earned!", offer.rewardString];
     self.dateEarnedLabel.text = [[DateFormatManager sharedManager] formatToShortDateString:offer.expirationDate];
     
     if (offer.didReadMessage) {

@@ -19,11 +19,11 @@ static const NSInteger Seconds_Per_Day = 24 * Seconds_Per_Hour;
     if (dateOfExpiration.timeIntervalSince1970 > currentDate.timeIntervalSince1970) {
         NSTimeInterval expirationTimeInterval = [dateOfExpiration timeIntervalSinceDate:currentDate];
         
-        NSInteger ti = (NSInteger)expirationTimeInterval;
+        long ti = (NSInteger)expirationTimeInterval;
         
-        NSInteger minutes = (ti / Seconds_Per_Minute) % Seconds_Per_Minute;
-        NSInteger hours = (ti / Seconds_Per_Hour) % Seconds_Per_Minute;
-        NSInteger days = (ti / Seconds_Per_Day) % Seconds_Per_Minute;
+        long minutes = (ti / Seconds_Per_Minute) % Seconds_Per_Minute;
+        long hours = (ti / Seconds_Per_Hour) % Seconds_Per_Minute;
+        long days = (ti / Seconds_Per_Day) % Seconds_Per_Minute;
         
         if (days > 0) {
             NSString *dayStr = [NSString stringWithFormat:@"＜%li day", days];

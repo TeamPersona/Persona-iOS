@@ -16,18 +16,32 @@
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.collectionView.delegate = self;
-    self.collectionView.dataSource = self.dataSource;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"SideScrollingCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:SideScrollingOfferCollectionViewCellIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"PendingSideScrollingCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:PendingSideScrollingOfferCollectionViewCellIdentifier];
+}
+
+- (void)setCollectionViewDataSource:(id<UICollectionViewDataSource>)dataSource
+{
+    self.collectionView.dataSource = dataSource;
+    [self.collectionView reloadData];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     if (self.collectionType == SideScrollingCollectionTypeCompletedTransactions) {
-        [self.collectionView registerNib:[UINib nibWithNibName:@"SideScrollingCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:SideScrollingOfferCollectionViewCellIdentifier];
-    } else if (self.collectionType == SideScrollingCollectionTypePendingTransactions) {
-        [self.collectionView registerNib:[UINib nibWithNibName:@"PendingSideScrollingCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:PendingSideScrollingOfferCollectionViewCellIdentifier];
+        return CGSizeMake(220, 120);
+    } else {
+        return CGSizeMake(190, 120);
     }
 }
+
 
 #pragma mark -- UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate sideScrollingCollectionDidSelectCellIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:self.sectionNumber]];
+    if ([self.sideScrollingCollectionDelegate respondsToSelector:@selector(sideScrollingCollectionDidSelectCellIndexPath:)]) {
+        [self.sideScrollingCollectionDelegate sideScrollingCollectionDidSelectCellIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:self.sectionNumber]];
+    }
     [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 

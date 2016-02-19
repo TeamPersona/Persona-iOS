@@ -15,8 +15,14 @@
 #import "Constants.h"
 
 @interface HomeViewController ()
-@property (nonatomic, strong) NSArray *recommendedOffers;
 @property (nonatomic, strong) NSArray *homeTableViewTitles;
+
+@property (nonatomic, strong) NSArray *completedTransactions;
+@property (nonatomic, strong) NSArray *pendingTransactions;
+@property (nonatomic, strong) NSArray *recommendedOffers;
+
+@property (nonatomic, strong) CompletedTransactionsDataSource *completedTransactionsDataSource;
+@property (nonatomic, strong) PendingTransactionsDataSource *pendingTransactionsDataSource;
 @end
 
 @implementation HomeViewController
@@ -34,11 +40,15 @@
     
     self.homeTableViewTitles = @[@"Completed Transactions", @"Pending Transactions", @"Recommended For You"];
     
-    
 #if DEBUG
     NSDictionary *environment = [[NSProcessInfo processInfo] environment];
-    self.recommendedOffers = [OffersManager parseRecommendedOffersFromJSONFile:environment[@"DEBUG_RECOMMENDED_OFFERS"]];
+    self.completedTransactions = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_COMPLETED_OFFERS"]];
+    self.pendingTransactions = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_PENDING_OFFERS"]];
+    self.recommendedOffers = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_RECOMMENDED_OFFERS"]];
 #endif
+    
+    self.completedTransactionsDataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:self.completedTransactions];
+    self.pendingTransactionsDataSource = [[PendingTransactionsDataSource alloc] initWithPendingTransactions:self.pendingTransactions];
     
     [self.tableView reloadData];
 }
@@ -61,12 +71,14 @@
     if (indexPath.section < 2) {
         SideScrollingCollectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:SideScrollingCollectionTableViewCellIdentifier forIndexPath:indexPath];
         cell.sectionNumber = indexPath.section;
-//        cell.collectionArray = self.offers[indexPath.row];
+        cell.sideScrollingCollectionDelegate = self;
         
         if (indexPath.section == 0) {
-        cell.dataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:nil];
+            cell.collectionType = SideScrollingCollectionTypeCompletedTransactions;
+            [cell setCollectionViewDataSource:self.completedTransactionsDataSource];
         } else if (indexPath.section == 1) {
-            cell.dataSource = [[PendingTransactionsDataSource alloc] initWithPendingTransactions:nil];
+            cell.collectionType = SideScrollingCollectionTypePendingTransactions;
+            [cell setCollectionViewDataSource:self.pendingTransactionsDataSource];
         }
         return cell;
     } else {

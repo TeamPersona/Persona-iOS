@@ -17,7 +17,7 @@
 static NSString *SideScrollingCollectionTableViewCellIdentifier = @"sideScrollingCollectionCell";
 
 
-@interface SideScrollingCollectionTableViewCell : UITableViewCell <UICollectionViewDelegate>
+@interface SideScrollingCollectionTableViewCell : UITableViewCell <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 typedef NS_ENUM(NSUInteger, SideScrollingCollectionType) {
     SideScrollingCollectionTypeCompletedTransactions,
@@ -25,12 +25,11 @@ typedef NS_ENUM(NSUInteger, SideScrollingCollectionType) {
 };
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) id <SideScrollingCollectionDelegate> delegate;
-@property (nonatomic, strong) id <UICollectionViewDataSource> dataSource;
+@property (nonatomic, strong) id <SideScrollingCollectionDelegate> sideScrollingCollectionDelegate;
+
 @property (nonatomic) SideScrollingCollectionType collectionType;
-
-
 @property (nonatomic) NSInteger sectionNumber;
-@property (nonatomic, strong) NSArray *collectionArray;
+
+- (void)setCollectionViewDataSource:(id <UICollectionViewDataSource>)dataSource;
 
 @end

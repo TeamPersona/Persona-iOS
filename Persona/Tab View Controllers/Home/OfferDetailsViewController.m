@@ -47,8 +47,6 @@ static const CGFloat TextViewPadding = 16.0f;
 - (void)populateViewInformation
 {
     [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
-    self.partnerImageView.layer.minificationFilter = kCAFilterTrilinear;
-    
     self.partnerLabel.text = self.offer.partner.name;
     
     NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate currentDate:[NSDate date]];
@@ -61,7 +59,7 @@ static const CGFloat TextViewPadding = 16.0f;
     }
     
     self.rewardLabel.text = self.offer.rewardString;
-    self.participantsLabel.text = [NSString stringWithFormat:@"%li/%li participants", self.offer.currentParticipants, self.offer.totalParticipants];
+    self.participantsLabel.text = [NSString stringWithFormat:@"%li/%li participants", (long)self.offer.currentParticipants, self.offer.totalParticipants];
     self.progressView.progress = self.offer.participantsProgress;
     
     self.filterCategoriesTextView.attributedText = [self attributedStringWithInfo:self.offer.infoFilterList andDescription:FilterCategoriesPrefixDescription];

@@ -34,13 +34,13 @@ static const NSString *OffersButtonTitleText = @"Offers";
 
 - (void)updateProfileInfo:(Participant *)participantInfo
 {
-    [self.pointsButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalPointsEarned.integerValue, PointsButtonTitleText]
+    [self.pointsButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalPointsEarned.longValue, PointsButtonTitleText]
                        forState:UIControlStateNormal];
     
     [self.balanceButton setTitle:[NSString stringWithFormat:@"$%.02f\n%@", participantInfo.accountBalance.doubleValue, BalanceButtonTitleText]
                        forState:UIControlStateNormal];
     
-    [self.offersButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalNumOffers.integerValue, OffersButtonTitleText]
+    [self.offersButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalNumOffers.longValue, OffersButtonTitleText]
                        forState:UIControlStateNormal];
 }
 
