@@ -22,7 +22,6 @@
 		C669B8431C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C669B8411C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib */; };
 		C669B84A1C44486900B1E232 /* CompletedTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B8491C44486900B1E232 /* CompletedTransactionsDataSource.m */; };
 		C669B84F1C44489300B1E232 /* PendingTransactionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */; };
-		C669B8521C4448AF00B1E232 /* RecommendedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C669B8511C4448AF00B1E232 /* RecommendedDataSource.m */; };
 		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
 		C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */; };
 		C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */; };
@@ -75,6 +74,7 @@
 		C6D7B2031C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2021C73F1150033F5A2 /* PendingSideScrollingCollectionViewCell.xib */; };
 		C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */; };
 		C6D7B2081C7688860033F5A2 /* offers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2071C7688860033F5A2 /* offers.json */; };
+		C6D7B20A1C76E7330033F5A2 /* recommendedOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */; };
 		C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3DF1B1B6BC137009CC49C /* Money.m */; };
 		C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79AD1B5D7B60006873BD /* PointsData.m */; };
 		C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C21B5D7FDA006873BD /* PointsManager.m */; };
@@ -134,8 +134,6 @@
 		C669B8491C44486900B1E232 /* CompletedTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTransactionsDataSource.m; sourceTree = "<group>"; };
 		C669B84D1C44489300B1E232 /* PendingTransactionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsDataSource.h; sourceTree = "<group>"; };
 		C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsDataSource.m; sourceTree = "<group>"; };
-		C669B8501C4448AF00B1E232 /* RecommendedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedDataSource.h; sourceTree = "<group>"; };
-		C669B8511C4448AF00B1E232 /* RecommendedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedDataSource.m; sourceTree = "<group>"; };
 		C66E7C7E1C5AD1470045F79A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C67278BD1B6404D4008F1A48 /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
 		C67278BE1B6404D4008F1A48 /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
@@ -224,6 +222,7 @@
 		C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = completeTransactionsMockData.json; sourceTree = "<group>"; };
 		C6D7B2061C7679D70033F5A2 /* OfferStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferStatus.h; sourceTree = "<group>"; };
 		C6D7B2071C7688860033F5A2 /* offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = offers.json; sourceTree = "<group>"; };
+		C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recommendedOffers.json; sourceTree = "<group>"; };
 		C6E3DF1A1B6BC137009CC49C /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		C6E3DF1B1B6BC137009CC49C /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		C6FD79AC1B5D7B60006873BD /* PointsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsData.h; sourceTree = "<group>"; };
@@ -371,15 +370,6 @@
 				C669B84E1C44489300B1E232 /* PendingTransactionsDataSource.m */,
 			);
 			path = "Pending Transactions";
-			sourceTree = "<group>";
-		};
-		C669B84C1C44487600B1E232 /* Recommended */ = {
-			isa = PBXGroup;
-			children = (
-				C669B8501C4448AF00B1E232 /* RecommendedDataSource.h */,
-				C669B8511C4448AF00B1E232 /* RecommendedDataSource.m */,
-			);
-			path = Recommended;
 			sourceTree = "<group>";
 		};
 		C6846C5E1B5626F80066FF74 /* Custom */ = {
@@ -579,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D7B2071C7688860033F5A2 /* offers.json */,
+				C6D7B2091C76E7330033F5A2 /* recommendedOffers.json */,
 				C6D7B2041C73F2600033F5A2 /* completeTransactionsMockData.json */,
 				C687F7521B6182DA007DDA93 /* featuredOffersMockDataSample1.json */,
 				C687F7541B61EC09007DDA93 /* profileMockData.json */,
@@ -600,7 +591,6 @@
 				C6C027231C1FED7400692227 /* OfferDetailsViewController.xib */,
 				C669B8471C44486900B1E232 /* Completed Transactions */,
 				C669B84B1C44487000B1E232 /* Pending Transactions */,
-				C669B84C1C44487600B1E232 /* Recommended */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -792,6 +782,7 @@
 				C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
 				C6FD79F81B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.xib in Resources */,
+				C6D7B20A1C76E7330033F5A2 /* recommendedOffers.json in Resources */,
 				C669B8431C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib in Resources */,
 				C687F7531B6182DA007DDA93 /* featuredOffersMockDataSample1.json in Resources */,
 				C6846C7C1B56D31C0066FF74 /* SignUpViewController.xib in Resources */,
@@ -874,7 +865,6 @@
 				C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
-				C669B8521C4448AF00B1E232 /* RecommendedDataSource.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
 				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,

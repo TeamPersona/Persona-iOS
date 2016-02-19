@@ -9,14 +9,12 @@
 #import "HomeViewController.h"
 #import "CompletedTransactionsDataSource.h"
 #import "PendingTransactionsDataSource.h"
-#import "RecommendedDataSource.h"
 #import "OfferDetailsViewController.h"
 #import "OfferTableViewCell.h"
 #import "OffersManager.h"
 #import "Constants.h"
 
 @interface HomeViewController ()
-@property (nonatomic, strong) NSArray *offers;
 @property (nonatomic, strong) NSArray *recommendedOffers;
 @property (nonatomic, strong) NSArray *homeTableViewTitles;
 @end
@@ -38,8 +36,8 @@
     
     
 #if DEBUG
-    self.offers = [OffersManager parseRecommendedOffersFromJSONFile:@"offers.json"];
-    self.recommendedOffers = [OffersManager parseRecommendedOffersFromJSONFile:@"offers.json"];
+    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
+    self.recommendedOffers = [OffersManager parseRecommendedOffersFromJSONFile:environment[@"DEBUG_RECOMMENDED_OFFERS"]];
 #endif
     
     [self.tableView reloadData];
@@ -63,7 +61,7 @@
     if (indexPath.section < 2) {
         SideScrollingCollectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:SideScrollingCollectionTableViewCellIdentifier forIndexPath:indexPath];
         cell.sectionNumber = indexPath.section;
-        cell.collectionArray = self.offers[indexPath.row];
+//        cell.collectionArray = self.offers[indexPath.row];
         
         if (indexPath.section == 0) {
         cell.dataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:nil];
@@ -103,15 +101,13 @@
     if (indexPath.section < 2) {
         return 120.0f;
     } else {
-        return OfferTableViewCellHeight;
+        Offer *offer = self.recommendedOffers[indexPath.row];
+        if (!offer.isExpired) {
+            return OfferTableViewCellHeight;
+        } else {
+            return OfferTableViewCellHeightExpired;
+        }
     }
-//
-//    Offer *offer = self.offers[indexPath.row];
-//    if (!offer.isExpired) {
-//        return OfferTableViewCellHeight;
-//    } else {
-//        return OfferTableViewCellHeightExpired;
-//    }
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -126,7 +122,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 2) {
-        OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.offers[indexPath.row]];
+        OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.recommendedOffers[indexPath.row]];
         [self.navigationController pushViewController:offerDetailsVC animated:YES];
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }

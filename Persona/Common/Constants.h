@@ -10,7 +10,7 @@
 #define Persona_Constants_h
 
 #define SCREEN_SIZE     [[UIScreen mainScreen] bounds].size
-#define DEBUG           1
+#define USE_MOCK_DATA   1
 #define IS_LOGGED_IN    @"kIsLoggedIn"
 
 #endif
