@@ -16,10 +16,6 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
 
 @implementation SideScrollingCollectionViewCell
 
-- (void)awakeFromNib
-{
-}
-
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -33,6 +29,8 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
 - (void)setOffer:(Offer *)offer
 {
     self.partnerImageView.image = nil;
+    self.messageImageView.image = nil;
+    
     [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(62, 62) completion:^(UIImage *image) {
         self.partnerImageView.image = image;
     }];
@@ -41,11 +39,16 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
     self.earnedLabel.text = [NSString stringWithFormat:@"%@ earned!", offer.rewardString];
     self.dateEarnedLabel.text = [[DateFormatManager sharedManager] formatToShortDateString:offer.expirationDate];
     
+    NSString *imgName;
     if (offer.didReadMessage) {
-        self.messageImageView.image = [UIImage imageNamed:MESSAGE_READ_IMAGE_NAME];
+        imgName = MESSAGE_READ_IMAGE_NAME;
     } else {
-        self.messageImageView.image = [UIImage imageNamed:MESSAGE_UNREAD_IMAGE_NAME];
+        imgName = MESSAGE_UNREAD_IMAGE_NAME;
     }
+    
+    [[ImageManager sharedManager] getImageName:imgName iconSize:self.messageImageView.bounds.size completion:^(UIImage *image) {
+        self.messageImageView.image = image;
+    }];
 }
 
 @end

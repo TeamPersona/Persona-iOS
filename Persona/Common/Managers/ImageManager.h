@@ -15,7 +15,7 @@ typedef void(^ImageCompletionBlock)(UIImage *image);
 
 + (ImageManager *)sharedManager;
 
+- (void)getImageName:(NSString *)imgName iconSize:(CGSize)size completion:(ImageCompletionBlock)completionBlock;
 - (void)getWebImage:(NSURL *)url iconSize:(CGSize)size completion:(ImageCompletionBlock)completionBlock;
-- (UIImage *)scaleImage:(UIImage *)img fitToSize:(CGSize)size;
 
 @end

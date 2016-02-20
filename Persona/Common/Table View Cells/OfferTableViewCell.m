@@ -26,11 +26,20 @@
 - (void)populateOfferInfo:(Offer *)offer
 {
     self.partnerImageView.image = nil;
+    self.expirationImageView.image = nil;
+    self.userIcon.image = nil;
     [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(56, 56) completion:^(UIImage *image) {
         if (image) {
             self.partnerImageView.image = image;
         }
     }];
+    [[ImageManager sharedManager] getImageName:@"Timer" iconSize:self.expirationImageView.bounds.size completion:^(UIImage *image) {
+        self.expirationImageView.image = image;
+    }];
+    [[ImageManager sharedManager] getImageName:@"User" iconSize:self.userIcon.bounds.size completion:^(UIImage *image) {
+        self.userIcon.image = image;
+    }];
+    
     self.titleLabel.text = offer.partner.name;
     self.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
     self.rewardLabel.text = offer.rewardString;

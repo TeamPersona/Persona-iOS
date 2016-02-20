@@ -11,10 +11,12 @@
 #import <SDWebImageDownloader.h>
 
 static NSString *ImageCacheNamespaceURLs = @"com.uwpib.persona.imageCache.URLs";
+static NSString *ImageCacheNamespaceLocal = @"com.uwpib.persona.imageCache.local";
 
 @interface ImageManager()
 
 @property (nonatomic, strong) SDImageCache *webImageCache;
+@property (nonatomic, strong) SDImageCache *localImageCache;
 
 @end
 
@@ -35,9 +37,22 @@ static NSString *ImageCacheNamespaceURLs = @"com.uwpib.persona.imageCache.URLs";
     self = [super init];
     if (self) {
         self.webImageCache = [[SDImageCache alloc] initWithNamespace:ImageCacheNamespaceURLs];
-        
+        self.localImageCache = [[SDImageCache alloc] initWithNamespace:ImageCacheNamespaceLocal];
     }
     return self;
+}
+
+- (void)getImageName:(NSString *)imgName iconSize:(CGSize)size completion:(ImageCompletionBlock)completionBlock
+{
+    NSString *imgStr = [NSString stringWithFormat:@"%@%f%f", imgName, size.width, size.height];
+    UIImage *img = [self.localImageCache imageFromDiskCacheForKey:imgStr];
+    if (img == nil) {
+        UIImage *newImage = [self scaleImage:[UIImage imageNamed:imgName] fitToSize:size];
+        [self.localImageCache storeImage:newImage forKey:imgStr];
+        completionBlock(newImage);
+    } else {
+        completionBlock(img);
+    }
 }
 
 - (void)getWebImage:(NSURL *)url iconSize:(CGSize)size completion:(ImageCompletionBlock)completionBlock
