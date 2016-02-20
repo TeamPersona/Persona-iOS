@@ -10,6 +10,7 @@
 #import "NSString+ExpirationTime.h"
 #import "UIColor+ProjectColors.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ImageManager.h"
 
 @implementation OfferTableViewCell
 
@@ -24,7 +25,12 @@
 
 - (void)populateOfferInfo:(Offer *)offer
 {
-    [self.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
+    self.partnerImageView.image = nil;
+    [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(56, 56) completion:^(UIImage *image) {
+        if (image) {
+            self.partnerImageView.image = image;
+        }
+    }];
     self.titleLabel.text = offer.partner.name;
     self.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
     self.rewardLabel.text = offer.rewardString;

@@ -8,7 +8,7 @@
 
 #import "OfferDetailsViewController.h"
 #import "NSString+ExpirationTime.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "ImageManager.h"
 
 static NSString *OfferDetailsTitle =                    @"Offer Details";
 static NSString *FilterCategoriesPrefixDescription =    @"Filtered by:";
@@ -46,7 +46,12 @@ static const CGFloat TextViewPadding = 16.0f;
 
 - (void)populateViewInformation
 {
-    [self.partnerImageView sd_setImageWithURL:self.offer.partner.partnerImageURL];
+    self.partnerImageView.image = nil;
+    [[ImageManager sharedManager] getWebImage:self.offer.partner.partnerImageURL iconSize:CGSizeMake(56, 56) completion:^(UIImage *image) {
+        if (image) {
+            self.partnerImageView.image = image;
+        }
+    }];
     self.partnerLabel.text = self.offer.partner.name;
     
     NSString *expirationString = [NSString stringWithExpirationDate:self.offer.expirationDate currentDate:[NSDate date]];

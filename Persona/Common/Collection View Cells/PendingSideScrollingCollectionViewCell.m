@@ -8,7 +8,7 @@
 
 #import "PendingSideScrollingCollectionViewCell.h"
 #import "DateFormatManager.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "ImageManager.h"
 
 @implementation PendingSideScrollingCollectionViewCell
 
@@ -28,7 +28,12 @@
 
 - (void)setOffer:(Offer *)offer
 {
-    [self.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
+    self.partnerImageView.image = nil;
+    [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(62, 62) completion:^(UIImage *image) {
+        if (image) {
+            self.partnerImageView.image = image;
+        }
+    }];
     self.partnerTitleLabel.text = offer.partner.name;
     
     self.pendingLabel.text = [NSString stringWithFormat:@"%@ pending", offer.rewardString];

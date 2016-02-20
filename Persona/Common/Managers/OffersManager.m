@@ -87,7 +87,7 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
         partner.name = jsonOffer[API_JSON_Partner_Name];
     }
     if (jsonOffer[API_JSON_Partner_ImageURL] != nil) {
-        partner.partnerImageURL = jsonOffer[API_JSON_Partner_ImageURL];
+        partner.partnerImageURL = [NSURL URLWithString:jsonOffer[API_JSON_Partner_ImageURL]];
     }
     if (jsonOffer[API_JSON_Offer_Id] != nil) {
         offer.offerId = [jsonOffer[API_JSON_Offer_Id] integerValue];

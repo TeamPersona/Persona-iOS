@@ -9,7 +9,7 @@
 #import "SideScrollingCollectionViewCell.h"
 #import "NSDate+EpochTime.h"
 #import "DateFormatManager.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "ImageManager.h"
 
 static NSString *MESSAGE_READ_IMAGE_NAME = @"EnvelopeRead";
 static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
@@ -32,7 +32,10 @@ static NSString *MESSAGE_UNREAD_IMAGE_NAME = @"EnvelopeUnread";
 
 - (void)setOffer:(Offer *)offer
 {
-    [self.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL];
+    self.partnerImageView.image = nil;
+    [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(62, 62) completion:^(UIImage *image) {
+        self.partnerImageView.image = image;
+    }];
     self.partnerTitleLabel.text = offer.partner.name;
     
     self.earnedLabel.text = [NSString stringWithFormat:@"%@ earned!", offer.rewardString];
