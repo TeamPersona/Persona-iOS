@@ -57,9 +57,8 @@ offerDetailsList = ["Get 20% off your next purchase!",
                     ]
 
 informationTypesCategoryList = {"Basic" : ["First Name", "Last Name", "Date of Birth", "Gender", "Ethnicity", "Home Address", "Allow Contact"],
-                                "Personal" : ["Education", "Marital Status", "Number of Dependents", "Political Affliations", "Religion"],
+                                "Personal" : ["Education", "Marital Status", "Number of Dependents", "Political Affliations", "Religion", "Current Employer", "Employment History"],
                                 "Financial" : ["Salary", "Purchase History", "Credit Score"],
-                                "Employment" : ["Current Employer", "Employment History"],
                                 "Heath & Fitness" : ["Height", "Weight", "Has Eyewear", "Disabilities", "Medical History", "Steps Taken History", "Sleep Tracking History"],
                                 "Entertainment" : ["TV Shows Interests", "Movie Interests", "Book Interests", "Favorite Sports Teams", "Video Game Interests", ],
                                 "Social" : ["Facebook Friends List", "Facebook Statuses", "Facebook Events", "Twitter Following List", "Twitter Followers List",
