@@ -7,6 +7,7 @@
 //
 
 #import "BaseNavigationViewController.h"
+#import "UIColor+ProjectColors.h"
 
 @interface BaseNavigationViewController ()
 
@@ -19,6 +20,9 @@
     self = [super initWithRootViewController:rootViewController];
     if (self) {
         self.title = rootViewController.title;
+        self.navigationBar.barTintColor = [UIColor personaColor];
+        self.navigationBar.tintColor = [UIColor whiteColor];
+        self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     }
     return self;
 }
