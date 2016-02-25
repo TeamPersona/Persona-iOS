@@ -24,7 +24,6 @@
 @property (nonatomic, assign) id<ProfileDataSourceDelegate> delegate;
 
 @property (nonatomic, strong) Participant *profileInfo;
-@property (nonatomic, strong) NSArray *pointsDataArray;
 @property (nonatomic, strong) NSArray *offersDataArray;
 @property (nonatomic, strong) BalanceInfo *balanceInfo;
 

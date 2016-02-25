@@ -81,8 +81,8 @@
 		C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3DF1B1B6BC137009CC49C /* Money.m */; };
 		C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79AD1B5D7B60006873BD /* PointsData.m */; };
 		C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C21B5D7FDA006873BD /* PointsManager.m */; };
-		C6FD79C81B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C61B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m */; };
-		C6FD79C91B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD79C71B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib */; };
+		C6FD79C81B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */; };
+		C6FD79C91B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */; };
 		C6FD79D31B5DA077006873BD /* OffersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79CC1B5DA077006873BD /* OffersDataSource.m */; };
 		C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79D01B5DA077006873BD /* ProfileDataSource.m */; };
 		C6FD79D61B5DA077006873BD /* SettingsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD79D21B5DA077006873BD /* SettingsDataSource.m */; };
@@ -236,9 +236,9 @@
 		C6FD79AD1B5D7B60006873BD /* PointsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsData.m; sourceTree = "<group>"; };
 		C6FD79C11B5D7FDA006873BD /* PointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsManager.h; sourceTree = "<group>"; };
 		C6FD79C21B5D7FDA006873BD /* PointsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsManager.m; sourceTree = "<group>"; };
-		C6FD79C51B5D9CB9006873BD /* ProfilePointsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePointsCollectionViewCell.h; sourceTree = "<group>"; };
-		C6FD79C61B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePointsCollectionViewCell.m; sourceTree = "<group>"; };
-		C6FD79C71B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePointsCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationCategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationCategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInformationCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6FD79CB1B5DA077006873BD /* OffersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersDataSource.h; sourceTree = "<group>"; };
 		C6FD79CC1B5DA077006873BD /* OffersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersDataSource.m; sourceTree = "<group>"; };
 		C6FD79CF1B5DA077006873BD /* ProfileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileDataSource.h; sourceTree = "<group>"; };
@@ -603,9 +603,9 @@
 				C6FD79FA1B5EF9E4006873BD /* ProfileTierCollectionViewCell.h */,
 				C6FD79FB1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m */,
 				C6FD79FC1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib */,
-				C6FD79C51B5D9CB9006873BD /* ProfilePointsCollectionViewCell.h */,
-				C6FD79C61B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m */,
-				C6FD79C71B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib */,
+				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
+				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
+				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
 				C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */,
 				C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */,
 				C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */,
@@ -770,7 +770,7 @@
 				C6D7B2081C7688860033F5A2 /* offers.json in Resources */,
 				C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */,
-				C6FD79C91B5D9CB9006873BD /* ProfilePointsCollectionViewCell.xib in Resources */,
+				C6FD79C91B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib in Resources */,
 				C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */,
 				C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
@@ -887,7 +887,7 @@
 				C6C027251C1FED7400692227 /* HomeViewController.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
 				C687F75C1B61F4DE007DDA93 /* RewardDataPoint.m in Sources */,
-				C6FD79C81B5D9CB9006873BD /* ProfilePointsCollectionViewCell.m in Sources */,
+				C6FD79C81B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m in Sources */,
 				C6FD79F71B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,

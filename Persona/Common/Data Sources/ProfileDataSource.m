@@ -8,7 +8,7 @@
 
 #import "ProfileDataSource.h"
 #import "ProfileTierCollectionViewCell.h"
-#import "ProfilePointsCollectionViewCell.h"
+#import "ProfileInformationCategoryCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "PointsData.h"
@@ -19,9 +19,19 @@
 
 @interface ProfileDataSource ()
 @property (nonatomic) ProfileSegment currentSelectedSegment;
+@property (nonatomic, strong) NSArray *profileInformationCategoriesList;
 @end
 
 @implementation ProfileDataSource
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.profileInformationCategoriesList = @[@"Basic", @"Personal", @"Financial", @"Health & Fitness", @"Entertainment", @"Social"];
+    }
+    return self;
+}
 
 - (void)updateDisplayForProfileSegment:(ProfileSegment)segment
 {
@@ -50,7 +60,7 @@
         numItems = 1;
     } else if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            numItems = self.pointsDataArray.count;
+            numItems = self.profileInformationCategoriesList.count;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             numItems = 1;
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
@@ -82,13 +92,8 @@
         return cell;
     } else if (indexPath.section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            PointsData *pointsData = self.pointsDataArray[indexPath.row];
-            
-            ProfilePointsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfilePointsCollectionViewCellIdentifier forIndexPath:indexPath];
-            cell.titleLabel.text = pointsData.dataTitle;
-            [cell.dataImageView sd_setImageWithURL:pointsData.dataImageURL];
-            cell.pointsValueLabel.text = [NSString stringWithFormat:@"%li pts", [pointsData.dataPointsValue longValue]];
-
+            ProfileInformationCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileInformationCategoryCollectionViewCellIdentifier forIndexPath:indexPath];
+            cell.titleLabel.text = self.profileInformationCategoriesList[indexPath.row];
             return cell;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             ProfileBalanceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileBalanceCollectionViewCellIdentifier forIndexPath:indexPath];

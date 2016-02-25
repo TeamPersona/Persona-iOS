@@ -39,13 +39,10 @@
     self.tableView.dataSource = self;
     
     self.homeTableViewTitles = @[@"Completed Transactions", @"Pending Transactions", @"Recommended For You"];
-    
-#if DEBUG
-    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
-    self.completedTransactions = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_COMPLETED_OFFERS"]];
-    self.pendingTransactions = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_PENDING_OFFERS"]];
-    self.recommendedOffers = [OffersManager parseOffersFromJSONFile:environment[@"DEBUG_RECOMMENDED_OFFERS"]];
-#endif
+    // TODO: Get data from server
+    self.completedTransactions = [OffersManager parseOffersFromJSONFile:@"completedOffers.json"];
+    self.pendingTransactions = [OffersManager parseOffersFromJSONFile:@"pendingOffers.json"];
+    self.recommendedOffers = [OffersManager parseOffersFromJSONFile:@"recommendedOffers.json"];
     
     self.completedTransactionsDataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:self.completedTransactions];
     self.pendingTransactionsDataSource = [[PendingTransactionsDataSource alloc] initWithPendingTransactions:self.pendingTransactions];
@@ -62,7 +59,15 @@
 #pragma mark -- Side Scrolling Collection Delegate Methods
 - (void)sideScrollingCollectionDidSelectCellIndexPath:(NSIndexPath *)indexPath
 {
-//    OfferDetailsViewController *vc = [OfferDetailsViewController alloc] initWithOffer:<#(Offer *)#>
+    Offer *offer;
+    if (indexPath.section == 0) {
+        offer = self.completedTransactions[indexPath.row];
+    } else if (indexPath.section == 1) {
+        offer = self.pendingTransactions[indexPath.row];
+    }
+    OfferDetailsViewController *vc = [[OfferDetailsViewController alloc] initWithOffer:offer];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark -- UITableView DataSource Methods

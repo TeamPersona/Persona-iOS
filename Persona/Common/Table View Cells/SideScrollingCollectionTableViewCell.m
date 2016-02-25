@@ -29,7 +29,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.collectionType == SideScrollingCollectionTypeCompletedTransactions) {
-        return CGSizeMake(220, 120);
+        return CGSizeMake(204, 120);
     } else {
         return CGSizeMake(190, 120);
     }

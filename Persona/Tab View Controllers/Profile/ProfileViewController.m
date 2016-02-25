@@ -14,7 +14,7 @@
 #import "OffersManager.h"
 #import "ProfileDataSource.h"
 #import "ProfileTierCollectionViewCell.h"
-#import "ProfilePointsCollectionViewCell.h"
+#import "ProfileInformationCategoryCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "OfferDetailsViewController.h"
@@ -39,19 +39,18 @@
     
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
-#if DEBUG
+    // TODO: Get data from server
     self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
-    self.profileDataSource.pointsDataArray = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
+//    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
     self.profileDataSource.offersDataArray = [OffersManager parseProfileOffersFromJSONFile:@"profileOffersMockData.json"];
     [self.collectionView reloadData];
-#endif
 
     // Collection View
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileSegmentedHeaderCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ProfileSegmentedHeaderViewIdentifier];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileTierCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileTierCollectionViewCellIdentifier];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"ProfilePointsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfilePointsCollectionViewCellIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileInformationCategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileInformationCategoryCollectionViewCellIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileBalanceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileBalanceCollectionViewCellIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileOffersCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileOffersCollectionViewCellIdentifier];
     
@@ -93,7 +92,9 @@
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.currentSelectedSegment == ProfileSegmentOffers) {
+    if (self.currentSelectedSegment == ProfileSegmentPoints) {
+        
+    } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
         OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
         [self.navigationController pushViewController:offerDetailsVC animated:YES];
         [collectionView deselectItemAtIndexPath:indexPath animated:NO];
@@ -108,7 +109,7 @@
         itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileTierCellHeight);
     } else if (indexPath.section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            itemSize = ProfilePointsCollectionViewCellSize;
+            itemSize = ProfileInformationCategoryCollectionViewCellSize;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileBalanceCollectionViewCellHeight);
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
@@ -140,7 +141,7 @@
     
     if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            edgeInset = ProfilePointsCollectionViewSectionInset;
+            edgeInset = ProfileInformationCategoryCollectionViewSectionInset;
         }
     }
     
@@ -153,7 +154,7 @@
     
     if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            minItemSpacing = ProfilePointsCollectionViewMinimumCellSpacing;
+            minItemSpacing = ProfileInformationCategoryCollectionViewMinimumCellSpacing;
         } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
             
         }
@@ -168,7 +169,7 @@
     
     if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
-            minLineSpacing = ProfilePointsCollectionViewMinimumCellSpacing;
+            minLineSpacing = ProfileInformationCategoryCollectionViewMinimumLineSpacing;
         }
     }
     
