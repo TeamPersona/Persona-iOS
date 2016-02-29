@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "InformationDetails.h"
 
-@interface InformationDetailsViewController : UIViewController <UITableViewDelegate, UITextFieldDelegate>
+@interface InformationDetailsViewController : UIViewController <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *informationSegmentedButton;
@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UITableView *permissionTableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
+// Autolayout Constraints
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topVerticalSpaceLayoutConstraint;
 
 - (instancetype)initWithInfoDetails:(InformationDetails *)details;
 

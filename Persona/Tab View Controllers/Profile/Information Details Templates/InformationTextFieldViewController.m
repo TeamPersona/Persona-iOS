@@ -38,12 +38,24 @@
     
     self.infoLabel.text = [NSString stringWithFormat:@"Enter your %@:", self.infoDetails.name.lowercaseString];
     self.textField.text = (NSString *)self.infoDetails.value;
+    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITextField Delegate Methods
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
 }
 
 @end

@@ -32,11 +32,24 @@
     
     self.titleLabel.text = self.infoDetails.name;
     
+    // Add keyboard notifications.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    
     [self updateButton:self.informationSegmentedButton state:YES];
     [self updateButton:self.permissionsSegmentedButton state:NO];
 
     if (self.infoDetails.type == InformationDetailsTypeString) {
         self.informationTemplateViewController = [[InformationTextFieldViewController alloc] initWithInfoDetails:self.infoDetails];
+        
     } else if (self.infoDetails.type == InformationDetailsTypeNumber) {
         self.informationTemplateViewController = [[InformationTextFieldViewController alloc] initWithInfoDetails:self.infoDetails];
     } else if (self.infoDetails.type == InformationDetailsTypeBoolean) {
@@ -67,6 +80,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -93,15 +111,38 @@
     }];
 }
 
-#pragma mark - UITextField Delegate Methods
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+#pragma mark - Keyboard Notifications
+- (void)keyboardWillShow:(NSNotification *)notification
 {
-    // Window resizing
+    NSDictionary *userInfo = notification.userInfo;
+    NSValue *finalFrameValue = userInfo[UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardFinalFrame = [self.view convertRect:finalFrameValue.CGRectValue fromView:nil];
+    
+    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationOptions animationCurve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    
+    [UIView animateWithDuration:animationDuration
+                          delay:0
+                        options:animationCurve
+                     animations:^{
+                         self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, CGRectGetWidth(self.view.frame), CGRectGetHeight([UIScreen mainScreen].bounds) - CGRectGetHeight(keyboardFinalFrame));
+                     } completion:^(BOOL finished) {
+                     }];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
+- (void)keyboardWillHide:(NSNotification *)notification
 {
+    NSDictionary *userInfo = notification.userInfo;
+    double animationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationOptions animationCurve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     
+    [UIView animateWithDuration:animationDuration
+                          delay:0
+                        options:animationCurve
+                     animations:^{
+                         self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, CGRectGetWidth(self.view.frame), CGRectGetHeight([UIScreen mainScreen].bounds));
+                     } completion:^(BOOL finished) {
+                     }];
 }
 
 #pragma mark - UITableView Delegate Methods

@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "InformationDetails.h"
 
-@interface InformationTextFieldViewController : UIViewController
+@interface InformationTextFieldViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
-@property (nonatomic, strong) id<UITextFieldDelegate> textFieldDelegate;
 
 - (instancetype)initWithInfoDetails:(InformationDetails *)details;
 
