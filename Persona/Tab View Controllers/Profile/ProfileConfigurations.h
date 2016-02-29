@@ -20,4 +20,13 @@ typedef NS_ENUM(NSUInteger, ProfileSegment) {
     ProfileSegmentOffers
 };
 
+typedef NS_ENUM(NSUInteger, InformationCategory) {
+    InformationCategoryBasic,
+    InformationCategoryPersonal,
+    InformationCategoryFinancial,
+    InformationCategoryHealthAndFitness,
+    InformationCategoryEntertainment,
+    InformationCategorySocial
+};
+
 #endif

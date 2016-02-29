@@ -23,6 +23,9 @@
         self.navigationBar.barTintColor = [UIColor personaColor];
         self.navigationBar.tintColor = [UIColor whiteColor];
         self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+        self.navigationBar.barStyle = UIBarStyleBlack;
+        self.navigationBar.translucent = NO;
     }
     return self;
 }

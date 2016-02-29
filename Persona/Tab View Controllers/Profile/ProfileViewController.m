@@ -18,12 +18,14 @@
 #import "ProfileBalanceCollectionViewCell.h"
 #import "ProfileOffersCollectionViewCell.h"
 #import "OfferDetailsViewController.h"
+#import "InformationCategoryDetailsViewController.h"
 #import "Constants.h"
 
 @interface ProfileViewController ()
 
 @property (nonatomic, strong) ProfileDataSource *profileDataSource;
 @property (nonatomic) ProfileSegment currentSelectedSegment;
+@property (nonatomic, strong) NSArray *profileInformationCategoriesList;
 
 @end
 
@@ -37,11 +39,14 @@
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(settingsButtonPressed:)];
     [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
     
+    self.profileInformationCategoriesList = @[@"Basic", @"Personal", @"Financial", @"Health & Fitness", @"Entertainment", @"Social"];
+    
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
     // TODO: Get data from server
     self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
+    self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
     self.profileDataSource.offersDataArray = [OffersManager parseProfileOffersFromJSONFile:@"profileOffersMockData.json"];
     [self.collectionView reloadData];
@@ -93,12 +98,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.currentSelectedSegment == ProfileSegmentPoints) {
-        
+        InformationCategoryDetailsViewController *informationDetailsVC = [[InformationCategoryDetailsViewController alloc] initWithCategoryTitle:self.profileInformationCategoriesList[indexPath.row]];
+        [self.navigationController pushViewController:informationDetailsVC animated:YES];
     } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
         OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
         [self.navigationController pushViewController:offerDetailsVC animated:YES];
-        [collectionView deselectItemAtIndexPath:indexPath animated:NO];
     }
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - UICollectionViewFlowLayout Delegate Methods
