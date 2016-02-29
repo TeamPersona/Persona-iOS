@@ -11,15 +11,11 @@
 typedef NS_ENUM(NSUInteger, InformationDetailsType) {
     InformationDetailsTypeNull = 0,
     InformationDetailsTypeString = 1,
-    InformationDetailsTypeInteger = 2,
+    InformationDetailsTypeNumber = 2,
     InformationDetailsTypeBoolean = 3,
     InformationDetailsTypeDate = 4,
-    InformationDetailsTypeOption = 5
-};
-
-typedef NS_ENUM(NSUInteger, InformationOptionsType) {
-    InformationOptionsTypeSingle,
-    InformationOptionsTypeMultiple
+    InformationDetailsTypeOptionSingle = 5,
+    InformationDetailsTypeOptionMultiple = 6
 };
 
 @interface InformationDetails : NSObject
@@ -28,7 +24,6 @@ typedef NS_ENUM(NSUInteger, InformationOptionsType) {
 @property (nonatomic) InformationDetailsType type;
 @property (nonatomic) NSInteger points;
 @property (nonatomic, strong) id value;
-@property (nonatomic) InformationOptionsType optionsType;
 @property (nonatomic, strong) NSArray *options;
 
 @property (nonatomic, readonly) BOOL hasValue;

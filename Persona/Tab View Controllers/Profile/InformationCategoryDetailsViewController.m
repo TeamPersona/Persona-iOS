@@ -10,9 +10,13 @@
 #import "ProfileInformationDetailsCollectionViewCell.h"
 #import "InformationDetailsDataSource.h"
 #import "ProfileInformationManager.h"
+#import "InformationDetailsViewController.h"
+#import "PopupTransitionAnimation.h"
 
 @interface InformationCategoryDetailsViewController ()
 @property (nonatomic, strong) InformationDetailsDataSource *dataSource;
+@property (nonatomic, strong) InformationCategory *infoCategory;
+@property (nonatomic, strong) PopupTransitionAnimation *animator;
 @end
 
 @implementation InformationCategoryDetailsViewController
@@ -29,8 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    InformationCategory *infoCategory = [ProfileInformationManager parseProfileInformationCategory:[NSString stringWithFormat:@"%@InformationMockData.json", self.title.lowercaseString]];
-    self.dataSource = [[InformationDetailsDataSource alloc] initWithInfoCategory:infoCategory];
+    self.animator = [PopupTransitionAnimation new];
+    self.infoCategory = [ProfileInformationManager parseProfileInformationCategory:[NSString stringWithFormat:@"%@InformationMockData.json", self.title.lowercaseString]];
+    self.dataSource = [[InformationDetailsDataSource alloc] initWithInfoCategory:self.infoCategory];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileInformationDetailsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileInformationDetailsCollectionViewCellIdentifier];
     self.collectionView.dataSource = self.dataSource;
@@ -42,10 +47,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    InformationDetailsViewController *vc = [[InformationDetailsViewController alloc] initWithInfoDetails:self.infoCategory.informationDetails[indexPath.row]];
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    vc.transitioningDelegate = self.animator;
+    [self.navigationController presentViewController:vc animated:YES completion:^{
+    }];
 }
 
 #pragma mark - UICollectionView Flow Layout Delegate Methods

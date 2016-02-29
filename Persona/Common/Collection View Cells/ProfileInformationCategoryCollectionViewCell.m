@@ -7,12 +7,13 @@
 //
 
 #import "ProfileInformationCategoryCollectionViewCell.h"
+#import "UIColor+ProjectColors.h"
 
 @implementation ProfileInformationCategoryCollectionViewCell
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    self.backgroundColor = [UIColor personaLightColor];
 }
 
 - (void)drawRect:(CGRect)rect

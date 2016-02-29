@@ -61,9 +61,6 @@ static const NSString *API_JSON_INFO_CATEGORY_DETAILS_OPTION_TYPE = @"optionType
     if (details[API_JSON_INFO_CATEGORY_DETAILS_OPTIONS] != nil) {
         infoDetails.options = details[API_JSON_INFO_CATEGORY_DETAILS_OPTIONS];
     }
-    if (details[API_JSON_INFO_CATEGORY_DETAILS_OPTION_TYPE] != nil) {
-        infoDetails.optionsType = (InformationOptionsType)details[API_JSON_INFO_CATEGORY_DETAILS_OPTION_TYPE];
-    }
     if (details[API_JSON_INFO_CATEGORY_DETAILS_VALUE] != nil) {
         infoDetails.value = details[API_JSON_INFO_CATEGORY_DETAILS_VALUE];
     }

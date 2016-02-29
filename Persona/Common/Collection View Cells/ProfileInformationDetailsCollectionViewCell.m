@@ -8,6 +8,7 @@
 
 #import "ProfileInformationDetailsCollectionViewCell.h"
 #import "ImageManager.h"
+#import "UIColor+ProjectColors.h"
 
 @interface ProfileInformationDetailsCollectionViewCell ()
 
@@ -19,7 +20,7 @@
 
 - (void)awakeFromNib
 {
-    self.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    self.backgroundColor = [UIColor personaLightColor];
     [[ImageManager sharedManager] getImageName:@"Checkmark" iconSize:self.checkmarkImageView.bounds.size completion:^(UIImage *image) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.checkmarkImage = image;

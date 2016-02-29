@@ -22,14 +22,12 @@
     {
       "name" : "Gender",
       "type" : 5,
-      "optionType" : 0,
       "options" : ["Male", "Female", "Other"],
       "points" : 20
     },
     {
       "name" : "Visible Minority Status",
       "type" : 5,
-      "optionType" : 0,
       "options" : ["South Asian", "Chinese", "Black", "Filipino", "Latin American", "Arab/West Asian", "Arab", "Southeast Asian", "West Asian", "Korean", "Japanese", "Visible Minority, n.i.e.", "Multiple Visible Minorities", "Not a Visible Minority"],
       "points" : 20
     },

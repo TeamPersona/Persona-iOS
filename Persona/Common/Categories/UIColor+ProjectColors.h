@@ -11,6 +11,9 @@
 @interface UIColor (ProjectColors)
 
 + (UIColor *)personaColor;
++ (UIColor *)personaLightColor;
++ (UIColor *)personaDarkColor;
+
 + (UIColor *)progressCircleFillColor;
 + (UIColor *)progressCircleOutlineColor;
 

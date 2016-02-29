@@ -70,6 +70,11 @@
 		C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */; };
 		C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */; };
 		C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08391B59DC7D0089E305 /* SettingsOption.m */; };
+		C6BDA5931C84235800D65A1F /* InformationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5911C84235800D65A1F /* InformationDetailsViewController.m */; };
+		C6BDA5941C84235800D65A1F /* InformationDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5921C84235800D65A1F /* InformationDetailsViewController.xib */; };
+		C6BDA59E1C8429BA00D65A1F /* InformationTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */; };
+		C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */; };
+		C6BDA5A71C8451DA00D65A1F /* PopupTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5A61C8451DA00D65A1F /* PopupTransitionAnimation.m */; };
 		C6C027251C1FED7400692227 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271F1C1FED7400692227 /* HomeViewController.m */; };
 		C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027201C1FED7400692227 /* HomeViewController.xib */; };
 		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
@@ -228,6 +233,14 @@
 		C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C6BC08381B59DC7D0089E305 /* SettingsOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsOption.h; sourceTree = "<group>"; };
 		C6BC08391B59DC7D0089E305 /* SettingsOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsOption.m; sourceTree = "<group>"; };
+		C6BDA5901C84235800D65A1F /* InformationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDetailsViewController.h; sourceTree = "<group>"; };
+		C6BDA5911C84235800D65A1F /* InformationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDetailsViewController.m; sourceTree = "<group>"; };
+		C6BDA5921C84235800D65A1F /* InformationDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDetailsViewController.xib; sourceTree = "<group>"; };
+		C6BDA59B1C8429BA00D65A1F /* InformationTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTextFieldViewController.h; sourceTree = "<group>"; };
+		C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTextFieldViewController.m; sourceTree = "<group>"; };
+		C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTextFieldViewController.xib; sourceTree = "<group>"; };
+		C6BDA5A51C8451DA00D65A1F /* PopupTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupTransitionAnimation.h; sourceTree = "<group>"; };
+		C6BDA5A61C8451DA00D65A1F /* PopupTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupTransitionAnimation.m; sourceTree = "<group>"; };
 		C6C0271E1C1FED7400692227 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C6C0271F1C1FED7400692227 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C6C027201C1FED7400692227 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -497,9 +510,13 @@
 				C6C7C2F41C7F1A5400815404 /* InformationCategoryDetailsViewController.h */,
 				C6C7C2F51C7F1A5400815404 /* InformationCategoryDetailsViewController.m */,
 				C6C7C2F61C7F1A5400815404 /* InformationCategoryDetailsViewController.xib */,
+				C6BDA5901C84235800D65A1F /* InformationDetailsViewController.h */,
+				C6BDA5911C84235800D65A1F /* InformationDetailsViewController.m */,
+				C6BDA5921C84235800D65A1F /* InformationDetailsViewController.xib */,
 				C6BC081D1B5937DF0089E305 /* SettingsViewController.h */,
 				C6BC081E1B5937DF0089E305 /* SettingsViewController.m */,
 				C6BC081F1B5937DF0089E305 /* SettingsViewController.xib */,
+				C6BDA59A1C8429BA00D65A1F /* Information Details Templates */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -510,6 +527,7 @@
 				C6AB448B1B3A4CC600BA6405 /* Constants.h */,
 				C6AB447E1B3A1FAF00BA6405 /* RewardTier.h */,
 				C6D7B2061C7679D70033F5A2 /* OfferStatus.h */,
+				C6BDA5A41C8451DA00D65A1F /* Animations */,
 				C6846C621B56C1600066FF74 /* Categories */,
 				C6846C5E1B5626F80066FF74 /* Custom */,
 				C6AB44511B3A1A1C00BA6405 /* Data Objects */,
@@ -615,6 +633,25 @@
 			path = "Test Data";
 			sourceTree = SOURCE_ROOT;
 		};
+		C6BDA59A1C8429BA00D65A1F /* Information Details Templates */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDA59B1C8429BA00D65A1F /* InformationTextFieldViewController.h */,
+				C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */,
+				C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */,
+			);
+			path = "Information Details Templates";
+			sourceTree = "<group>";
+		};
+		C6BDA5A41C8451DA00D65A1F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDA5A51C8451DA00D65A1F /* PopupTransitionAnimation.h */,
+				C6BDA5A61C8451DA00D65A1F /* PopupTransitionAnimation.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		C6C0271B1C1FED7400692227 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,9 +682,6 @@
 				C6FD79FA1B5EF9E4006873BD /* ProfileTierCollectionViewCell.h */,
 				C6FD79FB1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m */,
 				C6FD79FC1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib */,
-				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
-				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
-				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
 				C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */,
 				C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */,
 				C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */,
@@ -660,6 +694,9 @@
 				C6D7B2111C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.h */,
 				C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */,
 				C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */,
+				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
+				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
+				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
 				C66B82FC1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.h */,
 				C66B82FD1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m */,
 				C66B82FE1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib */,
@@ -822,6 +859,7 @@
 				C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
 				C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */,
+				C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
 				C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */,
 				C6533F8A1B69C76200A4D601 /* MessagesViewController.xib in Resources */,
@@ -842,6 +880,7 @@
 				C6846C731B56D21C0066FF74 /* WelcomeViewController.xib in Resources */,
 				C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */,
 				C6D7B2151C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib in Resources */,
+				C6BDA5941C84235800D65A1F /* InformationDetailsViewController.xib in Resources */,
 				C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */,
 				C66B83001C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
@@ -916,11 +955,14 @@
 			files = (
 				C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */,
 				C687F7511B617EBB007DDA93 /* ProfileManager.m in Sources */,
+				C6BDA59E1C8429BA00D65A1F /* InformationTextFieldViewController.m in Sources */,
 				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
 				C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */,
+				C6BDA5931C84235800D65A1F /* InformationDetailsViewController.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
+				C6BDA5A71C8451DA00D65A1F /* PopupTransitionAnimation.m in Sources */,
 				C6D7B21C1C7703730033F5A2 /* PendingTransactionsDataSource.m in Sources */,
 				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
