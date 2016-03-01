@@ -13,6 +13,7 @@
 + (UIColor *)personaColor;
 + (UIColor *)personaLightColor;
 + (UIColor *)personaDarkColor;
++ (UIColor *)personaAltColor;
 
 + (UIColor *)progressCircleFillColor;
 + (UIColor *)progressCircleOutlineColor;

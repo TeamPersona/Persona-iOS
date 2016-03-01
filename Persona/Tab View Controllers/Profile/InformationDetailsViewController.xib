@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationDetailsViewController">
             <connections>
+                <outlet property="containerView" destination="EpW-mb-KTM" id="c9X-6L-XQu"/>
                 <outlet property="doneButton" destination="Aoa-B8-Obh" id="qXF-VN-c7J"/>
                 <outlet property="infoView" destination="bmi-Po-U61" id="WlR-bY-W8z"/>
                 <outlet property="informationSegmentedButton" destination="eGn-zo-gk6" id="6FJ-f4-1xh"/>
@@ -46,7 +47,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-Lk-AJF">
-                            <rect key="frame" x="137.5" y="36" width="137.5" height="30"/>
+                            <rect key="frame" x="138" y="36" width="137" height="30"/>
                             <color key="backgroundColor" red="0.25098039220000001" green="0.42745098040000001" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="QBI-K7-e5n"/>
@@ -93,7 +94,7 @@
                             <color key="textColor" red="0.12941176470588234" green="0.65490196078431373" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-mp-vYc">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-mp-vYc">
                             <rect key="frame" x="55" y="0.0" width="165" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="GNm-OO-rfT"/>

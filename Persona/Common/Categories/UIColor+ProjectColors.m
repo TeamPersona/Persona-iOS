@@ -25,6 +25,11 @@
     return [self colorWithRed:16.0/255.0 green:68.0/255.0 blue:129.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)personaAltColor
+{
+    return [self colorWithRed:224.0/255.0 green:162.0/255.0 blue:55.0/255.0 alpha:1.0];
+}
+
 + (UIColor *)progressCircleFillColor
 {
     return [self personaColor];

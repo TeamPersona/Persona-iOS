@@ -78,6 +78,10 @@
 		C6BDA5AB1C85073000D65A1F /* InformationDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5A91C85073000D65A1F /* InformationDateViewController.m */; };
 		C6BDA5AC1C85073000D65A1F /* InformationDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */; };
 		C6BDA5AF1C85089A00D65A1F /* InformationTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */; };
+		C6BDA5B31C85169500D65A1F /* InformationOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5B11C85169500D65A1F /* InformationOptionsViewController.m */; };
+		C6BDA5B41C85169600D65A1F /* InformationOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5B21C85169500D65A1F /* InformationOptionsViewController.xib */; };
+		C6BDA5B81C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */; };
+		C6BDA5B91C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */; };
 		C6C027251C1FED7400692227 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271F1C1FED7400692227 /* HomeViewController.m */; };
 		C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027201C1FED7400692227 /* HomeViewController.xib */; };
 		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
@@ -249,6 +253,12 @@
 		C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDateViewController.xib; sourceTree = "<group>"; };
 		C6BDA5AD1C85089A00D65A1F /* InformationTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTemplateViewController.h; sourceTree = "<group>"; };
 		C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTemplateViewController.m; sourceTree = "<group>"; };
+		C6BDA5B01C85169500D65A1F /* InformationOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationOptionsViewController.h; sourceTree = "<group>"; };
+		C6BDA5B11C85169500D65A1F /* InformationOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationOptionsViewController.m; sourceTree = "<group>"; };
+		C6BDA5B21C85169500D65A1F /* InformationOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationOptionsViewController.xib; sourceTree = "<group>"; };
+		C6BDA5B51C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDetailsSelectionCollectionViewCell.h; sourceTree = "<group>"; };
+		C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDetailsSelectionCollectionViewCell.m; sourceTree = "<group>"; };
+		C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDetailsSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6C0271E1C1FED7400692227 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C6C0271F1C1FED7400692227 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C6C027201C1FED7400692227 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -652,6 +662,9 @@
 				C6BDA5A81C85073000D65A1F /* InformationDateViewController.h */,
 				C6BDA5A91C85073000D65A1F /* InformationDateViewController.m */,
 				C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */,
+				C6BDA5B01C85169500D65A1F /* InformationOptionsViewController.h */,
+				C6BDA5B11C85169500D65A1F /* InformationOptionsViewController.m */,
+				C6BDA5B21C85169500D65A1F /* InformationOptionsViewController.xib */,
 			);
 			path = "Information Details Templates";
 			sourceTree = "<group>";
@@ -713,6 +726,9 @@
 				C66B82FC1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.h */,
 				C66B82FD1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m */,
 				C66B82FE1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib */,
+				C6BDA5B51C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.h */,
+				C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */,
+				C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */,
 				C6FD79F91B5EF9C3006873BD /* Reusable Header Views */,
 			);
 			path = "Collection View Cells";
@@ -872,8 +888,10 @@
 				C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
 				C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */,
+				C6BDA5B41C85169600D65A1F /* InformationOptionsViewController.xib in Resources */,
 				C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
+				C6BDA5B91C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib in Resources */,
 				C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */,
 				C6533F8A1B69C76200A4D601 /* MessagesViewController.xib in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
@@ -988,6 +1006,7 @@
 				C6E3DF1C1B6BC137009CC49C /* Money.m in Sources */,
 				C6FD79AE1B5D7B60006873BD /* PointsData.m in Sources */,
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
+				C6BDA5B31C85169500D65A1F /* InformationOptionsViewController.m in Sources */,
 				C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */,
 				C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */,
 				C6D7B21F1C77D5010033F5A2 /* ImageManager.m in Sources */,
@@ -1001,6 +1020,7 @@
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,
 				C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */,
 				C6533F891B69C76200A4D601 /* MessagesViewController.m in Sources */,
+				C6BDA5B81C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
 				C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */,
 				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,

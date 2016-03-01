@@ -31,6 +31,11 @@
 {
     [super viewDidLoad];
     
+    self.containerView.layer.cornerRadius = 8.0;
+    self.containerView.layer.borderColor = [UIColor personaDarkColor].CGColor;
+    self.containerView.layer.borderWidth = 4.0;
+    self.containerView.layer.masksToBounds = YES;
+    
     self.titleLabel.text = self.infoDetails.name;
     
     // Add keyboard notifications.

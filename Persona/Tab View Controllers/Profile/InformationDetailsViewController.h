@@ -17,6 +17,7 @@
 
 @interface InformationDetailsViewController : UIViewController <UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *informationSegmentedButton;
 @property (weak, nonatomic) IBOutlet UIButton *permissionsSegmentedButton;

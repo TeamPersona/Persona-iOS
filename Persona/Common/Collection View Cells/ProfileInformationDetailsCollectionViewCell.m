@@ -20,6 +20,8 @@
 
 - (void)awakeFromNib
 {
+    self.layer.cornerRadius = 6.0f;
+    self.layer.masksToBounds = YES;
     self.backgroundColor = [UIColor personaLightColor];
     [[ImageManager sharedManager] getImageName:@"Checkmark" iconSize:self.checkmarkImageView.bounds.size completion:^(UIImage *image) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -28,12 +30,5 @@
         });
     }];
 }
-
-//- (void)prepareForReuse
-//{
-//    if (!self.checkmarkImageView.image) {
-//        self.checkmarkImageView.image = self.checkmarkImage;
-//    }
-//}
 
 @end
