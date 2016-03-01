@@ -82,6 +82,9 @@
 		C6BDA5B41C85169600D65A1F /* InformationOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5B21C85169500D65A1F /* InformationOptionsViewController.xib */; };
 		C6BDA5B81C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */; };
 		C6BDA5B91C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */; };
+		C6BDA5BE1C857C1400D65A1F /* MessagesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5BC1C857C1400D65A1F /* MessagesTableViewCell.m */; };
+		C6BDA5BF1C857C1400D65A1F /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5BD1C857C1400D65A1F /* MessagesTableViewCell.xib */; };
+		C6BDA5C21C8585C000D65A1F /* MessagesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5C11C8585C000D65A1F /* MessagesDataSource.m */; };
 		C6C027251C1FED7400692227 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271F1C1FED7400692227 /* HomeViewController.m */; };
 		C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027201C1FED7400692227 /* HomeViewController.xib */; };
 		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
@@ -259,6 +262,11 @@
 		C6BDA5B51C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDetailsSelectionCollectionViewCell.h; sourceTree = "<group>"; };
 		C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDetailsSelectionCollectionViewCell.m; sourceTree = "<group>"; };
 		C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDetailsSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6BDA5BB1C857C1400D65A1F /* MessagesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewCell.h; sourceTree = "<group>"; };
+		C6BDA5BC1C857C1400D65A1F /* MessagesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewCell.m; sourceTree = "<group>"; };
+		C6BDA5BD1C857C1400D65A1F /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesTableViewCell.xib; sourceTree = "<group>"; };
+		C6BDA5C01C8585C000D65A1F /* MessagesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesDataSource.h; sourceTree = "<group>"; };
+		C6BDA5C11C8585C000D65A1F /* MessagesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesDataSource.m; sourceTree = "<group>"; };
 		C6C0271E1C1FED7400692227 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C6C0271F1C1FED7400692227 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C6C027201C1FED7400692227 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -625,6 +633,9 @@
 				C6AB44861B3A35F400BA6405 /* OfferTableViewCell.h */,
 				C6AB44871B3A35F400BA6405 /* OfferTableViewCell.m */,
 				C6AB44881B3A35F400BA6405 /* OfferTableViewCell.xib */,
+				C6BDA5BB1C857C1400D65A1F /* MessagesTableViewCell.h */,
+				C6BDA5BC1C857C1400D65A1F /* MessagesTableViewCell.m */,
+				C6BDA5BD1C857C1400D65A1F /* MessagesTableViewCell.xib */,
 				C669B83F1C4434F800B1E232 /* SideScrollingCollectionTableViewCell.h */,
 				C669B8401C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m */,
 				C669B8411C4434F800B1E232 /* SideScrollingCollectionTableViewCell.xib */,
@@ -678,6 +689,40 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		C6BDA5BA1C857BEE00D65A1F /* Profile Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD79FA1B5EF9E4006873BD /* ProfileTierCollectionViewCell.h */,
+				C6FD79FB1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m */,
+				C6FD79FC1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib */,
+				C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */,
+				C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */,
+				C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */,
+				C6FD7A041B5EFA12006873BD /* ProfileOffersCollectionViewCell.h */,
+				C6FD7A051B5EFA12006873BD /* ProfileOffersCollectionViewCell.m */,
+				C6FD7A061B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib */,
+				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
+				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
+				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
+				C66B82FC1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.h */,
+				C66B82FD1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m */,
+				C66B82FE1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib */,
+				C6BDA5B51C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.h */,
+				C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */,
+				C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */,
+			);
+			name = "Profile Cells";
+			sourceTree = "<group>";
+		};
+		C6BDA5C31C8585CB00D65A1F /* Messages Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDA5C01C8585C000D65A1F /* MessagesDataSource.h */,
+				C6BDA5C11C8585C000D65A1F /* MessagesDataSource.m */,
+			);
+			name = "Messages Data Sources";
+			sourceTree = "<group>";
+		};
 		C6C0271B1C1FED7400692227 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,30 +750,13 @@
 		C6FD79C41B5D9CA7006873BD /* Collection View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C6FD79FA1B5EF9E4006873BD /* ProfileTierCollectionViewCell.h */,
-				C6FD79FB1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m */,
-				C6FD79FC1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib */,
-				C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */,
-				C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */,
-				C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */,
-				C6FD7A041B5EFA12006873BD /* ProfileOffersCollectionViewCell.h */,
-				C6FD7A051B5EFA12006873BD /* ProfileOffersCollectionViewCell.m */,
-				C6FD7A061B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib */,
 				C692F9B21C5B3033004EBFFC /* SideScrollingCollectionViewCell.h */,
 				C692F9B31C5B3033004EBFFC /* SideScrollingCollectionViewCell.m */,
 				C692F9B41C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib */,
 				C6D7B2111C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.h */,
 				C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */,
 				C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */,
-				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
-				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
-				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
-				C66B82FC1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.h */,
-				C66B82FD1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m */,
-				C66B82FE1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib */,
-				C6BDA5B51C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.h */,
-				C6BDA5B61C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m */,
-				C6BDA5B71C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib */,
+				C6BDA5BA1C857BEE00D65A1F /* Profile Cells */,
 				C6FD79F91B5EF9C3006873BD /* Reusable Header Views */,
 			);
 			path = "Collection View Cells";
@@ -739,6 +767,7 @@
 			children = (
 				C6FD79CB1B5DA077006873BD /* OffersDataSource.h */,
 				C6FD79CC1B5DA077006873BD /* OffersDataSource.m */,
+				C6BDA5C31C8585CB00D65A1F /* Messages Data Sources */,
 				C6D7B2161C7703570033F5A2 /* Home Data Sources */,
 				C6FD79D71B5DA098006873BD /* Profile Data Sources */,
 			);
@@ -891,6 +920,7 @@
 				C6BDA5B41C85169600D65A1F /* InformationOptionsViewController.xib in Resources */,
 				C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
+				C6BDA5BF1C857C1400D65A1F /* MessagesTableViewCell.xib in Resources */,
 				C6BDA5B91C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.xib in Resources */,
 				C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */,
 				C6533F8A1B69C76200A4D601 /* MessagesViewController.xib in Resources */,
@@ -1023,11 +1053,13 @@
 				C6BDA5B81C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
 				C687F7651B61F6DE007DDA93 /* JSONManager.m in Sources */,
+				C6BDA5C21C8585C000D65A1F /* MessagesDataSource.m in Sources */,
 				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,
 				C66B83031C7F3A040034D0A0 /* InformationDetailsDataSource.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
 				C66B82FF1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
+				C6BDA5BE1C857C1400D65A1F /* MessagesTableViewCell.m in Sources */,
 				C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */,
 				C6D7B21B1C7703730033F5A2 /* CompletedTransactionsDataSource.m in Sources */,
 				C669B8421C4434F800B1E232 /* SideScrollingCollectionTableViewCell.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "BaseTabBarViewController.h"
 
-@interface MessagesViewController : BaseTabBarViewController
+@interface MessagesViewController : BaseTabBarViewController <UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
