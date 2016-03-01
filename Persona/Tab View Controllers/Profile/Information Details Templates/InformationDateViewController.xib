@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationDateViewController">
+            <connections>
+                <outlet property="datePicker" destination="ucX-RD-gzK" id="N24-IV-OpG"/>
+                <outlet property="infoLabel" destination="NPH-uH-aWz" id="bQ5-fZ-pI3"/>
+                <outlet property="view" destination="AO0-O1-W3d" id="n1g-Wv-gOf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="AO0-O1-W3d">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your date of birth:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-uH-aWz">
+                    <rect key="frame" x="0.0" y="77" width="300" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="hdS-fT-lHj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-RD-gzK">
+                    <rect key="frame" x="0.0" y="105" width="300" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="vAD-HQ-9n9"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="478480213.215038">
+                        <!--2016-02-29 23:10:13 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePckerDidUpdate:" destination="-1" eventType="valueChanged" id="BNU-JH-cfN"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="0.062745098040000002" green="0.2666666667" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ucX-RD-gzK" firstAttribute="top" secondItem="NPH-uH-aWz" secondAttribute="bottom" constant="5" id="2sH-zi-ZKL"/>
+                <constraint firstAttribute="trailing" secondItem="NPH-uH-aWz" secondAttribute="trailing" id="LxC-U7-bGw"/>
+                <constraint firstItem="ucX-RD-gzK" firstAttribute="leading" secondItem="AO0-O1-W3d" secondAttribute="leading" id="U9r-IT-bi2"/>
+                <constraint firstItem="ucX-RD-gzK" firstAttribute="centerX" secondItem="AO0-O1-W3d" secondAttribute="centerX" id="lqj-vF-G6N"/>
+                <constraint firstAttribute="trailing" secondItem="ucX-RD-gzK" secondAttribute="trailing" id="uXs-mk-6Py"/>
+                <constraint firstItem="ucX-RD-gzK" firstAttribute="centerY" secondItem="AO0-O1-W3d" secondAttribute="centerY" id="ud1-VZ-IuZ"/>
+                <constraint firstItem="NPH-uH-aWz" firstAttribute="leading" secondItem="AO0-O1-W3d" secondAttribute="leading" id="vdh-OK-aIZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="204" y="299"/>
+        </view>
+    </objects>
+</document>

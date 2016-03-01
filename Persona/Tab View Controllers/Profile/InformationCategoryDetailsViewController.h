@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InformationDetailsViewController.h"
 
-@interface InformationCategoryDetailsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface InformationCategoryDetailsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, InformationDetailsPopupDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

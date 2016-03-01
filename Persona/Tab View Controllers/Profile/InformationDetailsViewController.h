@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "InformationDetails.h"
 
+@protocol InformationDetailsPopupDelegate <NSObject>
+
+- (void)updateInformationDetails:(InformationDetails *)details atIndex:(NSInteger)index;
+
+@end
+
 @interface InformationDetailsViewController : UIViewController <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -18,8 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *permissionTableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
-// Autolayout Constraints
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topVerticalSpaceLayoutConstraint;
+@property (nonatomic, strong) id<InformationDetailsPopupDelegate> delegate;
+@property (nonatomic) NSInteger index;
 
 - (instancetype)initWithInfoDetails:(InformationDetails *)details;
 

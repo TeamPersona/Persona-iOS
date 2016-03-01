@@ -75,6 +75,9 @@
 		C6BDA59E1C8429BA00D65A1F /* InformationTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */; };
 		C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */; };
 		C6BDA5A71C8451DA00D65A1F /* PopupTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5A61C8451DA00D65A1F /* PopupTransitionAnimation.m */; };
+		C6BDA5AB1C85073000D65A1F /* InformationDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5A91C85073000D65A1F /* InformationDateViewController.m */; };
+		C6BDA5AC1C85073000D65A1F /* InformationDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */; };
+		C6BDA5AF1C85089A00D65A1F /* InformationTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */; };
 		C6C027251C1FED7400692227 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0271F1C1FED7400692227 /* HomeViewController.m */; };
 		C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C027201C1FED7400692227 /* HomeViewController.xib */; };
 		C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C027221C1FED7400692227 /* OfferDetailsViewController.m */; };
@@ -241,6 +244,11 @@
 		C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTextFieldViewController.xib; sourceTree = "<group>"; };
 		C6BDA5A51C8451DA00D65A1F /* PopupTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupTransitionAnimation.h; sourceTree = "<group>"; };
 		C6BDA5A61C8451DA00D65A1F /* PopupTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupTransitionAnimation.m; sourceTree = "<group>"; };
+		C6BDA5A81C85073000D65A1F /* InformationDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDateViewController.h; sourceTree = "<group>"; };
+		C6BDA5A91C85073000D65A1F /* InformationDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDateViewController.m; sourceTree = "<group>"; };
+		C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDateViewController.xib; sourceTree = "<group>"; };
+		C6BDA5AD1C85089A00D65A1F /* InformationTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTemplateViewController.h; sourceTree = "<group>"; };
+		C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTemplateViewController.m; sourceTree = "<group>"; };
 		C6C0271E1C1FED7400692227 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C6C0271F1C1FED7400692227 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C6C027201C1FED7400692227 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -636,9 +644,14 @@
 		C6BDA59A1C8429BA00D65A1F /* Information Details Templates */ = {
 			isa = PBXGroup;
 			children = (
+				C6BDA5AD1C85089A00D65A1F /* InformationTemplateViewController.h */,
+				C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */,
 				C6BDA59B1C8429BA00D65A1F /* InformationTextFieldViewController.h */,
 				C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */,
 				C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */,
+				C6BDA5A81C85073000D65A1F /* InformationDateViewController.h */,
+				C6BDA5A91C85073000D65A1F /* InformationDateViewController.m */,
+				C6BDA5AA1C85073000D65A1F /* InformationDateViewController.xib */,
 			);
 			path = "Information Details Templates";
 			sourceTree = "<group>";
@@ -864,6 +877,7 @@
 				C687F7591B61EC09007DDA93 /* profilePointsMockData.json in Resources */,
 				C6533F8A1B69C76200A4D601 /* MessagesViewController.xib in Resources */,
 				C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */,
+				C6BDA5AC1C85073000D65A1F /* InformationDateViewController.xib in Resources */,
 				C614653B1B39FE3700F1E5F5 /* LaunchScreen.xib in Resources */,
 				C692F9B61C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib in Resources */,
 				C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */,
@@ -966,6 +980,7 @@
 				C6D7B21C1C7703730033F5A2 /* PendingTransactionsDataSource.m in Sources */,
 				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
 				C6AB447C1B3A1F5100BA6405 /* Partner.m in Sources */,
+				C6BDA5AB1C85073000D65A1F /* InformationDateViewController.m in Sources */,
 				C6846C721B56D21C0066FF74 /* WelcomeViewController.m in Sources */,
 				C6BC08321B5964560089E305 /* Settings.m in Sources */,
 				C6AB447B1B3A1F5100BA6405 /* Participant.m in Sources */,
@@ -1007,6 +1022,7 @@
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
 				C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,
 				C692F9B51C5B3033004EBFFC /* SideScrollingCollectionViewCell.m in Sources */,
+				C6BDA5AF1C85089A00D65A1F /* InformationTemplateViewController.m in Sources */,
 				C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */,
 				C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */,
 				C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */,

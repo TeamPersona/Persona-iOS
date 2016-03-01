@@ -8,11 +8,12 @@
 
 #import "InformationDetailsViewController.h"
 #import "UIColor+ProjectColors.h"
-#import "InformationTextFieldViewController.h"
+#import "InformationTemplateViewController.h"
 
 @interface InformationDetailsViewController ()
-@property (nonatomic, strong) UIViewController *informationTemplateViewController;
+@property (nonatomic, strong) InformationTemplateViewController *informationTemplateViewController;
 @property (nonatomic, strong) InformationDetails *infoDetails;
+@property (nonatomic) NSInteger indexOpened;
 @end
 
 @implementation InformationDetailsViewController
@@ -47,22 +48,7 @@
     [self updateButton:self.informationSegmentedButton state:YES];
     [self updateButton:self.permissionsSegmentedButton state:NO];
 
-    if (self.infoDetails.type == InformationDetailsTypeString) {
-        self.informationTemplateViewController = [[InformationTextFieldViewController alloc] initWithInfoDetails:self.infoDetails];
-        
-    } else if (self.infoDetails.type == InformationDetailsTypeNumber) {
-        self.informationTemplateViewController = [[InformationTextFieldViewController alloc] initWithInfoDetails:self.infoDetails];
-    } else if (self.infoDetails.type == InformationDetailsTypeBoolean) {
-        
-    } else if (self.infoDetails.type == InformationDetailsTypeDate) {
-        
-    } else if (self.infoDetails.type == InformationDetailsTypeDate) {
-        
-    } else if (self.infoDetails.type == InformationDetailsTypeOptionSingle) {
-        
-    } else if (self.infoDetails.type == InformationDetailsTypeOptionMultiple) {
-        
-    }
+    self.informationTemplateViewController = [[InformationTemplateViewController alloc] initInfoTemplateViewController:self.infoDetails];
 }
 
 - (void)viewDidLayoutSubviews
@@ -107,6 +93,13 @@
 
 - (IBAction)doneButtonPressed:(UIButton *)sender
 {
+    // Save info.
+    self.infoDetails = self.informationTemplateViewController.infoDetails;
+
+    if ([self.delegate respondsToSelector:@selector(updateInformationDetails: atIndex:)]) {
+        [self.delegate updateInformationDetails:self.infoDetails atIndex:self.index];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:^{
     }];
 }

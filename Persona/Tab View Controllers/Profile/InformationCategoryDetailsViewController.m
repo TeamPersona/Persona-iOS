@@ -10,7 +10,6 @@
 #import "ProfileInformationDetailsCollectionViewCell.h"
 #import "InformationDetailsDataSource.h"
 #import "ProfileInformationManager.h"
-#import "InformationDetailsViewController.h"
 #import "PopupTransitionAnimation.h"
 
 @interface InformationCategoryDetailsViewController ()
@@ -47,16 +46,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - InformationDetails Popup Delegate Methods
+- (void)updateInformationDetails:(InformationDetails *)details atIndex:(NSInteger)index
+{
+    self.infoCategory.informationDetails[index] = details;
+    [self.collectionView reloadData];
+}
+
 
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     InformationDetailsViewController *vc = [[InformationDetailsViewController alloc] initWithInfoDetails:self.infoCategory.informationDetails[indexPath.row]];
+    vc.delegate = self;
+    vc.index = indexPath.row;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self.animator;
     [self.navigationController presentViewController:vc animated:YES completion:^{
     }];
 }
+
 
 #pragma mark - UICollectionView Flow Layout Delegate Methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSString *categoryName;
 @property (nonatomic) NSInteger completionPoints;
-@property (nonatomic, strong) NSArray<InformationDetails *> *informationDetails;
+@property (nonatomic, strong) NSMutableArray<InformationDetails *> *informationDetails;
 @property (nonatomic) NSInteger totalReceivedPoints;
 
 @end

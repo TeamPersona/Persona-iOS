@@ -8,37 +8,22 @@
 
 #import "InformationTextFieldViewController.h"
 #import "UIColor+ProjectColors.h"
-#import <QuartzCore/QuartzCore.h>
-
-@interface InformationTextFieldViewController ()
-@property (nonatomic, strong) InformationDetails *infoDetails;
-@end
 
 @implementation InformationTextFieldViewController
-
-- (instancetype)initWithInfoDetails:(InformationDetails *)details
-{
-    self = [super init];
-    if (self) {
-        self.infoDetails = details;
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
     self.textField.borderStyle = UITextBorderStyleNone;
+    self.textField.delegate = self;
     if (self.infoDetails.type == InformationDetailsTypeString) {
         self.textField.keyboardType = UIKeyboardTypeDefault;
     } else if (self.infoDetails.type == InformationDetailsTypeNumber) {
         self.textField.keyboardType = UIKeyboardTypeNumberPad;
     }
-    
+
     self.infoLabel.text = [NSString stringWithFormat:@"Enter your %@:", self.infoDetails.name.lowercaseString];
     self.textField.text = (NSString *)self.infoDetails.value;
-    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,14 +33,15 @@
 }
 
 #pragma mark - UITextField Delegate Methods
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
+    self.infoDetails.value = self.textField.text;
 }
 
 @end

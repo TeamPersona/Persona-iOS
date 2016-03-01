@@ -1,5 +1,5 @@
 //
-//  InformationTextFieldViewController.h
+//  InformationDateViewController.h
 //  Persona
 //
 //  Created by Denny Kim on 2016-02-29.
@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "InformationTemplateViewController.h"
 
-@interface InformationTextFieldViewController : InformationTemplateViewController <UITextFieldDelegate>
+@interface InformationDateViewController : InformationTemplateViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
