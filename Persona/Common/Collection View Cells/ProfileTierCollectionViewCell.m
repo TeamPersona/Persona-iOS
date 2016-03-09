@@ -11,8 +11,8 @@
 
 @implementation ProfileTierCollectionViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)awakeFromNib
+{
 }
 
 - (void)setProgressPercent:(CGFloat)progressPercent

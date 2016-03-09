@@ -119,8 +119,6 @@
 		C6FD79FE1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD79FC1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib */; };
 		C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */; };
 		C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */; };
-		C6FD7A071B5EFA12006873BD /* ProfileOffersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD7A051B5EFA12006873BD /* ProfileOffersCollectionViewCell.m */; };
-		C6FD7A081B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD7A061B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,9 +320,6 @@
 		C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileBalanceCollectionViewCell.h; sourceTree = "<group>"; };
 		C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileBalanceCollectionViewCell.m; sourceTree = "<group>"; };
 		C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBalanceCollectionViewCell.xib; sourceTree = "<group>"; };
-		C6FD7A041B5EFA12006873BD /* ProfileOffersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileOffersCollectionViewCell.h; sourceTree = "<group>"; };
-		C6FD7A051B5EFA12006873BD /* ProfileOffersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileOffersCollectionViewCell.m; sourceTree = "<group>"; };
-		C6FD7A061B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileOffersCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6FD7A0C1B5F8270006873BD /* ProfileConfigurations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileConfigurations.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -698,9 +693,6 @@
 				C6FD79FF1B5EFA02006873BD /* ProfileBalanceCollectionViewCell.h */,
 				C6FD7A001B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m */,
 				C6FD7A011B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib */,
-				C6FD7A041B5EFA12006873BD /* ProfileOffersCollectionViewCell.h */,
-				C6FD7A051B5EFA12006873BD /* ProfileOffersCollectionViewCell.m */,
-				C6FD7A061B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib */,
 				C6FD79C51B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.h */,
 				C6FD79C61B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m */,
 				C6FD79C71B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib */,
@@ -947,7 +939,6 @@
 				C66B83001C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
 				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
-				C6FD7A081B5EFA12006873BD /* ProfileOffersCollectionViewCell.xib in Resources */,
 				C687F7581B61EC09007DDA93 /* profileOffersMockData.json in Resources */,
 				C6FD79FE1B5EF9E4006873BD /* ProfileTierCollectionViewCell.xib in Resources */,
 			);
@@ -1069,7 +1060,6 @@
 				C6FD79D31B5DA077006873BD /* OffersDataSource.m in Sources */,
 				C6FD79D61B5DA077006873BD /* SettingsDataSource.m in Sources */,
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
-				C6FD7A071B5EFA12006873BD /* ProfileOffersCollectionViewCell.m in Sources */,
 				C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
 				C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,

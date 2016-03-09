@@ -26,7 +26,6 @@ static const CGFloat ProfileSegmentedHeaderViewHeight = 72.0f;
 
 @property (weak, nonatomic) IBOutlet UIButton *pointsButton;
 @property (weak, nonatomic) IBOutlet UIButton *balanceButton;
-@property (weak, nonatomic) IBOutlet UIButton *offersButton;
 
 - (void)setSelectedProfileSegment:(ProfileSegment)segment;
 - (void)updateProfileInfo:(Participant *)participantInfo;

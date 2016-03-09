@@ -10,7 +10,6 @@
 #import "ProfileTierCollectionViewCell.h"
 #import "ProfileInformationCategoryCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
-#import "ProfileOffersCollectionViewCell.h"
 #import "PointsData.h"
 #import "Offer.h"
 #import "NSString+ExpirationTime.h"
@@ -53,8 +52,6 @@
             numItems = self.informationCategoriesList.count;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             numItems = 1;
-        } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-            numItems = self.offersDataArray.count;
         }
     }
     
@@ -75,7 +72,9 @@
             tierString = @"Gold";
         }
         
-        cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
+        if (self.profileInfo.rewardTier != RewardTierGold) {
+            cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
+        }
         
 //        cell.tierImageView.image = [UIImage imageNamed:@""];
         
@@ -88,39 +87,6 @@
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             ProfileBalanceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileBalanceCollectionViewCellIdentifier forIndexPath:indexPath];
             [cell updateBalanceInfo:self.balanceInfo];
-            return cell;
-        } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-            ProfileOffersCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileOffersCollectionViewCellIdentifier forIndexPath:indexPath];
-            [cell setNeedsDisplay];
-            Offer *offer = self.offersDataArray[indexPath.row];
-            
-            cell.titleLabel.text = offer.partner.name;
-            [cell.partnerImageView sd_setImageWithURL:offer.partner.partnerImageURL ];
-            cell.categoryLabel.text = [offer.requiredCategoriesList componentsJoinedByString:@", "];
-            cell.rewardLabel.text = offer.rewardString;
-
-            NSString *expirationString = [NSString stringWithExpirationDate:offer.expirationDate currentDate:[NSDate date]];
-            cell.expirationTimeLabel.text = expirationString;
-            
-            if (!offer.isExpired) {
-                cell.remainingLabel.hidden = NO;
-                cell.progressView.hidden = NO;
-                
-                cell.remainingLabel.text = [NSString stringWithFormat:@"%li remaining", (long)(offer.totalParticipants - offer.currentParticipants)];
-                cell.progressView.progress = offer.participantsProgress;
-                
-                if ([expirationString isEqualToString:Expiration_Time_Less_Than_A_Minute]) {
-                    cell.expirationTimeLabel.textColor = [UIColor expiringSoonColor];
-                } else {
-                    cell.expirationTimeLabel.textColor = [UIColor blackColor];
-                }
-            } else {
-                cell.remainingLabel.hidden = YES;
-                cell.progressView.hidden = YES;
-                
-                cell.expirationTimeLabel.textColor = [UIColor expiredColor];
-            }
-            
             return cell;
         }
     }

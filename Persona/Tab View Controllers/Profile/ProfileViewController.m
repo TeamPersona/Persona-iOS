@@ -16,7 +16,6 @@
 #import "ProfileTierCollectionViewCell.h"
 #import "ProfileInformationCategoryCollectionViewCell.h"
 #import "ProfileBalanceCollectionViewCell.h"
-#import "ProfileOffersCollectionViewCell.h"
 #import "OfferDetailsViewController.h"
 #import "InformationCategoryDetailsViewController.h"
 #import "Constants.h"
@@ -48,7 +47,6 @@
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
-    self.profileDataSource.offersDataArray = [OffersManager parseProfileOffersFromJSONFile:@"profileOffersMockData.json"];
     [self.collectionView reloadData];
 
     // Collection View
@@ -57,7 +55,6 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileTierCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileTierCollectionViewCellIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileInformationCategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileInformationCategoryCollectionViewCellIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileBalanceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileBalanceCollectionViewCellIdentifier];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileOffersCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileOffersCollectionViewCellIdentifier];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView.collectionViewLayout = flowLayout;
@@ -74,9 +71,9 @@
     [self.collectionView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Button Methods
@@ -97,12 +94,9 @@
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.currentSelectedSegment == ProfileSegmentPoints) {
+    if (self.currentSelectedSegment == ProfileSegmentPoints && indexPath.section != 0) {
         InformationCategoryDetailsViewController *informationDetailsVC = [[InformationCategoryDetailsViewController alloc] initWithCategoryTitle:self.profileInformationCategoriesList[indexPath.row]];
         [self.navigationController pushViewController:informationDetailsVC animated:YES];
-    } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-        OfferDetailsViewController *offerDetailsVC = [[OfferDetailsViewController alloc] initWithOffer:self.profileDataSource.offersDataArray[indexPath.row]];
-        [self.navigationController pushViewController:offerDetailsVC animated:YES];
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
@@ -118,13 +112,6 @@
             itemSize = ProfileInformationCategoryCollectionViewCellSize;
         } else if (self.currentSelectedSegment == ProfileSegmentBalance) {
             itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileBalanceCollectionViewCellHeight);
-        } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-            Offer * offer = self.profileDataSource.offersDataArray[indexPath.row];
-            if (!offer.isExpired) {
-                itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileOffersCollectionViewCellHeight);
-            } else {
-                itemSize = CGSizeMake(SCREEN_SIZE.width, ProfileOffersCollectionViewCellHeightExpired);
-            }
         }
     }
     
@@ -161,8 +148,6 @@
     if (section == ProfileSectionAccountInformation) {
         if (self.currentSelectedSegment == ProfileSegmentPoints) {
             minItemSpacing = ProfileInformationCategoryCollectionViewMinimumCellSpacing;
-        } else if (self.currentSelectedSegment == ProfileSegmentOffers) {
-            
         }
     }
     

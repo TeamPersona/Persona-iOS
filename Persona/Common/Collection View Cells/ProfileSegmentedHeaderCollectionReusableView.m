@@ -7,10 +7,10 @@
 //
 
 #import "ProfileSegmentedHeaderCollectionReusableView.h"
+#import "UIColor+ProjectColors.h"
 
 static const NSString *PointsButtonTitleText = @"Points";
 static const NSString *BalanceButtonTitleText = @"Balance";
-static const NSString *OffersButtonTitleText = @"Offers";
 
 @interface ProfileSegmentedHeaderCollectionReusableView ()
 @end
@@ -23,13 +23,15 @@ static const NSString *OffersButtonTitleText = @"Offers";
     self.pointsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.balanceButton.titleLabel.numberOfLines = 0;
     self.balanceButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.offersButton.titleLabel.numberOfLines = 0;
-    self.offersButton.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)setSelectedProfileSegment:(ProfileSegment)segment
 {
-    [self selectButtonForProfileSegment:segment];
+    if (segment == ProfileSegmentPoints) {
+        [self segmentButtonPressed:self.pointsButton];
+    } else if (segment == ProfileSegmentBalance) {
+        [self segmentButtonPressed:self.balanceButton];
+    }
 }
 
 - (void)updateProfileInfo:(Participant *)participantInfo
@@ -39,74 +41,30 @@ static const NSString *OffersButtonTitleText = @"Offers";
     
     [self.balanceButton setTitle:[NSString stringWithFormat:@"$%.02f\n%@", participantInfo.accountBalance.doubleValue, BalanceButtonTitleText]
                        forState:UIControlStateNormal];
-    
-    [self.offersButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalNumOffers.longValue, OffersButtonTitleText]
-                       forState:UIControlStateNormal];
 }
 
 #pragma mark - Button Methods
-- (IBAction)pointsButtonPressed:(UIButton *)sender
+- (IBAction)segmentButtonPressed:(UIButton *)sender
 {
-    [self updateSegmentedControlWithProfileSegment:ProfileSegmentPoints];
-}
-
-- (IBAction)balanceButtonPressed:(UIButton *)sender
-{
-    [self updateSegmentedControlWithProfileSegment:ProfileSegmentBalance];
-}
-
-- (IBAction)offersButtonPressed:(UIButton *)sender
-{
-    [self updateSegmentedControlWithProfileSegment:ProfileSegmentOffers];
-}
-
-#pragma mark - Private Methods
-- (void)updateSegmentedControlWithProfileSegment:(ProfileSegment)segment
-{
-    if (![self isSegmentButtonSelected:segment]) {
-        [self selectButtonForProfileSegment:segment];
-        [self.delegate profileSegmentedControlDidChangeToProfileSegment:segment];
-    }
-}
-
-- (BOOL)isSegmentButtonSelected:(ProfileSegment)segment
-{
-    BOOL isSelected = NO;
-    if (segment == ProfileSegmentPoints) {
-        isSelected = self.pointsButton.selected;
-    } else if (segment == ProfileSegmentBalance) {
-        isSelected = self.balanceButton.selected;
-    } else if (segment == ProfileSegmentOffers) {
-        isSelected = self.offersButton.selected;
-    }
-    return isSelected;
-}
-
-- (void)unselectAllButtons
-{
-    if ([self isSegmentButtonSelected:ProfileSegmentPoints]) {
-        self.pointsButton.selected = NO;
+    [self updateButton:sender state:YES];
+    if ([sender isEqual:self.pointsButton]) {
+        [self updateButton:self.balanceButton state:NO];
+        [self.delegate profileSegmentedControlDidChangeToProfileSegment:ProfileSegmentPoints];
+    } else if ([sender isEqual:self.balanceButton]) {
+        [self updateButton:self.pointsButton state:NO];
+        [self.delegate profileSegmentedControlDidChangeToProfileSegment:ProfileSegmentBalance];
     }
     
-    if ([self isSegmentButtonSelected:ProfileSegmentBalance]) {
-        self.balanceButton.selected = NO;
-    }
-    
-    if ([self isSegmentButtonSelected:ProfileSegmentOffers]) {
-        self.offersButton.selected = NO;
-    }
 }
 
-- (void)selectButtonForProfileSegment:(ProfileSegment)segment
+- (void)updateButton:(UIButton *)button state:(BOOL)shouldSelect
 {
-    [self unselectAllButtons];
-    
-    if (segment == ProfileSegmentPoints) {
-        self.pointsButton.selected = YES;
-    } else if (segment == ProfileSegmentBalance) {
-        self.balanceButton.selected = YES;
-    } else if (segment == ProfileSegmentOffers) {
-        self.offersButton.selected = YES;
+    if (shouldSelect) {
+        button.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        button.backgroundColor = [UIColor personaColor];
+    } else {
+        button.titleLabel.font = [UIFont systemFontOfSize:16.0];
+        button.backgroundColor = [UIColor personaLightColor];
     }
 }
 

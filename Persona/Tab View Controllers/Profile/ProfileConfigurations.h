@@ -16,8 +16,7 @@ typedef NS_ENUM(NSUInteger, ProfileSection) {
 
 typedef NS_ENUM(NSUInteger, ProfileSegment) {
     ProfileSegmentPoints,
-    ProfileSegmentBalance,
-    ProfileSegmentOffers
+    ProfileSegmentBalance
 };
 
 typedef NS_ENUM(NSUInteger, InformationCategory) {
