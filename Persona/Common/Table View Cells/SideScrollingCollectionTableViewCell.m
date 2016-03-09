@@ -31,7 +31,7 @@
     if (self.collectionType == SideScrollingCollectionTypeCompletedTransactions) {
         return CGSizeMake(204, 120);
     } else {
-        return CGSizeMake(190, 120);
+        return CGSizeMake(140, 120);
     }
 }
 

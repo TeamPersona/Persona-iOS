@@ -13,6 +13,9 @@
 #import "OfferTableViewCell.h"
 #import "OffersManager.h"
 #import "Constants.h"
+#import "UIColor+ProjectColors.h"
+
+static const CGFloat HomeTableViewHeaderViewHeight = 26.0f;
 
 @interface HomeViewController ()
 @property (nonatomic, strong) NSArray *homeTableViewTitles;
@@ -93,6 +96,25 @@
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), HomeTableViewHeaderViewHeight)];
+    view.backgroundColor = [UIColor personaColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(8, 0, CGRectGetWidth([UIScreen mainScreen].bounds) - 16, HomeTableViewHeaderViewHeight)];
+    label.text = self.homeTableViewTitles[section];
+    label.textColor = [UIColor whiteColor];
+//    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    [view addSubview:label];
+    
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return HomeTableViewHeaderViewHeight;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.homeTableViewTitles.count;
@@ -105,11 +127,6 @@
     } else {
         return self.recommendedOffers.count;
     }
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return self.homeTableViewTitles[section];
 }
 
 #pragma mark -- UITableView Delegate Methods
