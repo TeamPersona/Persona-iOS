@@ -13,10 +13,13 @@
 
 + (id)sharedManager;
 
-- (BOOL)isLoggedIn;
-- (NSString *)getAccessToken;
-
 - (void)saveAccountInformation:(AccountInformation *)info;
 - (void)clearAccountInformation;
+
+@property (nonatomic, readonly) BOOL isLoggedIn;
+@property (nonatomic, readonly) BOOL isAccessTokenExpired;
+@property (nonatomic, readonly) NSString *accessToken;
+@property (nonatomic, readonly) NSString *refreshToken;
+@property (nonatomic, readonly) NSString *tokenType;
 
 @end

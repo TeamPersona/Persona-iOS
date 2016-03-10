@@ -14,7 +14,10 @@
 {
     AccountInformation *info = [AccountInformation new];
     info.accessToken = dict[@"access_token"];
-    info.refreshToken = dict[@"refresh_token"];
+    // When a new access token is retrieved through a refresh token, the response will not include a new refresh token. Thus, omit the refresh token when parsing the response dictionary for that case.
+    if (dict[@"refresh_token"] != nil) {
+        info.refreshToken = dict[@"refresh_token"];
+    }
     [info updateExpirationDate:dict[@"expires_in"]];
     info.tokenType = dict[@"token_type"];
     return info;

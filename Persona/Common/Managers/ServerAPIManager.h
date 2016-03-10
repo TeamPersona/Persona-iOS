@@ -9,20 +9,23 @@
 #import <Foundation/Foundation.h>
 #import "PersonaAccountParameters.h"
 #import "AccountAuthenticationParameters.h"
+#import "AccountInformation.h"
 
 static NSString *ServerHostURL = @"http://localhost:9000";
 
-typedef void(^ResponseCompletionBlock)(BOOL success, NSDictionary *response, NSError *error);
+typedef void(^ResponseCompletionBlock)(BOOL success, id response, NSError *error);
 
 @interface ServerAPIManager : NSObject
 
 + (id)sharedManager;
 
-// Account
+// Account Creation and Authentication
 - (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account completionBlock:(ResponseCompletionBlock)completion;
 - (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate completionBlock:(ResponseCompletionBlock)completion;
-- (void)accountRefreshToken:(NSString *)refreshToken completionBlock:(ResponseCompletionBlock)completion;
+- (void)accountRefreshAccessToken:(NSString *)refreshToken completionBlock:(ResponseCompletionBlock)completion;
 
+// Account Querying
+- (void)accountGetAccountInformation:(ResponseCompletionBlock)completion;
 
 
 @end
