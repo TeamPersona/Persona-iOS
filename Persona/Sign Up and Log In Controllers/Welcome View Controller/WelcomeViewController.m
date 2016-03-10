@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Constants.h"
 #import "NSString+EmailValidation.h"
+#import "ServerAPIManager.h"
 
 typedef NS_ENUM(NSUInteger, WelcomeState) {
     WelcomeStateSignUp,
@@ -172,9 +173,18 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     
     // Basic client-side validation
     if ([email isValidEmail] && password.length != 0) {
-        //TODO: call API for login
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        [appDelegate transitionToMainTabView:YES];
+        AccountAuthenticationParameters *params = [AccountAuthenticationParameters new];
+        params.email = self.emailTextField.text;
+        params.password = self.passwordTextField.text;
+        params.grantType = @"password";
+        [[ServerAPIManager sharedManager] accountAuthenticate:params completionBlock:^(BOOL success, NSDictionary *response, NSError *error) {
+            if (success) {
+                AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                [appDelegate transitionToMainTabView:YES];
+            } else {
+                NSLog(@"%@", error);
+            }
+        }];
     }
 }
 
