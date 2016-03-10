@@ -54,6 +54,7 @@
 		C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A1829E1C9167C7003F27CC /* ServerFormParameters.m */; };
 		C6A182A21C916964003F27CC /* AccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A11C916964003F27CC /* AccountInformation.m */; };
 		C6A182A51C916AEF003F27CC /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A41C916AEF003F27CC /* AccountManager.m */; };
+		C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
@@ -218,6 +219,8 @@
 		C6A182A11C916964003F27CC /* AccountInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountInformation.m; path = "../Managers/Form Objects/AccountInformation.m"; sourceTree = "<group>"; };
 		C6A182A31C916AEF003F27CC /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		C6A182A41C916AEF003F27CC /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		C6A182A61C91B066003F27CC /* AccountAuthenticationParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountAuthenticationParameters.h; sourceTree = "<group>"; };
+		C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountAuthenticationParameters.m; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				C6A1829E1C9167C7003F27CC /* ServerFormParameters.m */,
 				C67646081C907989007CE725 /* PersonaAccountParameters.h */,
 				C6A1829B1C916727003F27CC /* PersonaAccountParameters.m */,
+				C6A182A61C91B066003F27CC /* AccountAuthenticationParameters.h */,
+				C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */,
 			);
 			path = "Form Objects";
 			sourceTree = "<group>";
@@ -1086,6 +1091,7 @@
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
 				C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */,
 				C66B82FF1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m in Sources */,
+				C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
 				C6BDA5BE1C857C1400D65A1F /* MessagesTableViewCell.m in Sources */,
 				C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */,

@@ -52,10 +52,20 @@
     
     [self.sessionManager POST:urlString parameters:[account formParameters] progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        AccountInformation *info = [AccountInformation parseDictionary:responseObject];
-        [[AccountManager sharedManager] saveAccountInformation:info];
+        [[AccountManager sharedManager] saveAccountInformation:[AccountInformation parseDictionary:responseObject]];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
+    }];
+}
+
+- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/authenticate", self.serverHostName];
+    
+    [self.sessionManager POST:urlString parameters:[authenticate formParameters] progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[AccountManager sharedManager] saveAccountInformation:[AccountInformation parseDictionary:responseObject]];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
 }
 

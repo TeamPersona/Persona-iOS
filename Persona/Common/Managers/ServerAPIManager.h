@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PersonaAccountParameters.h"
+#import "AccountAuthenticationParameters.h"
 
 static NSString *ServerHostURL = @"http://localhost:9000";
 
@@ -19,6 +20,9 @@ typedef void(^ResponseCompletionBlock)(BOOL success, NSDictionary *response, NSE
 
 // Account
 - (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account;
+- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate;
 - (void)accountRefreshToken:(NSString *)refreshToken completionBlock:(ResponseCompletionBlock)completion;
+
+
 
 @end
