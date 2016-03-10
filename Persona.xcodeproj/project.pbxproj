@@ -30,6 +30,7 @@
 		C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278BE1B6404D4008F1A48 /* BalanceManager.m */; };
 		C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */; };
 		C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */; };
+		C67646061C9070D9007CE725 /* ServerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C67646051C9070D9007CE725 /* ServerAPIManager.m */; };
 		C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */; };
 		C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C601B562AC00066FF74 /* CustomTextField.m */; };
 		C6846C651B56C17E0066FF74 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */; };
@@ -49,6 +50,10 @@
 		C687F7671B61FE83007DDA93 /* profileBalanceInfoMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = C687F7661B61FE83007DDA93 /* profileBalanceInfoMockData.json */; };
 		C692F9B51C5B3033004EBFFC /* SideScrollingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C692F9B31C5B3033004EBFFC /* SideScrollingCollectionViewCell.m */; };
 		C692F9B61C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C692F9B41C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib */; };
+		C6A1829C1C916727003F27CC /* PersonaAccountParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A1829B1C916727003F27CC /* PersonaAccountParameters.m */; };
+		C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A1829E1C9167C7003F27CC /* ServerFormParameters.m */; };
+		C6A182A21C916964003F27CC /* AccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A11C916964003F27CC /* AccountInformation.m */; };
+		C6A182A51C916AEF003F27CC /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A41C916AEF003F27CC /* AccountManager.m */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
@@ -174,6 +179,9 @@
 		C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+EpochTime.m"; sourceTree = "<group>"; };
 		C67278C91B641CF7008F1A48 /* NSString+ExpirationTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpirationTime.h"; sourceTree = "<group>"; };
 		C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpirationTime.m"; sourceTree = "<group>"; };
+		C67646041C9070D9007CE725 /* ServerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIManager.h; sourceTree = "<group>"; };
+		C67646051C9070D9007CE725 /* ServerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIManager.m; sourceTree = "<group>"; };
+		C67646081C907989007CE725 /* PersonaAccountParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonaAccountParameters.h; sourceTree = "<group>"; };
 		C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProjectColors.h"; sourceTree = "<group>"; };
 		C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProjectColors.m"; sourceTree = "<group>"; };
 		C6846C5F1B562AC00066FF74 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
@@ -203,6 +211,13 @@
 		C692F9B21C5B3033004EBFFC /* SideScrollingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollingCollectionViewCell.h; sourceTree = "<group>"; };
 		C692F9B31C5B3033004EBFFC /* SideScrollingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollingCollectionViewCell.m; sourceTree = "<group>"; };
 		C692F9B41C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideScrollingCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6A1829B1C916727003F27CC /* PersonaAccountParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonaAccountParameters.m; sourceTree = "<group>"; };
+		C6A1829D1C9167C7003F27CC /* ServerFormParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFormParameters.h; sourceTree = "<group>"; };
+		C6A1829E1C9167C7003F27CC /* ServerFormParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFormParameters.m; sourceTree = "<group>"; };
+		C6A182A01C916964003F27CC /* AccountInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountInformation.h; path = "../Managers/Form Objects/AccountInformation.h"; sourceTree = "<group>"; };
+		C6A182A11C916964003F27CC /* AccountInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountInformation.m; path = "../Managers/Form Objects/AccountInformation.m"; sourceTree = "<group>"; };
+		C6A182A31C916AEF003F27CC /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		C6A182A41C916AEF003F27CC /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -427,6 +442,17 @@
 			path = profileInformation;
 			sourceTree = "<group>";
 		};
+		C67646071C90797D007CE725 /* Form Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1829D1C9167C7003F27CC /* ServerFormParameters.h */,
+				C6A1829E1C9167C7003F27CC /* ServerFormParameters.m */,
+				C67646081C907989007CE725 /* PersonaAccountParameters.h */,
+				C6A1829B1C916727003F27CC /* PersonaAccountParameters.m */,
+			);
+			path = "Form Objects";
+			sourceTree = "<group>";
+		};
 		C6846C5E1B5626F80066FF74 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +590,8 @@
 		C6AB44511B3A1A1C00BA6405 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
+				C6A182A01C916964003F27CC /* AccountInformation.h */,
+				C6A182A11C916964003F27CC /* AccountInformation.m */,
 				C6AB44521B3A1A1C00BA6405 /* Offer.h */,
 				C6AB44531B3A1A1C00BA6405 /* Offer.m */,
 				C6BC08301B5964560089E305 /* Settings.h */,
@@ -589,6 +617,11 @@
 		C6AB445C1B3A1A5800BA6405 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C67646041C9070D9007CE725 /* ServerAPIManager.h */,
+				C67646051C9070D9007CE725 /* ServerAPIManager.m */,
+				C67646071C90797D007CE725 /* Form Objects */,
+				C6A182A31C916AEF003F27CC /* AccountManager.h */,
+				C6A182A41C916AEF003F27CC /* AccountManager.m */,
 				C687F7631B61F6DE007DDA93 /* JSONManager.h */,
 				C687F7641B61F6DE007DDA93 /* JSONManager.m */,
 				C6AB44601B3A1A7200BA6405 /* OffersManager.h */,
@@ -1037,9 +1070,11 @@
 				C6FD79C81B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m in Sources */,
 				C6FD79F71B5ECCF4006873BD /* ProfileSegmentedHeaderCollectionReusableView.m in Sources */,
 				C6AB44811B3A258D00BA6405 /* BaseTabBarViewController.m in Sources */,
+				C6A1829C1C916727003F27CC /* PersonaAccountParameters.m in Sources */,
 				C66B83091C7F59730034D0A0 /* InformationCategory.m in Sources */,
 				C6FD7A021B5EFA02006873BD /* ProfileBalanceCollectionViewCell.m in Sources */,
 				C67278CB1B641CF7008F1A48 /* NSString+ExpirationTime.m in Sources */,
+				C6A182A51C916AEF003F27CC /* AccountManager.m in Sources */,
 				C6533F891B69C76200A4D601 /* MessagesViewController.m in Sources */,
 				C6BDA5B81C851D3700D65A1F /* InformationDetailsSelectionCollectionViewCell.m in Sources */,
 				C6AB44891B3A35F400BA6405 /* OfferTableViewCell.m in Sources */,
@@ -1047,7 +1082,9 @@
 				C6BDA5C21C8585C000D65A1F /* MessagesDataSource.m in Sources */,
 				C64B0FB91B58309700C444C5 /* NSString+PhoneNumber.m in Sources */,
 				C66B83031C7F3A040034D0A0 /* InformationDetailsDataSource.m in Sources */,
+				C67646061C9070D9007CE725 /* ServerAPIManager.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
+				C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */,
 				C66B82FF1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m in Sources */,
 				C614652A1B39FE3700F1E5F5 /* main.m in Sources */,
 				C6BDA5BE1C857C1400D65A1F /* MessagesTableViewCell.m in Sources */,
@@ -1070,6 +1107,7 @@
 				C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */,
 				C6D7B1FE1C73D8C20033F5A2 /* DateFormatManager.m in Sources */,
 				C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */,
+				C6A182A21C916964003F27CC /* AccountInformation.m in Sources */,
 				C6C7C2F71C7F1A5400815404 /* InformationCategoryDetailsViewController.m in Sources */,
 				C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */,
 				C66B830C1C7F59FB0034D0A0 /* ProfileInformationManager.m in Sources */,

@@ -81,10 +81,7 @@ static NSString *VerificationTitle = @"Verification";
             if ([self validateVerificationNumber:numString]) {
                 AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
                 [appDelegate transitionToMainTabView:YES];
-                
-                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                [userDefaults setObject:@YES forKey:IS_LOGGED_IN];
-                [userDefaults synchronize];
+                // TODO: call server login 
             } else {
                 [self clearValidationCode];
                 [self.textField1 becomeFirstResponder];

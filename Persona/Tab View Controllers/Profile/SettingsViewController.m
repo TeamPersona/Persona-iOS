@@ -13,6 +13,7 @@
 #import "SettingsTableViewCell.h"
 #import "AppDelegate.h"
 #import "Constants.h"
+#import "AccountManager.h"
 
 static NSString *SettingsTitle =        @"Settings";
 static NSString *SettingsSectionPlist = @"SettingsSectionNames.plist";
@@ -54,10 +55,7 @@ static const CGFloat SettingsHeaderViewHeight = 32.0f;
 
 - (IBAction)logoutButtonPressed:(UIButton *)sender
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@NO forKey:IS_LOGGED_IN];
-    [userDefaults synchronize];
-    
+    [[AccountManager sharedManager] clearAccountInformation];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate logoutToWelcomeView:YES];
 }

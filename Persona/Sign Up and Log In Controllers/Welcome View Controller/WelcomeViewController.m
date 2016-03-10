@@ -175,10 +175,6 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
         //TODO: call API for login
         AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         [appDelegate transitionToMainTabView:YES];
-        
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:@YES forKey:IS_LOGGED_IN];
-        [userDefaults synchronize];
     }
 }
 

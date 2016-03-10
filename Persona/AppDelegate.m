@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "MainTabBarController.h"
 #import "WelcomeViewController.h"
+#import "AccountManager.h"
 
 @interface AppDelegate ()
 
@@ -20,15 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Initialize userDefaults if necessary
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    if (![userDefaults objectForKey:IS_LOGGED_IN]) {
-        [userDefaults setObject:@NO forKey:IS_LOGGED_IN];
-    }
-    
     UIViewController *viewControllerToPresent;
-    if ([userDefaults boolForKey:IS_LOGGED_IN]) {
+    if ([[AccountManager sharedManager] isLoggedIn]) {
         viewControllerToPresent = [[MainTabBarController alloc] initWithDefaultTabBarViewControllers];
     } else {
         viewControllerToPresent = [[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
