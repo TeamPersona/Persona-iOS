@@ -19,8 +19,8 @@ typedef void(^ResponseCompletionBlock)(BOOL success, NSDictionary *response, NSE
 + (id)sharedManager;
 
 // Account
-- (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account;
-- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate;
+- (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account completionBlock:(ResponseCompletionBlock)completion;
+- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate completionBlock:(ResponseCompletionBlock)completion;
 - (void)accountRefreshToken:(NSString *)refreshToken completionBlock:(ResponseCompletionBlock)completion;
 
 

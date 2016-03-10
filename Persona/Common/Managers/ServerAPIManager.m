@@ -46,26 +46,29 @@
 }
 
 #pragma mark - Account
-- (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account
+- (void)accountCreatePersonaAccount:(PersonaAccountParameters *)account completionBlock:(ResponseCompletionBlock)completion
 {
     NSString *urlString = [NSString stringWithFormat:@"%@/account", self.serverHostName];
     
     [self.sessionManager POST:urlString parameters:[account formParameters] progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [[AccountManager sharedManager] saveAccountInformation:[AccountInformation parseDictionary:responseObject]];
+        completion(YES, nil, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error.localizedDescription);
+        completion(NO, nil, error);
     }];
 }
 
-- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate
+- (void)accountAuthenticate:(AccountAuthenticationParameters *)authenticate completionBlock:(ResponseCompletionBlock)completion
 {
     NSString *urlString = [NSString stringWithFormat:@"%@/authenticate", self.serverHostName];
     
     [self.sessionManager POST:urlString parameters:[authenticate formParameters] progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [[AccountManager sharedManager] saveAccountInformation:[AccountInformation parseDictionary:responseObject]];
+        completion(YES, nil, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(NO, nil, error);
     }];
 }
 

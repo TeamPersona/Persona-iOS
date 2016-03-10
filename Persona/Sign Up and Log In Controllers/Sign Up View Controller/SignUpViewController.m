@@ -9,6 +9,8 @@
 #import "SignUpViewController.h"
 #import "PhoneVerificationViewController.h"
 #import "NSString+PhoneNumber.h"
+#import "AppDelegate.h"
+#import "ServerAPIManager.h"
 
 static NSString *SignUpTitle = @"Sign Up";
 
@@ -40,7 +42,7 @@ static NSString *SignUpTitle = @"Sign Up";
     [super viewWillAppear:animated];
     
     self.emailLabel.text = self.emailString;
-    [self.passwordTextField becomeFirstResponder];
+    [self.firstNameTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,18 +51,33 @@ static NSString *SignUpTitle = @"Sign Up";
 }
 
 #pragma mark - Button Methods
-- (IBAction)sendCodeButton:(UIButton *)sender
+- (IBAction)doneButtonPressed:(UIButton *)sender
 {
-    // send verification code
+    PersonaAccountParameters *params = [PersonaAccountParameters new];
+    params.firstName = self.firstNameTextField.text;
+    params.lastName = self.lastNameTextField.text;
+    params.email = self.emailString;
+    params.phoneNumber = self.phoneNumberTextField.text;
+    params.password = self.passwordTextField.text;
     
-    // transition to verification view
-    [self.navigationController pushViewController:[[PhoneVerificationViewController alloc] init] animated:YES];
+    [[ServerAPIManager sharedManager] accountCreatePersonaAccount:params completionBlock:^(BOOL success, NSDictionary *response, NSError *error) {
+        if (success) {
+            AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+            [appDelegate transitionToMainTabView:YES];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
 }
 
 #pragma mark - UITextField Methods
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if ([textField isEqual:self.passwordTextField]) {
+    if ([textField isEqual:self.firstNameTextField]) {
+        [self.lastNameTextField becomeFirstResponder];
+    } else if ([textField isEqual:self.lastNameTextField]) {
+        [self.passwordTextField becomeFirstResponder];
+    } else if ([textField isEqual:self.passwordTextField]) {
         [self.confirmPasswordTextField becomeFirstResponder];
     } else if ([textField isEqual:self.confirmPasswordTextField]) {
         [self.phoneNumberTextField becomeFirstResponder];
@@ -94,11 +111,11 @@ static NSString *SignUpTitle = @"Sign Up";
     //TODO: format text to phone number (###)-###-####
     if (sender.text.length == 10) {
         if (self.doesPasswordMatch) {
-            self.sendCodeButton.hidden = NO;
+            self.doneButton.hidden = NO;
         }
     } else {
-        if (!self.sendCodeButton.hidden) {
-            self.sendCodeButton.hidden = YES;
+        if (!self.doneButton.hidden) {
+            self.doneButton.hidden = YES;
         }
     }
 }
@@ -108,12 +125,12 @@ static NSString *SignUpTitle = @"Sign Up";
     if (shouldShow) {
         self.doesPasswordMatch = NO;
         self.errorLabel.hidden = NO;
-        self.sendCodeButton.hidden = YES;
+        self.doneButton.hidden = YES;
     } else {
         self.doesPasswordMatch = YES;
         self.errorLabel.hidden = YES;
         if ([self.phoneNumberTextField.text isValidPhoneNumber]) {
-            self.sendCodeButton.hidden = NO;
+            self.doneButton.hidden = NO;
         }
     }
 }
