@@ -9,6 +9,7 @@
 #import "ServerAPIManager.h"
 #import "Constants.h"
 #import "AccountManager.h"
+#import "Participant.h"
 #import <AFNetworking.h>
 
 typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
@@ -38,10 +39,10 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
     self = [super init];
     if (self) {
         self.accountSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-#if DEBUG
+#if TARGET_OS_SIMULATOR
         self.serverHostName = @"http://localhost:9000";
 #else
-        self.serverHostName = @"";
+        self.serverHostName = @"http://Dennys-rMBP.local:9000";
 #endif
     }
     return self;
@@ -71,11 +72,12 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(error);
             }
         }];
+    } else {
+        if (!self.authorizedSessionManager) {
+            [self initializeAuthorizationSessionManager];
+        }
+        completion(nil);
     }
-    if (!self.authorizedSessionManager) {
-        [self initializeAuthorizationSessionManager];
-    }
-    completion(nil);
 }
 
 #pragma mark - Account Creation and Authentication
@@ -129,7 +131,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
         if (!error) {
             [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                completion(YES, responseObject, nil);
+                completion(YES, [Participant parseDictionary:responseObject], nil);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 completion(NO, nil, error);
             }];

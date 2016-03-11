@@ -10,9 +10,32 @@
 
 @implementation Participant
 
++ (Participant *)parseDictionary:(NSDictionary *)dictionary
+{
+    Participant *participant = [Participant new];
+    participant.userId = [dictionary[@"id"] integerValue];
+    participant.name = [NSString stringWithFormat:@"%@ %@", dictionary[@"givenName"], dictionary[@"familyName"]];
+    participant.emailAddress = dictionary[@"emailAddress"];
+    participant.phoneNumber = dictionary[@"phoneNumber"];
+    participant.totalPoints = [dictionary[@"rewardPoints"] integerValue];
+    participant.accountBalance = dictionary[@"rewardPoints"];
+
+    return participant;
+}
+
+- (RewardTier)rewardTier
+{
+    return [RewardTierHelper rewardTierForPointsValue:self.totalPoints];
+}
+
+- (NSInteger)pointsToNextTier
+{
+    return [RewardTierHelper pointsRemainingToNextTier:self.totalPoints];
+}
+
 - (NSNumber *)tierProgress
 {
-    return [NSNumber numberWithFloat:self.totalPointsEarned.floatValue / (self.pointsUntilNextTier.floatValue + self.totalPointsEarned.floatValue)];
+    return [NSNumber numberWithFloat:(float) self.totalPoints / (float) (self.pointsToNextTier + self.totalPoints)];
 }
 
 @end

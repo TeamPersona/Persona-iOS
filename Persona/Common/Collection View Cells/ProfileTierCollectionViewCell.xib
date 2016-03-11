@@ -20,7 +20,7 @@
                             <constraint firstAttribute="width" constant="64" id="kOs-e6-M2k"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platinum Tier: 150 points remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-4T-20z">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-4T-20z">
                         <rect key="frame" x="8" y="151" width="304" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="YxM-KB-0pW"/>

@@ -36,7 +36,7 @@ static const NSString *BalanceButtonTitleText = @"Balance";
 
 - (void)updateProfileInfo:(Participant *)participantInfo
 {
-    [self.pointsButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalPointsEarned.longValue, PointsButtonTitleText]
+    [self.pointsButton setTitle:[NSString stringWithFormat:@"%li\n%@", participantInfo.totalPoints, PointsButtonTitleText]
                        forState:UIControlStateNormal];
     
     [self.balanceButton setTitle:[NSString stringWithFormat:@"$%.02f\n%@", participantInfo.accountBalance.doubleValue, BalanceButtonTitleText]

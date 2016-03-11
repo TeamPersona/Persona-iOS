@@ -7,16 +7,23 @@
 //
 
 #import "User.h"
-#import "RewardTier.h"
+#import "RewardTierHelper.h"
 
 @interface Participant : User
 
-@property (nonatomic) RewardTier rewardTier;
-@property (nonatomic) NSNumber *totalPointsEarned;
-@property (nonatomic) NSNumber *pointsUntilNextTier;
-@property (nonatomic) NSNumber *accountBalance; //TODO: Make money class $
-@property (nonatomic) NSNumber *totalNumOffers;
++ (Participant *)parseDictionary:(NSDictionary *)dictionary;
 
+@property (nonatomic, strong) NSString *emailAddress;
+@property (nonatomic, strong) NSString *phoneNumber;
+
+@property (nonatomic) NSInteger totalPoints;
+
+// These properties are generated from the total points above.
+@property (nonatomic, readonly) RewardTier rewardTier;
+@property (readonly) NSInteger pointsToNextTier;
 @property (readonly) NSNumber *tierProgress;
+
+@property (nonatomic) NSNumber *accountBalance; //TODO: Make money class $
+
 
 @end

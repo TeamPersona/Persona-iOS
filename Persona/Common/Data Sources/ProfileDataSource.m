@@ -73,7 +73,7 @@
         }
         
         if (self.profileInfo.rewardTier != RewardTierGold) {
-            cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %@ points remaining", tierString, self.profileInfo.pointsUntilNextTier.stringValue];
+            cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %li points remaining", tierString, self.profileInfo.pointsToNextTier];
         }
         
 //        cell.tierImageView.image = [UIImage imageNamed:@""];

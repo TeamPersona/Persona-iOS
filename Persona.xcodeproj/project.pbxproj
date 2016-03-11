@@ -55,6 +55,7 @@
 		C6A182A21C916964003F27CC /* AccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A11C916964003F27CC /* AccountInformation.m */; };
 		C6A182A51C916AEF003F27CC /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A41C916AEF003F27CC /* AccountManager.m */; };
 		C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */; };
+		C6A182AC1C92037E003F27CC /* RewardTierHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182AB1C92037E003F27CC /* RewardTierHelper.m */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
@@ -221,6 +222,8 @@
 		C6A182A41C916AEF003F27CC /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		C6A182A61C91B066003F27CC /* AccountAuthenticationParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountAuthenticationParameters.h; sourceTree = "<group>"; };
 		C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountAuthenticationParameters.m; sourceTree = "<group>"; };
+		C6A182AA1C92037E003F27CC /* RewardTierHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardTierHelper.h; sourceTree = "<group>"; };
+		C6A182AB1C92037E003F27CC /* RewardTierHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTierHelper.m; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -239,7 +242,6 @@
 		C6AB44781B3A1F5100BA6405 /* Partner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partner.m; sourceTree = "<group>"; };
 		C6AB44791B3A1F5100BA6405 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		C6AB447A1B3A1F5100BA6405 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		C6AB447E1B3A1FAF00BA6405 /* RewardTier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardTier.h; sourceTree = "<group>"; };
 		C6AB447F1B3A258D00BA6405 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
 		C6AB44801B3A258D00BA6405 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		C6AB44821B3A274B00BA6405 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
@@ -518,6 +520,15 @@
 			path = "Sign Up View Controller";
 			sourceTree = "<group>";
 		};
+		C6A182A91C920362003F27CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C6A182AA1C92037E003F27CC /* RewardTierHelper.h */,
+				C6A182AB1C92037E003F27CC /* RewardTierHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C6AB44071B3A01D000BA6405 /* Main View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,13 +588,13 @@
 			isa = PBXGroup;
 			children = (
 				C6AB448B1B3A4CC600BA6405 /* Constants.h */,
-				C6AB447E1B3A1FAF00BA6405 /* RewardTier.h */,
 				C6D7B2061C7679D70033F5A2 /* OfferStatus.h */,
 				C6BDA5A41C8451DA00D65A1F /* Animations */,
 				C6846C621B56C1600066FF74 /* Categories */,
 				C6846C5E1B5626F80066FF74 /* Custom */,
 				C6AB44511B3A1A1C00BA6405 /* Data Objects */,
 				C6AB445C1B3A1A5800BA6405 /* Managers */,
+				C6A182A91C920362003F27CC /* Helpers */,
 				C6AB44741B3A1F5100BA6405 /* Users */,
 				C6FD79CA1B5DA077006873BD /* Data Sources */,
 				C6FD79C41B5D9CA7006873BD /* Collection View Cells */,
@@ -1050,6 +1061,7 @@
 				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
 				C6FD79D51B5DA077006873BD /* ProfileDataSource.m in Sources */,
 				C6BDA5931C84235800D65A1F /* InformationDetailsViewController.m in Sources */,
+				C6A182AC1C92037E003F27CC /* RewardTierHelper.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,

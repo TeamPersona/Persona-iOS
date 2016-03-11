@@ -102,13 +102,7 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
 {
     if (self.currentWelcomeState == WelcomeStateSignUp) {
         if (textField.text.length != 0 && [textField.text isValidEmail]) {
-            //TODO: find out if this email is taken
-            BOOL isTaken = NO;
-            if (isTaken) {
-                self.errorSignUpLabel.hidden = YES;
-            } else {
-                self.nextButton.hidden = NO;
-            }
+            self.nextButton.hidden = NO;
         } else {
             self.nextButton.hidden = YES;
             self.errorSignUpLabel.hidden = YES;
@@ -202,15 +196,7 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     // Frames and sizes
     CGRect keyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     self.loginPanelBottomSpaceLayoutConstraint.constant = keyboardRect.size.height;
-    
-    // Animation options
-    double animationDuration = [[keyboardInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    UIViewAnimationCurve animationCurve = [[keyboardInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
-    
-    [UIView animateWithDuration:animationDuration animations:^{
-        [UIView setAnimationCurve:animationCurve];
-        [self.view layoutIfNeeded];
-    }];
+    [self.view layoutIfNeeded];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification

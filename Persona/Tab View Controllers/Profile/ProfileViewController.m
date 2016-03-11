@@ -19,6 +19,7 @@
 #import "OfferDetailsViewController.h"
 #import "InformationCategoryDetailsViewController.h"
 #import "Constants.h"
+#import "ServerAPIManager.h"
 
 @interface ProfileViewController ()
 
@@ -42,8 +43,15 @@
     
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
-    // TODO: Get data from server
-    self.profileDataSource.profileInfo = [ProfileManager parseProfileDataFromJSONFile:@"profileMockData.json"];
+    [[ServerAPIManager sharedManager] accountGetAccountInformation:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            self.profileDataSource.profileInfo = response;
+            [self.collectionView reloadData];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
