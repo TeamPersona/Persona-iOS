@@ -14,6 +14,8 @@
 #import "OffersManager.h"
 #import "Constants.h"
 #import "UIColor+ProjectColors.h"
+#import "ServerAPIManager.h"
+#import "AccountManager.h"
 
 static const CGFloat HomeTableViewHeaderViewHeight = 26.0f;
 

@@ -52,6 +52,15 @@
         }
     }];
 
+    [[ServerAPIManager sharedManager] accountWithdrawal:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            NSLog(@"%@", response);
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    
+
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];

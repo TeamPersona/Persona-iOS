@@ -196,7 +196,6 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     // Frames and sizes
     CGRect keyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     self.loginPanelBottomSpaceLayoutConstraint.constant = keyboardRect.size.height;
-    [self.view layoutIfNeeded];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification

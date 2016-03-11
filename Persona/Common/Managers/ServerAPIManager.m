@@ -51,9 +51,12 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
 #pragma mark - Private Helper Methods
 - (void)initializeAuthorizationSessionManager
 {
-    AccountManager *accountManager = [AccountManager sharedManager];
     self.authorizedSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
+}
+
+- (void)updateAuthorizationHeader
+{
+    AccountManager *accountManager = [AccountManager sharedManager];
     NSString *authorizationValue = [NSString stringWithFormat:@"%@ %@", [accountManager tokenType], [accountManager accessToken]];
     [self.authorizedSessionManager.requestSerializer setValue:authorizationValue forHTTPHeaderField:@"Authorization"];
 }
@@ -67,6 +70,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 if (!self.authorizedSessionManager) {
                     [self initializeAuthorizationSessionManager];
                 }
+                [self updateAuthorizationHeader];
                 completion(nil);
             } else {
                 completion(error);
@@ -75,6 +79,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
     } else {
         if (!self.authorizedSessionManager) {
             [self initializeAuthorizationSessionManager];
+            [self updateAuthorizationHeader];
         }
         completion(nil);
     }
@@ -136,8 +141,42 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(NO, nil, error);
             }];
         } else {
-            NSLog(@"%@", error);
+            NSLog(@"%@", error.localizedDescription);
         }
+    }];
+}
+
+- (void)accountWithdrawal:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/bank", self.serverHostName];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                if ([responseObject isKindOfClass:[NSArray class]]) {
+                    completion(YES, [PersonalInformation new], nil);
+                } else {
+                    completion(YES, [PersonalInformation parseDictionary:responseObject], nil);
+                }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+- (void)accountDeposit:(PersonalInformation *)info completion:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/bank", self.serverHostName];
+    
+    [self.authorizedSessionManager POST:urlString parameters:[info formParameters] progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        completion(YES, nil, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(NO, nil, nil);
     }];
 }
 

@@ -10,6 +10,7 @@
 #import "PersonaAccountParameters.h"
 #import "AccountAuthenticationParameters.h"
 #import "AccountInformation.h"
+#import "PersonalInformation.h"
 
 static NSString *ServerHostURL = @"http://localhost:9000";
 
@@ -27,5 +28,7 @@ typedef void(^ResponseCompletionBlock)(BOOL success, id response, NSError *error
 // Account Querying
 - (void)accountGetAccountInformation:(ResponseCompletionBlock)completion;
 
+- (void)accountWithdrawal:(ResponseCompletionBlock)completion;
+- (void)accountDeposit:(PersonalInformation *)info completion:(ResponseCompletionBlock)completion;
 
 @end
