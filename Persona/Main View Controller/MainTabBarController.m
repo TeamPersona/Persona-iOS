@@ -39,16 +39,16 @@ static NSString *TabBarProfileTitle =   @"Profile";
     self = [super init];
     if (self) {
         self.homeVC = [[HomeViewController alloc] initWithTabBarTitle:TabBarHomeTitle];
-        self.exploreVC = [[ExploreViewController alloc] initWithTabBarTitle:TabBarExploreTitle];
+//        self.exploreVC = [[ExploreViewController alloc] initWithTabBarTitle:TabBarExploreTitle];
         self.messagesVC = [[MessagesViewController alloc] initWithTabBarTitle:TabBarMessagesTitle];
         self.profileVC = [[ProfileViewController alloc] initWithTabBarTitle:TabBarProfileTitle];
 
         self.homeNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.homeVC];
-        self.exploreNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.exploreVC];
+//        self.exploreNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.exploreVC];
         self.messagesNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.messagesVC];
         self.profileNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.profileVC];
         
-        [self setViewControllers:@[self.homeNavVC, self.exploreNavVC, self.messagesNavVC, self.profileNavVC]];
+        [self setViewControllers:@[self.homeNavVC, self.messagesNavVC, self.profileNavVC]];
     }
     return self;
 }
