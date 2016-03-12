@@ -26,7 +26,7 @@
           }
         ]
       },
-      "offerId": 10,
+      "offerID": 10,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -70,7 +70,7 @@
         "Tech",
         "Computers"
       ],
-      "partnerId": 6,
+      "partnerID": 6,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
       "partnerName": "HP"
     },
@@ -110,7 +110,7 @@
           }
         ]
       },
-      "offerId": 47,
+      "offerID": 47,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -151,7 +151,7 @@
         "Amusement Park",
         "Family"
       ],
-      "partnerId": 14,
+      "partnerID": 14,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
       "partnerName": "Disney"
     },
@@ -191,7 +191,7 @@
           }
         ]
       },
-      "offerId": 82,
+      "offerID": 82,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -226,7 +226,7 @@
         "Mobile",
         "Music"
       ],
-      "partnerId": 2,
+      "partnerID": 2,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
       "partnerName": "Apple"
     },
@@ -250,7 +250,7 @@
           }
         ]
       },
-      "offerId": 139,
+      "offerID": 139,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -289,7 +289,7 @@
         "Entertainment",
         "Movies"
       ],
-      "partnerId": 18,
+      "partnerID": 18,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
       "partnerName": "Cineplex"
     },
@@ -319,7 +319,7 @@
           }
         ]
       },
-      "offerId": 168,
+      "offerID": 168,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -352,7 +352,7 @@
         "Food & Dining",
         "Grocery"
       ],
-      "partnerId": 1,
+      "partnerID": 1,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/walmart-logo.jpg",
       "partnerName": "Walmart"
     },
@@ -380,7 +380,7 @@
           }
         ]
       },
-      "offerId": 243,
+      "offerID": 243,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -415,7 +415,7 @@
         "Landscape",
         "Lawn Service"
       ],
-      "partnerId": 12,
+      "partnerID": 12,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/CT_Classic_StdKey_RGB.png",
       "partnerName": "Canadian Tire"
     },
@@ -461,7 +461,7 @@
           }
         ]
       },
-      "offerId": 268,
+      "offerID": 268,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -497,7 +497,7 @@
         "Home & Garden",
         "Home Improvements"
       ],
-      "partnerId": 10,
+      "partnerID": 10,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/home-depot-logo.png",
       "partnerName": "Home Depot"
     },
@@ -535,7 +535,7 @@
           }
         ]
       },
-      "offerId": 334,
+      "offerID": 334,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -560,7 +560,7 @@
         "Computers",
         "Keyboards"
       ],
-      "partnerId": 13,
+      "partnerID": 13,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Best_Buy_Logo.svg.png",
       "partnerName": "Best Buy"
     },
@@ -600,7 +600,7 @@
           }
         ]
       },
-      "offerId": 344,
+      "offerID": 344,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -624,7 +624,7 @@
         "Tech",
         "Cloud Computing Services"
       ],
-      "partnerId": 8,
+      "partnerID": 8,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-IBM_logo.svg.png",
       "partnerName": "IBM"
     },
@@ -646,7 +646,7 @@
           }
         ]
       },
-      "offerId": 357,
+      "offerID": 357,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -689,7 +689,7 @@
         "Sporting Goods",
         "Shoes"
       ],
-      "partnerId": 16,
+      "partnerID": 16,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Logo_NIKE.svg.png",
       "partnerName": "Nike"
     },
@@ -735,7 +735,7 @@
           }
         ]
       },
-      "offerId": 395,
+      "offerID": 395,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -784,7 +784,7 @@
         "Amusement Park",
         "Family"
       ],
-      "partnerId": 14,
+      "partnerID": 14,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
       "partnerName": "Disney"
     },
@@ -816,7 +816,7 @@
           }
         ]
       },
-      "offerId": 427,
+      "offerID": 427,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -856,7 +856,7 @@
         "Automotive",
         "Auto Dealers"
       ],
-      "partnerId": 4,
+      "partnerID": 4,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
       "partnerName": "Ford Motor"
     },
@@ -890,7 +890,7 @@
           }
         ]
       },
-      "offerId": 518,
+      "offerID": 518,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -934,7 +934,7 @@
         "Food & Dining",
         "Grocery"
       ],
-      "partnerId": 5,
+      "partnerID": 5,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Costco_Wholesale.svg.png",
       "partnerName": "Costco"
     },
@@ -958,7 +958,7 @@
           }
         ]
       },
-      "offerId": 578,
+      "offerID": 578,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -992,7 +992,7 @@
         "Automotive",
         "Auto Dealers"
       ],
-      "partnerId": 3,
+      "partnerID": 3,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/General_Motors_logo.png",
       "partnerName": "General Motors"
     },
@@ -1016,7 +1016,7 @@
           }
         ]
       },
-      "offerId": 676,
+      "offerID": 676,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -1053,7 +1053,7 @@
         "Mobile",
         "Music"
       ],
-      "partnerId": 2,
+      "partnerID": 2,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
       "partnerName": "Apple"
     },
@@ -1093,7 +1093,7 @@
           }
         ]
       },
-      "offerId": 731,
+      "offerID": 731,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -1129,7 +1129,7 @@
         "Mobile",
         "Music"
       ],
-      "partnerId": 2,
+      "partnerID": 2,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
       "partnerName": "Apple"
     },
@@ -1165,7 +1165,7 @@
           }
         ]
       },
-      "offerId": 739,
+      "offerID": 739,
       "offerInfoRequired": {
         "Financial": [
           {
@@ -1194,7 +1194,7 @@
         "Amusement Park",
         "Family"
       ],
-      "partnerId": 14,
+      "partnerID": 14,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
       "partnerName": "Disney"
     },
@@ -1218,7 +1218,7 @@
           }
         ]
       },
-      "offerId": 836,
+      "offerID": 836,
       "offerInfoRequired": {
         "Employment": [],
         "Heath & Fitness": [
@@ -1237,7 +1237,7 @@
         "Food & Dining",
         "Grocery"
       ],
-      "partnerId": 5,
+      "partnerID": 5,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Costco_Wholesale.svg.png",
       "partnerName": "Costco"
     },
@@ -1277,7 +1277,7 @@
           }
         ]
       },
-      "offerId": 911,
+      "offerID": 911,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -1301,7 +1301,7 @@
         "Travel",
         "Tourism"
       ],
-      "partnerId": 9,
+      "partnerID": 9,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Air_Canada_Logo.svg.png",
       "partnerName": "Air Canada"
     },
@@ -1325,7 +1325,7 @@
           }
         ]
       },
-      "offerId": 979,
+      "offerID": 979,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -1356,7 +1356,7 @@
         "Sporting Goods",
         "Shoes"
       ],
-      "partnerId": 16,
+      "partnerID": 16,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Logo_NIKE.svg.png",
       "partnerName": "Nike"
     }

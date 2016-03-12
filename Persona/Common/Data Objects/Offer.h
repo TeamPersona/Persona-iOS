@@ -18,10 +18,8 @@
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSNumber *rewardValue;
-@property (nonatomic, strong) NSString *rewardString;
 @property (nonatomic) NSInteger currentParticipants;
 @property (nonatomic) NSInteger totalParticipants;
-@property (nonatomic) CGFloat participantsProgress;
 
 // Offer Details
 @property (nonatomic, strong) NSArray *infoFilterList;
@@ -31,9 +29,11 @@
 
 @property (nonatomic, strong) NSString *offerDescription;
 
-@property (nonatomic) BOOL isEligible;
-@property (nonatomic, readonly) BOOL isExpired;
-@property (nonatomic, readonly) NSArray *missingInformationList;
+- (BOOL)isEligible;
+- (BOOL)isExpired;
+- (NSArray *)missingInformationList;
+- (NSString *)rewardString;
+- (CGFloat)participantsProgress;
 
 // Message
 @property (nonatomic) BOOL didReadMessage;

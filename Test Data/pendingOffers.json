@@ -26,7 +26,7 @@
           }
         ]
       },
-      "offerId": 63,
+      "offerID": 63,
       "offerInfoRequired": {
         "Employment": [],
         "Entertainment": [
@@ -45,7 +45,7 @@
         "Automotive",
         "Auto Dealers"
       ],
-      "partnerId": 4,
+      "partnerID": 4,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
       "partnerName": "Ford Motor"
     },
@@ -85,7 +85,7 @@
           }
         ]
       },
-      "offerId": 148,
+      "offerID": 148,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -109,7 +109,7 @@
         "Home & Garden",
         "Home Improvements"
       ],
-      "partnerId": 10,
+      "partnerID": 10,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/home-depot-logo.png",
       "partnerName": "Home Depot"
     },
@@ -143,7 +143,7 @@
           }
         ]
       },
-      "offerId": 187,
+      "offerID": 187,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -179,7 +179,7 @@
         "Entertainment",
         "Movies"
       ],
-      "partnerId": 18,
+      "partnerID": 18,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
       "partnerName": "Cineplex"
     },
@@ -207,7 +207,7 @@
           }
         ]
       },
-      "offerId": 287,
+      "offerID": 287,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -247,7 +247,7 @@
         "Travel",
         "Tourism"
       ],
-      "partnerId": 7,
+      "partnerID": 7,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Boeing-Logo.svg.png",
       "partnerName": "Boeing"
     },
@@ -271,7 +271,7 @@
           }
         ]
       },
-      "offerId": 383,
+      "offerID": 383,
       "offerInfoRequired": {
         "Employment": [],
         "Entertainment": [
@@ -304,7 +304,7 @@
         "Amusement Park",
         "Family"
       ],
-      "partnerId": 14,
+      "partnerID": 14,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
       "partnerName": "Disney"
     },
@@ -334,7 +334,7 @@
           }
         ]
       },
-      "offerId": 438,
+      "offerID": 438,
       "offerInfoRequired": {
         "Financial": [
           {
@@ -374,7 +374,7 @@
         "Food & Dining",
         "Grocery"
       ],
-      "partnerId": 1,
+      "partnerID": 1,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/walmart-logo.jpg",
       "partnerName": "Walmart"
     },
@@ -418,7 +418,7 @@
           }
         ]
       },
-      "offerId": 517,
+      "offerID": 517,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -437,7 +437,7 @@
         "Mobile",
         "Music"
       ],
-      "partnerId": 2,
+      "partnerID": 2,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/giant-apple-logo-bw.png",
       "partnerName": "Apple"
     },
@@ -477,7 +477,7 @@
           }
         ]
       },
-      "offerId": 601,
+      "offerID": 601,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -515,7 +515,7 @@
         "Personal Care",
         "Beauty Supplies"
       ],
-      "partnerId": 15,
+      "partnerID": 15,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/shoppers-drug-mart-logo.png",
       "partnerName": "Shopper Drug Mart"
     },
@@ -559,7 +559,7 @@
           }
         ]
       },
-      "offerId": 616,
+      "offerID": 616,
       "offerInfoRequired": {
         "Entertainment": [
           {
@@ -591,7 +591,7 @@
         "Automotive",
         "Auto Dealers"
       ],
-      "partnerId": 4,
+      "partnerID": 4,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
       "partnerName": "Ford Motor"
     },
@@ -621,7 +621,7 @@
           }
         ]
       },
-      "offerId": 674,
+      "offerID": 674,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -659,7 +659,7 @@
         "Amusement Park",
         "Family"
       ],
-      "partnerId": 14,
+      "partnerID": 14,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Disney_Logo.png",
       "partnerName": "Disney"
     }

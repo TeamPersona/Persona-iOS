@@ -24,7 +24,7 @@
           }
         ]
       },
-      "offerId": 100,
+      "offerID": 100,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -68,7 +68,7 @@
         "Auto Dealers",
         "Used Vehicles"
       ],
-      "partnerId": 11,
+      "partnerID": 11,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/500px-BMW.svg.png",
       "partnerName": "BMW"
     },
@@ -92,7 +92,7 @@
           }
         ]
       },
-      "offerId": 164,
+      "offerID": 164,
       "offerInfoRequired": {
         "Heath & Fitness": [
           {
@@ -126,7 +126,7 @@
         "Entertainment",
         "Movies"
       ],
-      "partnerId": 18,
+      "partnerID": 18,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Ciniplex_logo.svg.png",
       "partnerName": "Cineplex"
     },
@@ -162,7 +162,7 @@
           }
         ]
       },
-      "offerId": 195,
+      "offerID": 195,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -182,7 +182,7 @@
         "Auto Dealers",
         "Used Vehicles"
       ],
-      "partnerId": 11,
+      "partnerID": 11,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/500px-BMW.svg.png",
       "partnerName": "BMW"
     },
@@ -212,7 +212,7 @@
           }
         ]
       },
-      "offerId": 201,
+      "offerID": 201,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -248,7 +248,7 @@
         "Tech",
         "Computers"
       ],
-      "partnerId": 6,
+      "partnerID": 6,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
       "partnerName": "HP"
     },
@@ -282,7 +282,7 @@
           }
         ]
       },
-      "offerId": 248,
+      "offerID": 248,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -322,7 +322,7 @@
         "Tech",
         "Cloud Computing Services"
       ],
-      "partnerId": 8,
+      "partnerID": 8,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-IBM_logo.svg.png",
       "partnerName": "IBM"
     },
@@ -354,7 +354,7 @@
           }
         ]
       },
-      "offerId": 274,
+      "offerID": 274,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -388,7 +388,7 @@
         "Business",
         "Office Supplies"
       ],
-      "partnerId": 17,
+      "partnerID": 17,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Staples.svg.png",
       "partnerName": "Staples"
     },
@@ -428,7 +428,7 @@
           }
         ]
       },
-      "offerId": 336,
+      "offerID": 336,
       "offerInfoRequired": {
         "Employment": [
           {
@@ -462,7 +462,7 @@
         "Tech",
         "Computers"
       ],
-      "partnerId": 6,
+      "partnerID": 6,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/HP_New_Logo_2D.svg.png",
       "partnerName": "HP"
     },
@@ -492,7 +492,7 @@
           }
         ]
       },
-      "offerId": 435,
+      "offerID": 435,
       "offerInfoRequired": {
         "Employment": [],
         "Entertainment": [
@@ -518,7 +518,7 @@
         "Computers",
         "Keyboards"
       ],
-      "partnerId": 13,
+      "partnerID": 13,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/Best_Buy_Logo.svg.png",
       "partnerName": "Best Buy"
     },
@@ -548,7 +548,7 @@
           }
         ]
       },
-      "offerId": 438,
+      "offerID": 438,
       "offerInfoRequired": {
         "Basic": [
           {
@@ -583,7 +583,7 @@
         "Landscape",
         "Lawn Service"
       ],
-      "partnerId": 12,
+      "partnerID": 12,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/CT_Classic_StdKey_RGB.png",
       "partnerName": "Canadian Tire"
     },
@@ -617,7 +617,7 @@
           }
         ]
       },
-      "offerId": 463,
+      "offerID": 463,
       "offerInfoRequired": {
         "Basic": [],
         "Heath & Fitness": [
@@ -642,7 +642,7 @@
         "Automotive",
         "Auto Dealers"
       ],
-      "partnerId": 4,
+      "partnerID": 4,
       "partnerImageURL": "https://s3.amazonaws.com/persona.assets/640px-Ford_Motor_Company_Logo.svg.png",
       "partnerName": "Ford Motor"
     }

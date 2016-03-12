@@ -31,4 +31,8 @@ typedef void(^ResponseCompletionBlock)(BOOL success, id response, NSError *error
 - (void)accountWithdrawal:(ResponseCompletionBlock)completion;
 - (void)accountDeposit:(PersonalInformation *)info completion:(ResponseCompletionBlock)completion;
 
+// Offers
+- (void)offersGetOffer:(NSInteger)offerId completionBlock:(ResponseCompletionBlock)completion;
+- (void)offersGetNextOffers:(NSInteger)lastOfferId completionBlock:(ResponseCompletionBlock)completion;
+
 @end

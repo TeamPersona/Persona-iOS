@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "AccountManager.h"
 #import "Participant.h"
+#import "OffersManager.h"
 #import <AFNetworking.h>
 
 typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
@@ -184,6 +185,45 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
             }];
         } else {
             NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+#pragma mark - Offers
+- (void)offersGetOffer:(NSInteger)offerId completionBlock:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/offer/%li", self.serverHostName, offerId];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                completion(YES, [OffersManager parseJSONOfferObject:responseObject], nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+- (void)offersGetNextOffers:(NSInteger)lastOfferId completionBlock:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/offer/list/%li", self.serverHostName, lastOfferId];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSMutableArray *offers = [NSMutableArray new];
+                for (NSDictionary *info in responseObject) {
+                    [offers addObject:[OffersManager parseJSONOfferObject:info]];
+                }
+                completion(YES, offers, nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
         }
     }];
 }

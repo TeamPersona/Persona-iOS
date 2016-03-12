@@ -44,7 +44,23 @@ static const CGFloat HomeTableViewHeaderViewHeight = 26.0f;
     self.tableView.dataSource = self;
     
     self.homeTableViewTitles = @[@"Completed Transactions", @"Pending Transactions", @"Recommended For You"];
-    // TODO: Get data from server
+    
+    [[ServerAPIManager sharedManager] offersGetNextOffers:0 completionBlock:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            NSLog(@"%@", response);
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    [[ServerAPIManager sharedManager] offersGetOffer:1 completionBlock:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            NSLog(@"%@", response);
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+    
     self.completedTransactions = [OffersManager parseOffersFromJSONFile:@"completedOffers.json"];
     self.pendingTransactions = [OffersManager parseOffersFromJSONFile:@"pendingOffers.json"];
     self.recommendedOffers = [OffersManager parseOffersFromJSONFile:@"recommendedOffers.json"];

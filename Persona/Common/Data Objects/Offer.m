@@ -65,7 +65,7 @@
     return (self.expirationDate.timeIntervalSince1970 < [NSDate date].timeIntervalSince1970);
 }
 
-- (NSArray *)missingInformationCategories
+- (NSArray *)missingInformationList
 {
     [self._missingInfoSet sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         NSString *str1 = obj1;

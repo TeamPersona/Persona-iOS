@@ -3,32 +3,32 @@
     "lastRedeemedDate":"1436227200",
     "dataPoints":[
       {
-        "offerId":60632,
+        "offerID":60632,
         "rewardDate":"1434931200",
         "rewardValue":2.24
       },
       {
-        "offerId":60636,
+        "offerID":60636,
         "rewardDate":"1435276800",
         "rewardValue":0.35
       },
       {
-        "offerId":60622,
+        "offerID":60622,
         "rewardDate":"1435363200",
         "rewardValue":1.62
       },
       {
-        "offerId":67632,
+        "offerID":67632,
         "rewardDate":"1435449600",
         "rewardValue":1.14
       },
       {
-        "offerId":60932,
+        "offerID":60932,
         "rewardDate":"1436054400",
         "rewardValue":0.17
       },
       {
-        "offerId":63459,
+        "offerID":63459,
         "rewardDate":"1436659200",
         "rewardValue":1.26
       }

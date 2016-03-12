@@ -13,7 +13,7 @@
       ],
       "currNumParticipants" : 15,
       "rewardValue" : 3.5,
-      "partnerId" : 40847,
+      "partnerID" : 40847,
       "maxParticipants" : 20,
       "doesMatchFilters" : true,
       "partnerName" : "BMW",
@@ -36,7 +36,7 @@
           "isMissing" : false
         }
       ],
-      "offerId" : 99381,
+      "offerID" : 99381,
       "offerDetails" : "BMW is looking for the next new drivers for our i8 model - the most progressive sports car. The BMW i8 is ready to revolutionise its vehicle class."
     },
     {
@@ -57,7 +57,7 @@
       ],
       "currNumParticipants" : 37,
       "rewardValue" : 2,
-      "partnerId" : 19593,
+      "partnerID" : 19593,
       "maxParticipants" : 100,
       "doesMatchFilters" : true,
       "partnerName" : "Canadian Tire",
@@ -76,7 +76,7 @@
           "isMissing" : false
         }
       ],
-      "offerId" : 70726,
+      "offerID" : 70726,
       "offerDetails" : "Our summer deals are here! Special discounts for a limited-time!"
     },
     {
@@ -101,7 +101,7 @@
       ],
       "currNumParticipants" : 18,
       "rewardValue" : 3.45,
-      "partnerId" : 12185,
+      "partnerID" : 12185,
       "maxParticipants" : 50,
       "doesMatchFilters" : true,
       "partnerName" : "Best Buy",
@@ -116,7 +116,7 @@
           "isMissing" : false
         }
       ],
-      "offerId" : 33844,
+      "offerID" : 33844,
       "offerDetails" : "Come to your local Best Buy for our latest deals on the new Samsung Smart-TVs!"
     },
     {
@@ -142,7 +142,7 @@
       ],
       "currNumParticipants" : 14,
       "rewardValue" : 4.53,
-      "partnerId" : 47058,
+      "partnerID" : 47058,
       "maxParticipants" : 15,
       "doesMatchFilters" : true,
       "partnerName" : "Apple",
@@ -157,7 +157,7 @@
           "isMissing" : false
         }
       ],
-      "offerId" : 60632,
+      "offerID" : 60632,
       "offerDetails" : "Apple Watch - our most personal device yet. Soon to be on your wrist."
     },
     {
@@ -178,7 +178,7 @@
       ],
       "currNumParticipants" : 1,
       "rewardValue" : 8.93,
-      "partnerId" : 24243,
+      "partnerID" : 24243,
       "maxParticipants" : 40,
       "doesMatchFilters" : false,
       "partnerName" : "The Home Depot",
@@ -197,7 +197,7 @@
           "isMissing" : false
         }
       ],
-      "offerId" : 31974,
+      "offerID" : 31974,
       "offerDetails" : "Celebrate Canada Day with a BBQ on your beautiful deck! Limited-time offer!"
     }
   ]

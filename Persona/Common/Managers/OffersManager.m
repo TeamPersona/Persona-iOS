@@ -12,14 +12,15 @@
 static const NSString *API_JSON_Root_Offers =           @"offers";
 static const NSString *API_JSON_Root_Profile_Offers =   @"profileOffers";
 
-static const NSString *API_JSON_Partner_Id =            @"partnerId";
+static const NSString *API_JSON_Partner_Id =            @"partnerID";
 static const NSString *API_JSON_Partner_Name =          @"partnerName";
 static const NSString *API_JSON_Partner_ImageURL =      @"partnerImageURL";
-static const NSString *API_JSON_Offer_Id =              @"offerId";
+static const NSString *API_JSON_Offer_Id =              @"offerID";
 static const NSString *API_JSON_Offer_Details =         @"offerDetails";
 static const NSString *API_JSON_Info_Filters =          @"offerFilters";
 static const NSString *API_JSON_Info_Required =         @"offerInfoRequired";
 static const NSString *API_JSON_Category =              @"category";
+static const NSString *API_JSON_Start_Date =            @"offerStartDate";
 static const NSString *API_JSON_Expiration_Date =       @"offerExpirationDate";
 static const NSString *API_JSON_Reward_Value =          @"offerReward";
 static const NSString *API_JSON_Current_Participants =  @"offerCurrentParticipants";
@@ -74,7 +75,6 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     return nil;
 }
 
-#pragma mark - Helper Methods
 + (Offer *)parseJSONOfferObject:(NSDictionary *)jsonOffer
 {
     Offer *offer = [[Offer alloc] init];
@@ -105,6 +105,9 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
         offer.requiredCategoriesList = infos.allKeys;
         offer.infoRequiredList = [self parseOfferInfosWithMetadata:infos];
     }
+    if (jsonOffer[API_JSON_Start_Date] != nil) {
+        offer.startDate = [NSDate dateWithEpochTime:jsonOffer[API_JSON_Start_Date]];
+    }
     if (jsonOffer[API_JSON_Expiration_Date] != nil) {
         offer.expirationDate = [NSDate dateWithEpochTime:jsonOffer[API_JSON_Expiration_Date]];
     }
@@ -125,14 +128,27 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     return offer;
 }
 
+#pragma mark - Helper Methods
 + (NSArray *)parseOfferInfosWithMetadata:(NSDictionary *)offerInfos
 {
-    NSMutableArray *infos = [[NSMutableArray alloc] init];
-    for (NSString *key in offerInfos.allKeys) {
-        [infos addObjectsFromArray:offerInfos[key]];
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for (NSArray *infos in offerInfos.allValues) {
+        for (NSDictionary *info in infos) {
+            NSMutableDictionary *listObj = [[NSMutableDictionary alloc] initWithCapacity:2];
+            listObj[API_JSON_Category_Metadata_Name] = info[API_JSON_Category_Metadata_Name];
+            if ([info[API_JSON_Category_Metadata_Is_Missing] isKindOfClass:[NSString class]]) {
+                if ([info[API_JSON_Category_Metadata_Is_Missing] isEqualToString:@"true"]) {
+                    listObj[API_JSON_Category_Metadata_Is_Missing] = @true;
+                } else {
+                    listObj[API_JSON_Category_Metadata_Is_Missing] = @false;
+                }
+            } else {
+                listObj[API_JSON_Category_Metadata_Is_Missing] = info[API_JSON_Category_Metadata_Is_Missing];
+            }
+            [result addObject:listObj];
+        }
     }
-    
-    return infos;
+    return result;
 }
 
 @end
