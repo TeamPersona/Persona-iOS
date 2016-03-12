@@ -7,6 +7,7 @@
 //
 
 #import "PersonalInformation.h"
+#import "NSString+CamelCase.h"
 
 @implementation PersonalInformation
 
@@ -18,7 +19,21 @@
     }
     info.category = dictionary[@"category"];
     info.subCategory = dictionary[@"subcategory"];
-    info.data = dictionary[@"data"];
+
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
+    for (NSString *key in [dictionary[@"data"] allKeys]) {
+        if ([key isEqualToString:@"source"]) {
+            NSMutableArray *sources = [[NSMutableArray alloc] init];
+            for (NSDictionary *source in dictionary[@"data"][key]) {
+                [sources addObject:[InformationSource parseDictionary:source]];
+            }
+            info.sources = sources;
+        } else {
+            dataDict[[key toTitleCase]] = dictionary[@"data"][key];
+        }
+    }
+    
+    info.data = dataDict;
     return info;
 }
 

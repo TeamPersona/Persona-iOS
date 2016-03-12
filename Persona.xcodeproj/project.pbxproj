@@ -57,6 +57,17 @@
 		C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */; };
 		C6A182AC1C92037E003F27CC /* RewardTierHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182AB1C92037E003F27CC /* RewardTierHelper.m */; };
 		C6A182AF1C92F520003F27CC /* PersonalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182AE1C92F520003F27CC /* PersonalInformation.m */; };
+		C6A182B31C931B3D003F27CC /* InformationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B11C931B3D003F27CC /* InformationListViewController.m */; };
+		C6A182B41C931B3D003F27CC /* InformationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182B21C931B3D003F27CC /* InformationListViewController.xib */; };
+		C6A182B71C931C64003F27CC /* InformationSourcesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */; };
+		C6A182BA1C932E01003F27CC /* InformationSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B91C932E01003F27CC /* InformationSource.m */; };
+		C6A182BD1C933357003F27CC /* NSString+CamelCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182BC1C933357003F27CC /* NSString+CamelCase.m */; };
+		C6A182BF1C9335DA003F27CC /* CamelCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182BE1C9335DA003F27CC /* CamelCaseTests.m */; };
+		C6A182C31C93386E003F27CC /* InformationDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182C11C93386E003F27CC /* InformationDataTableViewCell.m */; };
+		C6A182C41C93386E003F27CC /* InformationDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182C21C93386E003F27CC /* InformationDataTableViewCell.xib */; };
+		C6A182C81C93418A003F27CC /* InformationManualEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182C61C93418A003F27CC /* InformationManualEntryViewController.m */; };
+		C6A182C91C93418A003F27CC /* InformationManualEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182C71C93418A003F27CC /* InformationManualEntryViewController.xib */; };
+		C6A182CC1C9377E2003F27CC /* InformationDataListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
@@ -227,6 +238,24 @@
 		C6A182AB1C92037E003F27CC /* RewardTierHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTierHelper.m; sourceTree = "<group>"; };
 		C6A182AD1C92F520003F27CC /* PersonalInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInformation.h; sourceTree = "<group>"; };
 		C6A182AE1C92F520003F27CC /* PersonalInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInformation.m; sourceTree = "<group>"; };
+		C6A182B01C931B3D003F27CC /* InformationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationListViewController.h; sourceTree = "<group>"; };
+		C6A182B11C931B3D003F27CC /* InformationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationListViewController.m; sourceTree = "<group>"; };
+		C6A182B21C931B3D003F27CC /* InformationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationListViewController.xib; sourceTree = "<group>"; };
+		C6A182B51C931C64003F27CC /* InformationSourcesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InformationSourcesDataSource.h; path = "../../Tab View Controllers/Profile/Information Details Templates/InformationSourcesDataSource.h"; sourceTree = "<group>"; };
+		C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InformationSourcesDataSource.m; path = "../../Tab View Controllers/Profile/Information Details Templates/InformationSourcesDataSource.m"; sourceTree = "<group>"; };
+		C6A182B81C932E01003F27CC /* InformationSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationSource.h; sourceTree = "<group>"; };
+		C6A182B91C932E01003F27CC /* InformationSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationSource.m; sourceTree = "<group>"; };
+		C6A182BB1C933357003F27CC /* NSString+CamelCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CamelCase.h"; sourceTree = "<group>"; };
+		C6A182BC1C933357003F27CC /* NSString+CamelCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CamelCase.m"; sourceTree = "<group>"; };
+		C6A182BE1C9335DA003F27CC /* CamelCaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamelCaseTests.m; sourceTree = "<group>"; };
+		C6A182C01C93386E003F27CC /* InformationDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDataTableViewCell.h; sourceTree = "<group>"; };
+		C6A182C11C93386E003F27CC /* InformationDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDataTableViewCell.m; sourceTree = "<group>"; };
+		C6A182C21C93386E003F27CC /* InformationDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationDataTableViewCell.xib; sourceTree = "<group>"; };
+		C6A182C51C93418A003F27CC /* InformationManualEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationManualEntryViewController.h; sourceTree = "<group>"; };
+		C6A182C61C93418A003F27CC /* InformationManualEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationManualEntryViewController.m; sourceTree = "<group>"; };
+		C6A182C71C93418A003F27CC /* InformationManualEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationManualEntryViewController.xib; sourceTree = "<group>"; };
+		C6A182CA1C9377E2003F27CC /* InformationDataListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDataListDataSource.h; sourceTree = "<group>"; };
+		C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDataListDataSource.m; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -419,6 +448,7 @@
 				C6533F811B69973000A4D601 /* EpochAndExpirationTests.m */,
 				C6533F831B69BD1500A4D601 /* EmailValidationTests.m */,
 				C6FD79EF1B5E8057006873BD /* HeightCalculations.m */,
+				C6A182BE1C9335DA003F27CC /* CamelCaseTests.m */,
 				C61465441B39FE3700F1E5F5 /* Supporting Files */,
 			);
 			path = PersonaTests;
@@ -461,6 +491,8 @@
 				C6A182A71C91B066003F27CC /* AccountAuthenticationParameters.m */,
 				C6A182AD1C92F520003F27CC /* PersonalInformation.h */,
 				C6A182AE1C92F520003F27CC /* PersonalInformation.m */,
+				C6A182B81C932E01003F27CC /* InformationSource.h */,
+				C6A182B91C932E01003F27CC /* InformationSource.m */,
 			);
 			path = "Form Objects";
 			sourceTree = "<group>";
@@ -479,16 +511,18 @@
 		C6846C621B56C1600066FF74 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */,
+				C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */,
 				C6846C631B56C17E0066FF74 /* NSString+EmailValidation.h */,
 				C6846C641B56C17E0066FF74 /* NSString+EmailValidation.m */,
 				C64B0FB71B58309700C444C5 /* NSString+PhoneNumber.h */,
 				C64B0FB81B58309700C444C5 /* NSString+PhoneNumber.m */,
-				C6811E151B5C97480066EFA7 /* UIColor+ProjectColors.h */,
-				C6811E161B5C97480066EFA7 /* UIColor+ProjectColors.m */,
-				C67278C01B64164A008F1A48 /* NSDate+EpochTime.h */,
-				C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */,
 				C67278C91B641CF7008F1A48 /* NSString+ExpirationTime.h */,
 				C67278CA1B641CF7008F1A48 /* NSString+ExpirationTime.m */,
+				C6A182BB1C933357003F27CC /* NSString+CamelCase.h */,
+				C6A182BC1C933357003F27CC /* NSString+CamelCase.m */,
+				C67278C01B64164A008F1A48 /* NSDate+EpochTime.h */,
+				C67278C11B64164A008F1A48 /* NSDate+EpochTime.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -578,6 +612,9 @@
 				C6C7C2F41C7F1A5400815404 /* InformationCategoryDetailsViewController.h */,
 				C6C7C2F51C7F1A5400815404 /* InformationCategoryDetailsViewController.m */,
 				C6C7C2F61C7F1A5400815404 /* InformationCategoryDetailsViewController.xib */,
+				C6A182C51C93418A003F27CC /* InformationManualEntryViewController.h */,
+				C6A182C61C93418A003F27CC /* InformationManualEntryViewController.m */,
+				C6A182C71C93418A003F27CC /* InformationManualEntryViewController.xib */,
 				C6BDA5901C84235800D65A1F /* InformationDetailsViewController.h */,
 				C6BDA5911C84235800D65A1F /* InformationDetailsViewController.m */,
 				C6BDA5921C84235800D65A1F /* InformationDetailsViewController.xib */,
@@ -716,6 +753,9 @@
 			children = (
 				C6BDA5AD1C85089A00D65A1F /* InformationTemplateViewController.h */,
 				C6BDA5AE1C85089A00D65A1F /* InformationTemplateViewController.m */,
+				C6A182B01C931B3D003F27CC /* InformationListViewController.h */,
+				C6A182B11C931B3D003F27CC /* InformationListViewController.m */,
+				C6A182B21C931B3D003F27CC /* InformationListViewController.xib */,
 				C6BDA59B1C8429BA00D65A1F /* InformationTextFieldViewController.h */,
 				C6BDA59C1C8429BA00D65A1F /* InformationTextFieldViewController.m */,
 				C6BDA59D1C8429BA00D65A1F /* InformationTextFieldViewController.xib */,
@@ -829,6 +869,10 @@
 				C6FD79D21B5DA077006873BD /* SettingsDataSource.m */,
 				C66B83011C7F3A040034D0A0 /* InformationDetailsDataSource.h */,
 				C66B83021C7F3A040034D0A0 /* InformationDetailsDataSource.m */,
+				C6A182B51C931C64003F27CC /* InformationSourcesDataSource.h */,
+				C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */,
+				C6A182CA1C9377E2003F27CC /* InformationDataListDataSource.h */,
+				C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */,
 			);
 			name = "Profile Data Sources";
 			sourceTree = "<group>";
@@ -839,6 +883,9 @@
 				C6BC08331B599AE90089E305 /* SettingsTableViewCell.h */,
 				C6BC08341B599AE90089E305 /* SettingsTableViewCell.m */,
 				C6BC08351B599AE90089E305 /* SettingsTableViewCell.xib */,
+				C6A182C01C93386E003F27CC /* InformationDataTableViewCell.h */,
+				C6A182C11C93386E003F27CC /* InformationDataTableViewCell.m */,
+				C6A182C21C93386E003F27CC /* InformationDataTableViewCell.xib */,
 			);
 			name = "Profile Cells";
 			sourceTree = "<group>";
@@ -963,6 +1010,7 @@
 				C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
 				C6BC08371B599AE90089E305 /* SettingsTableViewCell.xib in Resources */,
+				C6A182C41C93386E003F27CC /* InformationDataTableViewCell.xib in Resources */,
 				C6BDA5B41C85169600D65A1F /* InformationOptionsViewController.xib in Resources */,
 				C6BDA59F1C8429BA00D65A1F /* InformationTextFieldViewController.xib in Resources */,
 				C662FD241B5611A900000FD1 /* Images.xcassets in Resources */,
@@ -991,6 +1039,8 @@
 				C6BDA5941C84235800D65A1F /* InformationDetailsViewController.xib in Resources */,
 				C687F7571B61EC09007DDA93 /* profileMockData.json in Resources */,
 				C66B83001C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.xib in Resources */,
+				C6A182C91C93418A003F27CC /* InformationManualEntryViewController.xib in Resources */,
+				C6A182B41C931B3D003F27CC /* InformationListViewController.xib in Resources */,
 				C6FD7A031B5EFA02006873BD /* ProfileBalanceCollectionViewCell.xib in Resources */,
 				C6BC08291B595EEF0089E305 /* SettingsSectionNames.plist in Resources */,
 				C687F7581B61EC09007DDA93 /* profileOffersMockData.json in Resources */,
@@ -1069,8 +1119,10 @@
 				C6A182AF1C92F520003F27CC /* PersonalInformation.m in Sources */,
 				C6A182AC1C92037E003F27CC /* RewardTierHelper.m in Sources */,
 				C6AB442A1B3A05F200BA6405 /* ProfileViewController.m in Sources */,
+				C6A182C81C93418A003F27CC /* InformationManualEntryViewController.m in Sources */,
 				C614652D1B39FE3700F1E5F5 /* AppDelegate.m in Sources */,
 				C6AB44841B3A274B00BA6405 /* BaseNavigationViewController.m in Sources */,
+				C6A182B31C931B3D003F27CC /* InformationListViewController.m in Sources */,
 				C6BDA5A71C8451DA00D65A1F /* PopupTransitionAnimation.m in Sources */,
 				C6D7B21C1C7703730033F5A2 /* PendingTransactionsDataSource.m in Sources */,
 				C6C027271C1FED7400692227 /* OfferDetailsViewController.m in Sources */,
@@ -1107,6 +1159,7 @@
 				C66B83031C7F3A040034D0A0 /* InformationDetailsDataSource.m in Sources */,
 				C67646061C9070D9007CE725 /* ServerAPIManager.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
+				C6A182B71C931C64003F27CC /* InformationSourcesDataSource.m in Sources */,
 				C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */,
 				C66B82FF1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m in Sources */,
 				C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */,
@@ -1121,6 +1174,7 @@
 				C6FD79D31B5DA077006873BD /* OffersDataSource.m in Sources */,
 				C6FD79D61B5DA077006873BD /* SettingsDataSource.m in Sources */,
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
+				C6A182BA1C932E01003F27CC /* InformationSource.m in Sources */,
 				C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
 				C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,
@@ -1128,12 +1182,15 @@
 				C6BDA5AF1C85089A00D65A1F /* InformationTemplateViewController.m in Sources */,
 				C6846C7B1B56D31C0066FF74 /* SignUpViewController.m in Sources */,
 				C6BC08201B5937DF0089E305 /* SettingsViewController.m in Sources */,
+				C6A182CC1C9377E2003F27CC /* InformationDataListDataSource.m in Sources */,
 				C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */,
 				C6D7B1FE1C73D8C20033F5A2 /* DateFormatManager.m in Sources */,
 				C6846C801B56EE430066FF74 /* PhoneVerificationViewController.m in Sources */,
 				C6A182A21C916964003F27CC /* AccountInformation.m in Sources */,
 				C6C7C2F71C7F1A5400815404 /* InformationCategoryDetailsViewController.m in Sources */,
+				C6A182C31C93386E003F27CC /* InformationDataTableViewCell.m in Sources */,
 				C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */,
+				C6A182BD1C933357003F27CC /* NSString+CamelCase.m in Sources */,
 				C66B830C1C7F59FB0034D0A0 /* ProfileInformationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1145,6 +1202,7 @@
 				C6FD79F01B5E8057006873BD /* HeightCalculations.m in Sources */,
 				C61465471B39FE3700F1E5F5 /* PersonaTests.m in Sources */,
 				C6533F821B69973000A4D601 /* EpochAndExpirationTests.m in Sources */,
+				C6A182BF1C9335DA003F27CC /* CamelCaseTests.m in Sources */,
 				C6533F841B69BD1500A4D601 /* EmailValidationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

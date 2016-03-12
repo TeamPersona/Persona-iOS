@@ -7,12 +7,22 @@
 //
 
 #import "InformationDetails.h"
+#import "NSString+CamelCase.h"
 
 @implementation InformationDetails
 
 - (BOOL)hasValue
 {
-    return _value != nil;
+    return _value.count != 0;
+}
+
+- (NSDictionary *)serverFriendlyValues
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:self.value.count];
+    for (NSString *key in self.value.allKeys) {
+        dict[[key toCamelCase]] = self.value[key];
+    }
+    return dict;
 }
 
 @end

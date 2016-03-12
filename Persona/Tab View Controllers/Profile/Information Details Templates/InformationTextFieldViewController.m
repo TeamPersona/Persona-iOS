@@ -41,7 +41,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    self.infoDetails.value = self.textField.text;
+    self.infoDetails.value = @{self.infoDetails.name : self.textField.text};
 }
 
 @end

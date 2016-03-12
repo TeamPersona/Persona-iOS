@@ -49,10 +49,6 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     
-    
-    [self updateButton:self.informationSegmentedButton state:YES];
-    [self updateButton:self.permissionsSegmentedButton state:NO];
-
     self.informationTemplateViewController = [[InformationTemplateViewController alloc] initInfoTemplateViewController:self.infoDetails];
 }
 
@@ -62,13 +58,11 @@
     [self.infoView addSubview:self.informationTemplateViewController.view];
     [self addChildViewController:self.informationTemplateViewController];
     [self.informationTemplateViewController didMoveToParentViewController:self];
-    self.permissionTableView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -82,20 +76,6 @@
 }
 
 #pragma mark - Button Methods
-- (IBAction)segmentedButtonPressed:(UIButton *)sender
-{
-    [self updateButton:sender state:YES];
-    if ([sender isEqual:self.informationSegmentedButton]) {
-        [self updateButton:self.permissionsSegmentedButton state:NO];
-        self.infoView.hidden = NO;
-        self.permissionTableView.hidden = YES;
-    } else if ([sender isEqual:self.permissionsSegmentedButton]) {
-        [self updateButton:self.informationSegmentedButton state:NO];
-        self.permissionTableView.hidden = NO;
-        self.infoView.hidden = YES;
-    }
-}
-
 - (IBAction)doneButtonPressed:(UIButton *)sender
 {
     // Save info.
@@ -145,19 +125,5 @@
 
 #pragma mark - UITableView Delegate Methods
 
-
-
-
-#pragma mark - Private Methods
-- (void)updateButton:(UIButton *)button state:(BOOL)shouldSelect
-{
-    if (shouldSelect) {
-        button.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
-        button.backgroundColor = [UIColor personaColor];
-    } else {
-        button.titleLabel.font = [UIFont systemFontOfSize:14.0];
-        button.backgroundColor = [UIColor personaLightColor];
-    }
-}
 
 @end

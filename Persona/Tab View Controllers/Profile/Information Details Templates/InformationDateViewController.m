@@ -16,7 +16,7 @@
     [super viewDidLoad];
     self.datePicker.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     if (self.infoDetails.value) {
-        self.datePicker.date = [NSDate dateWithEpochTime:self.infoDetails.value];
+        self.datePicker.date = [NSDate dateWithEpochTime:self.infoDetails.value[self.infoDetails.name]];
     }
 }
 
@@ -28,7 +28,7 @@
 
 - (IBAction)datePckerDidUpdate:(UIDatePicker *)sender
 {
-    self.infoDetails.value = sender.date.epochTime;
+    self.infoDetails.value = @{self.infoDetails.name : sender.date.epochTime};
 }
 
 @end

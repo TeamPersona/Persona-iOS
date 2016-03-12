@@ -10,9 +10,6 @@
                 <outlet property="containerView" destination="EpW-mb-KTM" id="c9X-6L-XQu"/>
                 <outlet property="doneButton" destination="Aoa-B8-Obh" id="qXF-VN-c7J"/>
                 <outlet property="infoView" destination="bmi-Po-U61" id="WlR-bY-W8z"/>
-                <outlet property="informationSegmentedButton" destination="eGn-zo-gk6" id="6FJ-f4-1xh"/>
-                <outlet property="permissionTableView" destination="I2t-v1-dA2" id="cdU-Ov-t94"/>
-                <outlet property="permissionsSegmentedButton" destination="d9l-Lk-AJF" id="5Rf-eI-Ny3"/>
                 <outlet property="titleLabel" destination="hJH-mp-vYc" id="vaO-zT-GQ7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,43 +29,8 @@
                                 <constraint firstAttribute="height" constant="36" id="DqE-gM-jO6"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGn-zo-gk6">
-                            <rect key="frame" x="0.0" y="36" width="138" height="30"/>
-                            <color key="backgroundColor" red="0.1803921568627451" green="0.34509803921568627" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="0KJ-GZ-KpV"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                            <state key="normal" title="Information">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="segmentedButtonPressed:" destination="-1" eventType="touchUpInside" id="A3s-y2-OmB"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-Lk-AJF">
-                            <rect key="frame" x="138" y="36" width="137" height="30"/>
-                            <color key="backgroundColor" red="0.25098039220000001" green="0.42745098040000001" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="QBI-K7-e5n"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="Permissions">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="segmentedButtonPressed:" destination="-1" eventType="touchUpInside" id="i0w-BG-dQS"/>
-                            </connections>
-                        </button>
-                        <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I2t-v1-dA2">
-                            <rect key="frame" x="0.0" y="66" width="275" height="243"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="E4u-vp-avO"/>
-                            </connections>
-                        </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmi-Po-U61">
-                            <rect key="frame" x="0.0" y="66" width="275" height="243"/>
+                            <rect key="frame" x="0.0" y="36" width="275" height="273"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-B8-Obh">
@@ -106,8 +68,6 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1803921568627451" green="0.34509803921568627" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="I2t-v1-dA2" secondAttribute="bottom" constant="38" id="3ij-8Q-RgJ"/>
-                        <constraint firstItem="d9l-Lk-AJF" firstAttribute="leading" secondItem="eGn-zo-gk6" secondAttribute="trailing" id="3np-rA-PcW"/>
                         <constraint firstItem="eBF-d2-vgv" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" id="586-Ao-BLk"/>
                         <constraint firstItem="Aoa-B8-Obh" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="67y-pV-eme"/>
                         <constraint firstItem="dEf-24-CEG" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" id="7Jy-AH-kSz"/>
@@ -116,27 +76,19 @@
                         <constraint firstItem="bmi-Po-U61" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="LH9-D8-m4d"/>
                         <constraint firstItem="hJH-mp-vYc" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" constant="55" id="LhG-1A-wOR"/>
                         <constraint firstAttribute="trailing" secondItem="hJH-mp-vYc" secondAttribute="trailing" constant="55" id="LjE-J4-EDZ"/>
-                        <constraint firstItem="bmi-Po-U61" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" constant="66" id="MEi-eI-0Vv"/>
+                        <constraint firstItem="bmi-Po-U61" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" constant="36" id="MEi-eI-0Vv"/>
                         <constraint firstAttribute="trailing" secondItem="dEf-24-CEG" secondAttribute="trailing" id="MU2-jy-MzH"/>
                         <constraint firstItem="eBF-d2-vgv" firstAttribute="leading" secondItem="hJH-mp-vYc" secondAttribute="trailing" id="OCG-X6-P2Y"/>
                         <constraint firstAttribute="trailing" secondItem="bmi-Po-U61" secondAttribute="trailing" id="Pj6-gn-Agq"/>
                         <constraint firstAttribute="trailing" secondItem="hJH-mp-vYc" secondAttribute="trailing" id="TIR-ka-I66"/>
                         <constraint firstAttribute="trailing" secondItem="hJH-mp-vYc" secondAttribute="trailing" constant="55" id="VXj-v6-AEC"/>
-                        <constraint firstItem="I2t-v1-dA2" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="WVf-dW-ocg"/>
-                        <constraint firstItem="eGn-zo-gk6" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="XtZ-oD-PYv"/>
                         <constraint firstItem="hJH-mp-vYc" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" id="bWT-EQ-2Cm"/>
-                        <constraint firstItem="eGn-zo-gk6" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" constant="36" id="cIe-ep-0B3"/>
-                        <constraint firstAttribute="trailing" secondItem="I2t-v1-dA2" secondAttribute="trailing" id="daC-RN-uNn"/>
-                        <constraint firstItem="d9l-Lk-AJF" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" constant="36" id="geH-vB-BTt"/>
-                        <constraint firstAttribute="trailing" secondItem="d9l-Lk-AJF" secondAttribute="trailing" id="i0A-r8-y2B"/>
                         <constraint firstAttribute="trailing" secondItem="Aoa-B8-Obh" secondAttribute="trailing" id="nfK-83-TaH"/>
                         <constraint firstItem="hJH-mp-vYc" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" id="okT-Wc-oWN"/>
                         <constraint firstAttribute="bottom" secondItem="bmi-Po-U61" secondAttribute="bottom" constant="38" id="pqx-15-D2c"/>
                         <constraint firstAttribute="bottom" secondItem="Aoa-B8-Obh" secondAttribute="bottom" id="sVV-61-zDq"/>
-                        <constraint firstItem="I2t-v1-dA2" firstAttribute="top" secondItem="EpW-mb-KTM" secondAttribute="top" constant="66" id="st4-Z2-baL"/>
                         <constraint firstAttribute="trailing" secondItem="eBF-d2-vgv" secondAttribute="trailing" constant="8" id="wiX-Bv-O0n"/>
                         <constraint firstItem="hJH-mp-vYc" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="wjE-40-PGN"/>
-                        <constraint firstItem="eGn-zo-gk6" firstAttribute="width" secondItem="d9l-Lk-AJF" secondAttribute="width" id="ytx-RL-nOe"/>
                         <constraint firstItem="dEf-24-CEG" firstAttribute="leading" secondItem="EpW-mb-KTM" secondAttribute="leading" id="zkg-vC-fzs"/>
                     </constraints>
                     <variation key="default">

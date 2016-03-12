@@ -55,43 +55,43 @@
 - (void)testExpirationString2Mins
 {
     NSTimeInterval twoMinutesBefore = 60.0 * 2;
-    [self assertExpirationTimeInterval:twoMinutesBefore matchesExpectedExpirationString:@"<2 mins"];
+    [self assertExpirationTimeInterval:twoMinutesBefore matchesExpectedExpirationString:@"＜2 mins"];
 }
 
 - (void)testExpirationString59Mins59Secs
 {
     NSTimeInterval twoMinutesBefore = (60.0 * 59) + 59.0;
-    [self assertExpirationTimeInterval:twoMinutesBefore matchesExpectedExpirationString:@"<59 mins"];
+    [self assertExpirationTimeInterval:twoMinutesBefore matchesExpectedExpirationString:@"＜59 mins"];
 }
 
 - (void)testExpirationString1Hour
 {
     NSTimeInterval oneHourBefore = (60.0 * 60);
-    [self assertExpirationTimeInterval:oneHourBefore matchesExpectedExpirationString:@"<1 hour"];
+    [self assertExpirationTimeInterval:oneHourBefore matchesExpectedExpirationString:@"＜1 hour"];
 }
 
 - (void)testExpirationString23Hours59Mins
 {
     NSTimeInterval oneHourBefore = (60.0 * 60 * 23) + (60.0 * 59);
-    [self assertExpirationTimeInterval:oneHourBefore matchesExpectedExpirationString:@"<23 hours"];
+    [self assertExpirationTimeInterval:oneHourBefore matchesExpectedExpirationString:@"＜23 hours"];
 }
 
 - (void)testExpirationString1Day
 {
     NSTimeInterval oneDayBefore = (60.0 * 60 * 24);
-    [self assertExpirationTimeInterval:oneDayBefore matchesExpectedExpirationString:@"<1 day"];
+    [self assertExpirationTimeInterval:oneDayBefore matchesExpectedExpirationString:@"＜1 day"];
 }
 
 - (void)testExpirationString2Days
 {
     NSTimeInterval oneDayBefore = (60.0 * 60 * 24 * 2);
-    [self assertExpirationTimeInterval:oneDayBefore matchesExpectedExpirationString:@"<2 days"];
+    [self assertExpirationTimeInterval:oneDayBefore matchesExpectedExpirationString:@"＜2 days"];
 }
 
 - (void)assertExpirationTimeInterval:(NSTimeInterval)timeInterval matchesExpectedExpirationString:(NSString *)expectedExpirationStr
 {
     NSDate *date = [self.currentDate dateByAddingTimeInterval:timeInterval];
-    XCTAssertTrue([expectedExpirationStr isEqualToString:[NSString stringWithExpirationDate:date currentDate:self.currentDate]]);
+    XCTAssertEqualObjects(expectedExpirationStr, [NSString stringWithExpirationDate:date currentDate:self.currentDate]);
 }
 
 @end

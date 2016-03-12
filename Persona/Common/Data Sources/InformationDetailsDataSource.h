@@ -13,5 +13,6 @@
 @interface InformationDetailsDataSource : NSObject <UICollectionViewDataSource>
 
 - (id)initWithInfoCategory:(InformationCategory *)info;
+- (void)updateInfo:(InformationCategory *)info;
 
 @end

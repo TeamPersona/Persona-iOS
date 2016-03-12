@@ -19,10 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIButton *informationSegmentedButton;
-@property (weak, nonatomic) IBOutlet UIButton *permissionsSegmentedButton;
 @property (weak, nonatomic) IBOutlet UIView *infoView;
-@property (weak, nonatomic) IBOutlet UITableView *permissionTableView;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (nonatomic, strong) id<InformationDetailsPopupDelegate> delegate;

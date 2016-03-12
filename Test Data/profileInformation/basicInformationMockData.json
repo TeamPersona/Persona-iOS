@@ -4,46 +4,38 @@
   "info" : [
     {
       "name" : "First Name",
-      "value" : "Denny",
-      "type" : 1,
+      "value" : {"First Name" : "Denny"},
       "points" : 10
     },
     {
       "name" : "Last Name",
-      "value" : "Kim",
-      "type" : 1,
+      "value" : {"Last Name" : "Kim"},
       "points" : 10
     },
     {
       "name" : "Date of Birth",
-      "type" : 4,
       "points" : 20
     },
     {
       "name" : "Gender",
-      "type" : 5,
       "options" : ["Male", "Female", "Other"],
       "points" : 20
     },
     {
       "name" : "Visible Minority Status",
-      "type" : 5,
       "options" : ["South Asian", "Chinese", "Black", "Filipino", "Latin American", "Arab/West Asian", "Arab", "Southeast Asian", "West Asian", "Korean", "Japanese", "Visible Minority, n.i.e.", "Multiple Visible Minorities", "Not a Visible Minority"],
       "points" : 20
     },
     {
       "name" : "Allow Contact",
-      "type" : 3,
       "points" : 20
     },
     {
       "name" : "Home Address",
-      "type" : 1,
       "points" : 20
     },
     {
       "name" : "Postal Code",
-      "type" : 1,
       "points" : 20
     }
   ]

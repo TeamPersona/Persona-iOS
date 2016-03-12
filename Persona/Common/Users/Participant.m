@@ -18,7 +18,7 @@
     participant.emailAddress = dictionary[@"emailAddress"];
     participant.phoneNumber = dictionary[@"phoneNumber"];
     participant.totalPoints = [dictionary[@"rewardPoints"] integerValue];
-    participant.accountBalance = dictionary[@"rewardPoints"];
+    participant.accountBalance = dictionary[@"balance"];
 
     return participant;
 }

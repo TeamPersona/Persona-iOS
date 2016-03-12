@@ -27,6 +27,12 @@
     return self;
 }
 
+- (void)updateInfo:(InformationCategory *)info
+{
+    self.info = info;
+}
+
+
 #pragma mark - UICollectionView DataSource Methods
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -34,7 +40,7 @@
     ProfileInformationDetailsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileInformationDetailsCollectionViewCellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = details.name;
     cell.pointsLabel.text = [NSString stringWithFormat:@"%li points", details.points];
-    cell.checkmarkImageView.hidden = details.value == nil;
+    cell.checkmarkImageView.hidden = !details.hasValue;
     return cell;
 }
 

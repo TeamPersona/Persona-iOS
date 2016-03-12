@@ -63,6 +63,7 @@
     if (indexPath.section == ProfileSectionTierInformation) {
         ProfileTierCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ProfileTierCollectionViewCellIdentifier forIndexPath:indexPath];
         
+        cell.tierLabel.text = @"";
         cell.progressPercent = self.profileInfo.tierProgress.floatValue;
 
         NSString *tierString;

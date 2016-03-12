@@ -43,24 +43,14 @@
     
     self.profileDataSource = [[ProfileDataSource alloc] init];
     self.profileDataSource.delegate = self;
-    [[ServerAPIManager sharedManager] accountGetAccountInformation:^(BOOL success, id response, NSError *error) {
-        if (success) {
-            self.profileDataSource.profileInfo = response;
-            [self.collectionView reloadData];
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
-
-    [[ServerAPIManager sharedManager] accountWithdrawal:^(BOOL success, id response, NSError *error) {
-        if (success) {
-            NSLog(@"%@", response);
-        } else {
-            NSLog(@"%@", error.localizedDescription);
-        }
-    }];
     
-
+    // Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refreshProfile:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    
+    [self refreshProfile:nil];
+    
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
     self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
@@ -91,6 +81,27 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)refreshProfile:(UIRefreshControl *)control
+{
+    [[ServerAPIManager sharedManager] accountGetAccountInformation:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            self.profileDataSource.profileInfo = response;
+            [self.collectionView reloadData];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    [[ServerAPIManager sharedManager] accountWithdrawal:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            NSLog(@"%@", response);
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    [control endRefreshing];
 }
 
 #pragma mark - Button Methods

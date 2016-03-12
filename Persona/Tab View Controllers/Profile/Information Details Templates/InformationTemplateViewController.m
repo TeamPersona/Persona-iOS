@@ -10,6 +10,7 @@
 #import "InformationTextFieldViewController.h"
 #import "InformationDateViewController.h"
 #import "InformationOptionsViewController.h"
+#import "InformationListViewController.h"
 
 @interface InformationTemplateViewController ()
 
@@ -28,7 +29,9 @@
 
 - (instancetype)initInfoTemplateViewController:(InformationDetails *)infoDetails
 {
-    if (infoDetails.type == InformationDetailsTypeString) {
+    if (infoDetails.type == InformationDetailsTypeGeneric) {
+        return [[InformationListViewController alloc] initWithInfoDetails:infoDetails];
+    } else if (infoDetails.type == InformationDetailsTypeString) {
         return [[InformationTextFieldViewController alloc] initWithInfoDetails:infoDetails];
     } else if (infoDetails.type == InformationDetailsTypeNumber) {
         return [[InformationTextFieldViewController alloc] initWithInfoDetails:infoDetails];
@@ -41,7 +44,7 @@
     } else if (infoDetails.type == InformationDetailsTypeOptionMultiple) {
         return [[InformationOptionsViewController alloc] initWithInfoDetails:infoDetails];
     }
-    return [self initWithInfoDetails:infoDetails];
+    return [[InformationListViewController alloc] initWithInfoDetails:infoDetails];
 }
 
 - (void)viewDidLoad

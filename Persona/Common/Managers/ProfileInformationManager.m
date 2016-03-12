@@ -39,7 +39,9 @@ static const NSString *API_JSON_INFO_CATEGORY_DETAILS_OPTION_TYPE = @"optionType
     if (json[API_JSON_INFO_CATEGORY_INFO] != nil) {
         NSMutableArray *details = [[NSMutableArray alloc] init];
         for (NSDictionary *dict in json[API_JSON_INFO_CATEGORY_INFO]) {
-             [details addObject:[self parseProfileInformationDetails:dict]];
+            InformationDetails *infoDetail = [self parseProfileInformationDetails:dict];
+            infoDetail.mainCategory = infoCategory.categoryName;
+            [details addObject:infoDetail];
         }
         infoCategory.informationDetails = details;
     }

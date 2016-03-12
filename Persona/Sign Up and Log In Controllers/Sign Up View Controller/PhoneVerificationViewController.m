@@ -114,7 +114,6 @@ static NSString *VerificationTitle = @"Verification";
 #pragma mark - Button Methods
 - (IBAction)resendCodeButtonPressed:(UIButton *)sender
 {
-    //TODO: call API to resend code with this number (self.phoneNumString)
 }
 
 @end

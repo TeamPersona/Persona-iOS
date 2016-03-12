@@ -11,11 +11,13 @@
 #import "InformationDetailsDataSource.h"
 #import "ProfileInformationManager.h"
 #import "PopupTransitionAnimation.h"
+#import "BaseNavigationViewController.h"
 
 @interface InformationCategoryDetailsViewController ()
 @property (nonatomic, strong) InformationDetailsDataSource *dataSource;
 @property (nonatomic, strong) InformationCategory *infoCategory;
 @property (nonatomic, strong) PopupTransitionAnimation *animator;
+@property (nonatomic, strong) NSIndexPath *manualEntryIndexPath;
 @end
 
 @implementation InformationCategoryDetailsViewController
@@ -54,16 +56,39 @@
 }
 
 
+#pragma mark - Information Manual Entry Delegate Methods
+- (void)informationDidCancelManualEntry
+{
+    self.manualEntryIndexPath = nil;
+}
+
+- (void)informationDidFinishEntryWithData:(NSDictionary *)dataDict
+{
+    InformationDetails *info = self.infoCategory.informationDetails[self.manualEntryIndexPath.row];
+    info.value = dataDict;
+    [self.dataSource updateInfo:self.infoCategory];
+    [self.collectionView reloadData];
+    // TODO: send data to server
+}
+
 #pragma mark - UICollectionView Delegate Methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    InformationDetailsViewController *vc = [[InformationDetailsViewController alloc] initWithInfoDetails:self.infoCategory.informationDetails[indexPath.row]];
-    vc.delegate = self;
-    vc.index = indexPath.row;
-    vc.modalPresentationStyle = UIModalPresentationCustom;
-    vc.transitioningDelegate = self.animator;
-    [self.navigationController presentViewController:vc animated:YES completion:^{
-    }];
+    InformationDetails *info = self.infoCategory.informationDetails[indexPath.row];
+    if (info.value == nil) {
+        InformationManualEntryViewController *vc = [[InformationManualEntryViewController alloc] initWithInformationSubCategory:info.name];
+        vc.delegate = self;
+        self.manualEntryIndexPath = indexPath;
+        [self.navigationController presentViewController:[[BaseNavigationViewController alloc] initWithRootViewController:vc] animated:YES completion:nil];
+        
+    } else {
+        InformationDetailsViewController *vc = [[InformationDetailsViewController alloc] initWithInfoDetails:self.infoCategory.informationDetails[indexPath.row]];
+        vc.delegate = self;
+        vc.index = indexPath.row;
+        vc.modalPresentationStyle = UIModalPresentationCustom;
+        vc.transitioningDelegate = self.animator;
+        [self.navigationController presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 
