@@ -49,11 +49,12 @@
     [refreshControl addTarget:self action:@selector(refreshProfile:) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:refreshControl];
     
+    self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     [self refreshProfile:nil];
     
+    
 //    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
-    self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
-    self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
+//    self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
     [self.collectionView reloadData];
 
     // Collection View
@@ -96,11 +97,13 @@
     
     [[ServerAPIManager sharedManager] accountWithdrawal:^(BOOL success, id response, NSError *error) {
         if (success) {
-            NSLog(@"%@", response);
+            [self.profileDataSource setPersonalInformationDataWithWithdrawalInfo:response];
+            [self.collectionView reloadData];
         } else {
-            NSLog(@"%@", error.localizedDescription);
+            NSLog(@"%@", error);
         }
     }];
+    
     [control endRefreshing];
 }
 
@@ -123,7 +126,11 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.currentSelectedSegment == ProfileSegmentPoints && indexPath.section != 0) {
-        InformationCategoryDetailsViewController *informationDetailsVC = [[InformationCategoryDetailsViewController alloc] initWithCategoryTitle:self.profileInformationCategoriesList[indexPath.row]];
+        NSString *key = self.profileInformationCategoriesList[indexPath.row];
+        InformationCategory *infoCategory = [InformationCategory new];
+        infoCategory.categoryName = key;
+        infoCategory.informationDetails = self.profileDataSource.personalInformationData[key];
+        InformationCategoryDetailsViewController *informationDetailsVC = [[InformationCategoryDetailsViewController alloc] initWithInfoCategory:infoCategory];
         [self.navigationController pushViewController:informationDetailsVC animated:YES];
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];

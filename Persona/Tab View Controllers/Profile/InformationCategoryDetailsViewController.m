@@ -15,18 +15,18 @@
 
 @interface InformationCategoryDetailsViewController ()
 @property (nonatomic, strong) InformationDetailsDataSource *dataSource;
-@property (nonatomic, strong) InformationCategory *infoCategory;
 @property (nonatomic, strong) PopupTransitionAnimation *animator;
 @property (nonatomic, strong) NSIndexPath *manualEntryIndexPath;
 @end
 
 @implementation InformationCategoryDetailsViewController
 
-- (id)initWithCategoryTitle:(NSString *)title
+- (id)initWithInfoCategory:(InformationCategory *)category
 {
     self = [super init];
     if (self) {
-        self.title = title;
+        self.title = category.categoryName;
+        self.infoCategory = category;
     }
     return self;
 }
@@ -35,7 +35,9 @@
 {
     [super viewDidLoad];
     self.animator = [PopupTransitionAnimation new];
-    self.infoCategory = [ProfileInformationManager parseProfileInformationCategory:[NSString stringWithFormat:@"%@InformationMockData.json", self.title.lowercaseString]];
+    if (!self.infoCategory) {
+        self.infoCategory = [ProfileInformationManager parseProfileInformationCategory:[NSString stringWithFormat:@"%@InformationMockData.json", self.title.lowercaseString]];
+    }
     self.dataSource = [[InformationDetailsDataSource alloc] initWithInfoCategory:self.infoCategory];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProfileInformationDetailsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ProfileInformationDetailsCollectionViewCellIdentifier];

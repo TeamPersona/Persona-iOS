@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InformationCategory.h"
 #import "InformationDetailsViewController.h"
 #import "InformationManualEntryViewController.h"
 
 @interface InformationCategoryDetailsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, InformationDetailsPopupDelegate, InformationEntryDelegate>
 
+@property (nonatomic, strong) InformationCategory *infoCategory;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-- (id)initWithCategoryTitle:(NSString *)title;
+- (id)initWithInfoCategory:(InformationCategory *)category;
 
 @end

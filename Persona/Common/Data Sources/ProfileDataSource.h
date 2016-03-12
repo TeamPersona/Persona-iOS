@@ -25,9 +25,10 @@
 
 @property (nonatomic, strong) Participant *profileInfo;
 @property (nonatomic, strong) NSArray *informationCategoriesList;
-@property (nonatomic, strong) NSArray *offersDataArray;
+@property (nonatomic, strong) NSDictionary *personalInformationData;
 @property (nonatomic, strong) BalanceInfo *balanceInfo;
 
 - (void)updateDisplayForProfileSegment:(ProfileSegment)segment;
+- (void)setPersonalInformationDataWithWithdrawalInfo:(NSArray *)withdrawalInfo;
 
 @end

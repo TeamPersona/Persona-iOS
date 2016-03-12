@@ -14,6 +14,8 @@
 #import "Offer.h"
 #import "NSString+ExpirationTime.h"
 #import "UIColor+ProjectColors.h"
+#import "PersonalInformation.h"
+#import "InformationDetails.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileDataSource ()
@@ -25,6 +27,27 @@
 - (void)updateDisplayForProfileSegment:(ProfileSegment)segment
 {
     self.currentSelectedSegment = segment;
+}
+
+- (void)setPersonalInformationDataWithWithdrawalInfo:(NSArray *)withdrawalInfo
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    for (NSString *category in self.informationCategoriesList) {
+        [dict setObject:[NSMutableArray new] forKey:category];
+    }
+    
+    for (PersonalInformation *info in withdrawalInfo) {
+        InformationDetails *details = [InformationDetails new];
+        details.mainCategory = info.category;
+        details.name = info.subCategory;
+        details.points = [info.rewardValue integerValue];
+        details.value = info.data;
+        
+        if (dict[details.mainCategory] != nil) {
+            [dict[details.mainCategory] addObject:details];
+        }
+    }
+    self.personalInformationData = dict;
 }
 
 #pragma mark - Profile Segmented Control Delegate Methods
