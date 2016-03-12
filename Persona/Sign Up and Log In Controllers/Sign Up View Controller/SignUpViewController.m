@@ -43,6 +43,17 @@ static NSString *SignUpTitle = @"Sign Up";
     
     self.emailLabel.text = self.emailString;
     [self.firstNameTextField becomeFirstResponder];
+    
+    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
+    if (environment[@"EnvAccountShouldGenerate"]) {
+        self.firstNameTextField.text = @"Denny";
+        self.lastNameTextField.text = @"Kim";
+        self.phoneNumberTextField.text = @"1231231234";
+    }
+    if (environment[@"EnvAccountPassword"]) {
+        self.passwordTextField.text = environment[@"EnvAccountPassword"];
+        self.confirmPasswordTextField.text = environment[@"EnvAccountPassword"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

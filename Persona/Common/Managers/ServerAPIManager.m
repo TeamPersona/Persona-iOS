@@ -11,6 +11,7 @@
 #import "AccountManager.h"
 #import "Participant.h"
 #import "OffersManager.h"
+#import "AppDelegate.h"
 #import <AFNetworking.h>
 
 typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
@@ -76,7 +77,9 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 [self updateAuthorizationHeader];
                 completion(nil);
             } else {
-                completion(error);
+                AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                [appDelegate logoutToWelcomeView:YES];
+                completion(nil);
             }
         }];
     } else {

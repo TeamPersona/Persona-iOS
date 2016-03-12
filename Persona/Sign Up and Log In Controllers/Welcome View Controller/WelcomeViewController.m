@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     self.currentWelcomeState = self.segmentedControl.selectedSegmentIndex;
     
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
+
+    [self updateTextFieldsWithEnvironmentValues];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,6 +76,17 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     // Dispose of any resources that can be recreated.
 }
 
+- (void)updateTextFieldsWithEnvironmentValues
+{
+    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
+    if (environment[@"EnvAccountEmail"]) {
+        self.emailTextField.text = environment[@"EnvAccountEmail"];
+    }
+    if (environment[@"EnvAccountPassword"]) {
+        self.passwordTextField.text = environment[@"EnvAccountPassword"];
+    }
+}
+
 #pragma mark - UISegmentedControl Methods
 - (IBAction)segmentedControlValueDidChange:(UISegmentedControl *)sender
 {
@@ -84,6 +97,8 @@ typedef NS_ENUM(NSUInteger, WelcomeState) {
     
     self.emailTextField.text = @"";
     self.passwordTextField.text = @"";
+    [self updateTextFieldsWithEnvironmentValues];
+    
     self.nextButton.hidden = YES;
     self.errorSignUpLabel.hidden = YES;
     self.loginButton.hidden = YES;
