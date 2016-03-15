@@ -10,6 +10,8 @@
 
 @interface Partner : User
 
++ (Partner *)parseDictionary:(NSDictionary *)dict;
+
 @property (nonatomic, strong) NSString *partnerDescription;
 @property (nonatomic, strong) NSURL *partnerWebsite;
 @property (nonatomic, strong) NSURL *partnerImageURL;

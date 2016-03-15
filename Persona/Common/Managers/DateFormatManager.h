@@ -13,5 +13,6 @@
 + (id)sharedManager;
 
 - (NSString *)formatToShortDateString:(NSDate *)date;
+- (NSString *)formatToTimestampString:(NSDate *)date;
 
 @end

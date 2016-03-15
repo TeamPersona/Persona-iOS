@@ -12,5 +12,6 @@
 @interface SpacingAndSizingCalculations : NSObject
 
 + (CGFloat)calculateScrollViewHeightForItemCount:(NSInteger)count maxWidth:(CGFloat)maxWidth cellSize:(CGSize)cellSize sectionInset:(UIEdgeInsets)sectionInset minimumSpacing:(CGFloat)minSpacing;
++ (CGSize)calculateMessageLabelSize:(NSString *)textString;
 
 @end

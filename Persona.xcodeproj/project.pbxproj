@@ -59,7 +59,6 @@
 		C6A182AF1C92F520003F27CC /* PersonalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182AE1C92F520003F27CC /* PersonalInformation.m */; };
 		C6A182B31C931B3D003F27CC /* InformationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B11C931B3D003F27CC /* InformationListViewController.m */; };
 		C6A182B41C931B3D003F27CC /* InformationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182B21C931B3D003F27CC /* InformationListViewController.xib */; };
-		C6A182B71C931C64003F27CC /* InformationSourcesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */; };
 		C6A182BA1C932E01003F27CC /* InformationSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182B91C932E01003F27CC /* InformationSource.m */; };
 		C6A182BD1C933357003F27CC /* NSString+CamelCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182BC1C933357003F27CC /* NSString+CamelCase.m */; };
 		C6A182BF1C9335DA003F27CC /* CamelCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182BE1C9335DA003F27CC /* CamelCaseTests.m */; };
@@ -68,6 +67,14 @@
 		C6A182C81C93418A003F27CC /* InformationManualEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182C61C93418A003F27CC /* InformationManualEntryViewController.m */; };
 		C6A182C91C93418A003F27CC /* InformationManualEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182C71C93418A003F27CC /* InformationManualEntryViewController.xib */; };
 		C6A182CC1C9377E2003F27CC /* InformationDataListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */; };
+		C6A182D21C984319003F27CC /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182D11C984319003F27CC /* Message.m */; };
+		C6A182D51C984F56003F27CC /* MessagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182D41C984F56003F27CC /* MessagesManager.m */; };
+		C6A182D91C988879003F27CC /* MessagesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182D71C988879003F27CC /* MessagesDetailViewController.m */; };
+		C6A182DA1C988879003F27CC /* MessagesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182D81C988879003F27CC /* MessagesDetailViewController.xib */; };
+		C6A182DD1C9889D2003F27CC /* MessageDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182DC1C9889D2003F27CC /* MessageDetailDataSource.m */; };
+		C6A182E01C988A13003F27CC /* MessageDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182DF1C988A13003F27CC /* MessageDetail.m */; };
+		C6A182E41C988A83003F27CC /* MessageDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A182E21C988A83003F27CC /* MessageDetailCollectionViewCell.m */; };
+		C6A182E51C988A83003F27CC /* MessageDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A182E31C988A83003F27CC /* MessageDetailCollectionViewCell.xib */; };
 		C6AB440A1B3A01D000BA6405 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB44091B3A01D000BA6405 /* MainTabBarController.m */; };
 		C6AB44201B3A05AF00BA6405 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB441E1B3A05AF00BA6405 /* ExploreViewController.m */; };
 		C6AB44211B3A05AF00BA6405 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6AB441F1B3A05AF00BA6405 /* ExploreViewController.xib */; };
@@ -241,8 +248,6 @@
 		C6A182B01C931B3D003F27CC /* InformationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationListViewController.h; sourceTree = "<group>"; };
 		C6A182B11C931B3D003F27CC /* InformationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationListViewController.m; sourceTree = "<group>"; };
 		C6A182B21C931B3D003F27CC /* InformationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationListViewController.xib; sourceTree = "<group>"; };
-		C6A182B51C931C64003F27CC /* InformationSourcesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InformationSourcesDataSource.h; path = "../../Tab View Controllers/Profile/Information Details Templates/InformationSourcesDataSource.h"; sourceTree = "<group>"; };
-		C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InformationSourcesDataSource.m; path = "../../Tab View Controllers/Profile/Information Details Templates/InformationSourcesDataSource.m"; sourceTree = "<group>"; };
 		C6A182B81C932E01003F27CC /* InformationSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationSource.h; sourceTree = "<group>"; };
 		C6A182B91C932E01003F27CC /* InformationSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationSource.m; sourceTree = "<group>"; };
 		C6A182BB1C933357003F27CC /* NSString+CamelCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CamelCase.h"; sourceTree = "<group>"; };
@@ -256,6 +261,20 @@
 		C6A182C71C93418A003F27CC /* InformationManualEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationManualEntryViewController.xib; sourceTree = "<group>"; };
 		C6A182CA1C9377E2003F27CC /* InformationDataListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationDataListDataSource.h; sourceTree = "<group>"; };
 		C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationDataListDataSource.m; sourceTree = "<group>"; };
+		C6A182D01C984319003F27CC /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		C6A182D11C984319003F27CC /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		C6A182D31C984F56003F27CC /* MessagesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesManager.h; sourceTree = "<group>"; };
+		C6A182D41C984F56003F27CC /* MessagesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesManager.m; sourceTree = "<group>"; };
+		C6A182D61C988879003F27CC /* MessagesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesDetailViewController.h; sourceTree = "<group>"; };
+		C6A182D71C988879003F27CC /* MessagesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesDetailViewController.m; sourceTree = "<group>"; };
+		C6A182D81C988879003F27CC /* MessagesDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesDetailViewController.xib; sourceTree = "<group>"; };
+		C6A182DB1C9889D2003F27CC /* MessageDetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailDataSource.h; sourceTree = "<group>"; };
+		C6A182DC1C9889D2003F27CC /* MessageDetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailDataSource.m; sourceTree = "<group>"; };
+		C6A182DE1C988A13003F27CC /* MessageDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetail.h; sourceTree = "<group>"; };
+		C6A182DF1C988A13003F27CC /* MessageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetail.m; sourceTree = "<group>"; };
+		C6A182E11C988A83003F27CC /* MessageDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		C6A182E21C988A83003F27CC /* MessageDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		C6A182E31C988A83003F27CC /* MessageDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6AB44081B3A01D000BA6405 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		C6AB44091B3A01D000BA6405 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		C6AB441D1B3A05AF00BA6405 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -468,6 +487,9 @@
 				C6533F861B69C76200A4D601 /* MessagesViewController.h */,
 				C6533F871B69C76200A4D601 /* MessagesViewController.m */,
 				C6533F881B69C76200A4D601 /* MessagesViewController.xib */,
+				C6A182D61C988879003F27CC /* MessagesDetailViewController.h */,
+				C6A182D71C988879003F27CC /* MessagesDetailViewController.m */,
+				C6A182D81C988879003F27CC /* MessagesDetailViewController.xib */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -668,6 +690,10 @@
 				C66B83081C7F59730034D0A0 /* InformationCategory.m */,
 				C66B83041C7F58460034D0A0 /* InformationDetails.h */,
 				C66B83051C7F58460034D0A0 /* InformationDetails.m */,
+				C6A182D01C984319003F27CC /* Message.h */,
+				C6A182D11C984319003F27CC /* Message.m */,
+				C6A182DE1C988A13003F27CC /* MessageDetail.h */,
+				C6A182DF1C988A13003F27CC /* MessageDetail.m */,
 			);
 			path = "Data Objects";
 			sourceTree = "<group>";
@@ -696,6 +722,8 @@
 				C6D7B21E1C77D5010033F5A2 /* ImageManager.m */,
 				C66B830A1C7F59FB0034D0A0 /* ProfileInformationManager.h */,
 				C66B830B1C7F59FB0034D0A0 /* ProfileInformationManager.m */,
+				C6A182D31C984F56003F27CC /* MessagesManager.h */,
+				C6A182D41C984F56003F27CC /* MessagesManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -805,6 +833,8 @@
 			children = (
 				C6BDA5C01C8585C000D65A1F /* MessagesDataSource.h */,
 				C6BDA5C11C8585C000D65A1F /* MessagesDataSource.m */,
+				C6A182DB1C9889D2003F27CC /* MessageDetailDataSource.h */,
+				C6A182DC1C9889D2003F27CC /* MessageDetailDataSource.m */,
 			);
 			name = "Messages Data Sources";
 			sourceTree = "<group>";
@@ -842,6 +872,9 @@
 				C6D7B2111C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.h */,
 				C6D7B2121C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m */,
 				C6D7B2131C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.xib */,
+				C6A182E11C988A83003F27CC /* MessageDetailCollectionViewCell.h */,
+				C6A182E21C988A83003F27CC /* MessageDetailCollectionViewCell.m */,
+				C6A182E31C988A83003F27CC /* MessageDetailCollectionViewCell.xib */,
 				C6BDA5BA1C857BEE00D65A1F /* Profile Cells */,
 				C6FD79F91B5EF9C3006873BD /* Reusable Header Views */,
 			);
@@ -869,8 +902,6 @@
 				C6FD79D21B5DA077006873BD /* SettingsDataSource.m */,
 				C66B83011C7F3A040034D0A0 /* InformationDetailsDataSource.h */,
 				C66B83021C7F3A040034D0A0 /* InformationDetailsDataSource.m */,
-				C6A182B51C931C64003F27CC /* InformationSourcesDataSource.h */,
-				C6A182B61C931C64003F27CC /* InformationSourcesDataSource.m */,
 				C6A182CA1C9377E2003F27CC /* InformationDataListDataSource.h */,
 				C6A182CB1C9377E2003F27CC /* InformationDataListDataSource.m */,
 			);
@@ -1006,6 +1037,7 @@
 				C6C027281C1FED7400692227 /* OfferDetailsViewController.xib in Resources */,
 				C6BC08211B5937DF0089E305 /* SettingsViewController.xib in Resources */,
 				C6FD79C91B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.xib in Resources */,
+				C6A182E51C988A83003F27CC /* MessageDetailCollectionViewCell.xib in Resources */,
 				C6846C811B56EE430066FF74 /* PhoneVerificationViewController.xib in Resources */,
 				C6D7B2051C73F2600033F5A2 /* completeTransactionsMockData.json in Resources */,
 				C6AB442B1B3A05F200BA6405 /* ProfileViewController.xib in Resources */,
@@ -1024,6 +1056,7 @@
 				C692F9B61C5B3033004EBFFC /* SideScrollingCollectionViewCell.xib in Resources */,
 				C6C027261C1FED7400692227 /* HomeViewController.xib in Resources */,
 				C6D7B2101C76E9500033F5A2 /* pendingOffers.json in Resources */,
+				C6A182DA1C988879003F27CC /* MessagesDetailViewController.xib in Resources */,
 				C6C7C2F81C7F1A5400815404 /* InformationCategoryDetailsViewController.xib in Resources */,
 				C6AB448A1B3A35F400BA6405 /* OfferTableViewCell.xib in Resources */,
 				C66B830F1C7FDC9D0034D0A0 /* basicInformationMockData.json in Resources */,
@@ -1111,6 +1144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67278BF1B6404D4008F1A48 /* BalanceManager.m in Sources */,
+				C6A182E41C988A83003F27CC /* MessageDetailCollectionViewCell.m in Sources */,
 				C687F7511B617EBB007DDA93 /* ProfileManager.m in Sources */,
 				C6BDA59E1C8429BA00D65A1F /* InformationTextFieldViewController.m in Sources */,
 				C6BC083A1B59DC7D0089E305 /* SettingsOption.m in Sources */,
@@ -1137,9 +1171,11 @@
 				C6846C611B562AC00066FF74 /* CustomTextField.m in Sources */,
 				C6BDA5B31C85169500D65A1F /* InformationOptionsViewController.m in Sources */,
 				C67278C21B64164A008F1A48 /* NSDate+EpochTime.m in Sources */,
+				C6A182D91C988879003F27CC /* MessagesDetailViewController.m in Sources */,
 				C6FD79C31B5D7FDA006873BD /* PointsManager.m in Sources */,
 				C6D7B21F1C77D5010033F5A2 /* ImageManager.m in Sources */,
 				C6C027251C1FED7400692227 /* HomeViewController.m in Sources */,
+				C6A182D21C984319003F27CC /* Message.m in Sources */,
 				C6AB447D1B3A1F5100BA6405 /* User.m in Sources */,
 				C687F75C1B61F4DE007DDA93 /* RewardDataPoint.m in Sources */,
 				C6FD79C81B5D9CB9006873BD /* ProfileInformationCategoryCollectionViewCell.m in Sources */,
@@ -1159,7 +1195,6 @@
 				C66B83031C7F3A040034D0A0 /* InformationDetailsDataSource.m in Sources */,
 				C67646061C9070D9007CE725 /* ServerAPIManager.m in Sources */,
 				C6FD79FD1B5EF9E4006873BD /* ProfileTierCollectionViewCell.m in Sources */,
-				C6A182B71C931C64003F27CC /* InformationSourcesDataSource.m in Sources */,
 				C6A1829F1C9167C7003F27CC /* ServerFormParameters.m in Sources */,
 				C66B82FF1C7F386F0034D0A0 /* ProfileInformationDetailsCollectionViewCell.m in Sources */,
 				C6A182A81C91B066003F27CC /* AccountAuthenticationParameters.m in Sources */,
@@ -1176,6 +1211,8 @@
 				C6AB44541B3A1A1C00BA6405 /* Offer.m in Sources */,
 				C6A182BA1C932E01003F27CC /* InformationSource.m in Sources */,
 				C6811E171B5C97480066EFA7 /* UIColor+ProjectColors.m in Sources */,
+				C6A182D51C984F56003F27CC /* MessagesManager.m in Sources */,
+				C6A182DD1C9889D2003F27CC /* MessageDetailDataSource.m in Sources */,
 				C6AB44621B3A1A7200BA6405 /* OffersManager.m in Sources */,
 				C6D7B2141C7702DC0033F5A2 /* PendingSideScrollingCollectionViewCell.m in Sources */,
 				C692F9B51C5B3033004EBFFC /* SideScrollingCollectionViewCell.m in Sources */,
@@ -1192,6 +1229,7 @@
 				C6BC08361B599AE90089E305 /* SettingsTableViewCell.m in Sources */,
 				C6A182BD1C933357003F27CC /* NSString+CamelCase.m in Sources */,
 				C66B830C1C7F59FB0034D0A0 /* ProfileInformationManager.m in Sources */,
+				C6A182E01C988A13003F27CC /* MessageDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

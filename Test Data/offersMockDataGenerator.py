@@ -18,9 +18,9 @@ randBool = [True, False]
 # Epoch base datetime.
 epoch = datetime.datetime.utcfromtimestamp(0)
 # Start date.
-startDate = datetime.datetime(2016, 2, 16, 0, 0)
+startDate = datetime.datetime(2016, 3, 1, 0, 0)
 # End date.
-endDate = datetime.datetime(2016, 3, 8, 0, 0)
+endDate = datetime.datetime(2016, 3, 30, 0, 0)
 currentDate = (datetime.datetime.now() - epoch).total_seconds()
 
 weightedRanks = [0] * 11 + [1] * 7 + [2] * 2            # (divided by 5 - weights are 55%, 35%, 10%, respectively)
@@ -70,7 +70,7 @@ informationTypesCategoryList = {"Basic" : ["First Name", "Last Name", "Date of B
 missingInformationTypesList = {}
 for k in informationTypesCategoryList.keys():
     for info in informationTypesCategoryList[k]:
-        isMissing = random.choice(weighted10Chance)
+        isMissing = random.choice([False])
         if k in missingInformationTypesList:
             missingInformationTypesList[k].append(isMissing)
         else:
@@ -149,7 +149,7 @@ def generate_random_offer(lastOfferId, lastMessageId):
     offer.update(partners[random.randint(0, len(partners)-1)])
     # Increment offer id by random amount from 1 to 100.
     lastOfferId += random.randint(1, 100)
-    offer['offerId'] = lastOfferId
+    offer['offerID'] = lastOfferId
     offer['offerDetails'] = random.choice(offerDetailsList)
     offer['offerReward'] = round(random.uniform(0, 10), 2)
     randomStartDate = random_date(startDate, endDate)
@@ -165,7 +165,7 @@ def generate_random_offer(lastOfferId, lastMessageId):
     offer['isParticipating'] = determine_is_participating(offer['offerStatus'], offer['isEligible'])
     if random.choice(randBool) and offer['offerStatus'] == 3:
         lastMessageId += random.randint(1, 100)
-        offer['messageId'] = lastMessageId
+        offer['messageID'] = lastMessageId
         offer['didReadMessage'] = random.choice(randBool)
     return [offer, lastOfferId, lastMessageId]
 
@@ -189,7 +189,7 @@ if args.paginateLimit:
     count = 0
     numPages = math.ceil(args.numOffers / args.paginateLimit)
     for i in range(0, numPages):
-        data.update({'page' : i, 'lastOfferId' : lastOfferId, 'offers' : []})
+        data.update({'page' : i, 'lastOfferID' : lastOfferId, 'offers' : []})
         for j in range(0, min(args.numOffers - count, args.paginateLimit)):
             r = generate_random_offer(lastOfferId, lastMessageId)
             data['offers'].append(r[0])

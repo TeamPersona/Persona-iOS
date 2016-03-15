@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString *MessagesTableViewCellIdentifier = @"message";
+static const CGSize MessageImageViewSize = {56.0f, 56.0f};
 
 @interface MessagesTableViewCell : UITableViewCell
 

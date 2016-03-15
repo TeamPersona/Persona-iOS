@@ -12,5 +12,6 @@
 @interface MessagesDataSource : NSObject <UITableViewDataSource>
 
 - (id)initWithMessages:(NSArray *)messages;
+- (void)updateWithMessages:(NSArray *)messages;
 
 @end

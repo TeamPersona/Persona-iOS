@@ -12,6 +12,7 @@
 #import "Participant.h"
 #import "OffersManager.h"
 #import "AppDelegate.h"
+#import "Message.h"
 #import <AFNetworking.h>
 
 typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
@@ -61,7 +62,6 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
 {
     AccountManager *accountManager = [AccountManager sharedManager];
     NSString *authorizationValue = [NSString stringWithFormat:@"%@ %@", [accountManager tokenType], [accountManager accessToken]];
-    [self.authorizedSessionManager.requestSerializer setValue:authorizationValue forHTTPHeaderField:@"Authorization"];
     [self.authorizedSessionManager.requestSerializer setValue:authorizationValue forHTTPHeaderField:@"Authorization"];
 }
 
@@ -147,7 +147,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(NO, nil, error);
             }];
         } else {
-            NSLog(@"%@", error.localizedDescription);
+            completion(NO, nil, error);
         }
     }];
 }
@@ -169,7 +169,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(NO, nil, error);
             }];
         } else {
-            NSLog(@"%@", error.localizedDescription);
+            completion(NO, nil, error);
         }
     }];
 }
@@ -187,7 +187,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(NO, nil, error);
             }];
         } else {
-            NSLog(@"%@", error.localizedDescription);
+            completion(NO, nil, error);
         }
     }];
 }
@@ -206,7 +206,7 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
                 completion(NO, nil, error);
             }];
         } else {
-            NSLog(@"%@", error.localizedDescription);
+            completion(NO, nil, error);
         }
     }];
 }
@@ -227,9 +227,33 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 completion(NO, nil, error);
             }];
+        } else {
+            completion(NO, nil, error);
         }
     }];
 }
 
+#pragma mark - Chat
+- (void)chatGetMessages:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/chat", self.serverHostName];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSMutableArray *messages = [NSMutableArray new];
+                for (NSDictionary *msg in responseObject) {
+                    [messages addObject:[Message parseDictionary:msg]];
+                }
+                completion(YES, messages, nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            completion(NO, nil, error);
+        }
+    }];
+}
 
 @end

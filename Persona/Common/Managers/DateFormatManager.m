@@ -8,7 +8,8 @@
 
 #import "DateFormatManager.h"
 
-static NSDateFormatter *sFormatter = nil;
+static NSDateFormatter *sShortDateFormatter = nil;
+static NSDateFormatter *sTimestampDateFormatter = nil;
 
 @implementation DateFormatManager
 
@@ -26,15 +27,25 @@ static NSDateFormatter *sFormatter = nil;
 {
     self = [super init];
     if (self) {
-        sFormatter = [[NSDateFormatter alloc] init];
-        sFormatter.dateFormat = @"MMM/dd/YY";
+        sShortDateFormatter = [[NSDateFormatter alloc] init];
+        sShortDateFormatter.dateFormat = @"MMM/dd/YY";
+        
+        sTimestampDateFormatter = [[NSDateFormatter alloc] init];
+        sTimestampDateFormatter.dateStyle = NSDateFormatterShortStyle;
+        sTimestampDateFormatter.timeStyle = NSDateFormatterShortStyle;
+        sTimestampDateFormatter.doesRelativeDateFormatting = YES;
     }
     return self;
 }
 
 - (NSString *)formatToShortDateString:(NSDate *)date
 {
-    return [sFormatter stringFromDate:date];
+    return [sShortDateFormatter stringFromDate:date];
+}
+
+- (NSString *)formatToTimestampString:(NSDate *)date
+{
+    return [sTimestampDateFormatter stringFromDate:date];
 }
 
 @end
