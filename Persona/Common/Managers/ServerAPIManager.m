@@ -233,6 +233,72 @@ typedef void(^VerifyAccessTokenCompletionBlock)(NSError *error);
     }];
 }
 
+- (void)offersGetCompletedTransactions:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/offer/completed", self.serverHostName];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSMutableArray *offers = [NSMutableArray new];
+                for (NSDictionary *info in responseObject) {
+                    [offers addObject:[OffersManager parseJSONOfferObject:info]];
+                }
+                completion(YES, offers, nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            completion(NO, nil, error);
+        }
+    }];
+}
+
+- (void)offersGetPendingTransactions:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/offer/pending", self.serverHostName];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSMutableArray *offers = [NSMutableArray new];
+                for (NSDictionary *info in responseObject) {
+                    [offers addObject:[OffersManager parseJSONOfferObject:info]];
+                }
+                completion(YES, offers, nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            completion(NO, nil, error);
+        }
+    }];
+}
+
+- (void)offersGetRecommendedOffers:(ResponseCompletionBlock)completion
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@/offer/recommended", self.serverHostName];
+    
+    [self verifyAccessToken:^(NSError *error) {
+        if (!error) {
+            [self.authorizedSessionManager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSMutableArray *offers = [NSMutableArray new];
+                for (NSDictionary *info in responseObject) {
+                    [offers addObject:[OffersManager parseJSONOfferObject:info]];
+                }
+                completion(YES, offers, nil);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                completion(NO, nil, error);
+            }];
+        } else {
+            completion(NO, nil, error);
+        }
+    }];
+}
+
 #pragma mark - Chat
 - (void)chatGetMessages:(ResponseCompletionBlock)completion
 {

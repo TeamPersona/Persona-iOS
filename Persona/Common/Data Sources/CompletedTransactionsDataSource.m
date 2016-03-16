@@ -9,13 +9,6 @@
 #import "CompletedTransactionsDataSource.h"
 #import "SideScrollingCollectionViewCell.h"
 
-@interface CompletedTransactionsDataSource ()
-
-@property (nonatomic, strong) NSArray *completedTransactions;
-
-@end
-
-
 @implementation CompletedTransactionsDataSource
 
 - (id)initWithCompletedTransactions:(NSArray *)completedTransactions

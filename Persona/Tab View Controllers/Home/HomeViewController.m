@@ -41,33 +41,17 @@ static const CGFloat HomeTableViewHeaderViewHeight = 26.0f;
     [self.tableView registerNib:[UINib nibWithNibName:@"SideScrollingCollectionTableViewCell" bundle:nil] forCellReuseIdentifier:SideScrollingCollectionTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"OfferTableViewCell" bundle:nil] forCellReuseIdentifier:OfferTableViewCellIdentifier];
     
+    // Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refreshOffers:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    
+    [self refreshOffers:nil];
+    
     self.tableView.dataSource = self;
     
     self.homeTableViewTitles = @[@"Completed Transactions", @"Pending Transactions", @"Recommended For You"];
-    
-    [[ServerAPIManager sharedManager] offersGetNextOffers:0 completionBlock:^(BOOL success, id response, NSError *error) {
-        if (success) {
-            NSLog(@"%@", response);
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
-    
-    [[ServerAPIManager sharedManager] offersGetOffer:1 completionBlock:^(BOOL success, id response, NSError *error) {
-        if (success) {
-            NSLog(@"%@", response);
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
-    
-    self.completedTransactions = [OffersManager parseOffersFromJSONFile:@"completedOffers.json"];
-    self.pendingTransactions = [OffersManager parseOffersFromJSONFile:@"pendingOffers.json"];
-    self.recommendedOffers = [OffersManager parseOffersFromJSONFile:@"recommendedOffers.json"];
-    
-    self.completedTransactionsDataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:self.completedTransactions];
-    self.pendingTransactionsDataSource = [[PendingTransactionsDataSource alloc] initWithPendingTransactions:self.pendingTransactions];
-    
+
     [self.tableView reloadData];
 }
 
@@ -77,14 +61,46 @@ static const CGFloat HomeTableViewHeaderViewHeight = 26.0f;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)refreshOffers:(UIRefreshControl *)control
+{
+    [[ServerAPIManager sharedManager] offersGetCompletedTransactions:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            self.completedTransactionsDataSource = [[CompletedTransactionsDataSource alloc] initWithCompletedTransactions:response];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        
+        [[ServerAPIManager sharedManager] offersGetPendingTransactions:^(BOOL success, id response, NSError *error) {
+            if (success) {
+                self.pendingTransactionsDataSource = [[PendingTransactionsDataSource alloc] initWithPendingTransactions:response];
+                [self.tableView reloadData];
+            } else {
+                NSLog(@"%@", error.localizedDescription);
+            }
+            
+            [[ServerAPIManager sharedManager] offersGetRecommendedOffers:^(BOOL success, id response, NSError *error) {
+                if (success) {
+                    self.recommendedOffers = response;
+                    [self.tableView reloadData];
+                } else {
+                    NSLog(@"%@", error.localizedDescription);
+                }
+            }];
+        }];
+    }];
+
+    [control endRefreshing];
+}
+
 #pragma mark -- Side Scrolling Collection Delegate Methods
 - (void)sideScrollingCollectionDidSelectCellIndexPath:(NSIndexPath *)indexPath
 {
     Offer *offer;
     if (indexPath.section == 0) {
-        offer = self.completedTransactions[indexPath.row];
+        offer = self.completedTransactionsDataSource.completedTransactions[indexPath.row];
     } else if (indexPath.section == 1) {
-        offer = self.pendingTransactions[indexPath.row];
+        offer = self.pendingTransactionsDataSource.pendingTransactions[indexPath.row];
     }
     OfferDetailsViewController *vc = [[OfferDetailsViewController alloc] initWithOffer:offer];
     [self.navigationController pushViewController:vc animated:YES];

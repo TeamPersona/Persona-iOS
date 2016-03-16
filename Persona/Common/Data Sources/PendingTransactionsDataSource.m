@@ -9,13 +9,6 @@
 #import "PendingTransactionsDataSource.h"
 #import "PendingSideScrollingCollectionViewCell.h"
 
-@interface PendingTransactionsDataSource ()
-
-@property (nonatomic, strong) NSArray *pendingTransactions;
-
-@end
-
-
 @implementation PendingTransactionsDataSource
 
 - (id)initWithPendingTransactions:(NSArray *)pendingTransactions

@@ -13,4 +13,6 @@
 
 - (id)initWithPendingTransactions:(NSArray *)pendingTransactions;
 
+@property (nonatomic, strong) NSArray *pendingTransactions;
+
 @end

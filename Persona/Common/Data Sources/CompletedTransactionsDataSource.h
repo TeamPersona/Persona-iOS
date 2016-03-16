@@ -13,4 +13,6 @@
 
 - (id)initWithCompletedTransactions:(NSArray *)completedTransactions;
 
+@property (nonatomic, strong) NSArray *completedTransactions;
+
 @end

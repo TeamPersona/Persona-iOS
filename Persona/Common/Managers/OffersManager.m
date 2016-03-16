@@ -14,7 +14,7 @@ static const NSString *API_JSON_Root_Profile_Offers =   @"profileOffers";
 
 static const NSString *API_JSON_Partner_Id =            @"partnerID";
 static const NSString *API_JSON_Partner_Name =          @"partnerName";
-static const NSString *API_JSON_Partner_ImageURL =      @"partnerImageURL";
+static const NSString *API_JSON_Partner_ImageURL =      @"partnerImageUrl";
 static const NSString *API_JSON_Offer_Id =              @"offerID";
 static const NSString *API_JSON_Offer_Details =         @"offerDetails";
 static const NSString *API_JSON_Info_Filters =          @"offerFilters";

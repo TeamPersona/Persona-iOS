@@ -34,6 +34,9 @@ typedef void(^ResponseCompletionBlock)(BOOL success, id response, NSError *error
 // Offers
 - (void)offersGetOffer:(NSInteger)offerId completionBlock:(ResponseCompletionBlock)completion;
 - (void)offersGetNextOffers:(NSInteger)lastOfferId completionBlock:(ResponseCompletionBlock)completion;
+- (void)offersGetCompletedTransactions:(ResponseCompletionBlock)completion;
+- (void)offersGetPendingTransactions:(ResponseCompletionBlock)completion;
+- (void)offersGetRecommendedOffers:(ResponseCompletionBlock)completion;
 
 // Chat
 - (void)chatGetMessages:(ResponseCompletionBlock)completion;
