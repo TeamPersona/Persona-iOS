@@ -29,7 +29,7 @@
     MessageDetail *msg = self.msgDetails[indexPath.section];
     
     cell.messageLabel.text = msg.text;
-    cell.backgroundColor = msg.isUsersMessage ? [UIColor personaColor] : [UIColor greenColor];
+    cell.backgroundColor = msg.isUsersMessage ? [UIColor personaColor] : [UIColor personaAltColor];
     cell.messageLabel.textColor = msg.isUsersMessage ? [UIColor whiteColor] : [UIColor blackColor];
     
     return cell;

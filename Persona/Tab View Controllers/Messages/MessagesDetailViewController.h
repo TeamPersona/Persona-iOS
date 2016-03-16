@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Message.h"
 
-@interface MessagesDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface MessagesDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
 - (id)initWithMessage:(Message *)message;
 

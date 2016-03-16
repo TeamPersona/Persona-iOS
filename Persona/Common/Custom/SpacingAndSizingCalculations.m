@@ -44,7 +44,10 @@
     CGRect rect = [attributedText boundingRectWithSize:maxSize
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil];
+
+    // Add padding for label.
     rect.size.height += 16.0f;
+    rect.size.width += 20.0f;
     
     return rect.size;
 }
