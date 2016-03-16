@@ -14,10 +14,9 @@ static NSString *SideScrollingOfferCollectionViewCellIdentifier = @"sideScrollin
 @interface SideScrollingCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *partnerImageView;
-@property (weak, nonatomic) IBOutlet UILabel *partnerTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *earnedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateEarnedLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *messageImageView;
+@property (weak, nonatomic) IBOutlet UIButton *messageButton;
 
 - (void)setOffer:(Offer *)offer;
 

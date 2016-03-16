@@ -15,19 +15,16 @@
 #import "ProfileViewController.h"
 
 static NSString *TabBarHomeTitle =      @"Home";
-static NSString *TabBarExploreTitle =   @"Explore";
 static NSString *TabBarMessagesTitle =  @"Messages";
 static NSString *TabBarProfileTitle =   @"Profile";
 
 
 @interface MainTabBarController ()
 @property (nonatomic, strong) BaseNavigationViewController *homeNavVC;
-@property (nonatomic, strong) BaseNavigationViewController *exploreNavVC;
 @property (nonatomic, strong) BaseNavigationViewController *messagesNavVC;
 @property (nonatomic, strong) BaseNavigationViewController *profileNavVC;
 
 @property (nonatomic, strong) HomeViewController *homeVC;
-@property (nonatomic, strong) ExploreViewController *exploreVC;
 @property (nonatomic, strong) MessagesViewController *messagesVC;
 @property (nonatomic, strong) ProfileViewController *profileVC;
 @end
@@ -38,13 +35,13 @@ static NSString *TabBarProfileTitle =   @"Profile";
 {
     self = [super init];
     if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageButtonPressed:) name:@"NotificationOpenMessage" object:nil];
+        
         self.homeVC = [[HomeViewController alloc] initWithTabBarTitle:TabBarHomeTitle];
-//        self.exploreVC = [[ExploreViewController alloc] initWithTabBarTitle:TabBarExploreTitle];
         self.messagesVC = [[MessagesViewController alloc] initWithTabBarTitle:TabBarMessagesTitle];
         self.profileVC = [[ProfileViewController alloc] initWithTabBarTitle:TabBarProfileTitle];
 
         self.homeNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.homeVC];
-//        self.exploreNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.exploreVC];
         self.messagesNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.messagesVC];
         self.profileNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.profileVC];
         
@@ -58,10 +55,21 @@ static NSString *TabBarProfileTitle =   @"Profile";
     [super viewDidLoad];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)messageButtonPressed:(NSNotification *)notification
+{
+    self.selectedIndex = 1;
+    [self.messagesVC openMessageWithOfferId:[notification.userInfo[@"offerId"] integerValue]];
 }
 
 /*

@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (void)openMessageWithOfferId:(NSInteger)offerId;
+
 @end

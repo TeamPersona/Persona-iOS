@@ -886,8 +886,8 @@
 			children = (
 				C6FD79CB1B5DA077006873BD /* OffersDataSource.h */,
 				C6FD79CC1B5DA077006873BD /* OffersDataSource.m */,
-				C6BDA5C31C8585CB00D65A1F /* Messages Data Sources */,
 				C6D7B2161C7703570033F5A2 /* Home Data Sources */,
+				C6BDA5C31C8585CB00D65A1F /* Messages Data Sources */,
 				C6FD79D71B5DA098006873BD /* Profile Data Sources */,
 			);
 			path = "Data Sources";

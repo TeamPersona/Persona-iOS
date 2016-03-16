@@ -10,6 +10,9 @@
 #import "SideScrollingCollectionViewCell.h"
 #import "PendingSideScrollingCollectionViewCell.h"
 
+static const CGSize CompletedTransactionsCellSize = {204, 120};
+static const CGSize PendingTransactionsCellSize = {140, 120};
+
 @implementation SideScrollingCollectionTableViewCell
 
 - (void)awakeFromNib
@@ -29,10 +32,22 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.collectionType == SideScrollingCollectionTypeCompletedTransactions) {
-        return CGSizeMake(204, 120);
+        return CompletedTransactionsCellSize;
     } else {
-        return CGSizeMake(140, 120);
+        return PendingTransactionsCellSize;
     }
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    CGFloat width = self.collectionView.bounds.size.width;
+    CGFloat cellWidth = (self.collectionType == SideScrollingCollectionTypeCompletedTransactions) ? CompletedTransactionsCellSize.width : PendingTransactionsCellSize.width;
+    
+    NSInteger numberOfCells = [self.collectionView.dataSource collectionView:collectionView numberOfItemsInSection:section];
+    CGFloat totalCellWidth = cellWidth * numberOfCells;
+    CGFloat totalSpacingWidth = 10.0f * (numberOfCells - 1);
+    CGFloat padding = MAX((width - (totalCellWidth + totalSpacingWidth)) / 2, 0);
+    return UIEdgeInsetsMake(0, padding, 0, padding);
 }
 
 
