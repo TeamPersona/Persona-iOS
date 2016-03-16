@@ -99,7 +99,7 @@
 
 - (IBAction)confirmButtonPressed:(UIButton *)sender
 {
-    if (self.didUpdateDataPoints && self.dataSource.dataPoints.allKeys.count > 0 && [self.delegate respondsToSelector:@selector(informationDidFinishEntryWithData:)]) {
+    if (self.dataSource.dataPoints.allKeys.count > 0 && [self.delegate respondsToSelector:@selector(informationDidFinishEntryWithData:)]) {
         [self.delegate informationDidFinishEntryWithData:self.dataSource.dataPoints];
     }
     

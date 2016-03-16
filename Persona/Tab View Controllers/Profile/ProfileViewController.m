@@ -52,9 +52,6 @@
     self.profileDataSource.informationCategoriesList = self.profileInformationCategoriesList;
     [self refreshProfile:nil];
     
-    
-//    self.profileDataSource.pointsInfo = [PointsManager parsePointsDataFromJSONFile:@"profilePointsMockData.json"];
-//    self.profileDataSource.balanceInfo = [BalanceManager parseBalanceInfoFromJSONFile:@"profileBalanceInfoMockData.json"];
     [self.collectionView reloadData];
 
     // Collection View

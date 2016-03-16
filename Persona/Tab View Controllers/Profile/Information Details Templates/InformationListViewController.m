@@ -30,6 +30,7 @@
     self.dataSource.dataPoints = [NSMutableDictionary dictionaryWithDictionary:self.infoDetails.value];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"InformationDataTableViewCell" bundle:nil] forCellReuseIdentifier:InformationDataTableViewCellIdentifier];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 46.0f, 0);
     self.tableView.tableFooterView = [UIView new];
     self.tableView.dataSource = self.dataSource;
 }
@@ -57,12 +58,7 @@
     PersonalInformation *info = [PersonalInformation new];
     info.category = self.infoDetails.mainCategory;
     info.subCategory = self.infoDetails.name;
-    
-    NSMutableDictionary *dict = [NSMutableDictionary new];
-    for (NSString *key in self.infoDetails.value.allKeys) {
-        dict[[key toCamelCase]] = self.infoDetails.value[key];
-    }
-    info.data = dict;
+    info.data = self.infoDetails.value;
     
     [[ServerAPIManager sharedManager] accountDeposit:info completion:^(BOOL success, id response, NSError *error) {
         if (success) {

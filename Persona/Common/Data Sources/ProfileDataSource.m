@@ -16,7 +16,7 @@
 #import "UIColor+ProjectColors.h"
 #import "PersonalInformation.h"
 #import "InformationDetails.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "ImageManager.h"
 
 @interface ProfileDataSource ()
 @property (nonatomic) ProfileSegment currentSelectedSegment;
@@ -90,17 +90,24 @@
         cell.progressPercent = self.profileInfo.tierProgress.floatValue;
 
         NSString *tierString;
+        NSString *imageName;
         if (self.profileInfo.rewardTier == RewardTierDefault) {
             tierString = @"Silver";
+            imageName = @"BasicRewardTier";
         } else if (self.profileInfo.rewardTier == RewardTierSilver) {
             tierString = @"Gold";
+            imageName = @"SilverRewardTier";
+        } else {
+            imageName = @"GoldRewardTier";
         }
         
         if (self.profileInfo.rewardTier != RewardTierGold) {
             cell.tierLabel.text = [NSString stringWithFormat:@"%@ Tier: %li points remaining", tierString, self.profileInfo.pointsToNextTier];
         }
         
-//        cell.tierImageView.image = [UIImage imageNamed:@""];
+        [[ImageManager sharedManager] getImageName:imageName iconSize:CGSizeMake(76.0f, 76.0f) completion:^(UIImage *image) {
+            cell.tierImageView.image = image;
+        }];
         
         return cell;
     } else if (indexPath.section == ProfileSectionAccountInformation) {

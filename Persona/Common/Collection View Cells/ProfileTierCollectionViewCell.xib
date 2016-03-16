@@ -13,13 +13,6 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-z8-tHN">
-                        <rect key="frame" x="128" y="52" width="64" height="64"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="64" id="Flg-1n-n99"/>
-                            <constraint firstAttribute="width" constant="64" id="kOs-e6-M2k"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-4T-20z">
                         <rect key="frame" x="8" y="151" width="304" height="21"/>
                         <constraints>
@@ -29,6 +22,13 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-z8-tHN">
+                        <rect key="frame" x="122" y="52" width="76" height="76"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="Flg-1n-n99"/>
+                            <constraint firstAttribute="width" constant="76" id="kOs-e6-M2k"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -36,7 +36,7 @@
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="CVX-z8-tHN" secondAttribute="centerX" id="0sZ-L2-EHs"/>
                 <constraint firstAttribute="bottom" secondItem="TDi-4T-20z" secondAttribute="bottom" constant="8" id="4M6-uv-nKb"/>
-                <constraint firstAttribute="centerY" secondItem="CVX-z8-tHN" secondAttribute="centerY" constant="6" id="6dt-zP-Olb"/>
+                <constraint firstAttribute="centerY" secondItem="CVX-z8-tHN" secondAttribute="centerY" id="6dt-zP-Olb"/>
                 <constraint firstAttribute="centerX" secondItem="TDi-4T-20z" secondAttribute="centerX" id="h3i-wo-ZVS"/>
                 <constraint firstAttribute="trailing" secondItem="TDi-4T-20z" secondAttribute="trailing" constant="8" id="kDI-zU-OCT"/>
                 <constraint firstItem="TDi-4T-20z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="uOb-7U-YUK"/>

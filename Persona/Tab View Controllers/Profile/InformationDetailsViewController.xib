@@ -10,6 +10,7 @@
                 <outlet property="containerView" destination="EpW-mb-KTM" id="c9X-6L-XQu"/>
                 <outlet property="doneButton" destination="Aoa-B8-Obh" id="qXF-VN-c7J"/>
                 <outlet property="infoView" destination="bmi-Po-U61" id="WlR-bY-W8z"/>
+                <outlet property="pointsLabel" destination="eBF-d2-vgv" id="3bx-hm-OIu"/>
                 <outlet property="titleLabel" destination="hJH-mp-vYc" id="vaO-zT-GQ7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,7 +54,7 @@
                                 <constraint firstAttribute="height" constant="36" id="48C-9d-LCr"/>
                             </constraints>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                            <color key="textColor" red="0.12941176470588234" green="0.65490196078431373" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.87843137250000003" green="0.63529411759999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-mp-vYc">

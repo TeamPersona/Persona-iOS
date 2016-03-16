@@ -70,7 +70,6 @@
     info.value = dataDict;
     [self.dataSource updateInfo:self.infoCategory];
     [self.collectionView reloadData];
-    // TODO: send data to server
 }
 
 #pragma mark - UICollectionView Delegate Methods

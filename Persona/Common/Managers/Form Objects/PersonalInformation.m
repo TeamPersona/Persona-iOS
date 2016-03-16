@@ -19,6 +19,7 @@
     }
     info.category = dictionary[@"category"];
     info.subCategory = dictionary[@"subcategory"];
+    info.rewardValue = @20;
 
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
     for (NSString *key in [dictionary[@"data"] allKeys]) {
@@ -29,7 +30,7 @@
             }
             info.sources = sources;
         } else {
-            dataDict[[key toTitleCase]] = dictionary[@"data"][key];
+            dataDict[key] = dictionary[@"data"][key];
         }
     }
     

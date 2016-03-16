@@ -35,7 +35,7 @@
                             <constraint firstAttribute="height" constant="21" id="qxK-Uk-Co1"/>
                         </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <color key="textColor" red="0.29803921568627451" green="0.85490196078431369" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.87843137250000003" green="0.63529411759999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>

@@ -12,7 +12,7 @@ static NSString *ProfileTierCollectionViewCellIdentifier = @"profileTierCell";
 
 // Spacing and Sizing
 
-static const CGFloat ProfileTierOutlineLineWidth = 1.0f;
+static const CGFloat ProfileTierOutlineLineWidth = 0.6f;
 static const CGFloat ProfileTierOuterCircleDelta = -25.0f;
 static const CGFloat ProfileTierProgressCircleLineWidth = 20.0f - (ProfileTierOutlineLineWidth * 2);
 static const CGFloat ProfileTierInnerCircleDelta = ProfileTierOuterCircleDelta + (ProfileTierProgressCircleLineWidth/2);

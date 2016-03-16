@@ -27,8 +27,9 @@
     
     // Progress
     CGContextSetLineWidth(context, ProfileTierProgressCircleLineWidth / 2);
-    CGContextSetStrokeColorWithColor(context, [UIColor progressCircleFillColor].CGColor);
-    CGRect progressCircleRect = CGRectInset(self.tierImageView.frame, ProfileTierProgressCircleDelta, ProfileTierProgressCircleDelta);
+    CGContextSetStrokeColorWithColor(context, [UIColor personaAltColor].CGColor);
+    CGRect fRect = CGRectInset(self.tierImageView.frame, 8.0f, 8.0f);
+    CGRect progressCircleRect = CGRectInset(fRect, ProfileTierProgressCircleDelta, ProfileTierProgressCircleDelta);
     
     CGFloat progressCircleRadius = progressCircleRect.size.width / 2;
     CGFloat progressInRadians = self.progressPercent * 2 * M_PI;
@@ -41,14 +42,14 @@
     
     // Circle context
     CGContextSetLineWidth(context, ProfileTierOutlineLineWidth);
-    CGContextSetStrokeColorWithColor(context, [UIColor progressCircleOutlineColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor personaLightColor].CGColor);
     
     // Outer circle
-    CGRect outerCircleRect = CGRectInset(self.tierImageView.frame, ProfileTierOuterCircleDelta, ProfileTierOuterCircleDelta);
+    CGRect outerCircleRect = CGRectInset(fRect, ProfileTierOuterCircleDelta, ProfileTierOuterCircleDelta);
     CGContextStrokeEllipseInRect(context, outerCircleRect);
     
     // Inner circle
-    CGRect innerCircleRect = CGRectInset(self.tierImageView.frame, ProfileTierInnerCircleDelta, ProfileTierInnerCircleDelta);
+    CGRect innerCircleRect = CGRectInset(fRect, ProfileTierInnerCircleDelta, ProfileTierInnerCircleDelta);
     CGContextStrokeEllipseInRect(context, innerCircleRect);
 }
 

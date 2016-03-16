@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @property (nonatomic, strong) id<InformationDetailsPopupDelegate> delegate;
 @property (nonatomic) NSInteger index;

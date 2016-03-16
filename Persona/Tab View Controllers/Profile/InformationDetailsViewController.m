@@ -37,6 +37,7 @@
     self.containerView.layer.masksToBounds = YES;
     
     self.titleLabel.text = self.infoDetails.name;
+    self.pointsLabel.text = [NSString stringWithFormat:@"%li pts", self.infoDetails.points];
     
     // Add keyboard notifications.
     [[NSNotificationCenter defaultCenter] addObserver:self

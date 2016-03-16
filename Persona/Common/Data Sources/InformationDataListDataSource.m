@@ -28,9 +28,8 @@
     InformationDataTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:InformationDataTableViewCellIdentifier forIndexPath:indexPath];
     
     NSString *key = self.dataPoints.allKeys[indexPath.row];
-    cell.detailNameLabel.text = key;
+    cell.detailNameLabel.text = [NSString stringWithFormat:@"%@:", key];
     cell.detailDataLabel.text = self.dataPoints[key];
-    
     return cell;
 }
 
