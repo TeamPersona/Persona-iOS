@@ -63,8 +63,8 @@
                                 <outlet property="delegate" destination="-1" id="IMy-09-LSo"/>
                             </connections>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4h-jn-D18">
-                            <rect key="frame" x="227.5" y="145" width="145" height="30"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4h-jn-D18">
+                            <rect key="frame" x="228" y="145" width="145" height="30"/>
                             <state key="normal" title="Log In with Facebook">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

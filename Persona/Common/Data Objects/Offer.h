@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Partner.h"
 #import "OfferStatus.h"
+#import "RewardTierHelper.h"
 
 @interface Offer : NSObject
 
@@ -20,6 +21,7 @@
 @property (nonatomic, strong) NSNumber *rewardValue;
 @property (nonatomic) NSInteger currentParticipants;
 @property (nonatomic) NSInteger totalParticipants;
+@property (nonatomic) RewardTier minRewardTier;
 
 // Offer Details
 @property (nonatomic, strong) NSArray *infoFilterList;

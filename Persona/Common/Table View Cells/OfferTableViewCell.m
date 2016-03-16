@@ -28,6 +28,8 @@
     self.partnerImageView.image = nil;
     self.expirationImageView.image = nil;
     self.userIcon.image = nil;
+    self.rewardTierImageView.image = nil;
+
     [[ImageManager sharedManager] getWebImage:offer.partner.partnerImageURL iconSize:CGSizeMake(56, 56) completion:^(UIImage *image) {
         if (image) {
             self.partnerImageView.image = image;
@@ -38,6 +40,19 @@
     }];
     [[ImageManager sharedManager] getImageName:@"User" iconSize:self.userIcon.bounds.size completion:^(UIImage *image) {
         self.userIcon.image = image;
+    }];
+    
+    NSString *rewardTierImageName;
+    if (offer.minRewardTier == RewardTierDefault) {
+        rewardTierImageName = @"BasicRewardTier";
+    } else if (offer.minRewardTier == RewardTierSilver) {
+        rewardTierImageName = @"SilverRewardTier";
+    } else {
+        rewardTierImageName = @"GoldRewardTier";
+    }
+    
+    [[ImageManager sharedManager] getImageName:rewardTierImageName iconSize:CGSizeMake(18, 24) completion:^(UIImage *image) {
+        self.rewardTierImageView.image = image;
     }];
     
     self.titleLabel.text = offer.partner.name;

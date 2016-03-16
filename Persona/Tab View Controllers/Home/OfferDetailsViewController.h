@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *participantsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *rewardTierImageView;
 
 @property (weak, nonatomic) IBOutlet UITextView *filterCategoriesTextView;
 @property (weak, nonatomic) IBOutlet UITextView *requestedCategoriesTextView;

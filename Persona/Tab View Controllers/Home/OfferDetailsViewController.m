@@ -63,6 +63,19 @@ static const CGFloat TextViewPadding = 16.0f;
         self.expirationDateLabel.textColor = [UIColor redColor];
     }
     
+    NSString *rewardTierImageName;
+    if (self.offer.minRewardTier == RewardTierDefault) {
+        rewardTierImageName = @"BasicRewardTier";
+    } else if (self.offer.minRewardTier == RewardTierSilver) {
+        rewardTierImageName = @"SilverRewardTier";
+    } else {
+        rewardTierImageName = @"GoldRewardTier";
+    }
+    
+    [[ImageManager sharedManager] getImageName:rewardTierImageName iconSize:CGSizeMake(18, 24) completion:^(UIImage *image) {
+        self.rewardTierImageView.image = image;
+    }];
+    
     self.rewardLabel.text = self.offer.rewardString;
     self.participantsLabel.text = [NSString stringWithFormat:@"%li/%li participants", (long)self.offer.currentParticipants, self.offer.totalParticipants];
     self.progressView.progress = self.offer.participantsProgress;

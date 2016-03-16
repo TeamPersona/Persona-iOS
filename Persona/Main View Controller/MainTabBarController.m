@@ -13,6 +13,7 @@
 #import "ExploreViewController.h"
 #import "MessagesViewController.h"
 #import "ProfileViewController.h"
+#import "ImageManager.h"
 
 static NSString *TabBarHomeTitle =      @"Home";
 static NSString *TabBarMessagesTitle =  @"Messages";
@@ -41,9 +42,22 @@ static NSString *TabBarProfileTitle =   @"Profile";
         self.messagesVC = [[MessagesViewController alloc] initWithTabBarTitle:TabBarMessagesTitle];
         self.profileVC = [[ProfileViewController alloc] initWithTabBarTitle:TabBarProfileTitle];
 
+//        CGSize iconSize = CGSizeMake(30);
+        
         self.homeNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.homeVC];
+//        [[ImageManager sharedManager] getImageName:@"Marketplace" iconSize:iconSize completion:^(UIImage *image) {
+            self.homeNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"MarketplaceIcon"] tag:0];
+//        }];
+        
         self.messagesNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.messagesVC];
+//        [[ImageManager sharedManager] getImageName:@"Mail" iconSize:iconSize completion:^(UIImage *image) {
+            self.messagesNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Message" image:[UIImage imageNamed:@"MailIcon"] tag:1];
+//        }];
+
         self.profileNavVC = [[BaseNavigationViewController alloc] initWithRootViewController:self.profileVC];
+//        [[ImageManager sharedManager] getImageName:@"Profile" iconSize:iconSize completion:^(UIImage *image) {
+            self.profileNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:[UIImage imageNamed:@"ProfileIcon"] tag:2];
+//        }];
         
         [self setViewControllers:@[self.homeNavVC, self.messagesNavVC, self.profileNavVC]];
     }

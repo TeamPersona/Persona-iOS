@@ -29,33 +29,36 @@
 #pragma mark - UITableView DataSource Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.settings.sections;
+//    return self.settings.sections;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *items = [self.settings sectionItems:section];
-    return items.count;
+//    NSArray *items = [self.settings sectionItems:section];
+//    return items.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SettingsTableViewCellIdentifier forIndexPath:indexPath];
-    
-    NSArray *items = [self.settings sectionItems:indexPath.section];
-    SettingsOption *option = items[indexPath.row];
-    
-    cell.label.text = option.title;
-    
-    if (option.hasSwitch) {
-        cell.settingsSwitch.hidden = NO;
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    } else {
-        cell.settingsSwitch.hidden = YES;
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-
-    return cell;
+//    SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SettingsTableViewCellIdentifier forIndexPath:indexPath];
+//    
+//    NSArray *items = [self.settings sectionItems:indexPath.section];
+//    SettingsOption *option = items[indexPath.row];
+//    
+//    cell.label.text = option.title;
+//    
+//    if (option.hasSwitch) {
+//        cell.settingsSwitch.hidden = NO;
+//        cell.accessoryType = UITableViewCellAccessoryNone;
+//    } else {
+//        cell.settingsSwitch.hidden = YES;
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    }
+//
+//    return cell;
+    return nil;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

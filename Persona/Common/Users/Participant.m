@@ -17,8 +17,10 @@
     participant.name = [NSString stringWithFormat:@"%@ %@", dictionary[@"givenName"], dictionary[@"familyName"]];
     participant.emailAddress = dictionary[@"emailAddress"];
     participant.phoneNumber = dictionary[@"phoneNumber"];
-    participant.totalPoints = [dictionary[@"rewardPoints"] integerValue];
-    participant.accountBalance = dictionary[@"balance"];
+//    participant.totalPoints = [dictionary[@"rewardPoints"] integerValue];
+//    participant.accountBalance = dictionary[@"balance"];
+    participant.totalPoints = 260;
+    participant.accountBalance = [NSNumber numberWithDouble:50];
 
     return participant;
 }

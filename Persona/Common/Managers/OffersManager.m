@@ -26,6 +26,7 @@ static const NSString *API_JSON_Reward_Value =          @"offerReward";
 static const NSString *API_JSON_Current_Participants =  @"offerCurrentParticipants";
 static const NSString *API_JSON_Max_Participants =      @"offerMaxParticipants";
 static const NSString *API_JSON_Does_Match_Filters =    @"doesMatchFilters";
+static const NSString *API_JSON_Min_Reward_Tier =       @"offerMinRank";
 
 static const NSString *API_JSON_Category_Metadata_Name =        @"informationType";
 static const NSString *API_JSON_Category_Metadata_Is_Missing =  @"informationMissing";
@@ -119,6 +120,9 @@ typedef NS_ENUM(NSUInteger, OffersJSONType) {
     }
     if (jsonOffer[API_JSON_Max_Participants] != nil) {
         offer.totalParticipants = [jsonOffer[API_JSON_Max_Participants] integerValue];
+    }
+    if (jsonOffer[API_JSON_Min_Reward_Tier] != nil) {
+        offer.minRewardTier = [jsonOffer[API_JSON_Min_Reward_Tier] integerValue];
     }
     
     if (partner.name != nil && partner.userId) {

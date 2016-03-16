@@ -17,13 +17,14 @@
 
 - (void)updateBalanceInfo:(BalanceInfo *)balanceInfo
 {
-    self.redeemedToDateBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.redeemedRewardBalance.doubleValue];
-    self.currentBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.currentRewardBalance.doubleValue];
+    self.redeemedToDateBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", 0.0];
+    self.currentBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", 0.5];
+//    self.redeemedToDateBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.redeemedRewardBalance.doubleValue];
+//    self.currentBalanceLabel.text = [NSString stringWithFormat:@"$%.02f", balanceInfo.currentRewardBalance.doubleValue];
 }
 
 - (IBAction)redeemButtonPressed:(UIButton *)sender
 {
-    
 }
 
 @end

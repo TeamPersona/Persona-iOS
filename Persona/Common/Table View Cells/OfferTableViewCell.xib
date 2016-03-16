@@ -47,7 +47,7 @@
                         </constraints>
                     </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dy7-oe-svs">
-                        <rect key="frame" x="8" y="76" width="272" height="2"/>
+                        <rect key="frame" x="45" y="76" width="235" height="2"/>
                         <color key="progressTintColor" red="0.1803921568627451" green="0.34509803921568627" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-90-Yg4" userLabel="Participants Remaining">
@@ -98,10 +98,18 @@
                             <constraint firstAttribute="width" constant="15" id="wV9-81-mPX"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-R0-hhn">
+                        <rect key="frame" x="19" y="63" width="18" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="ASl-uC-yEw"/>
+                            <constraint firstAttribute="width" constant="18" id="nt8-Vh-Qd8"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="leading" secondItem="S00-Dz-2Au" secondAttribute="trailing" constant="8" id="1ft-Yk-D96"/>
                     <constraint firstItem="dNx-1E-8Rf" firstAttribute="leading" secondItem="NWc-bd-YOl" secondAttribute="trailing" constant="8" id="3UZ-IY-oPt"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="T3U-R0-hhn" secondAttribute="leading" constant="-11" id="3wJ-6k-9HM"/>
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4GS-n5-RDs"/>
                     <constraint firstItem="3bu-G3-1A9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="5L8-fR-E60"/>
                     <constraint firstItem="ThT-90-Yg4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6Sq-IJ-mAl"/>
@@ -118,16 +126,19 @@
                     <constraint firstItem="ThT-90-Yg4" firstAttribute="leading" secondItem="Qsl-kP-rfd" secondAttribute="trailing" constant="4" id="WhH-bh-JEw"/>
                     <constraint firstItem="S00-Dz-2Au" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ZQq-QW-7US"/>
                     <constraint firstItem="dNx-1E-8Rf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gdB-C6-W8V"/>
+                    <constraint firstItem="dy7-oe-svs" firstAttribute="leading" secondItem="T3U-R0-hhn" secondAttribute="trailing" constant="8" id="gmf-FB-JkF"/>
                     <constraint firstAttribute="bottomMargin" secondItem="dy7-oe-svs" secondAttribute="bottom" constant="3" id="jOj-E6-E8l"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ThT-90-Yg4" secondAttribute="bottom" constant="-5" id="jZs-e5-hC5"/>
                     <constraint firstItem="INS-pZ-mei" firstAttribute="centerY" secondItem="lzx-Ag-ev1" secondAttribute="centerY" id="leD-DE-cpu"/>
                     <constraint firstItem="lzx-Ag-ev1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="rpY-XL-PtN"/>
                     <constraint firstItem="S00-Dz-2Au" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sZX-ho-5m7"/>
+                    <constraint firstItem="T3U-R0-hhn" firstAttribute="top" secondItem="S00-Dz-2Au" secondAttribute="bottom" constant="-1" id="toK-fv-fo9"/>
                     <constraint firstItem="Qsl-kP-rfd" firstAttribute="centerY" secondItem="ThT-90-Yg4" secondAttribute="centerY" constant="-2.5" id="wkE-YI-UAF"/>
                     <constraint firstItem="INS-pZ-mei" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="xDn-hh-iFs"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="J29-vc-WZK"/>
                         <exclude reference="xDn-hh-iFs"/>
                         <exclude reference="Uce-NQ-tmj"/>
                         <exclude reference="VJc-6P-Hj1"/>
@@ -143,6 +154,7 @@
                 <outlet property="progressView" destination="dy7-oe-svs" id="csS-pZ-zuX"/>
                 <outlet property="remainingLabel" destination="ThT-90-Yg4" id="iwO-dB-mj9"/>
                 <outlet property="rewardLabel" destination="dNx-1E-8Rf" id="jcx-7i-RA5"/>
+                <outlet property="rewardTierImageView" destination="T3U-R0-hhn" id="l0V-bf-cmv"/>
                 <outlet property="titleLabel" destination="3bu-G3-1A9" id="iUS-ao-0ae"/>
                 <outlet property="userIcon" destination="Qsl-kP-rfd" id="Te5-OX-mB3"/>
             </connections>

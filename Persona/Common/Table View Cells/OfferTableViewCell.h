@@ -26,6 +26,7 @@ static const CGFloat OfferTableViewCellHeightExpired =  73.0f;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *remainingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *rewardTierImageView;
 
 - (void)populateOfferInfo:(Offer *)offer;
 
